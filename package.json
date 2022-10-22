@@ -22,6 +22,7 @@
     "dayjs": "^1.11.5",
     "embla-carousel-react": "^7.0.3",
     "framer-motion": "^7.6.1",
+    "image-downloader": "^4.3.0",
     "mongodb": "^4.11.0",
     "mongoose": "^6.6.5",
     "next": "12.3.1",

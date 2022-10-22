@@ -19,6 +19,9 @@ export default async function middleware(req) {
     }
   }
   if (req.url.split("/").includes("admin")) {
+    if (token.email === "v.wagner2k@gmail.com") {
+      return NextResponse.next();
+    }
     return NextResponse.redirect(url);
   }
 }
