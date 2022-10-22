@@ -91,6 +91,7 @@ async function handler(req, res) {
   const randomRarity = Math.floor(Math.random() * 1000) + 1;
   let rarity,
     knifeType,
+    weaponType,
     statTrak = false;
   if (randomRarity <= 800) {
     rarity = "Mil-Spec Grade";
@@ -106,7 +107,7 @@ async function handler(req, res) {
     knifeType = null;
   } else if (randomRarity <= 1000) {
     rarity = "Covert";
-    knifeType = "Knife";
+    weaponType = "Knife";
   }
 
   //randomize if weapon gets stattrak
@@ -114,10 +115,19 @@ async function handler(req, res) {
   if (randomStatTrak === 7) statTrak = true;
 
   //filter skingroup by rarity
-  let filteredSkingroups = skingroups.filter(
-    (skingroup) =>
-      skingroup.rarity === rarity && skingroup.knifeType === knifeType
-  );
+  let filteredSkingroups;
+  if (weaponType) {
+    filteredSkingroups = skingroups.filter(
+      (skingroup) => skingroup.weaponType === weaponType
+    );
+  } else {
+    filteredSkingroups = skingroups.filter(
+      (skingroup) =>
+        skingroup.rarity === rarity && skingroup.knifeType === knifeType
+    );
+  }
+
+  console.log(filteredSkingroups);
 
   //get one random skingroup from the filtered rarity
   const randomSkinGroup =
@@ -165,6 +175,7 @@ async function handler(req, res) {
     rarityColor: skin.rarityColor,
     price: skin.price,
     float: float,
+    statTrak: statTrak,
     userId: userId,
     openedAt: new Date(),
   });

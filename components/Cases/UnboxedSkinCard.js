@@ -1,0 +1,77 @@
+import { Card, Image, Group, Text, Badge, Button } from "@mantine/core";
+import { closeAllModals } from "@mantine/modals";
+import { useEffect, useRef, useState } from "react";
+import useSound from "use-sound";
+
+export default function UnboxedSkinCard({ skin }) {
+  const sound = useRef();
+
+  switch (skin.rarity) {
+    case "Mil-Spec Grade":
+      sound.current = "caseAwardRare.mp3";
+      break;
+    case "Restricted":
+      sound.current = "caseAwardMythical.mp3";
+      break;
+    case "Classified":
+      sound.current = "caseAwardLegendary.mp3";
+      break;
+    case "Covert":
+      sound.current = "caseAwardAncient.mp3";
+      break;
+    default:
+      break;
+  }
+  const [unboxedSkinSound] = useSound("/sounds/" + sound.current, {
+    volume: 0.1,
+  });
+
+  unboxedSkinSound();
+  return (
+    <Card
+      shadow={"sm"}
+      p={"lg"}
+      radius="md"
+      withBorder
+      sx={{
+        borderColor: skin.statTrak
+          ? "orange"
+          : skin.knifeType !== null
+          ? "purple"
+          : skin.souvenir
+          ? "yellow"
+          : "dark.04",
+      }}
+    >
+      <Card.Section>
+        <Image
+          src={
+            "https://steamcommunity-a.akamaihd.net/economy/image/" +
+            skin.iconUrl
+          }
+          height={200}
+          fit="contain"
+        />
+      </Card.Section>
+      <Group position="apart" mt="md">
+        <Text color={"#" + skin.rarityColor} weight={500}>
+          {skin.name}
+        </Text>
+        <Badge size="lg" color="orange" variant="light">
+          {skin.price} $
+        </Badge>
+      </Group>
+      <Text color={"dark.2"} size="xs">
+        {skin.float}
+      </Text>
+      <Button
+        variant="outline"
+        fullWidth
+        mt={20}
+        onClick={() => closeAllModals()}
+      >
+        Thats pretty cool
+      </Button>
+    </Card>
+  );
+}

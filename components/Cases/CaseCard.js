@@ -3,6 +3,8 @@ import { openModal, closeAllModals } from "@mantine/modals";
 import CaseDrops from "./CaseDrops";
 import { motion } from "framer-motion";
 import useSound from "use-sound";
+import UnboxedSkinCard from "./UnboxedSkinCard";
+import { useEffect, useRef, useState } from "react";
 
 export default function CaseCard({
   id,
@@ -14,6 +16,8 @@ export default function CaseCard({
   toggleMoneyUpdate,
 }) {
   const [play] = useSound("/sounds/caseDrop.mp3", { volume: 0.1 });
+  const [caseOpen] = useSound("/sounds/caseOpen.mp3", { volume: 0.1 });
+
   return (
     <Card shadow={"sm"} p="lg" radius={"md"} withBorder>
       <Card.Section>
@@ -51,6 +55,7 @@ export default function CaseCard({
         mt={"md"}
         radius="md"
         onClick={async () => {
+          caseOpen();
           const body = {
             id: id,
           };
@@ -59,7 +64,17 @@ export default function CaseCard({
             body: JSON.stringify(body),
             headers: { "Content-Type": "application/json" },
           });
+          if (!response.ok) return;
+          const unboxedSkin = await response.json();
+
           toggleMoneyUpdate();
+          openModal({
+            title: "Look what you unboxed",
+            children: <UnboxedSkinCard skin={unboxedSkin} />,
+            size: "lg",
+            transition: "slide-up",
+            transitionDuration: 300,
+          });
         }}
       >
         Buy and open
