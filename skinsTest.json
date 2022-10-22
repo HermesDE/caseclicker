@@ -1,0 +1,5207 @@
+{
+  "success": true,
+  "currency": "USD",
+  "timestamp": 1666255238,
+  "items_list": {
+    "&#39Blueberries&#39 Buckshot | NSWC SEAL": {
+      "name": "&#39Blueberries&#39 Buckshot | NSWC SEAL",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4114517977",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXA6Q1NL4kmrAlOA0_FVPCi2t_fUkRxNztUoreaOBM27OXJYzRD4si82tOIxq_3N-yDl2hXuZQhibuUpN2jjQPtqRc5Z2zxd9DDclRqaArW_wWggbC4Uzmy7rk",
+      "icon_url_large": null,
+      "type": null,
+      "rarity": "Exceptional",
+      "rarity_color": "8847ff",
+      "price": {
+        "7_days": {
+          "average": 2.5,
+          "median": 2.49,
+          "sold": "531",
+          "standard_deviation": "10.2",
+          "lowest_price": 0.83,
+          "highest_price": 2.72
+        },
+        "30_days": {
+          "average": 2.41,
+          "median": 2.42,
+          "sold": "2589",
+          "standard_deviation": "7.72",
+          "lowest_price": 0.83,
+          "highest_price": 2.84
+        },
+        "all_time": {
+          "average": 1.36,
+          "median": 2.23,
+          "sold": "149008",
+          "standard_deviation": "39.57",
+          "lowest_price": 0.83,
+          "highest_price": 2.84
+        }
+      },
+      "first_sale_date": "1607036400"
+    },
+    "&#39Medium Rare&#39 Crasswater | Guerrilla Warfare": {
+      "name": "&#39Medium Rare&#39 Crasswater | Guerrilla Warfare",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4578725140",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXA6Q1NL4kmrAlOA0_FVPCi2t_fUkRxNztDu4WvPgln3_b3YzxL6Nmkq5aKhf71Pa_TxCUDuZ0njLnC94r00Vbh_ktvMW7zJoCcdlQ9ZFiC-AfryOrojJC_6smd1zI97aG-vIXM",
+      "icon_url_large": null,
+      "type": null,
+      "rarity": "Master",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 6.68,
+          "median": 6.65,
+          "sold": "340",
+          "standard_deviation": "5.14",
+          "lowest_price": 5.13,
+          "highest_price": 7.18
+        },
+        "30_days": {
+          "average": 6.49,
+          "median": 6.5,
+          "sold": "1978",
+          "standard_deviation": "5.29",
+          "lowest_price": 5.13,
+          "highest_price": 7.3
+        },
+        "all_time": {
+          "average": 6.75,
+          "median": 6.4,
+          "sold": "52047",
+          "standard_deviation": "19.91",
+          "lowest_price": 4.43,
+          "highest_price": 15.53
+        }
+      },
+      "first_sale_date": "1632348000"
+    },
+    "&#39The Doctor&#39 Romanov | Sabre": {
+      "name": "&#39The Doctor&#39 Romanov | Sabre",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "3608084106",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXA6Q1NL4kmrAlOA0_FVPCi2t_fUkRxNztDu4WnKgtr0v33ZzxQ5d24gIjFz_OlZbqJxD4C68cp2u-Z9Ijw0AXmrUZoZm2iLI-cc1M7MAmC_FntwvCv28EpZvYmDw",
+      "icon_url_large": null,
+      "type": null,
+      "rarity": "Master",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "24_hours": {
+          "average": 3.64,
+          "median": 3.65,
+          "sold": "12",
+          "standard_deviation": "1.35",
+          "lowest_price": 3.55,
+          "highest_price": 3.69
+        },
+        "7_days": {
+          "average": 3.75,
+          "median": 3.74,
+          "sold": "1776",
+          "standard_deviation": "7.07",
+          "lowest_price": 1.01,
+          "highest_price": 4.04
+        },
+        "30_days": {
+          "average": 3.65,
+          "median": 3.65,
+          "sold": "8986",
+          "standard_deviation": "5.38",
+          "lowest_price": 1.01,
+          "highest_price": 4.04
+        },
+        "all_time": {
+          "average": 4.61,
+          "median": 3.58,
+          "sold": "655063",
+          "standard_deviation": "38.3",
+          "lowest_price": 1.01,
+          "highest_price": 19.04
+        }
+      },
+      "first_sale_date": "1574118000"
+    },
+    "&#39Two Times&#39 McCoy | TACP Cavalry": {
+      "name": "&#39Two Times&#39 McCoy | TACP Cavalry",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4115199052",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXA6Q1NL4kmrAlOA0_FVPCi2t_fUkRxNztUoreaOBM27OXJYzRD4si62tKKlKelZOKFlztVv5ZzjOyVrdqtjAfmqhVoYjr2J4fDIQQ7aAyCrACggbC4LzEcez0",
+      "icon_url_large": null,
+      "type": null,
+      "rarity": "Superior",
+      "rarity_color": "d32ce6",
+      "price": {
+        "7_days": {
+          "average": 1.81,
+          "median": 1.8,
+          "sold": "1045",
+          "standard_deviation": "7.03",
+          "lowest_price": 0.84,
+          "highest_price": 1.96
+        },
+        "30_days": {
+          "average": 1.76,
+          "median": 1.75,
+          "sold": "6208",
+          "standard_deviation": "5.59",
+          "lowest_price": 0.84,
+          "highest_price": 1.98
+        },
+        "all_time": {
+          "average": 0.97,
+          "median": 1.63,
+          "sold": "363792",
+          "standard_deviation": "40.4",
+          "lowest_price": 0.63,
+          "highest_price": 1.98
+        }
+      },
+      "first_sale_date": "1607036400"
+    },
+    "&#39Two Times&#39 McCoy | USAF TACP": {
+      "name": "&#39Two Times&#39 McCoy | USAF TACP",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "3608084078",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXA6Q1NL4kmrAlOA0_FVPCi2t_fUkRxNztUoreaOBM27OXJYzRD4si72oSJk6SiYbnTkDtSsMcg2r6QoI6t2AHlqUtvZT_3LIeRcAU8ZAvY-AeggbC4xBSHpL8",
+      "icon_url_large": null,
+      "type": null,
+      "rarity": "Superior",
+      "rarity_color": "d32ce6",
+      "price": {
+        "24_hours": {
+          "average": 1.78,
+          "median": 1.78,
+          "sold": "4",
+          "standard_deviation": "0",
+          "lowest_price": 1.78,
+          "highest_price": 1.78
+        },
+        "7_days": {
+          "average": 1.79,
+          "median": 1.78,
+          "sold": "1441",
+          "standard_deviation": "5.46",
+          "lowest_price": 1.26,
+          "highest_price": 1.92
+        },
+        "30_days": {
+          "average": 1.72,
+          "median": 1.73,
+          "sold": "7686",
+          "standard_deviation": "5.14",
+          "lowest_price": 1.26,
+          "highest_price": 1.92
+        },
+        "all_time": {
+          "average": 1.32,
+          "median": 1.53,
+          "sold": "684029",
+          "standard_deviation": "37.04",
+          "lowest_price": 0.67,
+          "highest_price": 4.53
+        }
+      },
+      "first_sale_date": "1574118000"
+    },
+    "1st Lieutenant Farlow | SWAT": {
+      "name": "1st Lieutenant Farlow | SWAT",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4141778898",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXA6Q1NL4kmrAlOA0_FVPCi2t_fUkRxNztUoreaOBBhx8zecC9L7dKiks7Tw6XxMOnQlTMF65wm0-iQpIn30Abk8xc5ajinddCWIwE6Y1zY_Vm5366x0hNmbFD7",
+      "icon_url_large": null,
+      "type": null,
+      "rarity": "Superior",
+      "rarity_color": "d32ce6",
+      "price": {
+        "7_days": {
+          "average": 3.15,
+          "median": 3.14,
+          "sold": "529",
+          "standard_deviation": "3.74",
+          "lowest_price": 2.68,
+          "highest_price": 3.37
+        },
+        "30_days": {
+          "average": 2.97,
+          "median": 2.98,
+          "sold": "3944",
+          "standard_deviation": "5.94",
+          "lowest_price": 1.09,
+          "highest_price": 3.88
+        },
+        "all_time": {
+          "average": 1.98,
+          "median": 2.74,
+          "sold": "277509",
+          "standard_deviation": "29.7",
+          "lowest_price": 1.09,
+          "highest_price": 3.88
+        }
+      },
+      "first_sale_date": "1607036400"
+    },
+    "2020 RMR Challengers": {
+      "name": "2020 RMR Challengers",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4292377293",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsQEl9Jg9SpIW1KgRr7OHFY28SvoyJl4iKm_vxPbzUhHgfuZEg2eyUpd2s0Qbsqhc4ZG33cI6VIFA5YgvS-wLrlb291JbtvJjMymwj5HcDj7YBnA",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsQEl9Jg9SpIW1KgRr7OHFY28SvoyJl4iKm_vxPbzUhHhu5MRjjeyPpNik21Hh-0Jlamv7ddLBdQI6NVDQqAe5wr3thMXp6M6bmHIyuiUn5mGdwUIhAwMIWw",
+      "type": "Container",
+      "rarity": "Base Grade",
+      "rarity_color": "b0c3d9",
+      "price": {
+        "7_days": {
+          "average": 0.15,
+          "median": 0.15,
+          "sold": "11319",
+          "standard_deviation": "6.67",
+          "lowest_price": 0.13,
+          "highest_price": 0.16
+        },
+        "30_days": {
+          "average": 0.16,
+          "median": 0.16,
+          "sold": "74715",
+          "standard_deviation": "6.25",
+          "lowest_price": 0.13,
+          "highest_price": 0.18
+        },
+        "all_time": {
+          "average": 0.31,
+          "median": 0.17,
+          "sold": "6559285",
+          "standard_deviation": "65.63",
+          "lowest_price": 0.13,
+          "highest_price": 1.1
+        }
+      },
+      "first_sale_date": "1611874800"
+    },
+    "2020 RMR Contenders": {
+      "name": "2020 RMR Contenders",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4292377294",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsQEl9Jg9SpIW1KgRr7OHFY28SvoyJl4-Fg_L6N77DhSUFsccgie-W9Nqj3gblqhA_NWyiLIfDclA_YFjU_1a7yOfmhcO9vpvA1zI97X4HoaIB",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsQEl9Jg9SpIW1KgRr7OHFY28SvoyJl4-Fg_L6N77DhVRd6dd2j6eVrI6ki1LjqkVqZWvyddXGJANvaVmG-ge_wO7rgJG5tZTAySdiuCYr-z-DyHRDHHHn",
+      "type": "Container",
+      "rarity": "Base Grade",
+      "rarity_color": "b0c3d9",
+      "price": {
+        "24_hours": {
+          "average": 0.16,
+          "median": 0.16,
+          "sold": "21",
+          "standard_deviation": "0",
+          "lowest_price": 0.16,
+          "highest_price": 0.16
+        },
+        "7_days": {
+          "average": 0.15,
+          "median": 0.15,
+          "sold": "23854",
+          "standard_deviation": "6.67",
+          "lowest_price": 0.11,
+          "highest_price": 0.16
+        },
+        "30_days": {
+          "average": 0.15,
+          "median": 0.15,
+          "sold": "96803",
+          "standard_deviation": "6.67",
+          "lowest_price": 0.11,
+          "highest_price": 0.18
+        },
+        "all_time": {
+          "average": 0.32,
+          "median": 0.16,
+          "sold": "8234066",
+          "standard_deviation": "63.64",
+          "lowest_price": 0.11,
+          "highest_price": 1.1
+        }
+      },
+      "first_sale_date": "1611874800"
+    },
+    "2020 RMR Legends": {
+      "name": "2020 RMR Legends",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4292377292",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsQEl9Jg9SpIW1KgRr7OHFY28SvoyJmIWMkvnwIPXUzm9X7ZV3377E847x0QS3rUo-Mj32JILBc1Q3Mg2D-QW3kObqgsC9ot2XnsDoW_yq",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsQEl9Jg9SpIW1KgRr7OHFY28SvoyJmIWMkvnwIITdl3lW7Yt00u3H8Nzz3QOxrRE4ammgco_HI1I7YVyE-wO3kru8hsK17ZXMziRipGB8snn0xlTa",
+      "type": "Container",
+      "rarity": "Base Grade",
+      "rarity_color": "b0c3d9",
+      "price": {
+        "7_days": {
+          "average": 0.16,
+          "median": 0.16,
+          "sold": "31136",
+          "standard_deviation": "6.25",
+          "lowest_price": 0.14,
+          "highest_price": 0.17
+        },
+        "30_days": {
+          "average": 0.16,
+          "median": 0.17,
+          "sold": "162505",
+          "standard_deviation": "6.25",
+          "lowest_price": 0.14,
+          "highest_price": 0.19
+        },
+        "all_time": {
+          "average": 0.34,
+          "median": 0.17,
+          "sold": "23823360",
+          "standard_deviation": "60",
+          "lowest_price": 0.14,
+          "highest_price": 1.11
+        }
+      },
+      "first_sale_date": "1611874800"
+    },
+    "3rd Commando Company | KSK": {
+      "name": "3rd Commando Company | KSK",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "3608084295",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXA6Q1NL4kmrAlOA0_FVPCi2t_fUkRxNztUoreaOBM27OXJYzRD4si92tTYlKL3Yr2BxzNX7pMh2byW9o-i2way-UVvamz2JYfGJw88Ml-BqQeggbC4_1avT64",
+      "icon_url_large": null,
+      "type": null,
+      "rarity": "Distinguished",
+      "rarity_color": "4b69ff",
+      "price": {
+        "24_hours": {
+          "average": 3.15,
+          "median": 3.19,
+          "sold": "8",
+          "standard_deviation": "5.61",
+          "lowest_price": 2.97,
+          "highest_price": 3.38
+        },
+        "7_days": {
+          "average": 3.04,
+          "median": 2.99,
+          "sold": "1279",
+          "standard_deviation": "6.13",
+          "lowest_price": 2.48,
+          "highest_price": 3.38
+        },
+        "30_days": {
+          "average": 2.93,
+          "median": 2.92,
+          "sold": "6288",
+          "standard_deviation": "5.02",
+          "lowest_price": 1.94,
+          "highest_price": 3.38
+        },
+        "all_time": {
+          "average": 3.16,
+          "median": 2.77,
+          "sold": "498306",
+          "standard_deviation": "29.81",
+          "lowest_price": 1.64,
+          "highest_price": 12.69
+        }
+      },
+      "first_sale_date": "1574118000"
+    },
+    "AK-47 | Aquamarine Revenge (Battle-Scarred)": {
+      "name": "AK-47 | Aquamarine Revenge (Battle-Scarred)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "1759174527",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5gZKKkPLLMrfFqWNU6dNoxL3H94qm3Ffm_RE6amn2ctWXdlI2ZwqB-FG_w-7s0ZK-7cjLzyE37HI8pSGKrIDGOAI",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5gZKKkPLLMrfFqWNU6dNoteXA54vwxgCyqRVvZzrxItTDewY7NwvS_gW2x7y-h5a9vp3KnXZh63Ug4yyJyUepwUYbPABm4j8",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Battle-Scarred",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "24_hours": {
+          "average": 16.53,
+          "median": 16.47,
+          "sold": "3",
+          "standard_deviation": "2.02",
+          "lowest_price": 16.16,
+          "highest_price": 16.97
+        },
+        "7_days": {
+          "average": 16.82,
+          "median": 16.74,
+          "sold": "292",
+          "standard_deviation": "3.56",
+          "lowest_price": 15.31,
+          "highest_price": 19.95
+        },
+        "30_days": {
+          "average": 16.53,
+          "median": 16.53,
+          "sold": "1490",
+          "standard_deviation": "4.27",
+          "lowest_price": 8.08,
+          "highest_price": 19.95
+        },
+        "all_time": {
+          "average": 13.29,
+          "median": 15.5,
+          "sold": "200527",
+          "standard_deviation": "26.72",
+          "lowest_price": 6.78,
+          "highest_price": 33.44
+        }
+      },
+      "first_sale_date": "1432764000"
+    },
+    "AK-47 | Aquamarine Revenge (Factory New)": {
+      "name": "AK-47 | Aquamarine Revenge (Factory New)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "1012020677",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5gZKKkPLLMrfFqWdY781lxLuW8Njw31Dn8xc_YTqmJ4DDJFM2ZwqE_ATtx-u7g8C5vpjOzHM263E8pSGKJ1XuG9M",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5gZKKkPLLMrfFqWdY781lteXA54vwxgbjrkc5ZD3wLNLGcFVrYl6GrAS2x7y7g8PvupidzyRmuCUl4H6IzkSpwUYbC6zHyEM",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Factory New",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 76.71,
+          "median": 75.27,
+          "sold": "55",
+          "standard_deviation": "4.69",
+          "lowest_price": 73.48,
+          "highest_price": 91.37
+        },
+        "30_days": {
+          "average": 75.26,
+          "median": 75.73,
+          "sold": "484",
+          "standard_deviation": "4.9",
+          "lowest_price": 66.98,
+          "highest_price": 114.33
+        },
+        "all_time": {
+          "average": 46.63,
+          "median": 55.76,
+          "sold": "59066",
+          "standard_deviation": "39.17",
+          "lowest_price": 23.24,
+          "highest_price": 159.4
+        }
+      },
+      "first_sale_date": "1432764000"
+    },
+    "AK-47 | Aquamarine Revenge (Field-Tested)": {
+      "name": "AK-47 | Aquamarine Revenge (Field-Tested)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "1011938131",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5gZKKkPLLMrfFqWZU7Mxkh6eU896n0FXk-RJsNzv3cI-WJAA3YFDTqFa2l-u6jJW4uJqdyCBluyEm-z-DyCua9lLK",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5gZKKkPLLMrfFqWZU7Mxkh9bN9J7yjRrhrUFuazjzJteVJlQ6NVHTrFe3wObs15G06picwHFnvid25C3bnhSzn1gSOQz0szG-",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Field-Tested",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 26.98,
+          "median": 26.78,
+          "sold": "346",
+          "standard_deviation": "12.17",
+          "lowest_price": 24.37,
+          "highest_price": 60.3
+        },
+        "30_days": {
+          "average": 26.31,
+          "median": 26.34,
+          "sold": "1783",
+          "standard_deviation": "7.04",
+          "lowest_price": 21.25,
+          "highest_price": 60.3
+        },
+        "all_time": {
+          "average": 21.28,
+          "median": 25.01,
+          "sold": "432912",
+          "standard_deviation": "32.17",
+          "lowest_price": 11.5,
+          "highest_price": 73.57
+        }
+      },
+      "first_sale_date": "1432764000"
+    },
+    "AK-47 | Aquamarine Revenge (Minimal Wear)": {
+      "name": "AK-47 | Aquamarine Revenge (Minimal Wear)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "1819967861",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5gZKKkPLLMrfFqWdY781lxLuW8Njw31Dn8xc_YTqmJ4DDJFM2ZwqE_ATtx-u7g8C5vpjOzHM263E8pSGKJ1XuG9M",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5gZKKkPLLMrfFqWdY781lteXA54vwxgbjrkc5ZD3wLNLGcFVrYl6GrAS2x7y7g8PvupidzyRmuCUl4H6IzkSpwUYbC6zHyEM",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Minimal Wear",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "24_hours": {
+          "average": 41.34,
+          "median": 41.73,
+          "sold": "3",
+          "standard_deviation": "2.82",
+          "lowest_price": 40.55,
+          "highest_price": 42.9
+        },
+        "7_days": {
+          "average": 43.36,
+          "median": 43.44,
+          "sold": "155",
+          "standard_deviation": "3.01",
+          "lowest_price": 39.62,
+          "highest_price": 46.09
+        },
+        "30_days": {
+          "average": 42.67,
+          "median": 42.77,
+          "sold": "866",
+          "standard_deviation": "4.55",
+          "lowest_price": 34.95,
+          "highest_price": 57.15
+        },
+        "all_time": {
+          "average": 30.78,
+          "median": 37.76,
+          "sold": "185428",
+          "standard_deviation": "34.85",
+          "lowest_price": 15.61,
+          "highest_price": 111.23
+        }
+      },
+      "first_sale_date": "1432764000"
+    },
+    "AK-47 | Aquamarine Revenge (Well-Worn)": {
+      "name": "AK-47 | Aquamarine Revenge (Well-Worn)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "2095030666",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5gZKKkPLLMrfFqWZU7Mxkh6eU896n0FXk-RJsNzv3cI-WJAA3YFDTqFa2l-u6jJW4uJqdyCBluyEm-z-DyCua9lLK",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5gZKKkPLLMrfFqWZU7Mxkh9bN9J7yjRrhrUFuazjzJteVJlQ6NVHTrFe3wObs15G06picwHFnvid25C3bnhSzn1gSOQz0szG-",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Well-Worn",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "24_hours": {
+          "average": 18.55,
+          "median": 18.61,
+          "sold": "8",
+          "standard_deviation": "5.23",
+          "lowest_price": 17.28,
+          "highest_price": 19.68
+        },
+        "7_days": {
+          "average": 18.57,
+          "median": 18.5,
+          "sold": "282",
+          "standard_deviation": "4.91",
+          "lowest_price": 16.11,
+          "highest_price": 21.06
+        },
+        "30_days": {
+          "average": 18.22,
+          "median": 18.19,
+          "sold": "1393",
+          "standard_deviation": "7.53",
+          "lowest_price": 3.15,
+          "highest_price": 32.29
+        },
+        "all_time": {
+          "average": 17.29,
+          "median": 17.83,
+          "sold": "241373",
+          "standard_deviation": "27.57",
+          "lowest_price": 3.15,
+          "highest_price": 55.79
+        }
+      },
+      "first_sale_date": "1432764000"
+    },
+    "AK-47 | Asiimov (Battle-Scarred)": {
+      "name": "AK-47 | Asiimov (Battle-Scarred)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "3113432098",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV092lnYmGmOHLO77QgHIf6pwpiO-RrIms2AC1-0NkZGihItDBJFVqZgrS_1TswOjn0Z-1vZjMyGwj5HeH24gOlg",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV092lnYmGmOHLO77QgHJu5MRjjeyP99WtilLk8hZlY22iJIaddQdsZw6ErALqxrztgJPuvZvBnXtquyUn5GGdwUL1hJIxSA",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Battle-Scarred",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 21.65,
+          "median": 21.54,
+          "sold": "311",
+          "standard_deviation": "4.62",
+          "lowest_price": 18.43,
+          "highest_price": 23.98
+        },
+        "30_days": {
+          "average": 21.18,
+          "median": 21.1,
+          "sold": "1930",
+          "standard_deviation": "5.28",
+          "lowest_price": 17.24,
+          "highest_price": 25.83
+        },
+        "all_time": {
+          "average": 24.83,
+          "median": 22.86,
+          "sold": "75354",
+          "standard_deviation": "23.42",
+          "lowest_price": 16.14,
+          "highest_price": 69.47
+        }
+      },
+      "first_sale_date": "1544223600"
+    },
+    "AK-47 | Asiimov (Factory New)": {
+      "name": "AK-47 | Asiimov (Factory New)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "3114548479",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV092lnYmGmOHLP7LWnn8fvpMkjOqS99Smiwzk_0VvamH0LIHEdwFqYw2G_QC3lefsjZS4uJXLyWwj5HclxVTx0A",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV092lnYmGmOHLP7LWnn9u5MRjjeyPo9qgjlfnqUtvMGHzIICWew45aV-B_1bqw7u5gse16JTKwXBnvigg5WGdwUL3VYtbUA",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Factory New",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 162.56,
+          "median": 162.22,
+          "sold": "24",
+          "standard_deviation": "1.53",
+          "lowest_price": 158.85,
+          "highest_price": 170.55
+        },
+        "30_days": {
+          "average": 157.78,
+          "median": 156.2,
+          "sold": "161",
+          "standard_deviation": "9.61",
+          "lowest_price": 133.29,
+          "highest_price": 316.53
+        },
+        "all_time": {
+          "average": 163.53,
+          "median": 160.97,
+          "sold": "5778",
+          "standard_deviation": "19.79",
+          "lowest_price": 113.07,
+          "highest_price": 521.47
+        }
+      },
+      "first_sale_date": "1544310000"
+    },
+    "AK-47 | Asiimov (Field-Tested)": {
+      "name": "AK-47 | Asiimov (Field-Tested)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "3113384982",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV092lnYmGmOHLPr7Vn35cppQiiOuQpoml3wW18xdkNTjxd9CQdwM_ZlrT-lW_kLzu0560vp-azXJ9-n51Q5-Fea0",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV092lnYmGmOHLPr7Vn35c18lwmO7Eu92milbl-BZsZGiiLNKdJFc8Mg7V_1S_xuzshZK97c_In3pruCJx4X_D30vgyZM--n4",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Field-Tested",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 29.2,
+          "median": 29.15,
+          "sold": "1052",
+          "standard_deviation": "2.75",
+          "lowest_price": 26.01,
+          "highest_price": 32.21
+        },
+        "30_days": {
+          "average": 28.28,
+          "median": 28.22,
+          "sold": "6975",
+          "standard_deviation": "3.57",
+          "lowest_price": 25.88,
+          "highest_price": 32.21
+        },
+        "all_time": {
+          "average": 32.59,
+          "median": 29.66,
+          "sold": "289581",
+          "standard_deviation": "24.94",
+          "lowest_price": 22.62,
+          "highest_price": 120.89
+        }
+      },
+      "first_sale_date": "1544137200"
+    },
+    "AK-47 | Asiimov (Minimal Wear)": {
+      "name": "AK-47 | Asiimov (Minimal Wear)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "3113472303",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV092lnYmGmOHLP7LWnn8fvpMkjOqS99Smiwzk_0VvamH0LIHEdwFqYw2G_QC3lefsjZS4uJXLyWwj5HclxVTx0A",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV092lnYmGmOHLP7LWnn9u5MRjjeyPo9qgjlfnqUtvMGHzIICWew45aV-B_1bqw7u5gse16JTKwXBnvigg5WGdwUL3VYtbUA",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Minimal Wear",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 48.08,
+          "median": 48.06,
+          "sold": "596",
+          "standard_deviation": "2.57",
+          "lowest_price": 41.83,
+          "highest_price": 50.76
+        },
+        "30_days": {
+          "average": 46.23,
+          "median": 46.16,
+          "sold": "3410",
+          "standard_deviation": "4.41",
+          "lowest_price": 39.5,
+          "highest_price": 52.08
+        },
+        "all_time": {
+          "average": 52,
+          "median": 48.41,
+          "sold": "108318",
+          "standard_deviation": "22.68",
+          "lowest_price": 36.75,
+          "highest_price": 226.95
+        }
+      },
+      "first_sale_date": "1544137200"
+    },
+    "AK-47 | Asiimov (Well-Worn)": {
+      "name": "AK-47 | Asiimov (Well-Worn)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "3113552610",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV092lnYmGmOHLPr7Vn35cppQiiOuQpoml3wW18xdkNTjxd9CQdwM_ZlrT-lW_kLzu0560vp-azXJ9-n51Q5-Fea0",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV092lnYmGmOHLPr7Vn35c18lwmO7Eu92milbl-BZsZGiiLNKdJFc8Mg7V_1S_xuzshZK97c_In3pruCJx4X_D30vgyZM--n4",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Well-Worn",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 28.19,
+          "median": 28.23,
+          "sold": "168",
+          "standard_deviation": "6.09",
+          "lowest_price": 18.26,
+          "highest_price": 32.24
+        },
+        "30_days": {
+          "average": 28.45,
+          "median": 28.48,
+          "sold": "803",
+          "standard_deviation": "6.1",
+          "lowest_price": 18.26,
+          "highest_price": 35.61
+        },
+        "all_time": {
+          "average": 32.9,
+          "median": 31.36,
+          "sold": "27099",
+          "standard_deviation": "25.39",
+          "lowest_price": 18.26,
+          "highest_price": 95.61
+        }
+      },
+      "first_sale_date": "1544223600"
+    },
+    "AK-47 | Baroque Purple (Battle-Scarred)": {
+      "name": "AK-47 | Baroque Purple (Battle-Scarred)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "3608087146",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszedDNH-NOJhJWZh_vxDLPUl31Ipp1w27GWoYmk21Dt8xI9ZGD3coPBIwBvZl6CqQLslObo0MC-6MubnXt9-n51KSM_V14",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszedDNH-NOJhJWZh_vxDLPUl31I18lwmO7Eu9T02Qzj_xZtYD36LNfEdQ86N12Eq1fvxui91sXu6ZXOnCRh7nZwsXbD30vg_hLcjfs",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Battle-Scarred",
+      "rarity": "Industrial Grade",
+      "rarity_color": "5e98d9",
+      "price": {
+        "7_days": {
+          "average": 3.13,
+          "median": 3.14,
+          "sold": "220",
+          "standard_deviation": "4.08",
+          "lowest_price": 2.34,
+          "highest_price": 3.38
+        },
+        "30_days": {
+          "average": 2.98,
+          "median": 2.97,
+          "sold": "1102",
+          "standard_deviation": "7.89",
+          "lowest_price": 0.85,
+          "highest_price": 3.46
+        },
+        "all_time": {
+          "average": 1.8,
+          "median": 2.81,
+          "sold": "128361",
+          "standard_deviation": "44.02",
+          "lowest_price": 0.77,
+          "highest_price": 5.49
+        }
+      },
+      "first_sale_date": "1574204400"
+    },
+    "AK-47 | Baroque Purple (Factory New)": {
+      "name": "AK-47 | Baroque Purple (Factory New)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "3601995596",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszedDNH-NOJhJWZh_vxDLfYkWNFppF10--W89jwjAfk-Ec_Nm6nI4eXIQA2Z1zQrwO9wrjm05C66pidmCR9-n51tb8UILo",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszedDNH-NOJhJWZh_vxDLfYkWNF18lwmO7Eu9jx0VLjrUc5N2rzJ4LGJwFqZlnSqVe2x-rv0MS_v8vAn3Rl7CV2tCnD30vglFj7tRc",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Factory New",
+      "rarity": "Industrial Grade",
+      "rarity_color": "5e98d9",
+      "price": {
+        "24_hours": {
+          "average": 9.98,
+          "median": 10.03,
+          "sold": "5",
+          "standard_deviation": "0.49",
+          "lowest_price": 9.94,
+          "highest_price": 10.05
+        },
+        "7_days": {
+          "average": 9.38,
+          "median": 9.19,
+          "sold": "86",
+          "standard_deviation": "9.93",
+          "lowest_price": 7.03,
+          "highest_price": 14.01
+        },
+        "30_days": {
+          "average": 9.73,
+          "median": 9.53,
+          "sold": "453",
+          "standard_deviation": "16.13",
+          "lowest_price": 7.02,
+          "highest_price": 24.84
+        },
+        "all_time": {
+          "average": 9.3,
+          "median": 9.65,
+          "sold": "30191",
+          "standard_deviation": "17.28",
+          "lowest_price": 6.18,
+          "highest_price": 24.84
+        }
+      },
+      "first_sale_date": "1574204400"
+    },
+    "AK-47 | Baroque Purple (Field-Tested)": {
+      "name": "AK-47 | Baroque Purple (Field-Tested)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "3608084104",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszedDNH-NOJhJWZh_vxDLbUkmJE5Yt127uQpYqg21bk80FkajjyJNDGJw4-YVjX-Va6lbvq05LpuMufzHEwpGB8svvQco2Z",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszedDNH-NOJhJWZh_vxDLbUkmJE5fp9i_vG8MLx2Qbl-xVpYDvzLISde1c_YQ6Dr1m-we7ohpG46MjMn3Y2vnZ04HyOgVXp1mer_etC",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Field-Tested",
+      "rarity": "Industrial Grade",
+      "rarity_color": "5e98d9",
+      "price": {
+        "7_days": {
+          "average": 3.28,
+          "median": 3.27,
+          "sold": "570",
+          "standard_deviation": "5.97",
+          "lowest_price": 2.57,
+          "highest_price": 4.52
+        },
+        "30_days": {
+          "average": 3.09,
+          "median": 3.08,
+          "sold": "2846",
+          "standard_deviation": "6.98",
+          "lowest_price": 0.88,
+          "highest_price": 4.52
+        },
+        "all_time": {
+          "average": 2.08,
+          "median": 2.97,
+          "sold": "383343",
+          "standard_deviation": "35.85",
+          "lowest_price": 0.88,
+          "highest_price": 5.67
+        }
+      },
+      "first_sale_date": "1574204400"
+    },
+    "AK-47 | Baroque Purple (Minimal Wear)": {
+      "name": "AK-47 | Baroque Purple (Minimal Wear)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "3608086429",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszedDNH-NOJhJWZh_vxDLfYkWNFppF10--W89jwjAfk-Ec_Nm6nI4eXIQA2Z1zQrwO9wrjm05C66pidmCR9-n51tb8UILo",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszedDNH-NOJhJWZh_vxDLfYkWNF18lwmO7Eu9jx0VLjrUc5N2rzJ4LGJwFqZlnSqVe2x-rv0MS_v8vAn3Rl7CV2tCnD30vglFj7tRc",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Minimal Wear",
+      "rarity": "Industrial Grade",
+      "rarity_color": "5e98d9",
+      "price": {
+        "24_hours": {
+          "average": 4.61,
+          "median": 4.37,
+          "sold": "9",
+          "standard_deviation": "8.09",
+          "lowest_price": 4.04,
+          "highest_price": 5.24
+        },
+        "7_days": {
+          "average": 4.27,
+          "median": 4.25,
+          "sold": "419",
+          "standard_deviation": "6.21",
+          "lowest_price": 3.32,
+          "highest_price": 5.38
+        },
+        "30_days": {
+          "average": 4.15,
+          "median": 4.14,
+          "sold": "2083",
+          "standard_deviation": "8.04",
+          "lowest_price": 2.67,
+          "highest_price": 8.25
+        },
+        "all_time": {
+          "average": 3.36,
+          "median": 4.09,
+          "sold": "172825",
+          "standard_deviation": "22.45",
+          "lowest_price": 1.79,
+          "highest_price": 8.25
+        }
+      },
+      "first_sale_date": "1574118000"
+    },
+    "AK-47 | Baroque Purple (Well-Worn)": {
+      "name": "AK-47 | Baroque Purple (Well-Worn)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "3608084772",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszedDNH-NOJhJWZh_vxDLbUkmJE5Yt127uQpYqg21bk80FkajjyJNDGJw4-YVjX-Va6lbvq05LpuMufzHEwpGB8svvQco2Z",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszedDNH-NOJhJWZh_vxDLbUkmJE5fp9i_vG8MLx2Qbl-xVpYDvzLISde1c_YQ6Dr1m-we7ohpG46MjMn3Y2vnZ04HyOgVXp1mer_etC",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Well-Worn",
+      "rarity": "Industrial Grade",
+      "rarity_color": "5e98d9",
+      "price": {
+        "7_days": {
+          "average": 3.12,
+          "median": 3.13,
+          "sold": "346",
+          "standard_deviation": "4.4",
+          "lowest_price": 2.46,
+          "highest_price": 3.39
+        },
+        "30_days": {
+          "average": 2.93,
+          "median": 2.92,
+          "sold": "1934",
+          "standard_deviation": "7.02",
+          "lowest_price": 0.74,
+          "highest_price": 3.39
+        },
+        "all_time": {
+          "average": 1.84,
+          "median": 2.81,
+          "sold": "224718",
+          "standard_deviation": "41.49",
+          "lowest_price": 0.74,
+          "highest_price": 6.17
+        }
+      },
+      "first_sale_date": "1574204400"
+    },
+    "AK-47 | Black Laminate (Battle-Scarred)": {
+      "name": "AK-47 | Black Laminate (Battle-Scarred)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "402846761",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4KcqP_xMq3I2GhTupQpi7DCrY2m3AzkrkZrZWz3cdCRcQBraQvX_lPtxOjugJO07svXiSw0Sdo_N6Y",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4KcqP_xMq3IqWdQ-sJ0xOrDp92tiQ238xJvZ2HzcYOSdAM6NA7U-Vfryb3ogZTvuZvIzHdr6HY8pSGKuKddSNs",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Battle-Scarred",
+      "rarity": "Mil-Spec Grade",
+      "rarity_color": "4b69ff",
+      "price": {
+        "7_days": {
+          "average": 23.52,
+          "median": 24.5,
+          "sold": "8",
+          "standard_deviation": "6.46",
+          "lowest_price": 21.78,
+          "highest_price": 25.9
+        },
+        "30_days": {
+          "average": 23.26,
+          "median": 22.5,
+          "sold": "65",
+          "standard_deviation": "13.62",
+          "lowest_price": 18.52,
+          "highest_price": 38.74
+        },
+        "all_time": {
+          "average": 7.75,
+          "median": 11.66,
+          "sold": "34719",
+          "standard_deviation": "99.49",
+          "lowest_price": 2.26,
+          "highest_price": 146.96
+        }
+      },
+      "first_sale_date": "1376604000"
+    },
+    "AK-47 | Black Laminate (Factory New)": {
+      "name": "AK-47 | Black Laminate (Factory New)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "445185476",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4KcqPv9NLPF2GgEuJFyi-uTotT03A3h_hZlYWv2IdPAcAY8Y1vU-gPrw7rvjJ6-7ZnXiSw034A6uhk",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4KcqPv9NLPFqWdQ-sJ0xOqUpdj2iVbm_Es9Z2D2IdOccAQ7ZA2F-FG8w-3rhcTpvsnJwHph6yQ8pSGKy_qypRo",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Factory New",
+      "rarity": "Mil-Spec Grade",
+      "rarity_color": "4b69ff",
+      "price": {
+        "30_days": {
+          "average": 111.4,
+          "median": 111.04,
+          "sold": "4",
+          "standard_deviation": "15.77",
+          "lowest_price": 93.2,
+          "highest_price": 130.33
+        },
+        "all_time": {
+          "average": 94.94,
+          "median": 94.2,
+          "sold": "1481",
+          "standard_deviation": "39.32",
+          "lowest_price": 0.78,
+          "highest_price": 367.57
+        }
+      },
+      "first_sale_date": "1377122400"
+    },
+    "AK-47 | Black Laminate (Field-Tested)": {
+      "name": "AK-47 | Black Laminate (Field-Tested)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "2443295957",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4KcqPrxN7LEmyUDsJIh27-YpYmmiVDm_UFuZ2vzJYPDJlRsYw2C8lC5w-fu0Je_6ZrB1zI97TOUU9Z0",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4KcqPrxN7LEm1Rd6dd2j6eTrdul2QLt-xZvMj3xIoSXdgQ-YF2GrgPsw7u9jZe7vpTInHNg7ycq-z-DyKKSrF1I",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Field-Tested",
+      "rarity": "Mil-Spec Grade",
+      "rarity_color": "4b69ff",
+      "price": {
+        "7_days": {
+          "average": 21.9,
+          "median": 21.61,
+          "sold": "64",
+          "standard_deviation": "6.62",
+          "lowest_price": 19.69,
+          "highest_price": 27.04
+        },
+        "30_days": {
+          "average": 22.88,
+          "median": 21.29,
+          "sold": "301",
+          "standard_deviation": "52.83",
+          "lowest_price": 16.03,
+          "highest_price": 166.65
+        },
+        "all_time": {
+          "average": 7.51,
+          "median": 12.08,
+          "sold": "186649",
+          "standard_deviation": "111.36",
+          "lowest_price": 2.18,
+          "highest_price": 166.65
+        }
+      },
+      "first_sale_date": "1376604000"
+    },
+    "AK-47 | Black Laminate (Minimal Wear)": {
+      "name": "AK-47 | Black Laminate (Minimal Wear)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "310777109",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4KcqPv9NLPF2GgEuJFyi-uTotT03A3h_hZlYWv2IdPAcAY8Y1vU-gPrw7rvjJ6-7ZnXiSw034A6uhk",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4KcqPv9NLPFqWdQ-sJ0xOqUpdj2iVbm_Es9Z2D2IdOccAQ7ZA2F-FG8w-3rhcTpvsnJwHph6yQ8pSGKy_qypRo",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Minimal Wear",
+      "rarity": "Mil-Spec Grade",
+      "rarity_color": "4b69ff",
+      "price": {
+        "7_days": {
+          "average": 30.68,
+          "median": 28.49,
+          "sold": "26",
+          "standard_deviation": "27.29",
+          "lowest_price": 20.76,
+          "highest_price": 63.19
+        },
+        "30_days": {
+          "average": 32.85,
+          "median": 28.42,
+          "sold": "177",
+          "standard_deviation": "91.28",
+          "lowest_price": 18.1,
+          "highest_price": 318.05
+        },
+        "all_time": {
+          "average": 8.89,
+          "median": 14.28,
+          "sold": "142798",
+          "standard_deviation": "141.12",
+          "lowest_price": 2.8,
+          "highest_price": 318.05
+        }
+      },
+      "first_sale_date": "1376604000"
+    },
+    "AK-47 | Black Laminate (Well-Worn)": {
+      "name": "AK-47 | Black Laminate (Well-Worn)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "2266846920",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4KcqPrxN7LEmyUDsJIh27-YpYmmiVDm_UFuZ2vzJYPDJlRsYw2C8lC5w-fu0Je_6ZrB1zI97TOUU9Z0",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4KcqPrxN7LEm1Rd6dd2j6eTrdul2QLt-xZvMj3xIoSXdgQ-YF2GrgPsw7u9jZe7vpTInHNg7ycq-z-DyKKSrF1I",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Well-Worn",
+      "rarity": "Mil-Spec Grade",
+      "rarity_color": "4b69ff",
+      "price": {
+        "7_days": {
+          "average": 21.81,
+          "median": 21.71,
+          "sold": "11",
+          "standard_deviation": "15.24",
+          "lowest_price": 18.26,
+          "highest_price": 30.6
+        },
+        "30_days": {
+          "average": 20.34,
+          "median": 19.92,
+          "sold": "65",
+          "standard_deviation": "11.04",
+          "lowest_price": 17.49,
+          "highest_price": 30.6
+        },
+        "all_time": {
+          "average": 8.09,
+          "median": 11.83,
+          "sold": "24413",
+          "standard_deviation": "102.42",
+          "lowest_price": 2.54,
+          "highest_price": 223.01
+        }
+      },
+      "first_sale_date": "1376690400"
+    },
+    "AK-47 | Bloodsport (Factory New)": {
+      "name": "AK-47 | Bloodsport (Factory New)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "2220112458",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV0966m4-PhOf7Ia_ummJW4NE_3rnHpdujjgK28kE5Y2Gid9WWdQ44YVHS-VS9wr--jJG6tJrAzCBh6D5iuyjdE47G3Q",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV0966m4-PhOf7Ia_ummJW4NFOhujT8om73ASy-0RqNW-hLYTAcg5vMgvT_Vm4wefthpO_v8yYwHVlsicr4C3fzQv330_79eypFA",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Factory New",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "24_hours": {
+          "average": 84.83,
+          "median": 85.64,
+          "sold": "4",
+          "standard_deviation": "3.35",
+          "lowest_price": 80.45,
+          "highest_price": 87.59
+        },
+        "7_days": {
+          "average": 83.18,
+          "median": 83.12,
+          "sold": "249",
+          "standard_deviation": "4.68",
+          "lowest_price": 47.3,
+          "highest_price": 88.94
+        },
+        "30_days": {
+          "average": 79.94,
+          "median": 80.15,
+          "sold": "1567",
+          "standard_deviation": "5.91",
+          "lowest_price": 47.3,
+          "highest_price": 144.13
+        },
+        "all_time": {
+          "average": 65.41,
+          "median": 66.95,
+          "sold": "86139",
+          "standard_deviation": "18.2",
+          "lowest_price": 41.49,
+          "highest_price": 150.36
+        }
+      },
+      "first_sale_date": "1489705200"
+    },
+    "AK-47 | Bloodsport (Field-Tested)": {
+      "name": "AK-47 | Bloodsport (Field-Tested)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "2495944666",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV0966m4-PhOf7Ia_um25V4dB8xO3Hpdn22lWxqUc9Zmr0J9XBIw89M1GGqFC8ybzvgMLvvJ6azSE1viM8pSGK5KY2J5A",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV0966m4-PhOf7Ia_um25V4dB8teXA54vwxlCy-0Y_YTimdoLEdwU5YguEq1i9k-e515e-tM_JzCYwuiNx4SyLmxapwUYbIBBxC48",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Field-Tested",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 63.2,
+          "median": 63.15,
+          "sold": "304",
+          "standard_deviation": "3.04",
+          "lowest_price": 58.65,
+          "highest_price": 74.92
+        },
+        "30_days": {
+          "average": 59.85,
+          "median": 60.09,
+          "sold": "1860",
+          "standard_deviation": "5.13",
+          "lowest_price": 48.89,
+          "highest_price": 74.92
+        },
+        "all_time": {
+          "average": 47.36,
+          "median": 48.9,
+          "sold": "148615",
+          "standard_deviation": "19.17",
+          "lowest_price": 28.18,
+          "highest_price": 99.54
+        }
+      },
+      "first_sale_date": "1489705200"
+    },
+    "AK-47 | Bloodsport (Minimal Wear)": {
+      "name": "AK-47 | Bloodsport (Minimal Wear)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "2220027148",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV0966m4-PhOf7Ia_ummJW4NE_3rnHpdujjgK28kE5Y2Gid9WWdQ44YVHS-VS9wr--jJG6tJrAzCBh6D5iuyjdE47G3Q",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV0966m4-PhOf7Ia_ummJW4NFOhujT8om73ASy-0RqNW-hLYTAcg5vMgvT_Vm4wefthpO_v8yYwHVlsicr4C3fzQv330_79eypFA",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Minimal Wear",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 71.06,
+          "median": 71.16,
+          "sold": "306",
+          "standard_deviation": "3.68",
+          "lowest_price": 50.17,
+          "highest_price": 76.94
+        },
+        "30_days": {
+          "average": 68.15,
+          "median": 68.42,
+          "sold": "1798",
+          "standard_deviation": "4.76",
+          "lowest_price": 50.17,
+          "highest_price": 78.8
+        },
+        "all_time": {
+          "average": 54.28,
+          "median": 55.82,
+          "sold": "107735",
+          "standard_deviation": "18.97",
+          "lowest_price": 32.04,
+          "highest_price": 125.29
+        }
+      },
+      "first_sale_date": "1489705200"
+    },
+    "AK-47 | Bloodsport (Well-Worn)": {
+      "name": "AK-47 | Bloodsport (Well-Worn)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "2287110472",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV0966m4-PhOf7Ia_um25V4dB8xO3Hpdn22lWxqUc9Zmr0J9XBIw89M1GGqFC8ybzvgMLvvJ6azSE1viM8pSGK5KY2J5A",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV0966m4-PhOf7Ia_um25V4dB8teXA54vwxlCy-0Y_YTimdoLEdwU5YguEq1i9k-e515e-tM_JzCYwuiNx4SyLmxapwUYbIBBxC48",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Well-Worn",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 58.88,
+          "median": 59.52,
+          "sold": "82",
+          "standard_deviation": "5.68",
+          "lowest_price": 49.25,
+          "highest_price": 64.43
+        },
+        "30_days": {
+          "average": 56.17,
+          "median": 56.34,
+          "sold": "412",
+          "standard_deviation": "8.85",
+          "lowest_price": 1.26,
+          "highest_price": 66.16
+        },
+        "all_time": {
+          "average": 47.07,
+          "median": 47.03,
+          "sold": "23204",
+          "standard_deviation": "17.04",
+          "lowest_price": 1.26,
+          "highest_price": 82.62
+        }
+      },
+      "first_sale_date": "1489705200"
+    },
+    "AK-47 | Blue Laminate (Factory New)": {
+      "name": "AK-47 | Blue Laminate (Factory New)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "310776531",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4KHgvLLP7LWnn8fscMpj-qUpNymjVK1_hFrMmmhJ4-Ue1c_YgrUrgS5ybvu18K6vZ-YyWwj5HdyMRX4FA",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4KHgvLLP7LWnn9u5MRjjeyPrIqtjVfh-kNvNj-iIdSSIwZsYlHR8wC_wrzr0cO7tMjImyZluyJz5WGdwUKTUQkCog",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Factory New",
+      "rarity": "Restricted",
+      "rarity_color": "8847ff",
+      "price": {
+        "24_hours": {
+          "average": 8.68,
+          "median": 8.68,
+          "sold": "1",
+          "standard_deviation": "0",
+          "lowest_price": 8.68,
+          "highest_price": 8.68
+        },
+        "7_days": {
+          "average": 9.11,
+          "median": 8.98,
+          "sold": "322",
+          "standard_deviation": "12.81",
+          "lowest_price": 7.59,
+          "highest_price": 19.56
+        },
+        "30_days": {
+          "average": 9.28,
+          "median": 8.9,
+          "sold": "1806",
+          "standard_deviation": "57.72",
+          "lowest_price": 7.27,
+          "highest_price": 91.04
+        },
+        "all_time": {
+          "average": 3.15,
+          "median": 6.4,
+          "sold": "1356769",
+          "standard_deviation": "124.61",
+          "lowest_price": 0.9,
+          "highest_price": 91.04
+        }
+      },
+      "first_sale_date": "1387494000"
+    },
+    "AK-47 | Blue Laminate (Field-Tested)": {
+      "name": "AK-47 | Blue Laminate (Field-Tested)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "507806503",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4KHgvLLPr7Vn35cppJ02uyUrI2h3wDkrkFsZz-gLdXHIA87MFjTqFm-wevvjcC0tZrPnXp9-n51Y5J6evE",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4KHgvLLPr7Vn35c18lwmO7Eu9vw2FHh8hJoZG3zcYSVdlBtaAuCqFi7kO7s1568vJjJwSRrsycksXfD30vgSXhu9Rc",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Field-Tested",
+      "rarity": "Restricted",
+      "rarity_color": "8847ff",
+      "price": {
+        "7_days": {
+          "average": 7.74,
+          "median": 7.54,
+          "sold": "591",
+          "standard_deviation": "54.12",
+          "lowest_price": 5.94,
+          "highest_price": 51.12
+        },
+        "30_days": {
+          "average": 7.35,
+          "median": 7.25,
+          "sold": "3172",
+          "standard_deviation": "31.87",
+          "lowest_price": 5.94,
+          "highest_price": 51.12
+        },
+        "all_time": {
+          "average": 2.52,
+          "median": 5.14,
+          "sold": "1743837",
+          "standard_deviation": "107.78",
+          "lowest_price": 0.56,
+          "highest_price": 51.12
+        }
+      },
+      "first_sale_date": "1387494000"
+    },
+    "AK-47 | Blue Laminate (Minimal Wear)": {
+      "name": "AK-47 | Blue Laminate (Minimal Wear)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "312599504",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4KHgvLLP7LWnn8fscMpj-qUpNymjVK1_hFrMmmhJ4-Ue1c_YgrUrgS5ybvu18K6vZ-YyWwj5HdyMRX4FA",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4KHgvLLP7LWnn9u5MRjjeyPrIqtjVfh-kNvNj-iIdSSIwZsYlHR8wC_wrzr0cO7tMjImyZluyJz5WGdwUKTUQkCog",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Minimal Wear",
+      "rarity": "Restricted",
+      "rarity_color": "8847ff",
+      "price": {
+        "24_hours": {
+          "average": 7.44,
+          "median": 7.45,
+          "sold": "7",
+          "standard_deviation": "0.92",
+          "lowest_price": 7.38,
+          "highest_price": 7.55
+        },
+        "7_days": {
+          "average": 8.49,
+          "median": 7.99,
+          "sold": "441",
+          "standard_deviation": "90.42",
+          "lowest_price": 5.76,
+          "highest_price": 71.64
+        },
+        "30_days": {
+          "average": 8,
+          "median": 7.78,
+          "sold": "2248",
+          "standard_deviation": "52.33",
+          "lowest_price": 5.76,
+          "highest_price": 71.64
+        },
+        "all_time": {
+          "average": 2.52,
+          "median": 5.36,
+          "sold": "1975535",
+          "standard_deviation": "131.91",
+          "lowest_price": 0.59,
+          "highest_price": 71.64
+        }
+      },
+      "first_sale_date": "1387494000"
+    },
+    "AK-47 | Blue Laminate (Well-Worn)": {
+      "name": "AK-47 | Blue Laminate (Well-Worn)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "310796398",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4KHgvLLPr7Vn35cppJ02uyUrI2h3wDkrkFsZz-gLdXHIA87MFjTqFm-wevvjcC0tZrPnXp9-n51Y5J6evE",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4KHgvLLPr7Vn35c18lwmO7Eu9vw2FHh8hJoZG3zcYSVdlBtaAuCqFi7kO7s1568vJjJwSRrsycksXfD30vgSXhu9Rc",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Well-Worn",
+      "rarity": "Restricted",
+      "rarity_color": "8847ff",
+      "price": {
+        "7_days": {
+          "average": 9.42,
+          "median": 9.33,
+          "sold": "18",
+          "standard_deviation": "6.24",
+          "lowest_price": 8.65,
+          "highest_price": 11.28
+        },
+        "30_days": {
+          "average": 9.33,
+          "median": 9.15,
+          "sold": "169",
+          "standard_deviation": "22.79",
+          "lowest_price": 4.03,
+          "highest_price": 31.6
+        },
+        "all_time": {
+          "average": 4.15,
+          "median": 7.11,
+          "sold": "60284",
+          "standard_deviation": "98.58",
+          "lowest_price": 0.97,
+          "highest_price": 58.18
+        }
+      },
+      "first_sale_date": "1387494000"
+    },
+    "AK-47 | Cartel (Battle-Scarred)": {
+      "name": "AK-47 | Cartel (Battle-Scarred)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "720303779",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhhwszJemkV09-3hpSOm8j8NrrHjyUB7sF33ujAptWh3w3k8xc6YW-iJYOVJwI8Zl3R-FC9wum9gZbtvcnI1zI97fGb_ofx",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhhwszJemkV09-3hpSOm8j8NrrHj1Rd6dd2j6eR84jz3FW1-EpoZGDzLNLDcABvYF3Qr1W8xuvuh5e_v5qbzXIyu3Qj-z-DyKvXwz18",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Battle-Scarred",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "7_days": {
+          "average": 6.13,
+          "median": 6.14,
+          "sold": "102",
+          "standard_deviation": "5.44",
+          "lowest_price": 5.39,
+          "highest_price": 7.85
+        },
+        "30_days": {
+          "average": 5.79,
+          "median": 5.8,
+          "sold": "896",
+          "standard_deviation": "7.78",
+          "lowest_price": 3.25,
+          "highest_price": 8.68
+        },
+        "all_time": {
+          "average": 3.42,
+          "median": 5.17,
+          "sold": "203239",
+          "standard_deviation": "53.58",
+          "lowest_price": 1.41,
+          "highest_price": 25
+        }
+      },
+      "first_sale_date": "1420844400"
+    },
+    "AK-47 | Cartel (Factory New)": {
+      "name": "AK-47 | Cartel (Factory New)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "741069236",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhhwszJemkV09-3hpSOm8j4OrzZgiUD7ZJzj7DHoY-iilC1-ENoNWuiI9WWdQI8Z1iE81Tvl7i81J-_6p2b1zI97XPwFCE_",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhhwszJemkV09-3hpSOm8j4OrzZglRd6dd2j6eT8Nv3jQ2y_xBrMT2iJ4aRJARvZgvT_VW8x-67jJPt6suamHtg7CBw-z-DyAdS0pUi",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Factory New",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "7_days": {
+          "average": 12.88,
+          "median": 12.91,
+          "sold": "134",
+          "standard_deviation": "6.01",
+          "lowest_price": 10.53,
+          "highest_price": 14.91
+        },
+        "30_days": {
+          "average": 12.91,
+          "median": 12.67,
+          "sold": "633",
+          "standard_deviation": "32.95",
+          "lowest_price": 8.68,
+          "highest_price": 96.82
+        },
+        "all_time": {
+          "average": 6.99,
+          "median": 10.7,
+          "sold": "231360",
+          "standard_deviation": "58.35",
+          "lowest_price": 3.49,
+          "highest_price": 96.82
+        }
+      },
+      "first_sale_date": "1420844400"
+    },
+    "AK-47 | Cartel (Field-Tested)": {
+      "name": "AK-47 | Cartel (Field-Tested)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "1827461358",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhhwszJemkV09-3hpSOm8j5Nr_Yg2Yf7ccnjOyVp92liwDg-BVoa236I9SWJgM3YV3TrFm3l-q61pS_7c7KyGwj5HcGMgDZeg",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhhwszJemkV09-3hpSOm8j5Nr_Yg2Zu5MRjjeyP8I6jjlHg-UJsMG33J9CRegI3ZgrTrlS3wevs05616pmcmnBg63Mh5GGdwUIXr_jb8w",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Field-Tested",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "7_days": {
+          "average": 5.63,
+          "median": 5.58,
+          "sold": "929",
+          "standard_deviation": "3.31",
+          "lowest_price": 4.82,
+          "highest_price": 6.22
+        },
+        "30_days": {
+          "average": 5.51,
+          "median": 5.51,
+          "sold": "4528",
+          "standard_deviation": "8.9",
+          "lowest_price": 4.73,
+          "highest_price": 16.87
+        },
+        "all_time": {
+          "average": 3.1,
+          "median": 5.09,
+          "sold": "1487423",
+          "standard_deviation": "55.06",
+          "lowest_price": 1.35,
+          "highest_price": 18.78
+        }
+      },
+      "first_sale_date": "1420844400"
+    },
+    "AK-47 | Cartel (Minimal Wear)": {
+      "name": "AK-47 | Cartel (Minimal Wear)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "720328212",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhhwszJemkV09-3hpSOm8j4OrzZgiUD7ZJzj7DHoY-iilC1-ENoNWuiI9WWdQI8Z1iE81Tvl7i81J-_6p2b1zI97XPwFCE_",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhhwszJemkV09-3hpSOm8j4OrzZglRd6dd2j6eT8Nv3jQ2y_xBrMT2iJ4aRJARvZgvT_VW8x-67jJPt6suamHtg7CBw-z-DyAdS0pUi",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Minimal Wear",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "7_days": {
+          "average": 7.22,
+          "median": 7.14,
+          "sold": "366",
+          "standard_deviation": "5.16",
+          "lowest_price": 6.3,
+          "highest_price": 9.66
+        },
+        "30_days": {
+          "average": 7,
+          "median": 6.96,
+          "sold": "1957",
+          "standard_deviation": "7.42",
+          "lowest_price": 4.07,
+          "highest_price": 11.58
+        },
+        "all_time": {
+          "average": 3.59,
+          "median": 6.4,
+          "sold": "956004",
+          "standard_deviation": "63.11",
+          "lowest_price": 1.7,
+          "highest_price": 24.51
+        }
+      },
+      "first_sale_date": "1420844400"
+    },
+    "AK-47 | Cartel (Well-Worn)": {
+      "name": "AK-47 | Cartel (Well-Worn)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "720386235",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhhwszJemkV09-3hpSOm8j5Nr_Yg2Yf7ccnjOyVp92liwDg-BVoa236I9SWJgM3YV3TrFm3l-q61pS_7c7KyGwj5HcGMgDZeg",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhhwszJemkV09-3hpSOm8j5Nr_Yg2Zu5MRjjeyP8I6jjlHg-UJsMG33J9CRegI3ZgrTrlS3wevs05616pmcmnBg63Mh5GGdwUIXr_jb8w",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Well-Worn",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "7_days": {
+          "average": 8.22,
+          "median": 8.21,
+          "sold": "56",
+          "standard_deviation": "5.73",
+          "lowest_price": 6.84,
+          "highest_price": 9.05
+        },
+        "30_days": {
+          "average": 7.8,
+          "median": 7.84,
+          "sold": "305",
+          "standard_deviation": "8.04",
+          "lowest_price": 5.69,
+          "highest_price": 12.33
+        },
+        "all_time": {
+          "average": 4.75,
+          "median": 6.65,
+          "sold": "65090",
+          "standard_deviation": "73.35",
+          "lowest_price": 1.97,
+          "highest_price": 147.97
+        }
+      },
+      "first_sale_date": "1420844400"
+    },
+    "AK-47 | Case Hardened (Battle-Scarred)": {
+      "name": "AK-47 | Case Hardened (Battle-Scarred)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "1290083026",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhhwszHeDFH6OO-kYGdjrmjYuvSwDIAvpAnib3C9o_3jFDsr0JpYWzyJ4eWIA48NQmB_Fm2lbzsm9bi66WZ81pV",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhhwszHeDFH6OO-kYGdjsj4MqnWkyUGuZVy3LCQo9mjiwC3qBA-Nz37cIeQcAM_YlnTqFm8lb--g5606M_K1zI97UjSHoic",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Battle-Scarred",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "7_days": {
+          "average": 108.13,
+          "median": 103.99,
+          "sold": "25",
+          "standard_deviation": "8.13",
+          "lowest_price": 93.51,
+          "highest_price": 128.33
+        },
+        "30_days": {
+          "average": 108.45,
+          "median": 102.13,
+          "sold": "161",
+          "standard_deviation": "26.63",
+          "lowest_price": 0.52,
+          "highest_price": 290.23
+        },
+        "all_time": {
+          "average": 22.23,
+          "median": 26.44,
+          "sold": "97841",
+          "standard_deviation": "150.11",
+          "lowest_price": 0.52,
+          "highest_price": 290.23
+        }
+      },
+      "first_sale_date": "1376604000"
+    },
+    "AK-47 | Case Hardened (Factory New)": {
+      "name": "AK-47 | Case Hardened (Factory New)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "310780982",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhhwszHeDFH6OO6nYeDg7mtYbiJkjoDvcAlj7yVotmtjAfjrkpoZW36IoaWclM3MFnY8lK9k-vnm9bi67lSw9Es",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhhwszHeDFH6OO6nYeDg8j4MqnWkyUIusYpjriToImhjQHg_EZkN2r0cY-RdAI3Z1jT-gS3kO_njZW_7pjB1zI97T2FIK3X",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Factory New",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "7_days": {
+          "average": 285.82,
+          "median": 274.39,
+          "sold": "19",
+          "standard_deviation": "13.67",
+          "lowest_price": 230.61,
+          "highest_price": 411.83
+        },
+        "30_days": {
+          "average": 290.05,
+          "median": 267.7,
+          "sold": "63",
+          "standard_deviation": "26.17",
+          "lowest_price": 230.07,
+          "highest_price": 792.29
+        },
+        "all_time": {
+          "average": 60.23,
+          "median": 61.23,
+          "sold": "47351",
+          "standard_deviation": "136.27",
+          "lowest_price": 10.2,
+          "highest_price": 792.29
+        }
+      },
+      "first_sale_date": "1376604000"
+    },
+    "AK-47 | Case Hardened (Field-Tested)": {
+      "name": "AK-47 | Case Hardened (Field-Tested)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "939047747",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhhwszHeDFH6OO7kYSCgvq6Yu-EwzsIuZIj3uiY99WmiwGx_kc9Zjr6JYHBIwM5MFHX-Fi9w-u-1Ij84soNG54bQA",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhhwszHeDFH6OO7kYSCgvrLP7rDkW4fuZEk37mYpNun3FXtqUpvMGymIYLEd1U3YF-Eq1S5kOfoh5-_vpiYmGwj5HetcqhLqw",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Field-Tested",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "7_days": {
+          "average": 165.14,
+          "median": 160.62,
+          "sold": "30",
+          "standard_deviation": "17.18",
+          "lowest_price": 111.14,
+          "highest_price": 291.9
+        },
+        "30_days": {
+          "average": 155.6,
+          "median": 151.31,
+          "sold": "188",
+          "standard_deviation": "15.53",
+          "lowest_price": 111.14,
+          "highest_price": 338.61
+        },
+        "all_time": {
+          "average": 26.55,
+          "median": 30.69,
+          "sold": "244605",
+          "standard_deviation": "186.82",
+          "lowest_price": 4.04,
+          "highest_price": 456.66
+        }
+      },
+      "first_sale_date": "1376604000"
+    },
+    "AK-47 | Case Hardened (Minimal Wear)": {
+      "name": "AK-47 | Case Hardened (Minimal Wear)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "2427139555",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhhwszHeDFH6OO6nYeDg7mtYbiJkjoDvcAlj7yVotmtjAfjrkpoZW36IoaWclM3MFnY8lK9k-vnm9bi67lSw9Es",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhhwszHeDFH6OO6nYeDg8j4MqnWkyUIusYpjriToImhjQHg_EZkN2r0cY-RdAI3Z1jT-gS3kO_njZW_7pjB1zI97T2FIK3X",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Minimal Wear",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "7_days": {
+          "average": 200.75,
+          "median": 196.83,
+          "sold": "31",
+          "standard_deviation": "8.71",
+          "lowest_price": 166.53,
+          "highest_price": 253.64
+        },
+        "30_days": {
+          "average": 195.73,
+          "median": 186.44,
+          "sold": "217",
+          "standard_deviation": "19.45",
+          "lowest_price": 135.87,
+          "highest_price": 463.01
+        },
+        "all_time": {
+          "average": 32.78,
+          "median": 38.49,
+          "sold": "199536",
+          "standard_deviation": "188.15",
+          "lowest_price": 5.01,
+          "highest_price": 481.1
+        }
+      },
+      "first_sale_date": "1376604000"
+    },
+    "AK-47 | Case Hardened (Well-Worn)": {
+      "name": "AK-47 | Case Hardened (Well-Worn)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "1233481152",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhhwszHeDFH6OO7kYSCgvq6Yu-EwzsIuZIj3uiY99WmiwGx_kc9Zjr6JYHBIwM5MFHX-Fi9w-u-1Ij84soNG54bQA",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhhwszHeDFH6OO7kYSCgvrLP7rDkW4fuZEk37mYpNun3FXtqUpvMGymIYLEd1U3YF-Eq1S5kOfoh5-_vpiYmGwj5HetcqhLqw",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Well-Worn",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "7_days": {
+          "average": 143.67,
+          "median": 132.18,
+          "sold": "33",
+          "standard_deviation": "24.46",
+          "lowest_price": 115.29,
+          "highest_price": 248.72
+        },
+        "30_days": {
+          "average": 131.31,
+          "median": 124.18,
+          "sold": "155",
+          "standard_deviation": "18.53",
+          "lowest_price": 16.87,
+          "highest_price": 248.72
+        },
+        "all_time": {
+          "average": 23.87,
+          "median": 28.32,
+          "sold": "140029",
+          "standard_deviation": "164.44",
+          "lowest_price": 3.77,
+          "highest_price": 398.46
+        }
+      },
+      "first_sale_date": "1376604000"
+    },
+    "AK-47 | Elite Build (Battle-Scarred)": {
+      "name": "AK-47 | Elite Build (Battle-Scarred)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "937277116",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09G3h5SOhe7LO77QgHIf7pJ0iLGS94_2jAOx_BdvZGr2I9eVegVvNV3Q_gW8lbrsgZC875TPnWwj5HcWwWbOUQ",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09G3h5SOhe7LO77QgHJu5MRjjeyP89vwigznqRA_N26mI9KWdQU7ZgnQ8lLvlevvgcK-6MnKzXRj6SkksWGdwULURAAVxw",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Battle-Scarred",
+      "rarity": "Mil-Spec Grade",
+      "rarity_color": "4b69ff",
+      "price": {
+        "24_hours": {
+          "average": 1.02,
+          "median": 1.03,
+          "sold": "78",
+          "standard_deviation": "1.92",
+          "lowest_price": 0.98,
+          "highest_price": 1.05
+        },
+        "7_days": {
+          "average": 1.01,
+          "median": 1.01,
+          "sold": "4227",
+          "standard_deviation": "2.91",
+          "lowest_price": 0.9,
+          "highest_price": 1.09
+        },
+        "30_days": {
+          "average": 0.98,
+          "median": 0.98,
+          "sold": "20347",
+          "standard_deviation": "4",
+          "lowest_price": 0.86,
+          "highest_price": 1.1
+        },
+        "all_time": {
+          "average": 0.75,
+          "median": 1,
+          "sold": "2377474",
+          "standard_deviation": "62.34",
+          "lowest_price": 0.14,
+          "highest_price": 3.18
+        }
+      },
+      "first_sale_date": "1429221600"
+    },
+    "AK-47 | Elite Build (Factory New)": {
+      "name": "AK-47 | Elite Build (Factory New)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "937252768",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09G3h5SOhe7LP7LWnn8fvJYh3-qR942higTmqBZpYGild4adIQQ5ZA6B_AC3lebo0ce-78vOnGwj5HeAJ9sV6g",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09G3h5SOhe7LP7LWnn9u5MRjjeyPod-l3VfkqRJoMWnxd9OQcQdoMljYqVO5xLi-g8e16JXOnSNh6XYlsGGdwUI-f1fsZg",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Factory New",
+      "rarity": "Mil-Spec Grade",
+      "rarity_color": "4b69ff",
+      "price": {
+        "7_days": {
+          "average": 5.04,
+          "median": 5.03,
+          "sold": "432",
+          "standard_deviation": "3.7",
+          "lowest_price": 3.92,
+          "highest_price": 5.64
+        },
+        "30_days": {
+          "average": 5.04,
+          "median": 5.04,
+          "sold": "2220",
+          "standard_deviation": "6.81",
+          "lowest_price": 3.6,
+          "highest_price": 9.66
+        },
+        "all_time": {
+          "average": 3.53,
+          "median": 5,
+          "sold": "508000",
+          "standard_deviation": "51.67",
+          "lowest_price": 1.38,
+          "highest_price": 19.9
+        }
+      },
+      "first_sale_date": "1429221600"
+    },
+    "AK-47 | Elite Build (Field-Tested)": {
+      "name": "AK-47 | Elite Build (Field-Tested)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "937248085",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09G3h5SOhe7LPr7Vn35cpsEl0-2Xrdii3APt-RI4ZG71IdOXelJoZVDX_li7kOu-1MW6uZ_JyHV9-n51hRUaMfs",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09G3h5SOhe7LPr7Vn35c18lwmO7Eu4ih0VDi80drZ276JtfBdQE4ZA3S8gXoxebogZ-57ZiYmCFlvyIi5HjD30vgrWhS6dA",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Field-Tested",
+      "rarity": "Mil-Spec Grade",
+      "rarity_color": "4b69ff",
+      "price": {
+        "24_hours": {
+          "average": 1.38,
+          "median": 1.41,
+          "sold": "122",
+          "standard_deviation": "5.67",
+          "lowest_price": 1.3,
+          "highest_price": 1.5
+        },
+        "7_days": {
+          "average": 1.4,
+          "median": 1.4,
+          "sold": "7363",
+          "standard_deviation": "4.2",
+          "lowest_price": 1.19,
+          "highest_price": 1.53
+        },
+        "30_days": {
+          "average": 1.37,
+          "median": 1.37,
+          "sold": "35451",
+          "standard_deviation": "4.29",
+          "lowest_price": 1.19,
+          "highest_price": 1.53
+        },
+        "all_time": {
+          "average": 0.99,
+          "median": 1.38,
+          "sold": "5861195",
+          "standard_deviation": "65.35",
+          "lowest_price": 0.22,
+          "highest_price": 6.8
+        }
+      },
+      "first_sale_date": "1429221600"
+    },
+    "AK-47 | Elite Build (Minimal Wear)": {
+      "name": "AK-47 | Elite Build (Minimal Wear)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "937254005",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09G3h5SOhe7LP7LWnn8fvJYh3-qR942higTmqBZpYGild4adIQQ5ZA6B_AC3lebo0ce-78vOnGwj5HeAJ9sV6g",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09G3h5SOhe7LP7LWnn9u5MRjjeyPod-l3VfkqRJoMWnxd9OQcQdoMljYqVO5xLi-g8e16JXOnSNh6XYlsGGdwUI-f1fsZg",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Minimal Wear",
+      "rarity": "Mil-Spec Grade",
+      "rarity_color": "4b69ff",
+      "price": {
+        "7_days": {
+          "average": 2.18,
+          "median": 2.18,
+          "sold": "3583",
+          "standard_deviation": "2.7",
+          "lowest_price": 1.97,
+          "highest_price": 2.27
+        },
+        "30_days": {
+          "average": 2.07,
+          "median": 2.05,
+          "sold": "19599",
+          "standard_deviation": "4.74",
+          "lowest_price": 1.86,
+          "highest_price": 2.27
+        },
+        "all_time": {
+          "average": 1.39,
+          "median": 2.05,
+          "sold": "4337871",
+          "standard_deviation": "63.38",
+          "lowest_price": 0.39,
+          "highest_price": 9.57
+        }
+      },
+      "first_sale_date": "1429221600"
+    },
+    "AK-47 | Elite Build (Well-Worn)": {
+      "name": "AK-47 | Elite Build (Well-Worn)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "2408710723",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09G3h5SOhe7LPr7Vn35cpsEl0-2Xrdii3APt-RI4ZG71IdOXelJoZVDX_li7kOu-1MW6uZ_JyHV9-n51hRUaMfs",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09G3h5SOhe7LPr7Vn35c18lwmO7Eu4ih0VDi80drZ276JtfBdQE4ZA3S8gXoxebogZ-57ZiYmCFlvyIi5HjD30vgrWhS6dA",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Well-Worn",
+      "rarity": "Mil-Spec Grade",
+      "rarity_color": "4b69ff",
+      "price": {
+        "24_hours": {
+          "average": 1.1,
+          "median": 1.09,
+          "sold": "161",
+          "standard_deviation": "3.57",
+          "lowest_price": 1.04,
+          "highest_price": 1.16
+        },
+        "7_days": {
+          "average": 1.09,
+          "median": 1.09,
+          "sold": "7460",
+          "standard_deviation": "4.5",
+          "lowest_price": 0.93,
+          "highest_price": 1.17
+        },
+        "30_days": {
+          "average": 1.07,
+          "median": 1.07,
+          "sold": "35879",
+          "standard_deviation": "3.67",
+          "lowest_price": 0.93,
+          "highest_price": 1.18
+        },
+        "all_time": {
+          "average": 0.84,
+          "median": 1.08,
+          "sold": "4232919",
+          "standard_deviation": "61.63",
+          "lowest_price": 0.16,
+          "highest_price": 5.22
+        }
+      },
+      "first_sale_date": "1429221600"
+    },
+    "AK-47 | Emerald Pinstripe (Battle-Scarred)": {
+      "name": "AK-47 | Emerald Pinstripe (Battle-Scarred)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "469502984",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszYeDNR-M6_hIW0lvygZITZk2pH8Yt33byV8N-ii1Dn8kVqMWv0IYGQIQ47YQvS_FG4k-i6h8Tq6pjBznBqpGB8snmEYrAC",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszYeDNR-M6_hIW0lvygZITZk2pH8fp9i_vG8MLz3wHgrkBrMD3wLYCTIAQ5ZF_VqVm7wb3tg5a67pucyyA17CUq4n3UgVXp1vg5u7a2",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Battle-Scarred",
+      "rarity": "Restricted",
+      "rarity_color": "8847ff",
+      "price": {
+        "24_hours": {
+          "average": 5.96,
+          "median": 6.12,
+          "sold": "5",
+          "standard_deviation": "2.14",
+          "lowest_price": 5.85,
+          "highest_price": 6.13
+        },
+        "7_days": {
+          "average": 5.92,
+          "median": 5.93,
+          "sold": "426",
+          "standard_deviation": "12.42",
+          "lowest_price": 4.62,
+          "highest_price": 12.45
+        },
+        "30_days": {
+          "average": 5.35,
+          "median": 5.25,
+          "sold": "2090",
+          "standard_deviation": "10.62",
+          "lowest_price": 3.87,
+          "highest_price": 12.45
+        },
+        "all_time": {
+          "average": 2.03,
+          "median": 2.13,
+          "sold": "584016",
+          "standard_deviation": "90.82",
+          "lowest_price": 0.75,
+          "highest_price": 16.25
+        }
+      },
+      "first_sale_date": "1399068000"
+    },
+    "AK-47 | Emerald Pinstripe (Factory New)": {
+      "name": "AK-47 | Emerald Pinstripe (Factory New)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "469813783",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszYeDNR-M6_hIW0lvygZITdn2xZ_Isj27uSod6kiQbirRE5ZW7wcdPEdVU-Y1vYqVa6xe--jZXutZqYmHNkpGB8sorXHHb4",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszYeDNR-M6_hIW0lvygZITdn2xZ_Pp9i_vG8MKn2Qbn_0FtMmv1ctTAdAE9NA2B_QK-w-3n1pG4uJyYwXExsydztH7agVXp1jpY8DLO",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Factory New",
+      "rarity": "Restricted",
+      "rarity_color": "8847ff",
+      "price": {
+        "7_days": {
+          "average": 15.22,
+          "median": 14.9,
+          "sold": "126",
+          "standard_deviation": "7.99",
+          "lowest_price": 12.65,
+          "highest_price": 24.12
+        },
+        "30_days": {
+          "average": 15.06,
+          "median": 14.68,
+          "sold": "507",
+          "standard_deviation": "13.61",
+          "lowest_price": 11.18,
+          "highest_price": 41.82
+        },
+        "all_time": {
+          "average": 5.59,
+          "median": 5.74,
+          "sold": "217895",
+          "standard_deviation": "110.18",
+          "lowest_price": 2.26,
+          "highest_price": 50.33
+        }
+      },
+      "first_sale_date": "1399154400"
+    },
+    "AK-47 | Emerald Pinstripe (Field-Tested)": {
+      "name": "AK-47 | Emerald Pinstripe (Field-Tested)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "2433040925",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszYeDNR-M6_hIW0lvygZITck29Y_cg_2L_D992hjQ21-kU-NT_xIY-TegM8ZgrX_Fe5wbjoh8fqvM7OzXNl7z5iuyj7hHPqsg",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszYeDNR-M6_hIW0lvygZITck29Y_chOhujT8om72gK2qUJoNmCiJYDHJFA8ZFHW8lS8xrzog5C7vMvOyyM1unMl4X7bygv3308LPTeH-g",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Field-Tested",
+      "rarity": "Restricted",
+      "rarity_color": "8847ff",
+      "price": {
+        "24_hours": {
+          "average": 7.01,
+          "median": 6.9,
+          "sold": "13",
+          "standard_deviation": "2.38",
+          "lowest_price": 6.81,
+          "highest_price": 7.2
+        },
+        "7_days": {
+          "average": 6.78,
+          "median": 6.78,
+          "sold": "627",
+          "standard_deviation": "4.19",
+          "lowest_price": 5.62,
+          "highest_price": 8.24
+        },
+        "30_days": {
+          "average": 6.4,
+          "median": 6.31,
+          "sold": "3112",
+          "standard_deviation": "7.2",
+          "lowest_price": 2.58,
+          "highest_price": 9.2
+        },
+        "all_time": {
+          "average": 2.02,
+          "median": 2.37,
+          "sold": "1517227",
+          "standard_deviation": "114.08",
+          "lowest_price": 0.79,
+          "highest_price": 21.2
+        }
+      },
+      "first_sale_date": "1399068000"
+    },
+    "AK-47 | Emerald Pinstripe (Minimal Wear)": {
+      "name": "AK-47 | Emerald Pinstripe (Minimal Wear)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "1275881771",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszYeDNR-M6_hIW0lvygZITdn2xZ_Isj27uSod6kiQbirRE5ZW7wcdPEdVU-Y1vYqVa6xe--jZXutZqYmHNkpGB8sorXHHb4",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszYeDNR-M6_hIW0lvygZITdn2xZ_Pp9i_vG8MKn2Qbn_0FtMmv1ctTAdAE9NA2B_QK-w-3n1pG4uJyYwXExsydztH7agVXp1jpY8DLO",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Minimal Wear",
+      "rarity": "Restricted",
+      "rarity_color": "8847ff",
+      "price": {
+        "7_days": {
+          "average": 8.94,
+          "median": 8.83,
+          "sold": "280",
+          "standard_deviation": "6.58",
+          "lowest_price": 7.68,
+          "highest_price": 13.62
+        },
+        "30_days": {
+          "average": 8.83,
+          "median": 8.79,
+          "sold": "1642",
+          "standard_deviation": "8.66",
+          "lowest_price": 7.48,
+          "highest_price": 20.85
+        },
+        "all_time": {
+          "average": 2.9,
+          "median": 3.36,
+          "sold": "827473",
+          "standard_deviation": "117.91",
+          "lowest_price": 1.12,
+          "highest_price": 27.9
+        }
+      },
+      "first_sale_date": "1399068000"
+    },
+    "AK-47 | Emerald Pinstripe (Well-Worn)": {
+      "name": "AK-47 | Emerald Pinstripe (Well-Worn)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "469509623",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszYeDNR-M6_hIW0lvygZITck29Y_cg_2L_D992hjQ21-kU-NT_xIY-TegM8ZgrX_Fe5wbjoh8fqvM7OzXNl7z5iuyj7hHPqsg",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszYeDNR-M6_hIW0lvygZITck29Y_chOhujT8om72gK2qUJoNmCiJYDHJFA8ZFHW8lS8xrzog5C7vMvOyyM1unMl4X7bygv3308LPTeH-g",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Well-Worn",
+      "rarity": "Restricted",
+      "rarity_color": "8847ff",
+      "price": {
+        "7_days": {
+          "average": 6.01,
+          "median": 5.94,
+          "sold": "381",
+          "standard_deviation": "6.53",
+          "lowest_price": 5.06,
+          "highest_price": 8.72
+        },
+        "30_days": {
+          "average": 5.65,
+          "median": 5.6,
+          "sold": "2073",
+          "standard_deviation": "9.55",
+          "lowest_price": 2.74,
+          "highest_price": 10.46
+        },
+        "all_time": {
+          "average": 2.03,
+          "median": 2.17,
+          "sold": "835755",
+          "standard_deviation": "96.14",
+          "lowest_price": 0.76,
+          "highest_price": 18.43
+        }
+      },
+      "first_sale_date": "1399068000"
+    },
+    "AK-47 | Fire Serpent (Battle-Scarred)": {
+      "name": "AK-47 | Fire Serpent (Battle-Scarred)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "310785310",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszOeC9H_9mkhIWFg8j1OO-GqWlD6dN-teHE9JrsxgDl_BBoYmD6JIbHJwdsYFiDr1K7kLvpjZPvu8nAmHtqvSkm5i6IyxKpwUYbkchkGw4",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszOeC9H_9mkhIWFg8j1OO-GqWlD6dN-teHE9Jrst1i1uRQ5fW3yI9WRcw83YViCr1DswO680JW57cjPwXcwvXQrtHbUmByzgkkZOuJxxavJ1uEsotc",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Battle-Scarred",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 433.59,
+          "median": 419.41,
+          "sold": "8",
+          "standard_deviation": "8.43",
+          "lowest_price": 397.79,
+          "highest_price": 518.53
+        },
+        "30_days": {
+          "average": 417.62,
+          "median": 408.95,
+          "sold": "37",
+          "standard_deviation": "8.27",
+          "lowest_price": 341.7,
+          "highest_price": 518.53
+        },
+        "all_time": {
+          "average": 98.4,
+          "median": 119.67,
+          "sold": "16046",
+          "standard_deviation": "128.57",
+          "lowest_price": 16.64,
+          "highest_price": 639.93
+        }
+      },
+      "first_sale_date": "1379973600"
+    },
+    "AK-47 | Fire Serpent (Factory New)": {
+      "name": "AK-47 | Fire Serpent (Factory New)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "2258156525",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszOeC9H_9mkhIWFg8j1OO-GqWlD6dN-teXI8oThxg3n8kM5ZD-nJI-UJ1c2MFjU-VXolezugZXpvMyan3I3v3Qjty2OlhKpwUYbndZ_4hw",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszOeC9H_9mkhIWFg8j1OO-GqWlD6dN-teXI8oTht1i1uRQ5fWDwLYbAdVBqYVHRrwC2kO7rhpLq6J_IzXE2unFxs3-JmkG200ofZ-JxxavJKZiOt4k",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Factory New",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "24_hours": {
+          "average": 0,
+          "median": 0,
+          "sold": "",
+          "standard_deviation": "0",
+          "lowest_price": 0,
+          "highest_price": 0
+        },
+        "7_days": {
+          "average": 0,
+          "median": 0,
+          "sold": "",
+          "standard_deviation": "0",
+          "lowest_price": 0,
+          "highest_price": 0
+        },
+        "30_days": {
+          "average": 1914.89,
+          "median": 1914.89,
+          "sold": "1",
+          "standard_deviation": "0",
+          "lowest_price": 1914.89,
+          "highest_price": 1914.89
+        },
+        "all_time": {
+          "average": 599.06,
+          "median": 573.33,
+          "sold": "425",
+          "standard_deviation": "73.57",
+          "lowest_price": 5.38,
+          "highest_price": 1914.89
+        }
+      },
+      "first_sale_date": "1381010400"
+    },
+    "AK-47 | Fire Serpent (Field-Tested)": {
+      "name": "AK-47 | Fire Serpent (Field-Tested)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "310779465",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszOeC9H_9mkhIWFg8j1OO-GqWlD6dN-teTE8YXghRrkqRVqMGzzIYeTIAVqaQuErlbvlb-80JfuusvJmHFr6SRxsXzfm0fkn1gSOc02RC4r",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszOeC9H_9mkhIWFg8j1OO-GqWlD6dN-teTE8YXghWu4qgE7NnfzdtCTIQM-ZFnWqFLqyb270ZHt6MyanHMxvHYitHzVzBHk1RtOarc8m7XAHlYw1xU4",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Field-Tested",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 780.75,
+          "median": 744.05,
+          "sold": "8",
+          "standard_deviation": "6.39",
+          "lowest_price": 741.24,
+          "highest_price": 859.48
+        },
+        "30_days": {
+          "average": 747.06,
+          "median": 737.18,
+          "sold": "42",
+          "standard_deviation": "6.31",
+          "lowest_price": 687.81,
+          "highest_price": 859.48
+        },
+        "all_time": {
+          "average": 147.56,
+          "median": 205.54,
+          "sold": "53674",
+          "standard_deviation": "156.19",
+          "lowest_price": 20.93,
+          "highest_price": 1256.67
+        }
+      },
+      "first_sale_date": "1379800800"
+    },
+    "AK-47 | Fire Serpent (Minimal Wear)": {
+      "name": "AK-47 | Fire Serpent (Minimal Wear)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "310791287",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszOeC9H_9mkhIWFg8j1OO-GqWlD6dN-teXI8oThxg3n8kM5ZD-nJI-UJ1c2MFjU-VXolezugZXpvMyan3I3v3Qjty2OlhKpwUYbndZ_4hw",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszOeC9H_9mkhIWFg8j1OO-GqWlD6dN-teXI8oTht1i1uRQ5fWDwLYbAdVBqYVHRrwC2kO7rhpLq6J_IzXE2unFxs3-JmkG200ofZ-JxxavJKZiOt4k",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Minimal Wear",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 1102.61,
+          "median": 1107.15,
+          "sold": "4",
+          "standard_deviation": "0.75",
+          "lowest_price": 1088.2,
+          "highest_price": 1107.93
+        },
+        "30_days": {
+          "average": 1072.19,
+          "median": 1035.76,
+          "sold": "15",
+          "standard_deviation": "8.58",
+          "lowest_price": 973.98,
+          "highest_price": 1354.45
+        },
+        "all_time": {
+          "average": 219.73,
+          "median": 294.08,
+          "sold": "18168",
+          "standard_deviation": "142.02",
+          "lowest_price": 22.16,
+          "highest_price": 1874.24
+        }
+      },
+      "first_sale_date": "1379887200"
+    },
+    "AK-47 | Fire Serpent (Well-Worn)": {
+      "name": "AK-47 | Fire Serpent (Well-Worn)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "2175069665",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszOeC9H_9mkhIWFg8j1OO-GqWlD6dN-teTE8YXghRrkqRVqMGzzIYeTIAVqaQuErlbvlb-80JfuusvJmHFr6SRxsXzfm0fkn1gSOc02RC4r",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszOeC9H_9mkhIWFg8j1OO-GqWlD6dN-teTE8YXghWu4qgE7NnfzdtCTIQM-ZFnWqFLqyb270ZHt6MyanHMxvHYitHzVzBHk1RtOarc8m7XAHlYw1xU4",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Well-Worn",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 316.66,
+          "median": 316.66,
+          "sold": "2",
+          "standard_deviation": "82.06",
+          "lowest_price": 56.81,
+          "highest_price": 576.51
+        },
+        "30_days": {
+          "average": 496.69,
+          "median": 541.76,
+          "sold": "6",
+          "standard_deviation": "42.54",
+          "lowest_price": 56.81,
+          "highest_price": 748.98
+        },
+        "all_time": {
+          "average": 137.23,
+          "median": 153.99,
+          "sold": "3048",
+          "standard_deviation": "101.24",
+          "lowest_price": 14.15,
+          "highest_price": 1017.96
+        }
+      },
+      "first_sale_date": "1380751200"
+    },
+    "AK-47 | First Class (Battle-Scarred)": {
+      "name": "AK-47 | First Class (Battle-Scarred)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "2484893436",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszPYzhH4uO6kYGfn_LmDLrawjxu4MBwnPCP9Img0QXn8hJpNmnzLYaXe1I9aQyBqAS7kru7gsO6vc_Km3pr6SB252GdwUIsOuqCcA",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszPYzhH4uO6kYGfn_LmDLrawjxu4MBwnPD--Y3nj1H6qhZpamjwLdeQJwY-aFjS8wW9ybq-18O578idzidlu3Iht3fVzBXjgwYMMLIg_UuXVQ",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Battle-Scarred",
+      "rarity": "Restricted",
+      "rarity_color": "8847ff",
+      "price": {
+        "7_days": {
+          "average": 36.62,
+          "median": 35.53,
+          "sold": "6",
+          "standard_deviation": "4.12",
+          "lowest_price": 34.83,
+          "highest_price": 39.06
+        },
+        "30_days": {
+          "average": 37.92,
+          "median": 35.87,
+          "sold": "20",
+          "standard_deviation": "9.59",
+          "lowest_price": 32.77,
+          "highest_price": 46.12
+        },
+        "all_time": {
+          "average": 7.01,
+          "median": 11.58,
+          "sold": "14219",
+          "standard_deviation": "150.21",
+          "lowest_price": 1.37,
+          "highest_price": 101.88
+        }
+      },
+      "first_sale_date": "1404338400"
+    },
+    "AK-47 | First Class (Factory New)": {
+      "name": "AK-47 | First Class (Factory New)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "520025695",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszPYzhH4uO6kYGfn_LmDLrawjxu5Mx2gv2PrNqn2lLkr0Fkaj36LNfEdwY8YlCD-gK3xOjphpfuu56bmnFivSF3sWGdwUIT_NQ9Tg",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszPYzhH4uO6kYGfn_LmDLrawjxu5Mx2gv3--Y3nj1H68kVuYT_zcISde1I3aQmB_1G8wua8hcW1uZvPynMxvSNwtnzcmBTi1QYMMLI7CTKq-A",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Factory New",
+      "rarity": "Restricted",
+      "rarity_color": "8847ff",
+      "price": {
+        "7_days": {
+          "average": 84.24,
+          "median": 80.76,
+          "sold": "6",
+          "standard_deviation": "11.72",
+          "lowest_price": 73.82,
+          "highest_price": 98.76
+        },
+        "30_days": {
+          "average": 89.13,
+          "median": 80.65,
+          "sold": "23",
+          "standard_deviation": "19.37",
+          "lowest_price": 71.59,
+          "highest_price": 144.3
+        },
+        "all_time": {
+          "average": 21.62,
+          "median": 26.3,
+          "sold": "9214",
+          "standard_deviation": "96.55",
+          "lowest_price": 0.73,
+          "highest_price": 144.3
+        }
+      },
+      "first_sale_date": "1404338400"
+    },
+    "AK-47 | First Class (Field-Tested)": {
+      "name": "AK-47 | First Class (Field-Tested)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "1262222494",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszPYzhH4uO6kYGfn_LmDLrawjxu5cB1g_zMu9rw0Fbl-kJuY2r3cI-RIVI-MlzTr1foxOe6hcC-6ZvPnCFquChz5XjD30vgHKsTYF0",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszPYzhH4uO6kYGfn_LmDLrawjxu5cB1g_zMyoD0mlOx5UU5azvyJYeXcgU6NVHUqQW-kurs0JDquZScySRh7yYksCzUnR3mgR9SLrs4VP3n5-U",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Field-Tested",
+      "rarity": "Restricted",
+      "rarity_color": "8847ff",
+      "price": {
+        "7_days": {
+          "average": 45,
+          "median": 42.62,
+          "sold": "7",
+          "standard_deviation": "12.42",
+          "lowest_price": 42.1,
+          "highest_price": 57.64
+        },
+        "30_days": {
+          "average": 43.27,
+          "median": 42.66,
+          "sold": "43",
+          "standard_deviation": "10.99",
+          "lowest_price": 34.49,
+          "highest_price": 57.64
+        },
+        "all_time": {
+          "average": 6.59,
+          "median": 13,
+          "sold": "45685",
+          "standard_deviation": "207.89",
+          "lowest_price": 2.49,
+          "highest_price": 292.84
+        }
+      },
+      "first_sale_date": "1404338400"
+    },
+    "AK-47 | First Class (Minimal Wear)": {
+      "name": "AK-47 | First Class (Minimal Wear)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "519998054",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszPYzhH4uO6kYGfn_LmDLrawjxu5Mx2gv2PrNqn2lLkr0Fkaj36LNfEdwY8YlCD-gK3xOjphpfuu56bmnFivSF3sWGdwUIT_NQ9Tg",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszPYzhH4uO6kYGfn_LmDLrawjxu5Mx2gv3--Y3nj1H68kVuYT_zcISde1I3aQmB_1G8wua8hcW1uZvPynMxvSNwtnzcmBTi1QYMMLI7CTKq-A",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Minimal Wear",
+      "rarity": "Restricted",
+      "rarity_color": "8847ff",
+      "price": {
+        "7_days": {
+          "average": 56.43,
+          "median": 55.49,
+          "sold": "3",
+          "standard_deviation": "8.72",
+          "lowest_price": 50.94,
+          "highest_price": 62.87
+        },
+        "30_days": {
+          "average": 58.09,
+          "median": 55.52,
+          "sold": "19",
+          "standard_deviation": "9.91",
+          "lowest_price": 50.71,
+          "highest_price": 66.52
+        },
+        "all_time": {
+          "average": 9.48,
+          "median": 17.04,
+          "sold": "22873",
+          "standard_deviation": "170.84",
+          "lowest_price": 3.77,
+          "highest_price": 217.83
+        }
+      },
+      "first_sale_date": "1404338400"
+    },
+    "AK-47 | First Class (Well-Worn)": {
+      "name": "AK-47 | First Class (Well-Worn)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "2066586042",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszPYzhH4uO6kYGfn_LmDLrawjxu5cB1g_zMu9rw0Fbl-kJuY2r3cI-RIVI-MlzTr1foxOe6hcC-6ZvPnCFquChz5XjD30vgHKsTYF0",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszPYzhH4uO6kYGfn_LmDLrawjxu5cB1g_zMyoD0mlOx5UU5azvyJYeXcgU6NVHUqQW-kurs0JDquZScySRh7yYksCzUnR3mgR9SLrs4VP3n5-U",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Well-Worn",
+      "rarity": "Restricted",
+      "rarity_color": "8847ff",
+      "price": {
+        "7_days": {
+          "average": 38.04,
+          "median": 36.15,
+          "sold": "3",
+          "standard_deviation": "8.35",
+          "lowest_price": 35.46,
+          "highest_price": 42.52
+        },
+        "30_days": {
+          "average": 38.55,
+          "median": 38.54,
+          "sold": "22",
+          "standard_deviation": "7.1",
+          "lowest_price": 34.91,
+          "highest_price": 43.59
+        },
+        "all_time": {
+          "average": 6.81,
+          "median": 12.22,
+          "sold": "22011",
+          "standard_deviation": "158.56",
+          "lowest_price": 2.31,
+          "highest_price": 59.24
+        }
+      },
+      "first_sale_date": "1404338400"
+    },
+    "AK-47 | Frontside Misty (Battle-Scarred)": {
+      "name": "AK-47 | Frontside Misty (Battle-Scarred)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "1361007858",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV08u_mpSOhcjnI7TDglRZ7cRnk6eYp4-gig2w_Uc9N26mIoCXdg5sMg2G_1O8le_nhp-6753AyHYxvSAn-z-DyG61se40",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV08u_mpSOhcjnI7TDglRZ7cRnk9bN9J7yjRrt-RBpMWCnIoLEJgFrZ17S_lnskru5gJS-6JzByntl6SAr5HuPmBWyn1gSOeBbOGui",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Battle-Scarred",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "7_days": {
+          "average": 10.06,
+          "median": 10.06,
+          "sold": "458",
+          "standard_deviation": "3.02",
+          "lowest_price": 8.67,
+          "highest_price": 11.13
+        },
+        "30_days": {
+          "average": 9.9,
+          "median": 9.91,
+          "sold": "2250",
+          "standard_deviation": "4.36",
+          "lowest_price": 7.91,
+          "highest_price": 14.22
+        },
+        "all_time": {
+          "average": 8.56,
+          "median": 10.04,
+          "sold": "273237",
+          "standard_deviation": "31.5",
+          "lowest_price": 3.89,
+          "highest_price": 21.79
+        }
+      },
+      "first_sale_date": "1442613600"
+    },
+    "AK-47 | Frontside Misty (Factory New)": {
+      "name": "AK-47 | Frontside Misty (Factory New)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "1804094201",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV08u_mpSOhcjnI7TDglRd4cJ5nqeSrY_x2VDlqBZrZTr2LIfAe1RvYgzW_Va6kL3u0JG8vJ7NyyQwunEj-z-DyIN9IvW2",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV08u_mpSOhcjnI7TDglRd4cJ5ntbN9J7yjRrn8xA4Yj3yd9OSdFU7aVmF8wPvwrrpgpG47c7InHVjuiMm5ymOn0S2n1gSOR29uyL_",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Factory New",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "7_days": {
+          "average": 50.5,
+          "median": 50.06,
+          "sold": "51",
+          "standard_deviation": "7.32",
+          "lowest_price": 45.05,
+          "highest_price": 69.45
+        },
+        "30_days": {
+          "average": 48.63,
+          "median": 48.58,
+          "sold": "313",
+          "standard_deviation": "7.04",
+          "lowest_price": 38.48,
+          "highest_price": 69.45
+        },
+        "all_time": {
+          "average": 34.26,
+          "median": 40.53,
+          "sold": "41729",
+          "standard_deviation": "32.63",
+          "lowest_price": 17.35,
+          "highest_price": 126.85
+        }
+      },
+      "first_sale_date": "1442613600"
+    },
+    "AK-47 | Frontside Misty (Field-Tested)": {
+      "name": "AK-47 | Frontside Misty (Field-Tested)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "1650908310",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV08u_mpSOhcjnI7TDglRc7cF4n-SPpI-iigLg80ZvZzryd4_GI1Q6Yg3VqFe4w-y90JLo753NzXtmsnEl4mGdwUIuRPhSEw",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV08u_mpSOhcjnI7TDglRc7cF4n-T--Y3nj1H6-hBrMW_3LIOWdlU_MlGDqwO6wrvq15C6vp-bnHY36SAm4XbYl0SwhgYMMLJqUag1Og",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Field-Tested",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "7_days": {
+          "average": 14.1,
+          "median": 14.09,
+          "sold": "1208",
+          "standard_deviation": "2.85",
+          "lowest_price": 12.86,
+          "highest_price": 15.17
+        },
+        "30_days": {
+          "average": 13.84,
+          "median": 13.88,
+          "sold": "6460",
+          "standard_deviation": "3.68",
+          "lowest_price": 12.34,
+          "highest_price": 17.22
+        },
+        "all_time": {
+          "average": 12.29,
+          "median": 13.77,
+          "sold": "1284487",
+          "standard_deviation": "26.5",
+          "lowest_price": 6.18,
+          "highest_price": 46.16
+        }
+      },
+      "first_sale_date": "1442613600"
+    },
+    "AK-47 | Frontside Misty (Minimal Wear)": {
+      "name": "AK-47 | Frontside Misty (Minimal Wear)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "2403023248",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV08u_mpSOhcjnI7TDglRd4cJ5nqeSrY_x2VDlqBZrZTr2LIfAe1RvYgzW_Va6kL3u0JG8vJ7NyyQwunEj-z-DyIN9IvW2",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV08u_mpSOhcjnI7TDglRd4cJ5ntbN9J7yjRrn8xA4Yj3yd9OSdFU7aVmF8wPvwrrpgpG47c7InHVjuiMm5ymOn0S2n1gSOR29uyL_",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Minimal Wear",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "7_days": {
+          "average": 24.27,
+          "median": 24.21,
+          "sold": "424",
+          "standard_deviation": "2.63",
+          "lowest_price": 22.35,
+          "highest_price": 25.96
+        },
+        "30_days": {
+          "average": 23.98,
+          "median": 23.96,
+          "sold": "2122",
+          "standard_deviation": "3.8",
+          "lowest_price": 16.38,
+          "highest_price": 34.73
+        },
+        "all_time": {
+          "average": 17.66,
+          "median": 22.71,
+          "sold": "390343",
+          "standard_deviation": "30.54",
+          "lowest_price": 9.32,
+          "highest_price": 66.43
+        }
+      },
+      "first_sale_date": "1442613600"
+    },
+    "AK-47 | Frontside Misty (Well-Worn)": {
+      "name": "AK-47 | Frontside Misty (Well-Worn)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "1310109885",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV08u_mpSOhcjnI7TDglRc7cF4n-SPpI-iigLg80ZvZzryd4_GI1Q6Yg3VqFe4w-y90JLo753NzXtmsnEl4mGdwUIuRPhSEw",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV08u_mpSOhcjnI7TDglRc7cF4n-T--Y3nj1H6-hBrMW_3LIOWdlU_MlGDqwO6wrvq15C6vp-bnHY36SAm4XbYl0SwhgYMMLJqUag1Og",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Well-Worn",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "7_days": {
+          "average": 13.24,
+          "median": 13.31,
+          "sold": "267",
+          "standard_deviation": "5.48",
+          "lowest_price": 11.33,
+          "highest_price": 14.62
+        },
+        "30_days": {
+          "average": 12.91,
+          "median": 12.86,
+          "sold": "1506",
+          "standard_deviation": "5.85",
+          "lowest_price": 10.6,
+          "highest_price": 17.32
+        },
+        "all_time": {
+          "average": 11.86,
+          "median": 12.92,
+          "sold": "226986",
+          "standard_deviation": "26.2",
+          "lowest_price": 5.73,
+          "highest_price": 36.33
+        }
+      },
+      "first_sale_date": "1442613600"
+    },
+    "AK-47 | Fuel Injector (Battle-Scarred)": {
+      "name": "AK-47 | Fuel Injector (Battle-Scarred)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "1681994122",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV08-jhIWZlP_1IbzUklRZ7cRnk6eSp92h2gGwrkRvZGymI4aVcwY5ZVuFrAS5xuy605e1v5_PznEyvyBx-z-DyHxgUuDa",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV08-jhIWZlP_1IbzUklRZ7cRnk9bN9J7yjRrn-UJoYWyncYGWdQNrZljQ-1G5xe2608O7u5-cn3NquSIk4nyMmhXkn1gSOesG3acm",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Battle-Scarred",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 61.89,
+          "median": 61.47,
+          "sold": "62",
+          "standard_deviation": "6.1",
+          "lowest_price": 55.14,
+          "highest_price": 72.81
+        },
+        "30_days": {
+          "average": 59.88,
+          "median": 59.88,
+          "sold": "349",
+          "standard_deviation": "6.55",
+          "lowest_price": 42.51,
+          "highest_price": 72.81
+        },
+        "all_time": {
+          "average": 30.49,
+          "median": 33.21,
+          "sold": "52247",
+          "standard_deviation": "47.23",
+          "lowest_price": 15.64,
+          "highest_price": 73.61
+        }
+      },
+      "first_sale_date": "1455836400"
+    },
+    "AK-47 | Fuel Injector (Factory New)": {
+      "name": "AK-47 | Fuel Injector (Factory New)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "1560600321",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV08-jhIWZlP_1IbzUklRd4cJ5nqeZ9Nzx3Qex80c-ZGn3LYWTdFc9NFuEqAO8xLrtjMC4u56dznQ36XVw-z-DyK64IMQ5",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV08-jhIWZlP_1IbzUklRd4cJ5ntbN9J7yjRrsqkM4ZmqmLILHdQY6aFvW_AC9lO2718S-ucnLwCRnvSN24nmJzEDln1gSOcGSLCO2",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Factory New",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 310.71,
+          "median": 304.88,
+          "sold": "8",
+          "standard_deviation": "3.55",
+          "lowest_price": 304.72,
+          "highest_price": 336.95
+        },
+        "30_days": {
+          "average": 287.67,
+          "median": 287.65,
+          "sold": "56",
+          "standard_deviation": "12.32",
+          "lowest_price": 241.97,
+          "highest_price": 488.83
+        },
+        "all_time": {
+          "average": 124.18,
+          "median": 109.76,
+          "sold": "7352",
+          "standard_deviation": "61.24",
+          "lowest_price": 20.56,
+          "highest_price": 605.65
+        }
+      },
+      "first_sale_date": "1455836400"
+    },
+    "AK-47 | Fuel Injector (Field-Tested)": {
+      "name": "AK-47 | Fuel Injector (Field-Tested)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "2398779579",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV08-jhIWZlP_1IbzUklRc7cF4n-SPpIr33gS1rkJqYGD7J4GQcQY5aFCG-lHrlO650JLv6ZzMziA2vXMgtmGdwULg8tCd0w",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV08-jhIWZlP_1IbzUklRc7cF4n-T--Y3nj1H6-hU-ZWmicYeTcQ82Yl_V-VG5yOa5hZbp6Z2fnHYw7yEn4i2ImEa10gYMMLLca3SSng",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Field-Tested",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 119.47,
+          "median": 119.31,
+          "sold": "91",
+          "standard_deviation": "3.81",
+          "lowest_price": 103.77,
+          "highest_price": 139.97
+        },
+        "30_days": {
+          "average": 109.98,
+          "median": 108.11,
+          "sold": "520",
+          "standard_deviation": "6.62",
+          "lowest_price": 94.82,
+          "highest_price": 140.51
+        },
+        "all_time": {
+          "average": 42.08,
+          "median": 49.1,
+          "sold": "93138",
+          "standard_deviation": "75.44",
+          "lowest_price": 21.65,
+          "highest_price": 140.51
+        }
+      },
+      "first_sale_date": "1455836400"
+    },
+    "AK-47 | Fuel Injector (Minimal Wear)": {
+      "name": "AK-47 | Fuel Injector (Minimal Wear)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "1560455078",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV08-jhIWZlP_1IbzUklRd4cJ5nqeZ9Nzx3Qex80c-ZGn3LYWTdFc9NFuEqAO8xLrtjMC4u56dznQ36XVw-z-DyK64IMQ5",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV08-jhIWZlP_1IbzUklRd4cJ5ntbN9J7yjRrsqkM4ZmqmLILHdQY6aFvW_AC9lO2718S-ucnLwCRnvSN24nmJzEDln1gSOcGSLCO2",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Minimal Wear",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "24_hours": {
+          "average": 175.04,
+          "median": 175.04,
+          "sold": "2",
+          "standard_deviation": "2.62",
+          "lowest_price": 170.45,
+          "highest_price": 179.63
+        },
+        "7_days": {
+          "average": 173.77,
+          "median": 172.49,
+          "sold": "33",
+          "standard_deviation": "4.76",
+          "lowest_price": 144.54,
+          "highest_price": 195.43
+        },
+        "30_days": {
+          "average": 160.7,
+          "median": 160.98,
+          "sold": "193",
+          "standard_deviation": "6.9",
+          "lowest_price": 137,
+          "highest_price": 210.87
+        },
+        "all_time": {
+          "average": 57.78,
+          "median": 68.82,
+          "sold": "43136",
+          "standard_deviation": "76.72",
+          "lowest_price": 29.03,
+          "highest_price": 210.87
+        }
+      },
+      "first_sale_date": "1455836400"
+    },
+    "AK-47 | Fuel Injector (Well-Worn)": {
+      "name": "AK-47 | Fuel Injector (Well-Worn)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "2001464428",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV08-jhIWZlP_1IbzUklRc7cF4n-SPpIr33gS1rkJqYGD7J4GQcQY5aFCG-lHrlO650JLv6ZzMziA2vXMgtmGdwULg8tCd0w",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV08-jhIWZlP_1IbzUklRc7cF4n-T--Y3nj1H6-hU-ZWmicYeTcQ82Yl_V-VG5yOa5hZbp6Z2fnHYw7yEn4i2ImEa10gYMMLLca3SSng",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Well-Worn",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 83.29,
+          "median": 81.35,
+          "sold": "49",
+          "standard_deviation": "5.34",
+          "lowest_price": 72.96,
+          "highest_price": 92.59
+        },
+        "30_days": {
+          "average": 76.11,
+          "median": 75.54,
+          "sold": "321",
+          "standard_deviation": "8.18",
+          "lowest_price": 48.33,
+          "highest_price": 92.59
+        },
+        "all_time": {
+          "average": 34.12,
+          "median": 36.96,
+          "sold": "66318",
+          "standard_deviation": "58.1",
+          "lowest_price": 17.99,
+          "highest_price": 92.59
+        }
+      },
+      "first_sale_date": "1455836400"
+    },
+    "AK-47 | Gold Arabesque (Battle-Scarred)": {
+      "name": "AK-47 | Gold Arabesque (Battle-Scarred)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4578728007",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV09u5mIS0luX1Mb7Ch35U1810i__Yu4r00Qyw-0tkYjylLIKXeg86M1zX_Qfoxr_u0MfqvsjIy3dguCYksSzD30vg_z3OXoA",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV09u5mIS0luX1Mb7Ch35U1810i__YyoD0mlOx5RU9amGnJI6dc1NoaVzS8li6k-rogsDqu8zInCM1uHUj53renROx1UtSLrs4pz9Izpw",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Battle-Scarred",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "30_days": {
+          "average": 1028.67,
+          "median": 1056.88,
+          "sold": "8",
+          "standard_deviation": "10.96",
+          "lowest_price": 843.27,
+          "highest_price": 1197.42
+        },
+        "all_time": {
+          "average": 979.1,
+          "median": 1021.27,
+          "sold": "162",
+          "standard_deviation": "19.95",
+          "lowest_price": 662.13,
+          "highest_price": 1699.82
+        }
+      },
+      "first_sale_date": "1632348000"
+    },
+    "AK-47 | Gold Arabesque (Factory New)": {
+      "name": "AK-47 | Gold Arabesque (Factory New)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4578724751",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV09u5mIS0luX1Mb7Ch35U18l4jeHVu9zx2VbkqUE-NTqictOdJgQ_ZVDT_VG5xu3pgsO76MnNy3Fqvigg5yrD30vgkVPLuPE",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV09u5mIS0luX1Mb7Ch35U18l4jeHVyoD0mlOx5UM4YjvzdoTHJFVvNw3YrlO_xebsgpa7u57Pzidk7nQm53zUmx21g01SLrs4iSV9vgU",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Factory New",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "30_days": {
+          "average": 1880.17,
+          "median": 1901.37,
+          "sold": "9",
+          "standard_deviation": "5.4",
+          "lowest_price": 1652.42,
+          "highest_price": 1969.09
+        },
+        "all_time": {
+          "average": 1750.36,
+          "median": 1811.78,
+          "sold": "63",
+          "standard_deviation": "18.32",
+          "lowest_price": 6.64,
+          "highest_price": 2498.8
+        }
+      },
+      "first_sale_date": "1632434400"
+    },
+    "AK-47 | Gold Arabesque (Field-Tested)": {
+      "name": "AK-47 | Gold Arabesque (Field-Tested)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4578725441",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV09u5mIS0luX1Mb7Ch35U18h0juDU-MKn3lC2rkRqaj-iLYPDcAJsYVyBqFO_yee-h5Xq6Z7InyQ1uCMq5yzYgVXp1rYILQK0",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV09u5mIS0luX1Mb7Ch35U18h0juDU-LP5iUazrl1uZT2hcYGTe1BvaF2G-FXsweq-15S9tJSYy3E17yMjsymLnRa_g0tJcKUx0mqyJN5P",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Field-Tested",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 1587.97,
+          "median": 1587.97,
+          "sold": "2",
+          "standard_deviation": "2.13",
+          "lowest_price": 1554.08,
+          "highest_price": 1621.86
+        },
+        "30_days": {
+          "average": 1393.3,
+          "median": 1353.55,
+          "sold": "11",
+          "standard_deviation": "7.89",
+          "lowest_price": 1283.23,
+          "highest_price": 1621.86
+        },
+        "all_time": {
+          "average": 1367.59,
+          "median": 1369.52,
+          "sold": "488",
+          "standard_deviation": "13.48",
+          "lowest_price": 118.82,
+          "highest_price": 1804.74
+        }
+      },
+      "first_sale_date": "1632348000"
+    },
+    "AK-47 | Gold Arabesque (Minimal Wear)": {
+      "name": "AK-47 | Gold Arabesque (Minimal Wear)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4580135137",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV09u5mIS0luX1Mb7Ch35U18l4jeHVu9zx2VbkqUE-NTqictOdJgQ_ZVDT_VG5xu3pgsO76MnNy3Fqvigg5yrD30vgkVPLuPE",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV09u5mIS0luX1Mb7Ch35U18l4jeHVyoD0mlOx5UM4YjvzdoTHJFVvNw3YrlO_xebsgpa7u57Pzidk7nQm53zUmx21g01SLrs4iSV9vgU",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Minimal Wear",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "30_days": {
+          "average": 1548.22,
+          "median": 1491.94,
+          "sold": "9",
+          "standard_deviation": "6.22",
+          "lowest_price": 1444.85,
+          "highest_price": 1754.61
+        },
+        "all_time": {
+          "average": 1713.19,
+          "median": 1745.22,
+          "sold": "199",
+          "standard_deviation": "8.75",
+          "lowest_price": 856.98,
+          "highest_price": 1998.36
+        }
+      },
+      "first_sale_date": "1632348000"
+    },
+    "AK-47 | Gold Arabesque (Well-Worn)": {
+      "name": "AK-47 | Gold Arabesque (Well-Worn)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4578857198",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV09u5mIS0luX1Mb7Ch35U18h0juDU-MKn3lC2rkRqaj-iLYPDcAJsYVyBqFO_yee-h5Xq6Z7InyQ1uCMq5yzYgVXp1rYILQK0",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV09u5mIS0luX1Mb7Ch35U18h0juDU-LP5iUazrl1uZT2hcYGTe1BvaF2G-FXsweq-15S9tJSYy3E17yMjsymLnRa_g0tJcKUx0mqyJN5P",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Well-Worn",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "30_days": {
+          "average": 1047.2,
+          "median": 1047.2,
+          "sold": "2",
+          "standard_deviation": "2.15",
+          "lowest_price": 1024.67,
+          "highest_price": 1069.74
+        },
+        "all_time": {
+          "average": 1102.64,
+          "median": 1075.98,
+          "sold": "30",
+          "standard_deviation": "17.21",
+          "lowest_price": 857.35,
+          "highest_price": 1663.05
+        }
+      },
+      "first_sale_date": "1632348000"
+    },
+    "AK-47 | Green Laminate (Factory New)": {
+      "name": "AK-47 | Green Laminate (Factory New)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4578727895",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4eZkvL6DLfYkWNFpsByiOjHrdnw2wG3qkNkYmz1d9WWcgM-YF-E_gXtxezog8e7uJ-YwSR9-n51Fx7ex2s",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4eZkvL6DLfYkWNF18lwmO7Eu4n2ilWy80Y5YGygdYadcwM4MgvT-lS-wOm7gcLvuJ_OzyNkviJz7SnD30vgE7DfOg4",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Factory New",
+      "rarity": "Mil-Spec Grade",
+      "rarity_color": "4b69ff",
+      "price": {
+        "7_days": {
+          "average": 10.82,
+          "median": 10.81,
+          "sold": "92",
+          "standard_deviation": "5.98",
+          "lowest_price": 9.29,
+          "highest_price": 12.21
+        },
+        "30_days": {
+          "average": 10.81,
+          "median": 10.72,
+          "sold": "572",
+          "standard_deviation": "10.79",
+          "lowest_price": 8.62,
+          "highest_price": 18.52
+        },
+        "all_time": {
+          "average": 11.41,
+          "median": 10.75,
+          "sold": "13876",
+          "standard_deviation": "12.89",
+          "lowest_price": 8.62,
+          "highest_price": 22.37
+        }
+      },
+      "first_sale_date": "1632348000"
+    },
+    "AK-47 | Green Laminate (Field-Tested)": {
+      "name": "AK-47 | Green Laminate (Field-Tested)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4578726880",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4eZkvL6DLbUkmJE5Ysn3ezE9N3x2ge2qBFtYj_6cofHd1U4YQuBqFa6wOm80JG-vMjPzCZjpGB8sou7-M-F",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4eZkvL6DLbUkmJE5fp9i_vG8MKj31GxqkI4YWqhd9SUc1A3N1mC_wK4wb2-15G4vZqanHVhunUk4CvdgVXp1ji7IfbB",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Field-Tested",
+      "rarity": "Mil-Spec Grade",
+      "rarity_color": "4b69ff",
+      "price": {
+        "24_hours": {
+          "average": 7.12,
+          "median": 7.12,
+          "sold": "2",
+          "standard_deviation": "0",
+          "lowest_price": 7.12,
+          "highest_price": 7.12
+        },
+        "7_days": {
+          "average": 7.59,
+          "median": 7.52,
+          "sold": "194",
+          "standard_deviation": "6.85",
+          "lowest_price": 6.6,
+          "highest_price": 10.29
+        },
+        "30_days": {
+          "average": 7.45,
+          "median": 7.41,
+          "sold": "1066",
+          "standard_deviation": "7.24",
+          "lowest_price": 5.96,
+          "highest_price": 11.99
+        },
+        "all_time": {
+          "average": 7.7,
+          "median": 7.49,
+          "sold": "19824",
+          "standard_deviation": "8.03",
+          "lowest_price": 5.96,
+          "highest_price": 12.32
+        }
+      },
+      "first_sale_date": "1632348000"
+    },
+    "AK-47 | Green Laminate (Minimal Wear)": {
+      "name": "AK-47 | Green Laminate (Minimal Wear)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4578724539",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4eZkvL6DLfYkWNFpsByiOjHrdnw2wG3qkNkYmz1d9WWcgM-YF-E_gXtxezog8e7uJ-YwSR9-n51Fx7ex2s",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4eZkvL6DLfYkWNF18lwmO7Eu4n2ilWy80Y5YGygdYadcwM4MgvT-lS-wOm7gcLvuJ_OzyNkviJz7SnD30vgE7DfOg4",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Minimal Wear",
+      "rarity": "Mil-Spec Grade",
+      "rarity_color": "4b69ff",
+      "price": {
+        "7_days": {
+          "average": 8.22,
+          "median": 8.17,
+          "sold": "194",
+          "standard_deviation": "7.76",
+          "lowest_price": 6.33,
+          "highest_price": 10.65
+        },
+        "30_days": {
+          "average": 8,
+          "median": 7.97,
+          "sold": "941",
+          "standard_deviation": "10.91",
+          "lowest_price": 6.33,
+          "highest_price": 19.02
+        },
+        "all_time": {
+          "average": 8.34,
+          "median": 8.04,
+          "sold": "16843",
+          "standard_deviation": "10.58",
+          "lowest_price": 6.33,
+          "highest_price": 19.02
+        }
+      },
+      "first_sale_date": "1632348000"
+    },
+    "AK-47 | Green Laminate (Well-Worn)": {
+      "name": "AK-47 | Green Laminate (Well-Worn)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4578805513",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4eZkvL6DLbUkmJE5Ysn3ezE9N3x2ge2qBFtYj_6cofHd1U4YQuBqFa6wOm80JG-vMjPzCZjpGB8sou7-M-F",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhoyszJemkV4N27q4eZkvL6DLbUkmJE5fp9i_vG8MKj31GxqkI4YWqhd9SUc1A3N1mC_wK4wb2-15G4vZqanHVhunUk4CvdgVXp1ji7IfbB",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Well-Worn",
+      "rarity": "Mil-Spec Grade",
+      "rarity_color": "4b69ff",
+      "price": {
+        "7_days": {
+          "average": 8.79,
+          "median": 8.93,
+          "sold": "14",
+          "standard_deviation": "12.04",
+          "lowest_price": 7.5,
+          "highest_price": 10.43
+        },
+        "30_days": {
+          "average": 9.85,
+          "median": 9.98,
+          "sold": "39",
+          "standard_deviation": "12.74",
+          "lowest_price": 7.5,
+          "highest_price": 12.9
+        },
+        "all_time": {
+          "average": 12.93,
+          "median": 12.49,
+          "sold": "684",
+          "standard_deviation": "25.7",
+          "lowest_price": 7.12,
+          "highest_price": 41.31
+        }
+      },
+      "first_sale_date": "1632348000"
+    },
+    "AK-47 | Hydroponic (Battle-Scarred)": {
+      "name": "AK-47 | Hydroponic (Battle-Scarred)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "992313987",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhh3szKcDBA49OJnpWFkPvxDLPUl31IppQoiOyXodSj21Dn-0o-Zmv3ddeRJlU2Ml7Xq1fowr2-gcK075SYzHJ9-n51k3_26so",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhh3szKcDBA49OJnpWFkPvxDLPUl31I18lwmO7Eu92silHi_0tqYD3wJI_HdwQ6MAnUrgK2kujo1JDqv86YzSZr6Slz4H_D30vgAYpaxMU",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Battle-Scarred",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "30_days": {
+          "average": 435.7,
+          "median": 430.15,
+          "sold": "3",
+          "standard_deviation": "1.86",
+          "lowest_price": 429.79,
+          "highest_price": 447.16
+        },
+        "all_time": {
+          "average": 30.69,
+          "median": 26.85,
+          "sold": "5837",
+          "standard_deviation": "219.49",
+          "lowest_price": 14.7,
+          "highest_price": 564.67
+        }
+      },
+      "first_sale_date": "1432764000"
+    },
+    "AK-47 | Hydroponic (Factory New)": {
+      "name": "AK-47 | Hydroponic (Factory New)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "1322336689",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhh3szKcDBA49OJnpWFkPvxDLfYkWNFppwpie2Rp9_w0VDm-UNrMj30IoPHdAY-M1rY-1K7w7291pO8vJTJzHN9-n51xLwwH8g",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhh3szKcDBA49OJnpWFkPvxDLfYkWNF18lwmO7Eu9Wti1Dk-UA5aj3xJoaSI1I5Z12C_FG-k-znhJW5vs6bmndjuiki4H7D30vgYDi_Mc0",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Factory New",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "30_days": {
+          "average": 1612.06,
+          "median": 1612.06,
+          "sold": "2",
+          "standard_deviation": "6.14",
+          "lowest_price": 1513.01,
+          "highest_price": 1711.12
+        },
+        "all_time": {
+          "average": 206.21,
+          "median": 151.85,
+          "sold": "6304",
+          "standard_deviation": "188.66",
+          "lowest_price": 81.72,
+          "highest_price": 1921.63
+        }
+      },
+      "first_sale_date": "1432850400"
+    },
+    "AK-47 | Hydroponic (Field-Tested)": {
+      "name": "AK-47 | Hydroponic (Field-Tested)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "992220845",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhh3szKcDBA49OJnpWFkPvxDLbUkmJE5YsoibiSrY6m2lbi_Ec4Y2z0dY6ccgJsaF3Q-gK_k-e9h5_qtMnOnSM1pGB8svbIhxYt",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhh3szKcDBA49OJnpWFkPvxDLbUkmJE5fp9i_vG8MKsiwXn8xFvYTv1I4LBcgM5MFDZ-lXsyOvvhcW97pSby3s1snQlsS6LgVXp1pCH1igz",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Field-Tested",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "30_days": {
+          "average": 740.4,
+          "median": 719.13,
+          "sold": "12",
+          "standard_deviation": "7.72",
+          "lowest_price": 691.82,
+          "highest_price": 906.65
+        },
+        "all_time": {
+          "average": 64.54,
+          "median": 56.58,
+          "sold": "25723",
+          "standard_deviation": "315.22",
+          "lowest_price": 27.79,
+          "highest_price": 912
+        }
+      },
+      "first_sale_date": "1432764000"
+    },
+    "AK-47 | Hydroponic (Minimal Wear)": {
+      "name": "AK-47 | Hydroponic (Minimal Wear)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "992246530",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhh3szKcDBA49OJnpWFkPvxDLfYkWNFppwpie2Rp9_w0VDm-UNrMj30IoPHdAY-M1rY-1K7w7291pO8vJTJzHN9-n51xLwwH8g",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhh3szKcDBA49OJnpWFkPvxDLfYkWNF18lwmO7Eu9Wti1Dk-UA5aj3xJoaSI1I5Z12C_FG-k-znhJW5vs6bmndjuiki4H7D30vgYDi_Mc0",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Minimal Wear",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "30_days": {
+          "average": 1193.34,
+          "median": 1209.19,
+          "sold": "3",
+          "standard_deviation": "3.39",
+          "lowest_price": 1137.82,
+          "highest_price": 1233.01
+        },
+        "all_time": {
+          "average": 127.68,
+          "median": 104.57,
+          "sold": "11647",
+          "standard_deviation": "233.18",
+          "lowest_price": 21.13,
+          "highest_price": 1984.64
+        }
+      },
+      "first_sale_date": "1432850400"
+    },
+    "AK-47 | Hydroponic (Well-Worn)": {
+      "name": "AK-47 | Hydroponic (Well-Worn)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "1121699897",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhh3szKcDBA49OJnpWFkPvxDLbUkmJE5YsoibiSrY6m2lbi_Ec4Y2z0dY6ccgJsaF3Q-gK_k-e9h5_qtMnOnSM1pGB8svbIhxYt",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhh3szKcDBA49OJnpWFkPvxDLbUkmJE5fp9i_vG8MKsiwXn8xFvYTv1I4LBcgM5MFDZ-lXsyOvvhcW97pSby3s1snQlsS6LgVXp1pCH1igz",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Well-Worn",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "all_time": {
+          "average": 53.65,
+          "median": 48.44,
+          "sold": "1627",
+          "standard_deviation": "113.36",
+          "lowest_price": 23.22,
+          "highest_price": 560.38
+        }
+      },
+      "first_sale_date": "1432764000"
+    },
+    "AK-47 | Ice Coaled (Battle-Scarred)": {
+      "name": "AK-47 | Ice Coaled (Battle-Scarred)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4910488438",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5k5SDnvnzIITZk2pH8Ysp3ujArYj02QG3-ks4MmHzdYOTcAc3MlCG-lC9kL_o0MO8tJzJzCExpGB8suUG-IwZ",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5k5SDnvnzIITZk2pH8fp9i_vG8MKt3FW18xc9YmygJY7BIw4-MF3W-FC3kua5hZe_7czOnCdjsiEi4CyPgVXp1rT8Wct7",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Battle-Scarred",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "24_hours": {
+          "average": 14.62,
+          "median": 14.77,
+          "sold": "21",
+          "standard_deviation": "2.68",
+          "lowest_price": 14.1,
+          "highest_price": 15.39
+        },
+        "7_days": {
+          "average": 14.14,
+          "median": 14.09,
+          "sold": "761",
+          "standard_deviation": "3.68",
+          "lowest_price": 12.57,
+          "highest_price": 15.39
+        },
+        "30_days": {
+          "average": 13.81,
+          "median": 13.77,
+          "sold": "3210",
+          "standard_deviation": "5.39",
+          "lowest_price": 10.92,
+          "highest_price": 22.02
+        },
+        "all_time": {
+          "average": 17.46,
+          "median": 13.86,
+          "sold": "9756",
+          "standard_deviation": "13.36",
+          "lowest_price": 10.92,
+          "highest_price": 37.31
+        }
+      },
+      "first_sale_date": "1656712800"
+    },
+    "AK-47 | Ice Coaled (Factory New)": {
+      "name": "AK-47 | Ice Coaled (Factory New)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4901490939",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5k5SDnvnzIITdn2xZ_IsoiL2XotT03wS3-EJpNmynIobEcAY9ZVvWqFbvyOu80ZLvucmamnpqpGB8sq6j9EZr",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5k5SDnvnzIITdn2xZ_Pp9i_vG8MKsigDi_Es9ZGmgJ4eQJwNqZ1iB-FG9xe3p15HttZianXYwv3RxtnfUgVXp1lJgFZ41",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Factory New",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "7_days": {
+          "average": 71.79,
+          "median": 71.35,
+          "sold": "131",
+          "standard_deviation": "4.34",
+          "lowest_price": 62.85,
+          "highest_price": 85.95
+        },
+        "30_days": {
+          "average": 71.27,
+          "median": 71.47,
+          "sold": "1214",
+          "standard_deviation": "7.83",
+          "lowest_price": 54,
+          "highest_price": 147.96
+        },
+        "all_time": {
+          "average": 103.72,
+          "median": 72.9,
+          "sold": "4407",
+          "standard_deviation": "16.04",
+          "lowest_price": 54,
+          "highest_price": 189.92
+        }
+      },
+      "first_sale_date": "1656712800"
+    },
+    "AK-47 | Ice Coaled (Field-Tested)": {
+      "name": "AK-47 | Ice Coaled (Field-Tested)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4910470216",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5k5SDnvnzIITck29Y_cg_i-rHoYrw3VLs_RZlZ2umLYSTdQc_Zl7ZrwPoxefp18Du7Z-bwHZh6z5iuyiJTfqMXg",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5k5SDnvnzIITck29Y_chOhujT8om7iVey_xU5Zj_7ItOcdgRraFrW_VC_xujm0MTquJTPmyQx6yJw7Hvfzgv3309IyM9cTA",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Field-Tested",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "7_days": {
+          "average": 23.81,
+          "median": 23.71,
+          "sold": "1765",
+          "standard_deviation": "2.35",
+          "lowest_price": 21.47,
+          "highest_price": 25.46
+        },
+        "30_days": {
+          "average": 24.46,
+          "median": 24.49,
+          "sold": "9669",
+          "standard_deviation": "5.41",
+          "lowest_price": 19.54,
+          "highest_price": 28.69
+        },
+        "all_time": {
+          "average": 33.32,
+          "median": 24.61,
+          "sold": "34140",
+          "standard_deviation": "13.39",
+          "lowest_price": 19.54,
+          "highest_price": 61.35
+        }
+      },
+      "first_sale_date": "1656712800"
+    },
+    "AK-47 | Ice Coaled (Minimal Wear)": {
+      "name": "AK-47 | Ice Coaled (Minimal Wear)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4901050731",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5k5SDnvnzIITdn2xZ_IsoiL2XotT03wS3-EJpNmynIobEcAY9ZVvWqFbvyOu80ZLvucmamnpqpGB8sq6j9EZr",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5k5SDnvnzIITdn2xZ_Pp9i_vG8MKsigDi_Es9ZGmgJ4eQJwNqZ1iB-FG9xe3p15HttZianXYwv3RxtnfUgVXp1lJgFZ41",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Minimal Wear",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "7_days": {
+          "average": 43.42,
+          "median": 43.42,
+          "sold": "651",
+          "standard_deviation": "2.24",
+          "lowest_price": 39.96,
+          "highest_price": 45.64
+        },
+        "30_days": {
+          "average": 43.78,
+          "median": 43.67,
+          "sold": "3711",
+          "standard_deviation": "5.98",
+          "lowest_price": 38.32,
+          "highest_price": 52.74
+        },
+        "all_time": {
+          "average": 60.52,
+          "median": 43.94,
+          "sold": "13410",
+          "standard_deviation": "13.48",
+          "lowest_price": 38.32,
+          "highest_price": 109.11
+        }
+      },
+      "first_sale_date": "1656712800"
+    },
+    "AK-47 | Ice Coaled (Well-Worn)": {
+      "name": "AK-47 | Ice Coaled (Well-Worn)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4910615021",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5k5SDnvnzIITck29Y_cg_i-rHoYrw3VLs_RZlZ2umLYSTdQc_Zl7ZrwPoxefp18Du7Z-bwHZh6z5iuyiJTfqMXg",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5k5SDnvnzIITck29Y_chOhujT8om7iVey_xU5Zj_7ItOcdgRraFrW_VC_xujm0MTquJTPmyQx6yJw7Hvfzgv3309IyM9cTA",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Well-Worn",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "7_days": {
+          "average": 22.32,
+          "median": 22.24,
+          "sold": "182",
+          "standard_deviation": "4.57",
+          "lowest_price": 19.18,
+          "highest_price": 26.16
+        },
+        "30_days": {
+          "average": 22.51,
+          "median": 22.4,
+          "sold": "850",
+          "standard_deviation": "7.19",
+          "lowest_price": 16.55,
+          "highest_price": 27.71
+        },
+        "all_time": {
+          "average": 28.49,
+          "median": 22.83,
+          "sold": "2302",
+          "standard_deviation": "15.11",
+          "lowest_price": 16.55,
+          "highest_price": 43.15
+        }
+      },
+      "first_sale_date": "1656799200"
+    },
+    "AK-47 | Jaguar (Battle-Scarred)": {
+      "name": "AK-47 | Jaguar (Battle-Scarred)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "527679328",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszYcDNW5Nmkq4GAw6DLO77QgHIf6ZQmju_C9NT00QCw_kpkZDrwdtWWIVA3YA2G8li2kLvv1pG475vMwWwj5He0r7zIMQ",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszYcDNW5Nmkq4GAw6DLO77QgHJu5MRjjeyP9N2ijFK3qks9am2nIY-ddVU9MwvTqQe3wLu5jZ-07cjJmnVn6SYn7WGdwUIg7NlC-A",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Battle-Scarred",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 19.37,
+          "median": 19.11,
+          "sold": "42",
+          "standard_deviation": "11.49",
+          "lowest_price": 16.83,
+          "highest_price": 30.44
+        },
+        "30_days": {
+          "average": 18.06,
+          "median": 17.94,
+          "sold": "315",
+          "standard_deviation": "7.82",
+          "lowest_price": 12.78,
+          "highest_price": 30.44
+        },
+        "all_time": {
+          "average": 10.89,
+          "median": 13,
+          "sold": "98468",
+          "standard_deviation": "37.89",
+          "lowest_price": 6.22,
+          "highest_price": 31.69
+        }
+      },
+      "first_sale_date": "1405116000"
+    },
+    "AK-47 | Jaguar (Factory New)": {
+      "name": "AK-47 | Jaguar (Factory New)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "527750372",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszYcDNW5Nmkq4GAw6DLP7LWnn8fvscmibGTpdSmigGyqRFrYm_wJdfBdQ84YAmD-1S6wrru08W-7ZianWwj5HfSt_Eogg",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszYcDNW5Nmkq4GAw6DLP7LWnn9u5MRjjeyPo46iiwzm-0tvMWyldtSScwA9YAmE_Vi4wL-8hJO4v8nInyFh6yVxsWGdwUIYQq5JMA",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Factory New",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 87.11,
+          "median": 87.74,
+          "sold": "4",
+          "standard_deviation": "2.84",
+          "lowest_price": 83.1,
+          "highest_price": 89.85
+        },
+        "30_days": {
+          "average": 89.48,
+          "median": 88.05,
+          "sold": "24",
+          "standard_deviation": "7.43",
+          "lowest_price": 79.07,
+          "highest_price": 103.28
+        },
+        "all_time": {
+          "average": 49.33,
+          "median": 47.46,
+          "sold": "10422",
+          "standard_deviation": "50.03",
+          "lowest_price": 24.76,
+          "highest_price": 445.43
+        }
+      },
+      "first_sale_date": "1405116000"
+    },
+    "AK-47 | Jaguar (Field-Tested)": {
+      "name": "AK-47 | Jaguar (Field-Tested)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "787584217",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszYcDNW5Nmkq4GAw6DLPr7Vn35cpschiOiTpNvx2QzmqUJkZDqnJoWRcgQ7NQvQ_FnsxunugMfv6MucyiB9-n51SuyeNcE",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszYcDNW5Nmkq4GAw6DLPr7Vn35c18lwmO7Eu46lilXm-kQ4YmHxdoeddVVqY1vU-lO7lb3vg57uu5rIzCMw7nZ35i3D30vgFhd2p1E",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Field-Tested",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "24_hours": {
+          "average": 22.84,
+          "median": 22.55,
+          "sold": "6",
+          "standard_deviation": "6.35",
+          "lowest_price": 22.06,
+          "highest_price": 25.72
+        },
+        "7_days": {
+          "average": 23.74,
+          "median": 23.22,
+          "sold": "155",
+          "standard_deviation": "6.03",
+          "lowest_price": 21.29,
+          "highest_price": 29.81
+        },
+        "30_days": {
+          "average": 23.56,
+          "median": 23.06,
+          "sold": "689",
+          "standard_deviation": "36.04",
+          "lowest_price": 17.61,
+          "highest_price": 193.72
+        },
+        "all_time": {
+          "average": 14.06,
+          "median": 16.44,
+          "sold": "337303",
+          "standard_deviation": "44.07",
+          "lowest_price": 7.83,
+          "highest_price": 193.72
+        }
+      },
+      "first_sale_date": "1405116000"
+    },
+    "AK-47 | Jaguar (Minimal Wear)": {
+      "name": "AK-47 | Jaguar (Minimal Wear)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "527663032",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszYcDNW5Nmkq4GAw6DLP7LWnn8fvscmibGTpdSmigGyqRFrYm_wJdfBdQ84YAmD-1S6wrru08W-7ZianWwj5HfSt_Eogg",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszYcDNW5Nmkq4GAw6DLP7LWnn9u5MRjjeyPo46iiwzm-0tvMWyldtSScwA9YAmE_Vi4wL-8hJO4v8nInyFh6yVxsWGdwUIYQq5JMA",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Minimal Wear",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 33.96,
+          "median": 33.85,
+          "sold": "58",
+          "standard_deviation": "4.76",
+          "lowest_price": 30.96,
+          "highest_price": 38.41
+        },
+        "30_days": {
+          "average": 33.58,
+          "median": 33.19,
+          "sold": "311",
+          "standard_deviation": "11.12",
+          "lowest_price": 27.37,
+          "highest_price": 75.49
+        },
+        "all_time": {
+          "average": 19.58,
+          "median": 20.95,
+          "sold": "143167",
+          "standard_deviation": "44.52",
+          "lowest_price": 10.96,
+          "highest_price": 106.03
+        }
+      },
+      "first_sale_date": "1405116000"
+    },
+    "AK-47 | Jaguar (Well-Worn)": {
+      "name": "AK-47 | Jaguar (Well-Worn)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "527685518",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszYcDNW5Nmkq4GAw6DLPr7Vn35cpschiOiTpNvx2QzmqUJkZDqnJoWRcgQ7NQvQ_FnsxunugMfv6MucyiB9-n51SuyeNcE",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszYcDNW5Nmkq4GAw6DLPr7Vn35c18lwmO7Eu46lilXm-kQ4YmHxdoeddVVqY1vU-lO7lb3vg57uu5rIzCMw7nZ35i3D30vgFhd2p1E",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Well-Worn",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 20.92,
+          "median": 20.23,
+          "sold": "66",
+          "standard_deviation": "17.95",
+          "lowest_price": 18.54,
+          "highest_price": 43.63
+        },
+        "30_days": {
+          "average": 20.03,
+          "median": 19.72,
+          "sold": "389",
+          "standard_deviation": "24.91",
+          "lowest_price": 13.89,
+          "highest_price": 97.76
+        },
+        "all_time": {
+          "average": 12.97,
+          "median": 14.42,
+          "sold": "138123",
+          "standard_deviation": "35.07",
+          "lowest_price": 7.13,
+          "highest_price": 97.76
+        }
+      },
+      "first_sale_date": "1405116000"
+    },
+    "AK-47 | Jet Set (Battle-Scarred)": {
+      "name": "AK-47 | Jet Set (Battle-Scarred)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "520043688",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszfdDFO08iklZaOm_LwDLrawjxu4MBwnPCPrNjwiwTlr0ZuYmv2IoCTcgY5N1nT_VC8yb--08C-tJSayHBhuyN352GdwULxcInyhw",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszfdDFO08iklZaOm_LwDLrawjxu4MBwnPD--Y3nj1H68kc5MGnycIOXcwQ7Z17W-lG5l-_sgpe-tMyYnyRhsilx5H3fnhbigwYMMLIrBiDPfg",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Battle-Scarred",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "30_days": {
+          "average": 108.51,
+          "median": 107.57,
+          "sold": "13",
+          "standard_deviation": "8.75",
+          "lowest_price": 95.05,
+          "highest_price": 125.31
+        },
+        "all_time": {
+          "average": 22.09,
+          "median": 27.21,
+          "sold": "8104",
+          "standard_deviation": "128.5",
+          "lowest_price": 8.79,
+          "highest_price": 140.28
+        }
+      },
+      "first_sale_date": "1404338400"
+    },
+    "AK-47 | Jet Set (Factory New)": {
+      "name": "AK-47 | Jet Set (Factory New)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "1503346502",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszfdDFO08iklZaOm_LwDLrawjxu5Mx2gv2PotytiQHnqhBoZGqnI9XBcgQ-Yl_Y_Vfvyey9g8S4753JzSA1s3Eh5GGdwUIoc5a5cw",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszfdDFO08iklZaOm_LwDLrawjxu5Mx2gv3--Y3nj1H6_ENkMmzwddWRdQVqZguE-lO-wunngpDttJ-bzyBn6SAi4S2LlkS0gAYMMLJosXbvAg",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Factory New",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "all_time": {
+          "average": 137,
+          "median": 115.3,
+          "sold": "612",
+          "standard_deviation": "79.42",
+          "lowest_price": 0.68,
+          "highest_price": 597.44
+        }
+      },
+      "first_sale_date": "1404338400"
+    },
+    "AK-47 | Jet Set (Field-Tested)": {
+      "name": "AK-47 | Jet Set (Field-Tested)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "1993586050",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszfdDFO08iklZaOm_LwDLrawjxu5cB1g_zMu4is2FDnrxBoZGz2JYOcdVc6MwuDrlPqxO_rjZPtvZ3AzHY3viQq5S3D30vg5o4KWoA",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszfdDFO08iklZaOm_LwDLrawjxu5cB1g_zMyoD0mlOx5RdlYz3wcNWRdQM7YF3Z_QC6k7280ZTouZzNwXcyuyAr4HuJmxG_gUpSLrs4hFb_dAQ",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Field-Tested",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "7_days": {
+          "average": 141.68,
+          "median": 140.63,
+          "sold": "5",
+          "standard_deviation": "5.58",
+          "lowest_price": 134.01,
+          "highest_price": 156.52
+        },
+        "30_days": {
+          "average": 139.52,
+          "median": 135.27,
+          "sold": "18",
+          "standard_deviation": "8.53",
+          "lowest_price": 125.72,
+          "highest_price": 171.05
+        },
+        "all_time": {
+          "average": 26.37,
+          "median": 37.84,
+          "sold": "16879",
+          "standard_deviation": "153.61",
+          "lowest_price": 11.29,
+          "highest_price": 463.01
+        }
+      },
+      "first_sale_date": "1404338400"
+    },
+    "AK-47 | Jet Set (Minimal Wear)": {
+      "name": "AK-47 | Jet Set (Minimal Wear)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "1237963018",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszfdDFO08iklZaOm_LwDLrawjxu5Mx2gv2PotytiQHnqhBoZGqnI9XBcgQ-Yl_Y_Vfvyey9g8S4753JzSA1s3Eh5GGdwUIoc5a5cw",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszfdDFO08iklZaOm_LwDLrawjxu5Mx2gv3--Y3nj1H6_ENkMmzwddWRdQVqZguE-lO-wunngpDttJ-bzyBn6SAi4S2LlkS0gAYMMLJosXbvAg",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Minimal Wear",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "30_days": {
+          "average": 190.08,
+          "median": 186.56,
+          "sold": "3",
+          "standard_deviation": "12.35",
+          "lowest_price": 163.25,
+          "highest_price": 220.43
+        },
+        "all_time": {
+          "average": 38.09,
+          "median": 48.92,
+          "sold": "8981",
+          "standard_deviation": "139.87",
+          "lowest_price": 0.49,
+          "highest_price": 503.28
+        }
+      },
+      "first_sale_date": "1404338400"
+    },
+    "AK-47 | Jet Set (Well-Worn)": {
+      "name": "AK-47 | Jet Set (Well-Worn)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "519992253",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszfdDFO08iklZaOm_LwDLrawjxu5cB1g_zMu4is2FDnrxBoZGz2JYOcdVc6MwuDrlPqxO_rjZPtvZ3AzHY3viQq5S3D30vg5o4KWoA",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszfdDFO08iklZaOm_LwDLrawjxu5cB1g_zMyoD0mlOx5RdlYz3wcNWRdQM7YF3Z_QC6k7280ZTouZzNwXcyuyAr4HuJmxG_gUpSLrs4hFb_dAQ",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Well-Worn",
+      "rarity": "Classified",
+      "rarity_color": "d32ce6",
+      "price": {
+        "7_days": {
+          "average": 110.77,
+          "median": 110.77,
+          "sold": "2",
+          "standard_deviation": "9.95",
+          "lowest_price": 99.75,
+          "highest_price": 121.79
+        },
+        "30_days": {
+          "average": 115.69,
+          "median": 119.53,
+          "sold": "12",
+          "standard_deviation": "9.33",
+          "lowest_price": 99.75,
+          "highest_price": 132.29
+        },
+        "all_time": {
+          "average": 22.35,
+          "median": 30.93,
+          "sold": "11893",
+          "standard_deviation": "133.64",
+          "lowest_price": 9.61,
+          "highest_price": 144.69
+        }
+      },
+      "first_sale_date": "1404338400"
+    },
+    "AK-47 | Jungle Spray (Battle-Scarred)": {
+      "name": "AK-47 | Jungle Spray (Battle-Scarred)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "727138120",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhzw8zbYS9D9eO8gY6Mm_LLO77QgHIfvMcliLiTrN-j0Fa2_RdoMGj3cICRJAU5Y1CG8wC2kLy71JG5uJ3ByGwj5Hf749CJhg",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhzw8zbYS9D9eO8gY6Mm_LLO77QgHJu5MRjjeyPoY6higXm8kBqazuhItKRIQc6NV7UrFK5w-a5jMe07c-dmHVmviAq5GGdwULfUvNkPw",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Battle-Scarred",
+      "rarity": "Industrial Grade",
+      "rarity_color": "5e98d9",
+      "price": {
+        "7_days": {
+          "average": 6.11,
+          "median": 6.18,
+          "sold": "41",
+          "standard_deviation": "10.27",
+          "lowest_price": 4.63,
+          "highest_price": 8.67
+        },
+        "30_days": {
+          "average": 5.69,
+          "median": 5.65,
+          "sold": "216",
+          "standard_deviation": "9.66",
+          "lowest_price": 3.61,
+          "highest_price": 8.67
+        },
+        "all_time": {
+          "average": 0.93,
+          "median": 2.17,
+          "sold": "122078",
+          "standard_deviation": "226.32",
+          "lowest_price": 0.15,
+          "highest_price": 77.62
+        }
+      },
+      "first_sale_date": "1376604000"
+    },
+    "AK-47 | Jungle Spray (Factory New)": {
+      "name": "AK-47 | Jungle Spray (Factory New)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "310916740",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhzw8zbYS9D9eO8gY6Mm_LLP7LWnn8f6cMk2L3E9NqkilHm8hI-a2inctSWcAc8Zl-C81nvw-_uhpW06MjKzmwj5Hd9a9y0Zw",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhzw8zbYS9D9eO8gY6Mm_LLP7LWnn9u5MRjjeyP9Iqg2gCxqkVtMTzxLdfHegdqNwrT-FC8xum9jJ7tvpzIynFr7nUh4mGdwUJ0ApgG6g",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Factory New",
+      "rarity": "Industrial Grade",
+      "rarity_color": "5e98d9",
+      "price": {
+        "30_days": {
+          "average": 163.97,
+          "median": 163.97,
+          "sold": "1",
+          "standard_deviation": "0",
+          "lowest_price": 163.97,
+          "highest_price": 163.97
+        },
+        "all_time": {
+          "average": 12.66,
+          "median": 12.33,
+          "sold": "5525",
+          "standard_deviation": "160.03",
+          "lowest_price": 0.47,
+          "highest_price": 208.99
+        }
+      },
+      "first_sale_date": "1376776800"
+    },
+    "AK-47 | Jungle Spray (Field-Tested)": {
+      "name": "AK-47 | Jungle Spray (Field-Tested)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "620121692",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhzw8zbYS9D9eO8gY6Mm_LLPr7Vn35cppEn2LiRo9mn2gDt-RVuZzr0doOQcVA5NVnU_ge4wuru15-46svMzyZ9-n51EmbODt4",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhzw8zbYS9D9eO8gY6Mm_LLPr7Vn35c18lwmO7Eu9ij2gXk_UZuYW36JtCXdlU5M13V-Qe5le_rgcC6v5nIm3tn7HYn4yvD30vgFUbvgVU",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Field-Tested",
+      "rarity": "Industrial Grade",
+      "rarity_color": "5e98d9",
+      "price": {
+        "7_days": {
+          "average": 7.02,
+          "median": 6.8,
+          "sold": "92",
+          "standard_deviation": "32.96",
+          "lowest_price": 5.45,
+          "highest_price": 25.08
+        },
+        "30_days": {
+          "average": 7.12,
+          "median": 6.35,
+          "sold": "495",
+          "standard_deviation": "83.75",
+          "lowest_price": 5.06,
+          "highest_price": 93.3
+        },
+        "all_time": {
+          "average": 0.71,
+          "median": 1.76,
+          "sold": "730235",
+          "standard_deviation": "405.56",
+          "lowest_price": 0.12,
+          "highest_price": 93.3
+        }
+      },
+      "first_sale_date": "1376517600"
+    },
+    "AK-47 | Jungle Spray (Minimal Wear)": {
+      "name": "AK-47 | Jungle Spray (Minimal Wear)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "676146370",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhzw8zbYS9D9eO8gY6Mm_LLP7LWnn8f6cMk2L3E9NqkilHm8hI-a2inctSWcAc8Zl-C81nvw-_uhpW06MjKzmwj5Hd9a9y0Zw",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhzw8zbYS9D9eO8gY6Mm_LLP7LWnn9u5MRjjeyP9Iqg2gCxqkVtMTzxLdfHegdqNwrT-FC8xum9jJ7tvpzIynFr7nUh4mGdwUJ0ApgG6g",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Minimal Wear",
+      "rarity": "Industrial Grade",
+      "rarity_color": "5e98d9",
+      "price": {
+        "7_days": {
+          "average": 17.36,
+          "median": 14.53,
+          "sold": "18",
+          "standard_deviation": "70.81",
+          "lowest_price": 12.38,
+          "highest_price": 63.56
+        },
+        "30_days": {
+          "average": 14.83,
+          "median": 13.7,
+          "sold": "121",
+          "standard_deviation": "46.07",
+          "lowest_price": 11.35,
+          "highest_price": 63.56
+        },
+        "all_time": {
+          "average": 1.72,
+          "median": 3.45,
+          "sold": "180169",
+          "standard_deviation": "272",
+          "lowest_price": 0.47,
+          "highest_price": 63.56
+        }
+      },
+      "first_sale_date": "1376604000"
+    },
+    "AK-47 | Jungle Spray (Well-Worn)": {
+      "name": "AK-47 | Jungle Spray (Well-Worn)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "310778054",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhzw8zbYS9D9eO8gY6Mm_LLPr7Vn35cppEn2LiRo9mn2gDt-RVuZzr0doOQcVA5NVnU_ge4wuru15-46svMzyZ9-n51EmbODt4",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhzw8zbYS9D9eO8gY6Mm_LLPr7Vn35c18lwmO7Eu9ij2gXk_UZuYW36JtCXdlU5M13V-Qe5le_rgcC6v5nIm3tn7HYn4yvD30vgFUbvgVU",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Well-Worn",
+      "rarity": "Industrial Grade",
+      "rarity_color": "5e98d9",
+      "price": {
+        "7_days": {
+          "average": 6.03,
+          "median": 6.14,
+          "sold": "20",
+          "standard_deviation": "11.22",
+          "lowest_price": 3.36,
+          "highest_price": 6.68
+        },
+        "30_days": {
+          "average": 5.96,
+          "median": 6.02,
+          "sold": "128",
+          "standard_deviation": "7.89",
+          "lowest_price": 3.36,
+          "highest_price": 6.71
+        },
+        "all_time": {
+          "average": 1.17,
+          "median": 2.49,
+          "sold": "97500",
+          "standard_deviation": "180.67",
+          "lowest_price": 0.29,
+          "highest_price": 53.81
+        }
+      },
+      "first_sale_date": "1376604000"
+    },
+    "AK-47 | Leet Museo (Battle-Scarred)": {
+      "name": "AK-47 | Leet Museo (Battle-Scarred)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4578742037",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV0920h5SZlvTgDLPUl31IppwgjuyY9NSmiQHl-BY4amH0dYSUdA9saVyG_AS3xOjr1Me-v5XPmHt9-n51sg74Wuo",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV0920h5SZlvTgDLPUl31I18lwmO7Eu9WkjFHtqktvMmzyJ9PBew45MFrR_Fjsyeq5g8O1uZvNmCNhuSgktHbD30vg7voGZEA",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Battle-Scarred",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 16.22,
+          "median": 16.18,
+          "sold": "174",
+          "standard_deviation": "3.57",
+          "lowest_price": 14.03,
+          "highest_price": 18.03
+        },
+        "30_days": {
+          "average": 15.88,
+          "median": 15.91,
+          "sold": "914",
+          "standard_deviation": "4.32",
+          "lowest_price": 14.02,
+          "highest_price": 18.35
+        },
+        "all_time": {
+          "average": 17.52,
+          "median": 16.17,
+          "sold": "15725",
+          "standard_deviation": "9.07",
+          "lowest_price": 13.93,
+          "highest_price": 23.86
+        }
+      },
+      "first_sale_date": "1632348000"
+    },
+    "AK-47 | Leet Museo (Factory New)": {
+      "name": "AK-47 | Leet Museo (Factory New)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4578724761",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV0920h5SZlvTgDLfYkWNFpsYhj-rAp4332FexrkE_ZWn3LYfHe1Q4ZVvV8ge5w7-6gZW1tMjOwSN9-n51hQgYTAQ",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV0920h5SZlvTgDLfYkWNF18lwmO7Eu4-ljVe1-RI-YzqmcYTGdAY6aFmC8wO4xe3qjcC7vsyczXFqsnUl7S7D30vgp4yMCZE",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Factory New",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 38.72,
+          "median": 38.45,
+          "sold": "91",
+          "standard_deviation": "9.6",
+          "lowest_price": 33.39,
+          "highest_price": 66.88
+        },
+        "30_days": {
+          "average": 37.79,
+          "median": 37.84,
+          "sold": "465",
+          "standard_deviation": "5.99",
+          "lowest_price": 32.23,
+          "highest_price": 66.88
+        },
+        "all_time": {
+          "average": 47.6,
+          "median": 39.04,
+          "sold": "9198",
+          "standard_deviation": "14.29",
+          "lowest_price": 32.23,
+          "highest_price": 70.4
+        }
+      },
+      "first_sale_date": "1632348000"
+    },
+    "AK-47 | Leet Museo (Field-Tested)": {
+      "name": "AK-47 | Leet Museo (Field-Tested)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4571719143",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV0920h5SZlvTgDLbUkmJE5Yso3rCX8Nyj2w3n80E_Yzv0LILGegBsYAnW-lW3kOi8hJ64vpnJyiQ2pGB8sjkBcWBl",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV0920h5SZlvTgDLbUkmJE5fp9i_vG8MKs3A3irkNqYGDwLITGclQ5aVyD8lfswL_phZK17ZuayHpnuCQi5imIgVXp1pBODejn",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Field-Tested",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 17.22,
+          "median": 17.18,
+          "sold": "641",
+          "standard_deviation": "3.47",
+          "lowest_price": 14.67,
+          "highest_price": 18.78
+        },
+        "30_days": {
+          "average": 17.05,
+          "median": 17.01,
+          "sold": "3189",
+          "standard_deviation": "3.62",
+          "lowest_price": 14.27,
+          "highest_price": 21.81
+        },
+        "all_time": {
+          "average": 19.77,
+          "median": 17.23,
+          "sold": "57901",
+          "standard_deviation": "10.27",
+          "lowest_price": 14.27,
+          "highest_price": 29.16
+        }
+      },
+      "first_sale_date": "1632348000"
+    },
+    "AK-47 | Leet Museo (Minimal Wear)": {
+      "name": "AK-47 | Leet Museo (Minimal Wear)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4578724540",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV0920h5SZlvTgDLfYkWNFpsYhj-rAp4332FexrkE_ZWn3LYfHe1Q4ZVvV8ge5w7-6gZW1tMjOwSN9-n51hQgYTAQ",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV0920h5SZlvTgDLfYkWNF18lwmO7Eu4-ljVe1-RI-YzqmcYTGdAY6aFmC8wO4xe3qjcC7vsyczXFqsnUl7S7D30vgp4yMCZE",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Minimal Wear",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 24.21,
+          "median": 24.23,
+          "sold": "202",
+          "standard_deviation": "3.73",
+          "lowest_price": 21.46,
+          "highest_price": 26.59
+        },
+        "30_days": {
+          "average": 23.48,
+          "median": 23.47,
+          "sold": "1121",
+          "standard_deviation": "5.05",
+          "lowest_price": 18.45,
+          "highest_price": 29.25
+        },
+        "all_time": {
+          "average": 29.06,
+          "median": 23.97,
+          "sold": "22647",
+          "standard_deviation": "12.99",
+          "lowest_price": 18.45,
+          "highest_price": 44.34
+        }
+      },
+      "first_sale_date": "1632348000"
+    },
+    "AK-47 | Leet Museo (Well-Worn)": {
+      "name": "AK-47 | Leet Museo (Well-Worn)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "4580143380",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV0920h5SZlvTgDLbUkmJE5Yso3rCX8Nyj2w3n80E_Yzv0LILGegBsYAnW-lW3kOi8hJ64vpnJyiQ2pGB8sjkBcWBl",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV0920h5SZlvTgDLbUkmJE5fp9i_vG8MKs3A3irkNqYGDwLITGclQ5aVyD8lfswL_phZK17ZuayHpnuCQi5imIgVXp1pBODejn",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Well-Worn",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 18.28,
+          "median": 18.19,
+          "sold": "97",
+          "standard_deviation": "6.33",
+          "lowest_price": 15.58,
+          "highest_price": 20.61
+        },
+        "30_days": {
+          "average": 17.74,
+          "median": 17.61,
+          "sold": "405",
+          "standard_deviation": "7.19",
+          "lowest_price": 14.04,
+          "highest_price": 20.61
+        },
+        "all_time": {
+          "average": 19.58,
+          "median": 18.57,
+          "sold": "6344",
+          "standard_deviation": "10.47",
+          "lowest_price": 14.04,
+          "highest_price": 26.72
+        }
+      },
+      "first_sale_date": "1632348000"
+    },
+    "AK-47 | Legion of Anubis (Battle-Scarred)": {
+      "name": "AK-47 | Legion of Anubis (Battle-Scarred)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "3955302901",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV0924gYKChMj8NrrHjyUHuJUi3uuUrdmkjgPl-UdqYWr6LYCUdlM9MlnZ_lK-ku_shZ677c-f1zI97bR0BUMC",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV0924gYKChMj8NrrHj1Rd6dd2j6eXpdym3Fbh80ZtNW7yJoKTcAU3aF7R_gS9ku_mgZW875zKyXpk63J0-z-DyGMBIzdE",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Battle-Scarred",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 8.82,
+          "median": 8.84,
+          "sold": "646",
+          "standard_deviation": "3.22",
+          "lowest_price": 8.09,
+          "highest_price": 10.49
+        },
+        "30_days": {
+          "average": 8.63,
+          "median": 8.62,
+          "sold": "3124",
+          "standard_deviation": "4.32",
+          "lowest_price": 7.28,
+          "highest_price": 11.33
+        },
+        "all_time": {
+          "average": 12.28,
+          "median": 9.17,
+          "sold": "55531",
+          "standard_deviation": "47.2",
+          "lowest_price": 7.28,
+          "highest_price": 62.64
+        }
+      },
+      "first_sale_date": "1596837600"
+    },
+    "AK-47 | Legion of Anubis (Factory New)": {
+      "name": "AK-47 | Legion of Anubis (Factory New)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "3955334989",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV0924gYKChMj4OrzZgiUGv5wo3uuY8dr02lLn-0FsMGmgIdfEelU3Ml-G_VG9xOm7gZC87suf1zI97aiJAbeK",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV0924gYKChMj4OrzZglRd6dd2j6eWotWs3Fbtr0U9YT_wJISVIQZtZAmB8gK3kum5gpa_uZqdzXRj6HZ0-z-DyDgX3Rs-",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Factory New",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 22.78,
+          "median": 22.69,
+          "sold": "438",
+          "standard_deviation": "4.26",
+          "lowest_price": 18.81,
+          "highest_price": 24.51
+        },
+        "30_days": {
+          "average": 22.66,
+          "median": 22.59,
+          "sold": "2325",
+          "standard_deviation": "4.63",
+          "lowest_price": 18.81,
+          "highest_price": 33.74
+        },
+        "all_time": {
+          "average": 37.26,
+          "median": 24.37,
+          "sold": "43100",
+          "standard_deviation": "90.42",
+          "lowest_price": 18.81,
+          "highest_price": 435.09
+        }
+      },
+      "first_sale_date": "1596837600"
+    },
+    "AK-47 | Legion of Anubis (Field-Tested)": {
+      "name": "AK-47 | Legion of Anubis (Field-Tested)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "3946606207",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV0924gYKChMj5Nr_Yg2YfvcQp3LHEp46i0QLs_kJsN236IYKRIQE2aQuG8ljrxe7phZ-5v8_MnWwj5HdtkEFgKg",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV0924gYKChMj5Nr_Yg2Zu5MRjjeyPoI2t3gyx-RFram_7IYeVJgI3ZFzUqVa2yb25jZ_puJ3PyXtmuXInsWGdwUK4PCOkIg",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Field-Tested",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "24_hours": {
+          "average": 11.42,
+          "median": 11.68,
+          "sold": "18",
+          "standard_deviation": "3.18",
+          "lowest_price": 11.02,
+          "highest_price": 11.86
+        },
+        "7_days": {
+          "average": 11.29,
+          "median": 11.21,
+          "sold": "2369",
+          "standard_deviation": "3.13",
+          "lowest_price": 10.22,
+          "highest_price": 11.98
+        },
+        "30_days": {
+          "average": 11.1,
+          "median": 11.05,
+          "sold": "11548",
+          "standard_deviation": "3.36",
+          "lowest_price": 10.14,
+          "highest_price": 12.22
+        },
+        "all_time": {
+          "average": 17.56,
+          "median": 11.73,
+          "sold": "223568",
+          "standard_deviation": "72.42",
+          "lowest_price": 10.14,
+          "highest_price": 146.65
+        }
+      },
+      "first_sale_date": "1596837600"
+    },
+    "AK-47 | Legion of Anubis (Minimal Wear)": {
+      "name": "AK-47 | Legion of Anubis (Minimal Wear)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "3955317693",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV0924gYKChMj4OrzZgiUGv5wo3uuY8dr02lLn-0FsMGmgIdfEelU3Ml-G_VG9xOm7gZC87suf1zI97aiJAbeK",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV0924gYKChMj4OrzZglRd6dd2j6eWotWs3Fbtr0U9YT_wJISVIQZtZAmB8gK3kum5gpa_uZqdzXRj6HZ0-z-DyDgX3Rs-",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Minimal Wear",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 14.9,
+          "median": 14.7,
+          "sold": "1103",
+          "standard_deviation": "3.88",
+          "lowest_price": 13.09,
+          "highest_price": 16.09
+        },
+        "30_days": {
+          "average": 14.82,
+          "median": 14.79,
+          "sold": "6001",
+          "standard_deviation": "3.37",
+          "lowest_price": 13.09,
+          "highest_price": 16.24
+        },
+        "all_time": {
+          "average": 24.04,
+          "median": 15.71,
+          "sold": "112777",
+          "standard_deviation": "85.07",
+          "lowest_price": 13.09,
+          "highest_price": 247.52
+        }
+      },
+      "first_sale_date": "1596837600"
+    },
+    "AK-47 | Neon Revolution (Battle-Scarred)": {
+      "name": "AK-47 | Neon Revolution (Battle-Scarred)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "1935618669",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV0924lZKIn-7LO77QgHIfusd30-3H8NqgilGwrRBpZG7wIdDHdgc7YV3Rq1e-x-a5gp_u6ZSYmmwj5HcS3vwV9A",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV0924lZKIn-7LO77QgHJu5MRjjeyPp47z0VCyrkVpMTynctWQdQE9ZA6C_lC7wevu1JC8upWfznsx7ylztmGdwULNyiVWKg",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Battle-Scarred",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "24_hours": {
+          "average": 14.01,
+          "median": 14.01,
+          "sold": "4",
+          "standard_deviation": "0.49",
+          "lowest_price": 13.94,
+          "highest_price": 14.09
+        },
+        "7_days": {
+          "average": 14.41,
+          "median": 14.36,
+          "sold": "482",
+          "standard_deviation": "3.33",
+          "lowest_price": 13.44,
+          "highest_price": 16.21
+        },
+        "30_days": {
+          "average": 14.09,
+          "median": 14.1,
+          "sold": "2093",
+          "standard_deviation": "5.85",
+          "lowest_price": 9.71,
+          "highest_price": 26.72
+        },
+        "all_time": {
+          "average": 18.23,
+          "median": 17.88,
+          "sold": "98280",
+          "standard_deviation": "24.69",
+          "lowest_price": 9.71,
+          "highest_price": 58.2
+        }
+      },
+      "first_sale_date": "1471644000"
+    },
+    "AK-47 | Neon Revolution (Factory New)": {
+      "name": "AK-47 | Neon Revolution (Factory New)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "2088302278",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV0924lZKIn-7LP7LWnn8fvsAo0u-R9trzi1bs-hI9NjqiJIXGdwBrNAzW8li4w7jqhcW16cvAzWwj5HdQlBgtMw",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV0924lZKIn-7LP7LWnn9u5MRjjeyPo4ms0FLkqEU6MDv7JdfEJ1VvYVuD_1frlLrpjZ-6vsvMySFq73Yr4WGdwUIt-GQI9g",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Factory New",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 48.09,
+          "median": 47.77,
+          "sold": "111",
+          "standard_deviation": "3.14",
+          "lowest_price": 43.79,
+          "highest_price": 51.77
+        },
+        "30_days": {
+          "average": 46.72,
+          "median": 46.61,
+          "sold": "614",
+          "standard_deviation": "4.76",
+          "lowest_price": 34.72,
+          "highest_price": 59.16
+        },
+        "all_time": {
+          "average": 53.35,
+          "median": 50.04,
+          "sold": "26594",
+          "standard_deviation": "26.61",
+          "lowest_price": 33.63,
+          "highest_price": 326.7
+        }
+      },
+      "first_sale_date": "1471644000"
+    },
+    "AK-47 | Neon Revolution (Field-Tested)": {
+      "name": "AK-47 | Neon Revolution (Field-Tested)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "2410824263",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV0924lZKIn-7LPr7Vn35cppwl3OyVp9Txi1Gy_0Y9MDjyd4fGJFVsZFGG-gC5xLvo1pfouJ3Bzyd9-n51-K95osI",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV0924lZKIn-7LPr7Vn35c18lwmO7Eu9Wh3lHg-Us4MDylIIPEIVc_MlmDrALsxOe5hce7ucjOmnM3viAq4yrD30vgQUUy1Yw",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Field-Tested",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 16.45,
+          "median": 16.38,
+          "sold": "1448",
+          "standard_deviation": "3.52",
+          "lowest_price": 13.89,
+          "highest_price": 17.55
+        },
+        "30_days": {
+          "average": 16.08,
+          "median": 16.07,
+          "sold": "7553",
+          "standard_deviation": "3.6",
+          "lowest_price": 13.89,
+          "highest_price": 18.2
+        },
+        "all_time": {
+          "average": 21.26,
+          "median": 20.35,
+          "sold": "460118",
+          "standard_deviation": "29.34",
+          "lowest_price": 12.56,
+          "highest_price": 83.39
+        }
+      },
+      "first_sale_date": "1471644000"
+    },
+    "AK-47 | Neon Revolution (Minimal Wear)": {
+      "name": "AK-47 | Neon Revolution (Minimal Wear)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "1934611432",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV0924lZKIn-7LP7LWnn8fvsAo0u-R9trzi1bs-hI9NjqiJIXGdwBrNAzW8li4w7jqhcW16cvAzWwj5HdQlBgtMw",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV0924lZKIn-7LP7LWnn9u5MRjjeyPo4ms0FLkqEU6MDv7JdfEJ1VvYVuD_1frlLrpjZ-6vsvMySFq73Yr4WGdwUIt-GQI9g",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Minimal Wear",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 25.35,
+          "median": 25.41,
+          "sold": "356",
+          "standard_deviation": "3.91",
+          "lowest_price": 21.58,
+          "highest_price": 27.61
+        },
+        "30_days": {
+          "average": 24.7,
+          "median": 24.64,
+          "sold": "1983",
+          "standard_deviation": "4.29",
+          "lowest_price": 20.13,
+          "highest_price": 32.91
+        },
+        "all_time": {
+          "average": 30.67,
+          "median": 28.73,
+          "sold": "127162",
+          "standard_deviation": "28.04",
+          "lowest_price": 18.02,
+          "highest_price": 132.86
+        }
+      },
+      "first_sale_date": "1471644000"
+    },
+    "AK-47 | Neon Revolution (Well-Worn)": {
+      "name": "AK-47 | Neon Revolution (Well-Worn)",
+      "marketable": 1,
+      "tradable": 1,
+      "classid": "1935617223",
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV0924lZKIn-7LPr7Vn35cppwl3OyVp9Txi1Gy_0Y9MDjyd4fGJFVsZFGG-gC5xLvo1pfouJ3Bzyd9-n51-K95osI",
+      "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV0924lZKIn-7LPr7Vn35c18lwmO7Eu9Wh3lHg-Us4MDylIIPEIVc_MlmDrALsxOe5hce7ucjOmnM3viAq4yrD30vgQUUy1Yw",
+      "type": "Weapon",
+      "weapon_type": "Rifle",
+      "gun_type": "AK-47",
+      "exterior": "Well-Worn",
+      "rarity": "Covert",
+      "rarity_color": "eb4b4b",
+      "price": {
+        "7_days": {
+          "average": 20.16,
+          "median": 20.15,
+          "sold": "116",
+          "standard_deviation": "4.04",
+          "lowest_price": 17.48,
+          "highest_price": 22.25
+        },
+        "30_days": {
+          "average": 19.9,
+          "median": 19.97,
+          "sold": "598",
+          "standard_deviation": "5.91",
+          "lowest_price": 16.29,
+          "highest_price": 24.15
+        },
+        "all_time": {
+          "average": 24.33,
+          "median": 24.42,
+          "sold": "28519",
+          "standard_deviation": "25.96",
+          "lowest_price": 14.25,
+          "highest_price": 76.49
+        }
+      },
+      "first_sale_date": "1471644000"
+    }
+  }
+}

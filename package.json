@@ -1,0 +1,39 @@
+{
+  "name": "caseclicker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/server": "^11.10.0",
+    "@mantine/carousel": "^5.6.0",
+    "@mantine/core": "^5.6.0",
+    "@mantine/dates": "^5.6.0",
+    "@mantine/hooks": "^5.6.0",
+    "@mantine/modals": "^5.6.0",
+    "@mantine/next": "^5.6.0",
+    "@mantine/notifications": "^5.6.0",
+    "@next-auth/mongodb-adapter": "^1.1.1",
+    "dayjs": "^1.11.5",
+    "embla-carousel-react": "^7.0.3",
+    "framer-motion": "^7.6.1",
+    "mongodb": "^4.11.0",
+    "mongoose": "^6.6.5",
+    "next": "12.3.1",
+    "next-auth": "^4.14.0",
+    "rate-limiter-flexible": "^2.3.12",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.6.0",
+    "use-sound": "^4.0.1"
+  },
+  "devDependencies": {
+    "eslint": "8.25.0",
+    "eslint-config-next": "12.3.1"
+  }
+}
