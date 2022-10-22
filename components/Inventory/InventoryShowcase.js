@@ -45,7 +45,7 @@ export default function InventoryShowcase() {
         {skins.length > 0 &&
           skins.map((skin) => {
             return (
-              <Grid.Col span={4}>
+              <Grid.Col key={skin._id} span={4}>
                 <SkinCard
                   id={skin._id}
                   name={skin.name}
