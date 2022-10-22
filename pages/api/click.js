@@ -3,6 +3,7 @@ import UserStat from "../../lib/database/schemas/userStat";
 import { authOptions } from "../api/auth/[...nextauth]";
 import { unstable_getServerSession } from "next-auth/next";
 import { RateLimiterMemory } from "rate-limiter-flexible";
+import { getToken } from "next-auth/jwt";
 
 const opts = {
   points: 20,
@@ -17,8 +18,8 @@ async function handler(req, res) {
     return res.status(429).json({ error: "Rate limit exeeded" });
   }
 
-  const session = await unstable_getServerSession(req, res, authOptions);
-  const { userId } = session;
+  const token = await getToken({ req });
+  const userId = token.id;
 
   const userStat = await UserStat.findOne({ userId: userId });
   const updatedUserStat = await UserStat.findOneAndUpdate(

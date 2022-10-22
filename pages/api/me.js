@@ -1,6 +1,4 @@
 import connectDB from "../../lib/database/connectMongoDb";
-import { authOptions } from "../api/auth/[...nextauth]";
-import { unstable_getServerSession } from "next-auth/next";
 import UserStat from "../../lib/database/schemas/userStat";
 import { getToken } from "next-auth/jwt";
 
