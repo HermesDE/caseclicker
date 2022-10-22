@@ -14,15 +14,22 @@ export const authOptions = {
     // ...add more providers here
   ],
   session: {
-    strategy: "database",
+    strategy: "jwt",
     maxAge: 30 * 24 * 60 * 60,
     updateAge: 24 * 60 * 60,
   },
   adapter: MongoDBAdapter(clientPromise),
   callbacks: {
-    async session({ session, user }) {
-      session.userId = user.id;
+    async session({ session, token, user }) {
+      session.userId = token.id;
       return session;
+    },
+    async jwt({ token, account, profile }) {
+      if (account) {
+        token.accessToken = account.access_token;
+        token.id = token.sub;
+      }
+      return token;
     },
   },
   events: {

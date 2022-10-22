@@ -23,7 +23,10 @@ async function handler(req, res) {
           return b.price - a.price;
         });
       }
-      skins.length = 50;
+      if (skins.length > 50) {
+        skins.length = 50;
+      }
+
       res.json(skins);
       break;
     case "DELETE":
