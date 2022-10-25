@@ -19,6 +19,8 @@ export default function SkinCard({
   rarityColor,
   float,
   deleteSkin,
+  toggleMoneyUpdate,
+  sellLock,
 }) {
   return (
     <motion.div>
@@ -45,6 +47,7 @@ export default function SkinCard({
           fullWidth
           mt={"md"}
           radius="md"
+          disabled={sellLock}
           onClick={async () => {
             const body = {
               id: id,
@@ -56,6 +59,7 @@ export default function SkinCard({
             });
             if (response.ok) {
               deleteSkin(id);
+              toggleMoneyUpdate();
               showNotification({
                 title: "Item sold!",
                 message: `You sold your ${name} for ${price} $.`,

@@ -3,8 +3,7 @@ import UserStat from "../../../lib/database/schemas/userStat";
 import Case from "../../../lib/database/schemas/case";
 import SkinGroup from "../../../lib/database/schemas/skingroup";
 import Skin from "../../../lib/database/schemas/skin";
-import { authOptions } from "../../api/auth/[...nextauth]";
-import { unstable_getServerSession } from "next-auth/next";
+import { getToken } from "next-auth/jwt";
 import OpenedSkin from "../../../lib/database/schemas/openedSkin";
 
 const generateFloat = (exteriors) => {
@@ -70,8 +69,8 @@ const generateFloat = (exteriors) => {
 };
 
 async function handler(req, res) {
-  const session = await unstable_getServerSession(req, res, authOptions);
-  const { userId } = session;
+  const token = await getToken({ req });
+  const userId = token.id;
 
   const userStat = await UserStat.findOne({ userId: userId });
   const caseToBuy = await Case.findById(req.body.id);
@@ -180,6 +179,10 @@ async function handler(req, res) {
     openedAt: new Date(),
   });
   await newOpenedSkin.save();
+  await UserStat.findOneAndUpdate(
+    { userId: userId },
+    { $inc: { openedCases: 1 } }
+  );
 
   res.json(newOpenedSkin);
 }

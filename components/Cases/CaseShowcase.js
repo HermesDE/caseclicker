@@ -2,7 +2,7 @@ import { Container, Grid } from "@mantine/core";
 import { useEffect, useState } from "react";
 import CaseCard from "./CaseCard";
 
-export default function CaseShowcase({ toggleMoneyUpdate }) {
+export default function CaseShowcase({ toggleMoneyUpdate, money }) {
   const [cases, setCases] = useState([]);
 
   useEffect(() => {
@@ -27,6 +27,7 @@ export default function CaseShowcase({ toggleMoneyUpdate }) {
                   name={c.name}
                   iconUrl={c.iconUrl}
                   price={c.price}
+                  money={money}
                 />
               </Grid.Col>
             );

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import useSound from "use-sound";
 import UnboxedSkinCard from "./UnboxedSkinCard";
 import { useEffect, useRef, useState } from "react";
+import { showNotification } from "@mantine/notifications";
 
 export default function CaseCard({
   id,
@@ -14,9 +15,11 @@ export default function CaseCard({
   rarity,
   rarityColor,
   toggleMoneyUpdate,
+  money,
 }) {
   const [play] = useSound("/sounds/caseDrop.mp3", { volume: 0.1 });
   const [caseOpen] = useSound("/sounds/caseOpen.mp3", { volume: 0.1 });
+  const [loading, setLoading] = useState(false);
 
   return (
     <Card shadow={"sm"} p="lg" radius={"md"} withBorder>
@@ -49,12 +52,15 @@ export default function CaseCard({
         <Badge color={"yellow"}>{price} $</Badge>
       </Group>
       <Button
+        disabled={loading || money < price}
+        loading={loading}
         variant="light"
         color={"blue"}
         fullWidth
         mt={"md"}
         radius="md"
         onClick={async () => {
+          setLoading(true);
           caseOpen();
           const body = {
             id: id,
@@ -64,7 +70,15 @@ export default function CaseCard({
             body: JSON.stringify(body),
             headers: { "Content-Type": "application/json" },
           });
-          if (!response.ok) return;
+          setLoading(false);
+          if (!response.ok) {
+            showNotification({
+              title: "Error",
+              message: "Error while opening the case",
+              color: "red",
+            });
+            return;
+          }
           const unboxedSkin = await response.json();
 
           toggleMoneyUpdate();
@@ -77,7 +91,11 @@ export default function CaseCard({
           });
         }}
       >
-        Buy and open
+        {loading
+          ? "Opening"
+          : money < price
+          ? "Not enough money"
+          : "Buy and open"}
       </Button>
     </Card>
   );
