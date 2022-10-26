@@ -8,64 +8,39 @@ import OpenedSkin from "../../../lib/database/schemas/openedSkin";
 
 const generateFloat = (exteriors) => {
   const float = Math.random();
+  console.log(exteriors);
 
-  switch (float) {
-    case float < 0.07 &&
-      exteriors.find((e) => e === "Factory New") === undefined:
-      return generateFloat(exteriors);
-      break;
-    case float < 0.15 &&
-      exteriors.find((e) => e === "Minimal Wear") === undefined:
-      return generateFloat(exteriors);
-      break;
-    case float < 0.38 &&
-      exteriors.find((e) => e === "Field-Tested") === undefined:
-      return generateFloat(exteriors);
-      break;
-    case float < 0.45 && exteriors.find((e) => e === "Well-Worn") === undefined:
-      return generateFloat(exteriors);
-      break;
-    case float < 1 &&
-      exteriors.find((e) => e === "Battle-Scarred") === undefined:
-      console.log("new float");
-      return generateFloat(exteriors);
-      break;
-    default:
-      return float;
-      break;
+  if (
+    exteriors.find((e) => e === "Battle-Scarred") === undefined &&
+    float > 0.45
+  ) {
+    return generateFloat(exteriors);
+  } else if (
+    exteriors.find((e) => e === "Well-Worn") === undefined &&
+    float > 0.38 &&
+    float < 0.45
+  ) {
+    return generateFloat(exteriors);
+  } else if (
+    exteriors.find((e) => e === "Field-Tested") === undefined &&
+    float > 0.15 &&
+    float < 0.38
+  ) {
+    return generateFloat(exteriors);
+  } else if (
+    exteriors.find((e) => e === "Minimal Wear") === undefined &&
+    float > 0.07 &&
+    float < 0.15
+  ) {
+    return generateFloat(exteriors);
+  } else if (
+    exteriors.find((e) => e === "Factory New") === undefined &&
+    float < 0.07
+  ) {
+    return generateFloat(exteriors);
+  } else {
+    return float;
   }
-
-  /* if (
-      float < 0.07 &&
-      float >= 0 &&
-      exteriors.find((e) => e === "Factory New") === undefined
-    ) {
-      generateFloat(exteriors);
-    } else if (
-      float < 0.15 &&
-      float >= 0.07 &&
-      exteriors.find((e) => e === "Minimal Wear") === undefined
-    ) {
-      generateFloat(exteriors);
-    } else if (
-      float < 0.38 &&
-      float >= 0.15 &&
-      exteriors.find((e) => e === "Field-Tested") === undefined
-    ) {
-      generateFloat(exteriors);
-    } else if (
-      float < 0.45 &&
-      float >= 0.38 &&
-      exteriors.find((e) => e === "Well-Worn") === undefined
-    ) {
-      generateFloat(exteriors);
-    } else if (
-      float < 1 &&
-      float >= 0.45 &&
-      exteriors.find((e) => e === "Battle-Scarred") === undefined
-    ) {
-      generateFloat(exteriors);
-    } */
 };
 
 async function handler(req, res) {
@@ -126,8 +101,6 @@ async function handler(req, res) {
     );
   }
 
-  console.log(filteredSkingroups);
-
   //get one random skingroup from the filtered rarity
   const randomSkinGroup =
     filteredSkingroups[Math.floor(Math.random() * filteredSkingroups.length)];
@@ -175,6 +148,7 @@ async function handler(req, res) {
     price: skin.price,
     float: float,
     statTrak: statTrak,
+    souvenir: skin.souvenir ? true : false,
     userId: userId,
     openedAt: new Date(),
   });
