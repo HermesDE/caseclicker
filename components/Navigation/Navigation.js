@@ -84,6 +84,17 @@ export default function Navigation({ children, money }) {
                 styles={{ label: { fontSize: "20px" } }}
               />
             </Link>
+            <Link href="/marketplace" passHref>
+              <NavLink
+                component="a"
+                label="Marketplace"
+                description="sell your skins to other people"
+                active={router.pathname === "/marketplace"}
+                color="orange"
+                sx={{ padding: 30, borderRadius: 5, marginTop: 10 }}
+                styles={{ label: { fontSize: "20px" } }}
+              />
+            </Link>
           </Navbar.Section>
           <Navbar.Section>
             <Divider my={"sm"} label="User" labelPosition="center" />

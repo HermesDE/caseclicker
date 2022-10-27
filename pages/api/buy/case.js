@@ -6,11 +6,33 @@ import Skin from "../../../lib/database/schemas/skin";
 import { getToken } from "next-auth/jwt";
 import OpenedSkin from "../../../lib/database/schemas/openedSkin";
 
-const generateFloat = (exteriors) => {
-  const float = Math.random();
-  console.log(exteriors);
+const generateFloat = (exterior) => {
+  let min, max;
+  switch (exterior) {
+    case "Factory New":
+      min = 0;
+      max = 0.07;
+      break;
+    case "Minimal Wear":
+      min = 0.07;
+      max = 0.15;
+      break;
+    case "Field-Tested":
+      min = 0.15;
+      max = 0.38;
+      break;
+    case "Well-Worn":
+      min = 0.38;
+      max = 0.45;
+      break;
+    case "Battle-Scarred":
+      min = 0.45;
+      max = 1;
+  }
+  return Math.random() * (max - min) + min;
 
-  if (
+  //const float = Math.random();
+  /* if (
     exteriors.find((e) => e === "Battle-Scarred") === undefined &&
     float > 0.45
   ) {
@@ -40,7 +62,7 @@ const generateFloat = (exteriors) => {
     return generateFloat(exteriors);
   } else {
     return float;
-  }
+  } */
 };
 
 async function handler(req, res) {
@@ -53,10 +75,6 @@ async function handler(req, res) {
   //check if user has enough money
   if (userStat.money < caseToBuy.price)
     return res.status(403).json({ error: "you dont have enough money" });
-
-  //delete money from database
-  userStat.money -= caseToBuy.price;
-  await userStat.save();
 
   //gamble the skin
   const skingroups = await SkinGroup.find({ _id: caseToBuy.skingroups });
@@ -118,10 +136,13 @@ async function handler(req, res) {
 
   //create array of exteriors to create float
   const exteriors = filteredSkins.map((skin) => skin.exterior);
-  const float = generateFloat(exteriors);
+  const randomExterior =
+    exteriors[[Math.floor(Math.random() * exteriors.length)]];
+  const skin = filteredSkins.find((skin) => skin.exterior === randomExterior);
+  const float = generateFloat(randomExterior);
 
   //pick skin by float
-  let skin;
+  /* let skin;
   if (float <= 0.07) {
     skin = filteredSkins.find((skin) => skin.exterior === "Factory New");
   } else if (float <= 0.15) {
@@ -132,7 +153,7 @@ async function handler(req, res) {
     skin = filteredSkins.find((skin) => skin.exterior === "Well-Worn");
   } else if (float <= 1) {
     skin = filteredSkins.find((skin) => skin.exterior === "Battle-Scarred");
-  }
+  } */
 
   const newOpenedSkin = new OpenedSkin({
     name: skin.name,
@@ -157,6 +178,9 @@ async function handler(req, res) {
     { userId: userId },
     { $inc: { openedCases: 1 } }
   );
+  //delete money from database
+  userStat.money -= caseToBuy.price;
+  await userStat.save();
 
   res.json(newOpenedSkin);
 }

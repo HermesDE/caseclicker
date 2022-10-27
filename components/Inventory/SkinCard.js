@@ -1,14 +1,7 @@
-import {
-  Badge,
-  Button,
-  Card,
-  Group,
-  Image,
-  Text,
-  Transition,
-} from "@mantine/core";
+import { Badge, Button, Card, Group, Image, Text } from "@mantine/core";
 import { showNotification } from "@mantine/notifications";
-import { motion } from "framer-motion";
+import { openModal } from "@mantine/modals";
+import MarketplaceOfferModal from "./MarketplaceOfferModal";
 
 export default function SkinCard({
   id,
@@ -23,29 +16,28 @@ export default function SkinCard({
   sellLock,
 }) {
   return (
-    <motion.div>
-      <Card shadow={"sm"} p="lg" radius={"md"} withBorder>
-        <Card.Section>
-          <Image
-            src={`https://steamcommunity-a.akamaihd.net/economy/image/${iconUrl}`}
-            height={100}
-            fit="contain"
-          ></Image>
-        </Card.Section>
-        <Group position="apart" mt={"md"}>
-          <Text weight={500} color={"#" + rarityColor}>
-            {name}
-          </Text>
-          <Badge color={"yellow"}>{price} $</Badge>
-        </Group>
+    <Card shadow={"sm"} p="lg" radius={"md"} withBorder>
+      <Card.Section>
+        <Image
+          src={`https://steamcommunity-a.akamaihd.net/economy/image/${iconUrl}`}
+          height={100}
+          fit="contain"
+        ></Image>
+      </Card.Section>
+      <Text weight={500} color={"#" + rarityColor}>
+        {name}
+      </Text>
+      <Group position="apart" mt={"md"}>
         <Text color={"dark.2"} size="xs">
           {float}
         </Text>
+        <Badge color={"yellow"}>{price} $</Badge>
+      </Group>
+
+      <Group grow mt="md" spacing="xs">
         <Button
           variant="light"
           color={"red"}
-          fullWidth
-          mt={"md"}
           radius="md"
           disabled={sellLock}
           onClick={async () => {
@@ -76,7 +68,34 @@ export default function SkinCard({
         >
           Sell for {price} $
         </Button>
-      </Card>
-    </motion.div>
+        {rarity === "Classified" || rarity === "Covert" ? (
+          <Button
+            variant="default"
+            onClick={() =>
+              openModal({
+                title: "Offer this skin on the marketplace",
+                children: (
+                  <MarketplaceOfferModal
+                    id={id}
+                    name={name}
+                    iconUrl={iconUrl}
+                    price={price}
+                    rarity={rarity}
+                    rarityColor={rarityColor}
+                    float={float}
+                    deleteSkin={deleteSkin}
+                  />
+                ),
+                size: "lg",
+              })
+            }
+          >
+            Offer on marketplace
+          </Button>
+        ) : (
+          ""
+        )}
+      </Group>
+    </Card>
   );
 }

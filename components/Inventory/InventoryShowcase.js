@@ -7,6 +7,7 @@ import {
   Title,
   Button,
 } from "@mantine/core";
+import { useLocalStorage } from "@mantine/hooks";
 import { openModal } from "@mantine/modals";
 import { showNotification } from "@mantine/notifications";
 import { useEffect, useState } from "react";
@@ -17,9 +18,18 @@ import SkinCard from "./SkinCard";
 export default function InventoryShowcase({ toggleMoneyUpdate }) {
   const [loading, setLoading] = useState(false);
   const [skins, setSkins] = useState([]);
-  const [sortTimestamp, setSortTimestamp] = useState(true);
-  const [exterior, setExterior] = useState("");
-  const [rarity, setRarity] = useState("");
+  const [sortTimestamp, setSortTimestamp] = useLocalStorage({
+    key: "sortTimestamp",
+    getInitialValueInEffect: true,
+  });
+  const [exterior, setExterior] = useLocalStorage({
+    key: "exterior",
+    getInitialValueInEffect: true,
+  });
+  const [rarity, setRarity] = useLocalStorage({
+    key: "rarity",
+    getInitialValueInEffect: true,
+  });
   const [sellLock, setSellLock] = useState(true);
 
   useEffect(() => {
@@ -155,6 +165,7 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
                     name={skin.name}
                     iconUrl={skin.iconUrl}
                     price={skin.price}
+                    rarity={skin.rarity}
                     rarityColor={skin.rarityColor}
                     float={skin.float}
                     deleteSkin={deleteSkin}
