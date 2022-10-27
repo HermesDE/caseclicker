@@ -19,7 +19,7 @@ const useStyles = createStyles((_theme, _params, getRef) => ({
   },
 }));
 
-export default function Offers() {
+export default function Offers({ toggleMoneyUpdate, money }) {
   const [latestOffers, setLatestOffers] = useState([]);
   const [expensiveOffers, setExpensiveOffers] = useState([]);
   const { classes } = useStyles();
@@ -39,38 +39,52 @@ export default function Offers() {
     fetchExpensiveOffers();
   }, []);
 
+  const deleteOffer = (id) => {
+    setLatestOffers(latestOffers.filter((offer) => offer._id !== id));
+    setExpensiveOffers(expensiveOffers.filter((offer) => offer._id !== id));
+  };
+
   return (
     <Container fluid mt={30}>
-      <Grid>
-        {latestOffers.length > 0 && (
-          <>
-            <Title order={2}>Latest offers</Title>
-            <Carousel
-              classNames={classes}
-              slideSize={"33.333333%"}
-              slideGap="md"
-              loop
-              align={"start"}
-              slidesToScroll={3}
-              withIndicators
-              //height={300}
-            >
-              {latestOffers.map((offer) => {
-                return (
-                  <Carousel.Slide key={offer._id}>
-                    <OfferSkinCard
-                      openedSkin={offer.openedSkin}
-                      offeredAt={offer.offeredAt}
-                      price={offer.price}
-                      id={offer._id}
-                    />
-                  </Carousel.Slide>
-                );
-              })}
-            </Carousel>
-          </>
-        )}
-      </Grid>
+      {latestOffers.length > 0 && (
+        <>
+          <Title order={2}>Latest offers</Title>
+          <Carousel
+            classNames={classes}
+            slideSize={"33.333333%"}
+            slideGap="md"
+            loop
+            align={"start"}
+            //slidesToScroll={3}
+            withIndicators
+            breakpoints={[
+              {
+                minWidth: "sm",
+                slideSize: "100%",
+                slideGap: 0,
+              },
+              { minWidth: "md", slideSize: "33.333333%" },
+              //{ minWidth: "xl", slideSize: "25%" },
+            ]}
+          >
+            {latestOffers.map((offer) => {
+              return (
+                <Carousel.Slide key={offer._id}>
+                  <OfferSkinCard
+                    openedSkin={offer.openedSkin}
+                    offeredAt={offer.offeredAt}
+                    price={offer.price}
+                    id={offer._id}
+                    toggleMoneyUpdate={toggleMoneyUpdate}
+                    deleteOffer={deleteOffer}
+                    money={money}
+                  />
+                </Carousel.Slide>
+              );
+            })}
+          </Carousel>
+        </>
+      )}
     </Container>
   );
 }

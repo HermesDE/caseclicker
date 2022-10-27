@@ -8,10 +8,20 @@ import {
   Tooltip,
 } from "@mantine/core";
 import { showNotification } from "@mantine/notifications";
+import { useState } from "react";
 
-export default function OfferSkinCard({ id, price, openedSkin, offeredAt }) {
+export default function OfferSkinCard({
+  id,
+  price,
+  openedSkin,
+  offeredAt,
+  toggleMoneyUpdate,
+  deleteOffer,
+  money,
+}) {
+  const [loading, setLoading] = useState(false);
   return (
-    <Card sx={{ height: 275 }} shadow={"sm"} p="lg" radius={"md"} withBorder>
+    <Card shadow={"sm"} p="lg" radius={"md"} withBorder>
       <Card.Section>
         <Image
           src={`https://steamcommunity-a.akamaihd.net/economy/image/${openedSkin.iconUrl}`}
@@ -50,10 +60,13 @@ export default function OfferSkinCard({ id, price, openedSkin, offeredAt }) {
         color="red"
         variant="light"
         fullWidth
+        loading={loading}
+        disabled={loading || money < price}
         onClick={async () => {
           const body = {
             id: id,
           };
+          setLoading(true);
           const response = await fetch("/api/buy/marketplaceSkin", {
             method: "POST",
             body: JSON.stringify(body),
@@ -65,10 +78,25 @@ export default function OfferSkinCard({ id, price, openedSkin, offeredAt }) {
               message: "You successfully bought the skin",
               color: "green",
             });
+            deleteOffer(id);
+          } else {
+            let message;
+            if (response.status === 404) {
+              message = "This skin is no longer available.";
+            } else {
+              message = "There was an error buying this skin.";
+            }
+            showNotification({
+              title: "Error",
+              message: message,
+              color: "red",
+            });
           }
+          setLoading(false);
+          toggleMoneyUpdate();
         }}
       >
-        Buy for {price} $
+        {money < price ? "Not enough money" : `Buy for ${price} $`}
       </Button>
     </Card>
   );

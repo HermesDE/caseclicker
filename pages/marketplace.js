@@ -29,7 +29,10 @@ export default function Marketplace() {
   };
   return (
     <Navigation money={money}>
-      <MarketplaceOverview toggleMoneyUpdate={toggleMoneyUpdate} />
+      <MarketplaceOverview
+        toggleMoneyUpdate={toggleMoneyUpdate}
+        money={money}
+      />
     </Navigation>
   );
 }
