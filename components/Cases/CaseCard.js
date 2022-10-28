@@ -1,12 +1,10 @@
 import { Badge, Button, Card, Center, Group, Image, Text } from "@mantine/core";
 import { openModal, closeAllModals } from "@mantine/modals";
-import CaseDrops from "./CaseDrops";
 import { motion } from "framer-motion";
 import useSound from "use-sound";
 import UnboxedSkinCard from "./UnboxedSkinCard";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { showNotification } from "@mantine/notifications";
-import Link from "next/link";
 
 export default function CaseCard({
   id,
@@ -31,6 +29,7 @@ export default function CaseCard({
           <motion.image whileHover={{ scaleY: 1.1 }}>
             <a href={link} rel="noreferrer" target={"_blank"}>
               <Image
+                alt={name}
                 mt={10}
                 src={`/pictures/cases/${iconUrl}`}
                 height={100}

@@ -19,6 +19,7 @@ export default function SkinCard({
     <Card shadow={"sm"} p="lg" radius={"md"} withBorder>
       <Card.Section>
         <Image
+          alt={name}
           src={`https://steamcommunity-a.akamaihd.net/economy/image/${iconUrl}`}
           height={100}
           fit="contain"

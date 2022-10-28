@@ -57,6 +57,7 @@ export default function UnboxedSkinCard({ skin }) {
     >
       <Card.Section>
         <Image
+          alt={skin.name}
           src={
             "https://steamcommunity-a.akamaihd.net/economy/image/" +
             skin.iconUrl

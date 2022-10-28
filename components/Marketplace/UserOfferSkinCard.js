@@ -14,6 +14,7 @@ export default function UserOfferSkinCard({
     <Card shadow={"sm"} p="lg" radius={"md"} withBorder>
       <Card.Section>
         <Image
+          alt={openedSkin.name}
           src={`https://steamcommunity-a.akamaihd.net/economy/image/${openedSkin.iconUrl}`}
           height={100}
           fit="contain"
