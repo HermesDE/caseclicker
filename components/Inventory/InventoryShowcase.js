@@ -6,6 +6,7 @@ import {
   Select,
   Title,
   Button,
+  Text,
 } from "@mantine/core";
 import { useLocalStorage } from "@mantine/hooks";
 import { openModal } from "@mantine/modals";
@@ -30,6 +31,7 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
     key: "rarity",
   });
   const [sellLock, setSellLock] = useState(true);
+  const [inventoryValue, setInventoryValue] = useState(0);
 
   useEffect(() => {
     async function fetchData() {
@@ -53,12 +55,26 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
     fetchData();
   }, [sortTimestamp, exterior, rarity]);
 
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch("api/inventory?value=true");
+      const data = await response.json();
+      setInventoryValue(data.inventoryValue);
+    }
+    fetchData();
+  }, []);
+
   const deleteSkin = (id) => {
     setSkins(skins.filter((skin) => skin._id !== id));
   };
 
   return (
     <Container fluid>
+      <Grid justify={"center"}>
+        <Grid.Col>
+          <Text>Inventory value: {inventoryValue}$</Text>
+        </Grid.Col>
+      </Grid>
       <Grid align={"flex-end"}>
         <Grid.Col span={3}>
           <Select

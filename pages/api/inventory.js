@@ -11,9 +11,16 @@ async function handler(req, res) {
 
   switch (req.method) {
     case "GET": {
-      const { sort, exterior, rarity } = req.query;
+      const { sort, exterior, rarity, value } = req.query;
       let skins = await OpenedSkin.find({ userId: userId });
 
+      if (value) {
+        const value = await OpenedSkin.aggregate([
+          { $match: { userId: userId } },
+          { $group: { _id: null, value: { $sum: "$price" } } },
+        ]);
+        return res.json({ inventoryValue: value[0].value });
+      }
       if (exterior !== "null" && exterior) {
         skins = skins.filter((skin) => skin.exterior === exterior);
       }
