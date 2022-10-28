@@ -7,6 +7,10 @@ async function handler(req, res) {
   if (!token) return res.status(401).json({ error: "Unauthorized" });
   const { id } = token;
   const userStat = await UserStat.findOne({ userId: id });
-  res.json({ money: userStat.money, moneyPerClick: userStat.moneyPerClick });
+  res.json({
+    money: userStat.money,
+    moneyPerClick: userStat.moneyPerClick,
+    openedCases: userStat.openedCases,
+  });
 }
 export default connectDB(handler);

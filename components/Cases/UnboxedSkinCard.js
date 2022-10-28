@@ -1,24 +1,34 @@
 import { Card, Image, Group, Text, Badge, Button } from "@mantine/core";
 import { closeAllModals } from "@mantine/modals";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import useSound from "use-sound";
 
 export default function UnboxedSkinCard({ skin }) {
   const sound = useRef();
+  let color;
 
   switch (skin.rarity) {
     case "Mil-Spec Grade":
       sound.current = "caseAwardRare.mp3";
+      color = "blue";
       break;
     case "Restricted":
       sound.current = "caseAwardMythical.mp3";
+      color = "violet";
       break;
     case "Classified":
       sound.current = "caseAwardLegendary.mp3";
+      color = "grape";
       break;
     case "Covert":
       sound.current = "caseAwardAncient.mp3";
+      color = "red";
       break;
+    case "Extraordinary":
+      sound.current = "caseAwardAncient.mp3";
+      color = "red";
+      break;
+
     default:
       break;
   }
@@ -40,6 +50,8 @@ export default function UnboxedSkinCard({ skin }) {
           ? "purple"
           : skin.souvenir
           ? "yellow"
+          : skin.type === "Gloves"
+          ? "purple"
           : "dark.04",
       }}
     >
@@ -66,6 +78,7 @@ export default function UnboxedSkinCard({ skin }) {
       </Text>
       <Button
         variant="outline"
+        color={color}
         fullWidth
         mt={20}
         onClick={() => closeAllModals()}

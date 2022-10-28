@@ -11,7 +11,6 @@ import { useLocalStorage } from "@mantine/hooks";
 import { openModal } from "@mantine/modals";
 import { showNotification } from "@mantine/notifications";
 import { useEffect, useState } from "react";
-import UpCircleIcon from "../icons/UpCircleIcon";
 import CustomSell from "./CustomSell";
 import SkinCard from "./SkinCard";
 
@@ -19,16 +18,16 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
   const [loading, setLoading] = useState(false);
   const [skins, setSkins] = useState([]);
   const [sortTimestamp, setSortTimestamp] = useLocalStorage({
+    defaultValue: "true",
     key: "sortTimestamp",
-    getInitialValueInEffect: true,
   });
   const [exterior, setExterior] = useLocalStorage({
+    defaultValue: "",
     key: "exterior",
-    getInitialValueInEffect: true,
   });
   const [rarity, setRarity] = useLocalStorage({
+    defaultValue: "",
     key: "rarity",
-    getInitialValueInEffect: true,
   });
   const [sellLock, setSellLock] = useState(true);
 

@@ -76,6 +76,11 @@ async function handler(req, res) {
   if (userStat.money < caseToBuy.price)
     return res.status(403).json({ error: "you dont have enough money" });
 
+  //check if user has enough openedCases
+  if (userStat.openedCases < caseToBuy.neededOpenedCases) {
+    return res.status(403).json({ error: "you didn't unlock the case" });
+  }
+
   //gamble the skin
   const skingroups = await SkinGroup.find({ _id: caseToBuy.skingroups });
 
@@ -84,6 +89,7 @@ async function handler(req, res) {
   let rarity,
     knifeType,
     weaponType,
+    type,
     statTrak = false;
   if (randomRarity <= 800) {
     rarity = "Mil-Spec Grade";
@@ -98,19 +104,29 @@ async function handler(req, res) {
     rarity = "Covert";
     knifeType = null;
   } else if (randomRarity <= 1000) {
-    rarity = "Covert";
-    weaponType = "Knife";
+    if (caseToBuy.specialItem === "knife") {
+      rarity = "Covert";
+      weaponType = "Knife";
+    } else {
+      rarity = "Extraordinary";
+      type = "Gloves";
+    }
   }
 
   //randomize if weapon gets stattrak
   const randomStatTrak = Math.floor(Math.random() * 10) + 1;
   if (randomStatTrak === 7) statTrak = true;
+  if (type === "Gloves") statTrak = false;
 
   //filter skingroup by rarity
   let filteredSkingroups;
   if (weaponType) {
     filteredSkingroups = skingroups.filter(
       (skingroup) => skingroup.weaponType === weaponType
+    );
+  } else if (type) {
+    filteredSkingroups = skingroups.filter(
+      (skingroup) => skingroup.type === type
     );
   } else {
     filteredSkingroups = skingroups.filter(
@@ -139,7 +155,10 @@ async function handler(req, res) {
   const randomExterior =
     exteriors[[Math.floor(Math.random() * exteriors.length)]];
   const skin = filteredSkins.find((skin) => skin.exterior === randomExterior);
-  const float = generateFloat(randomExterior);
+  let float;
+  if (randomExterior !== "Not painted") {
+    float = generateFloat(randomExterior);
+  }
 
   //pick skin by float
   /* let skin;

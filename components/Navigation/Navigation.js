@@ -97,7 +97,7 @@ export default function Navigation({ children, money }) {
             </Link>
           </Navbar.Section>
           <Navbar.Section>
-            <Divider my={"sm"} label="User" labelPosition="center" />
+            <Divider my={"sm"} labelPosition="center" />
             {session ? (
               <Menu position="right">
                 <Menu.Target>

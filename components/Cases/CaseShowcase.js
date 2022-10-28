@@ -2,14 +2,20 @@ import { Container, Grid } from "@mantine/core";
 import { useEffect, useState } from "react";
 import CaseCard from "./CaseCard";
 
-export default function CaseShowcase({ toggleMoneyUpdate, money }) {
+export default function CaseShowcase({
+  toggleMoneyUpdate,
+  money,
+  userOpenedCases,
+}) {
   const [cases, setCases] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
       const response = await fetch("/api/cases");
       if (!response.ok) return;
-      setCases(await response.json());
+      let cases = await response.json();
+      cases = cases.sort((a, b) => a.neededOpenedCases - b.neededOpenedCases);
+      setCases(cases);
     }
     fetchData();
   }, []);
@@ -28,6 +34,9 @@ export default function CaseShowcase({ toggleMoneyUpdate, money }) {
                   iconUrl={c.iconUrl}
                   price={c.price}
                   money={money}
+                  link={c.link}
+                  neededOpenedCases={c.neededOpenedCases}
+                  userOpenedCases={userOpenedCases}
                 />
               </Grid.Col>
             );

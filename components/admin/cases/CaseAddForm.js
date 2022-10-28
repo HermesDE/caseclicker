@@ -1,4 +1,11 @@
-import { Button, Container, Grid, MultiSelect, TextInput } from "@mantine/core";
+import {
+  Button,
+  Container,
+  Grid,
+  MultiSelect,
+  Select,
+  TextInput,
+} from "@mantine/core";
 import { useEffect, useState } from "react";
 
 export default function CaseAddForm() {
@@ -8,7 +15,10 @@ export default function CaseAddForm() {
 
   const [caseName, setCaseName] = useState("");
   const [iconUrl, setIconUrl] = useState("");
+  const [caseUrl, setCaseUrl] = useState("");
   const [casePrice, setCasePrice] = useState(0);
+  const [specialItem, setSpecialItem] = useState("knife");
+  const [neededOpenedCases, setNeededOpenedCases] = useState(0);
 
   useEffect(() => {
     async function fetchData() {
@@ -30,25 +40,50 @@ export default function CaseAddForm() {
   return (
     <Container fluid>
       <Grid>
-        <Grid.Col span={4}>
+        <Grid.Col span={3}>
           <TextInput
             label="Case name"
             value={caseName}
             onChange={(e) => setCaseName(e.target.value)}
           />
         </Grid.Col>
-        <Grid.Col span={4}>
+
+        <Grid.Col span={3}>
+          <TextInput
+            label="Case Price in Dollar"
+            value={casePrice}
+            onChange={(e) => setCasePrice(e.target.value)}
+          />
+        </Grid.Col>
+        <Grid.Col span={3}>
+          <TextInput
+            label="Needed opened cases"
+            value={neededOpenedCases}
+            onChange={(e) => setNeededOpenedCases(e.target.value)}
+          />
+        </Grid.Col>
+        <Grid.Col span={3}>
+          <Select
+            label="Special Item"
+            data={["gloves", "knife"]}
+            value={specialItem}
+            onChange={setSpecialItem}
+          />
+        </Grid.Col>
+      </Grid>
+      <Grid>
+        <Grid.Col span={6}>
           <TextInput
             label="Case Icon URL"
             value={iconUrl}
             onChange={(e) => setIconUrl(e.target.value)}
           />
         </Grid.Col>
-        <Grid.Col span={4}>
+        <Grid.Col span={6}>
           <TextInput
-            label="Case Price in Dollar"
-            value={casePrice}
-            onChange={(e) => setCasePrice(e.target.value)}
+            label="Case URL"
+            value={caseUrl}
+            onChange={(e) => setCaseUrl(e.target.value)}
           />
         </Grid.Col>
       </Grid>
@@ -84,6 +119,9 @@ export default function CaseAddForm() {
                 iconUrl: iconUrl,
                 price: casePrice,
                 skingroups: selectedSkingroups,
+                specialItem: specialItem,
+                caseUrl: caseUrl,
+                neededOpenedCases: neededOpenedCases,
               };
               await fetch("/api/admin/cases", {
                 method: "POST",

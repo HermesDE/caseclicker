@@ -6,6 +6,7 @@ import useSound from "use-sound";
 import UnboxedSkinCard from "./UnboxedSkinCard";
 import { useEffect, useRef, useState } from "react";
 import { showNotification } from "@mantine/notifications";
+import Link from "next/link";
 
 export default function CaseCard({
   id,
@@ -16,8 +17,10 @@ export default function CaseCard({
   rarityColor,
   toggleMoneyUpdate,
   money,
+  link,
+  neededOpenedCases,
+  userOpenedCases,
 }) {
-  const [play] = useSound("/sounds/caseDrop.mp3", { volume: 0.1 });
   const [caseOpen] = useSound("/sounds/caseOpen.mp3", { volume: 0.1 });
   const [loading, setLoading] = useState(false);
 
@@ -26,23 +29,16 @@ export default function CaseCard({
       <Card.Section>
         <Center>
           <motion.image whileHover={{ scaleY: 1.1 }}>
-            <Image
-              mt={10}
-              onClick={() => {
-                play();
-                openModal({
-                  title: name,
-                  children: <CaseDrops close={closeAllModals} id={id} />,
-                  transition: "slide-down",
-                  transitionDuration: 500,
-                });
-              }}
-              src={`/pictures/cases/${iconUrl}`}
-              height={100}
-              width={150}
-              fit="contain"
-              sx={{ cursor: "pointer" }}
-            ></Image>
+            <a href={link} rel="noreferrer" target={"_blank"}>
+              <Image
+                mt={10}
+                src={`/pictures/cases/${iconUrl}`}
+                height={100}
+                width={150}
+                fit="contain"
+                sx={{ cursor: "pointer" }}
+              ></Image>
+            </a>
           </motion.image>
         </Center>
       </Card.Section>
@@ -52,7 +48,9 @@ export default function CaseCard({
         <Badge color={"yellow"}>{price} $</Badge>
       </Group>
       <Button
-        disabled={loading || money < price}
+        disabled={
+          loading || money < price || userOpenedCases < neededOpenedCases
+        }
         loading={loading}
         variant="light"
         color={"blue"}
@@ -95,6 +93,10 @@ export default function CaseCard({
           ? "Opening"
           : money < price
           ? "Not enough money"
+          : userOpenedCases < neededOpenedCases
+          ? `Open another ${
+              neededOpenedCases - userOpenedCases
+            } cases to unlock`
           : "Buy and open"}
       </Button>
     </Card>

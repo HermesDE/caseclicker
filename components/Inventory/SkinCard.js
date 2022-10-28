@@ -25,7 +25,10 @@ export default function SkinCard({
         ></Image>
       </Card.Section>
       <Text weight={500} color={"#" + rarityColor}>
-        {name}
+        {name.split("|").shift()}
+      </Text>
+      <Text weight={500} color={"#" + rarityColor}>
+        {name.split("|").pop()}
       </Text>
       <Group position="apart" mt={"md"}>
         <Text color={"dark.2"} size="xs">

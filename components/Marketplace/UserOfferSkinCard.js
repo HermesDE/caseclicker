@@ -1,5 +1,6 @@
 import { Card, Image, Text, Group, Badge, Button } from "@mantine/core";
 import { showNotification } from "@mantine/notifications";
+import TrashIcon from "../icons/TrashIcon";
 
 export default function UserOfferSkinCard({
   id,
@@ -19,7 +20,10 @@ export default function UserOfferSkinCard({
         ></Image>
       </Card.Section>
       <Text weight={500} color={"#" + openedSkin.rarityColor}>
-        {openedSkin.name}
+        {openedSkin.name.split("|").shift()}
+      </Text>
+      <Text weight={500} color={"#" + openedSkin.rarityColor}>
+        {openedSkin.name.split("|").pop()}
       </Text>
       <Group position="apart" mt={"md"}>
         <Text color={"dark.2"} size="xs">
@@ -32,6 +36,7 @@ export default function UserOfferSkinCard({
         variant="light"
         fullWidth
         color={"red"}
+        leftIcon={<TrashIcon size={14} />}
         onClick={async () => {
           const body = {
             id: id,

@@ -6,6 +6,7 @@ import { showNotification } from "@mantine/notifications";
 export default function Cases() {
   const [money, setMoney] = useState(0);
   const [update, setUpdate] = useState(false);
+  const [userOpenedCases, setUserOpenedCases] = useState(0);
 
   useEffect(() => {
     async function fetchData() {
@@ -20,6 +21,7 @@ export default function Cases() {
       }
       const data = await response.json();
       setMoney(data.money);
+      setUserOpenedCases(data.openedCases);
     }
     fetchData();
   }, [update]);
@@ -30,7 +32,11 @@ export default function Cases() {
 
   return (
     <Navigation money={money}>
-      <CaseShowcase money={money} toggleMoneyUpdate={toggleMoneyUpdate} />
+      <CaseShowcase
+        money={money}
+        toggleMoneyUpdate={toggleMoneyUpdate}
+        userOpenedCases={userOpenedCases}
+      />
     </Navigation>
   );
 }
