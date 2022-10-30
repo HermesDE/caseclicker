@@ -17,6 +17,7 @@ import {
   Menu,
   Button,
   Center,
+  Indicator,
 } from "@mantine/core";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -24,12 +25,29 @@ import { useSession } from "next-auth/react";
 import { signOut, signIn } from "next-auth/react";
 import RightIcon from "../icons/RightIcon";
 import { openConfirmModal } from "@mantine/modals";
+import NotificationDrawer from "../Notifications/NotificationDrawer";
 
 export default function Navigation({ children, money }) {
   const theme = useMantineTheme();
   const [opened, setOpened] = useState(false);
   const router = useRouter();
   const { data: session, status } = useSession();
+  const [notifications, setNotifications] = useState([]);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch("/api/notifications");
+      setNotifications(await response.json());
+    }
+    fetchData();
+  }, []);
+
+  const deleteNotification = (id) => {
+    setNotifications(
+      notifications.filter((notification) => notification._id !== id)
+    );
+  };
 
   return (
     <AppShell
@@ -99,7 +117,36 @@ export default function Navigation({ children, money }) {
           <Navbar.Section>
             <Divider my={"sm"} labelPosition="center" />
             {session ? (
-              <Menu position="right">
+              <>
+                <Group position="center">
+                  <Indicator
+                    color={"orange"}
+                    onClick={() => setOpen(true)}
+                    sx={{ cursor: "pointer" }}
+                    showZero={false}
+                    label={notifications.length}
+                    overflowCount={10}
+                    size={22}
+                  >
+                    <Avatar
+                      onClick={() => setOpen(true)}
+                      sx={{ cursor: "pointer" }}
+                      src={session?.user?.image}
+                    />
+                  </Indicator>
+
+                  <div>
+                    <Text weight={500}>{Math.round(money * 100) / 100} $</Text>
+                    <Text>{session?.user?.name}</Text>
+                  </div>
+                </Group>
+                <NotificationDrawer
+                  deleteNotification={deleteNotification}
+                  notifications={notifications}
+                  open={open}
+                  setOpen={setOpen}
+                />
+                {/* <Menu position="right">
                 <Menu.Target>
                   <UnstyledButton
                     sx={{
@@ -134,7 +181,8 @@ export default function Navigation({ children, money }) {
                     Logout
                   </Menu.Item>
                 </Menu.Dropdown>
-              </Menu>
+              </Menu> */}
+              </>
             ) : (
               <Center>
                 <Button
