@@ -1,6 +1,8 @@
 import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
+import DiscordProvider from "next-auth/providers/discord";
+import FaceItProvider from "next-auth/providers/faceit";
 import clientPromise from "../../../lib/database/mongodb";
 import mongoose from "mongoose";
 import UserStat from "../../../lib/database/schemas/userStat";
@@ -10,6 +12,14 @@ export const authOptions = {
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    }),
+    DiscordProvider({
+      clientId: process.env.DISCORD_CLIENT_ID,
+      clientSecret: process.env.DISCORD_CLIENT_SECRET,
+    }),
+    FaceItProvider({
+      clientId: process.env.FACEIT_CLIENT_ID,
+      clientSecret: process.env.FACEIT_CLIENT_SECRET,
     }),
     // ...add more providers here
   ],
@@ -47,6 +57,10 @@ export const authOptions = {
           mongoose.connection.close();
         });
     },
+  },
+  pages: {
+    signIn: "/auth/signin",
+    error: "/auth/signin",
   },
 };
 export default NextAuth(authOptions);
