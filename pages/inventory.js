@@ -1,6 +1,7 @@
 import InventoryShowcase from "../components/Inventory/InventoryShowcase";
 import Navigation from "../components/Navigation/Navigation";
 import { useState, useEffect } from "react";
+import Head from "next/head";
 
 export default function Inventory() {
   const [money, setMoney] = useState(0);
@@ -27,8 +28,13 @@ export default function Inventory() {
     setUpdate(!update);
   };
   return (
-    <Navigation money={money}>
-      <InventoryShowcase toggleMoneyUpdate={toggleMoneyUpdate} />
-    </Navigation>
+    <>
+      <Head>
+        <title>Inventory | Case Clicker</title>
+      </Head>
+      <Navigation money={money}>
+        <InventoryShowcase toggleMoneyUpdate={toggleMoneyUpdate} />
+      </Navigation>
+    </>
   );
 }

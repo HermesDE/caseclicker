@@ -18,6 +18,8 @@ import {
   Button,
   Center,
   Indicator,
+  ActionIcon,
+  ScrollArea,
 } from "@mantine/core";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -26,6 +28,8 @@ import { signOut, signIn } from "next-auth/react";
 import RightIcon from "../icons/RightIcon";
 import { openConfirmModal } from "@mantine/modals";
 import NotificationDrawer from "../Notifications/NotificationDrawer";
+import ArrowUpIcon from "../icons/ArrowUpIcon";
+import LogoutIcon from "../icons/LogoutIcon";
 
 export default function Navigation({ children, money }) {
   const theme = useMantineTheme();
@@ -68,7 +72,7 @@ export default function Navigation({ children, money }) {
           hidden={!opened}
           width={{ sm: 300, lg: 300 }}
         >
-          <Navbar.Section grow>
+          <Navbar.Section component={ScrollArea} grow>
             <Link href="/" passHref>
               <NavLink
                 component="a"
@@ -113,6 +117,17 @@ export default function Navigation({ children, money }) {
                 styles={{ label: { fontSize: "20px" } }}
               />
             </Link>
+            <Link href="/casino" passHref>
+              <NavLink
+                component="a"
+                label="Casino"
+                description="gamble with your skins"
+                active={router.pathname === "/casino"}
+                color="orange"
+                sx={{ padding: 30, borderRadius: 5, marginTop: 10 }}
+                styles={{ label: { fontSize: "20px" } }}
+              />
+            </Link>
           </Navbar.Section>
           <Navbar.Section>
             <Divider my={"sm"} labelPosition="center" />
@@ -139,7 +154,24 @@ export default function Navigation({ children, money }) {
                     <Text weight={500}>{Math.round(money * 100) / 100} $</Text>
                     <Text>{session?.user?.name}</Text>
                   </div>
+                  <Menu position="top">
+                    <Menu.Target>
+                      <ActionIcon>
+                        <ArrowUpIcon size={26} />
+                      </ActionIcon>
+                    </Menu.Target>
+                    <Menu.Dropdown>
+                      <Menu.Item
+                        onClick={() => signOut()}
+                        color={"red"}
+                        icon={<LogoutIcon size={16} />}
+                      >
+                        Logout
+                      </Menu.Item>
+                    </Menu.Dropdown>
+                  </Menu>
                 </Group>
+
                 <NotificationDrawer
                   deleteNotification={deleteNotification}
                   notifications={notifications}
@@ -218,7 +250,11 @@ export default function Navigation({ children, money }) {
               />
             </MediaQuery>
 
-            <Title>Case Clicker</Title>
+            <Link href={"/"} passHref>
+              <a>
+                <Title>Case Clicker</Title>
+              </a>
+            </Link>
           </div>
         </Header>
       }

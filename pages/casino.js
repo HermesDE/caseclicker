@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
-import { showNotification } from "@mantine/notifications";
 import Navigation from "../components/Navigation/Navigation";
-import MarketplaceOverview from "../components/Marketplace/MarketplaceOverview";
+import { useState, useEffect } from "react";
 import Head from "next/head";
+import CasinoOverview from "../components/Casino/CasinoOverview";
 
-export default function Marketplace() {
+export default function Casino() {
   const [money, setMoney] = useState(0);
   const [update, setUpdate] = useState(false);
+  const [tokens, setTokens] = useState(0);
 
   useEffect(() => {
     async function fetchData() {
@@ -21,6 +21,7 @@ export default function Marketplace() {
       }
       const data = await response.json();
       setMoney(data.money);
+      setTokens(data.tokens);
     }
     fetchData();
   }, [update]);
@@ -34,11 +35,13 @@ export default function Marketplace() {
         <title>Marketplace | Case Clicker</title>
       </Head>
       <Navigation money={money}>
-        <MarketplaceOverview
+        <CasinoOverview
           toggleMoneyUpdate={toggleMoneyUpdate}
           money={money}
+          tokens={tokens}
         />
       </Navigation>
+      ;
     </>
   );
 }

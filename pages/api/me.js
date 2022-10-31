@@ -11,6 +11,7 @@ async function handler(req, res) {
     money: userStat.money,
     moneyPerClick: userStat.moneyPerClick,
     openedCases: userStat.openedCases,
+    tokens: userStat.tokens,
   });
 }
 export default connectDB(handler);

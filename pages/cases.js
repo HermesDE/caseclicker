@@ -2,6 +2,7 @@ import CaseShowcase from "../components/Cases/CaseShowcase";
 import Navigation from "../components/Navigation/Navigation";
 import { useState, useEffect } from "react";
 import { showNotification } from "@mantine/notifications";
+import Head from "next/head";
 
 export default function Cases() {
   const [money, setMoney] = useState(0);
@@ -31,12 +32,17 @@ export default function Cases() {
   };
 
   return (
-    <Navigation money={money}>
-      <CaseShowcase
-        money={money}
-        toggleMoneyUpdate={toggleMoneyUpdate}
-        userOpenedCases={userOpenedCases}
-      />
-    </Navigation>
+    <>
+      <Head>
+        <title>Cases | Case Clicker</title>
+      </Head>
+      <Navigation money={money}>
+        <CaseShowcase
+          money={money}
+          toggleMoneyUpdate={toggleMoneyUpdate}
+          userOpenedCases={userOpenedCases}
+        />
+      </Navigation>
+    </>
   );
 }
