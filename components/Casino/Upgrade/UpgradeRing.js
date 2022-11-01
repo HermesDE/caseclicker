@@ -25,25 +25,27 @@ export default function UpgradeRing({ result, chance }) {
       const timer = (ms) => new Promise((res) => setTimeout(res, ms));
       if (result) {
         const spins = Math.floor(Math.random() * (4 - 2 + 1) + 2);
-        for (let i = 0; i < spins; i++) {
-          for (let j = 1; j < 100; j++) {
-            setInnerSections([
-              { value: j - 1, color: "dark" },
-              { value: 1, color: "yellow" },
-              { value: 100 - j, color: "dark" },
-            ]);
-            await timer(20);
+        const frames = spins * 100 + result.random;
+        for (let i = 1; i < frames; i++) {
+          setInnerSections([
+            { value: i - 1, color: "dark" },
+            { value: 1, color: "yellow" },
+            { value: 100 - i, color: "dark" },
+          ]);
+          if (i % 100 == 0) {
+            setInnerSections([{ value: 100, color: "dark" }]);
           }
-          setInnerSections([{ value: 100, color: "dark" }]);
+
+          await timer(20);
         }
-        for (let i = 0; i < result.random; i++) {
+        /* for (let i = 0; i < result.random; i++) {
           setInnerSections([
             { value: i - 1, color: "dark" },
             { value: 1, color: "yellow" },
             { value: 100 - i, color: "dark" },
           ]);
           await timer(20);
-        }
+        } */
       }
     }
     loadResult();
@@ -61,7 +63,7 @@ export default function UpgradeRing({ result, chance }) {
                 </Text>
               </Center>
             }
-            size={300}
+            size={330}
             sections={innerSections}
           />
         </Center>
