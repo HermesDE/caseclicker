@@ -178,42 +178,6 @@ export default function Navigation({ children, money }) {
                   open={open}
                   setOpen={setOpen}
                 />
-                {/* <Menu position="right">
-                <Menu.Target>
-                  <UnstyledButton
-                    sx={{
-                      ":hover": {
-                        backgroundColor:
-                          theme.colorScheme === "dark"
-                            ? theme.colors.dark[5]
-                            : theme.colors.gray[0],
-                      },
-                      cursor: "pointer",
-                      borderRadius: 5,
-
-                      width: "100%",
-                      padding: "10px",
-                    }}
-                  >
-                    <Group position="center">
-                      <Avatar src={session?.user?.image} />
-                      <div>
-                        <Text weight={500}>
-                          {Math.round(money * 100) / 100} $
-                        </Text>
-                        <Text>{session?.user?.name}</Text>
-                      </div>
-                      <RightIcon size={18} />
-                    </Group>
-                  </UnstyledButton>
-                </Menu.Target>
-                <Menu.Dropdown>
-                  <Menu.Item disabled>Profile</Menu.Item>
-                  <Menu.Item color={"orange"} onClick={() => signOut()}>
-                    Logout
-                  </Menu.Item>
-                </Menu.Dropdown>
-              </Menu> */}
               </>
             ) : (
               <Center>

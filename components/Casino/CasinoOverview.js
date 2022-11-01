@@ -2,6 +2,7 @@ import { Button, Container, Grid, Text, Title } from "@mantine/core";
 import { openModal } from "@mantine/modals";
 import { useEffect } from "react";
 import MoneyToTokensModal from "./MoneyToTokensModal";
+import Link from "next/link";
 
 export default function CasinoOverview({ money, toggleMoneyUpdate, tokens }) {
   return (
@@ -35,6 +36,14 @@ export default function CasinoOverview({ money, toggleMoneyUpdate, tokens }) {
       <Grid mt={50}>
         <Grid.Col span={12}>
           <Title order={1}>Casino Games</Title>
+        </Grid.Col>
+      </Grid>
+      <Grid>
+        {/* <Grid.Col>
+          <a href="/casino/coinflip">Coinflip</a>
+        </Grid.Col> */}
+        <Grid.Col>
+          <Link href={"/casino/upgrade"}>Skin Upgrade</Link>
         </Grid.Col>
       </Grid>
     </Container>
