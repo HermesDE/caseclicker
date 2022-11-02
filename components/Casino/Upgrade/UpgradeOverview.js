@@ -83,7 +83,6 @@ export default function UpgradeOverview() {
     if (finished) {
       //user has won
       if (result?.result) {
-        console.log(pickedUpgradeSkin);
         openModal({
           children: <UpgradeWonModal skin={pickedUpgradeSkin} />,
           size: "lg",
