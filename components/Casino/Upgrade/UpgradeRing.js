@@ -1,7 +1,14 @@
 import { RingProgress, Center, Text } from "@mantine/core";
 import { useState, useEffect } from "react";
 
-export default function UpgradeRing({ result, chance, finished, setFinished }) {
+export default function UpgradeRing({
+  result,
+  chance,
+  finished,
+  setFinished,
+  under,
+}) {
+  console.log(result);
   const [outerSections, setOuterSections] = useState([
     { value: 100, color: "dark" },
   ]);
@@ -11,14 +18,21 @@ export default function UpgradeRing({ result, chance, finished, setFinished }) {
 
   useEffect(() => {
     if (chance) {
-      setOuterSections([
-        { value: chance, color: "green" },
-        { value: 100 - chance, color: "red" },
-      ]);
+      if (under) {
+        setOuterSections([
+          { value: chance, color: "green" },
+          { value: 100 - chance, color: "red" },
+        ]);
+      } else {
+        setOuterSections([
+          { value: 100 - chance, color: "red" },
+          { value: chance, color: "green" },
+        ]);
+      }
     } else {
       setOuterSections([{ value: 100, color: "dark" }]);
     }
-  }, [chance]);
+  }, [chance, under]);
 
   useEffect(() => {
     if (finished) {
@@ -36,7 +50,13 @@ export default function UpgradeRing({ result, chance, finished, setFinished }) {
       if (result) {
         console.log(result);
         const spins = Math.floor(Math.random() * (8 - 4 + 1) + 4);
-        let frames = spins * 100 + result.random;
+        let frames;
+        if (under) {
+          frames = spins * 100 + result.random;
+        } else {
+          frames = spins * 100 + (100 - result.random);
+        }
+
         let steps = 1;
         let j = 0;
         for (let i = frames; i >= 0; i -= steps) {

@@ -26,6 +26,7 @@ export default function UpgradeOverview() {
   const [userSkinPrice, setUserSkinPrice] = useState(null);
   const [upgradeSkinPrice, setUpgradeSkinPrice] = useState(null);
 
+  const [under, setUnder] = useState(false);
   const [chance, setChance] = useState(null);
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState(null);
@@ -139,6 +140,8 @@ export default function UpgradeOverview() {
               setFinished={setFinished}
               result={result}
               chance={chance}
+              under={under}
+              setUnder={setUnder}
             />
           </Center>
         </Grid.Col>
@@ -170,7 +173,12 @@ export default function UpgradeOverview() {
         </Grid.Col>
       </Grid>
       <Grid>
-        <Grid.Col offset={4} span={4}>
+        <Grid.Col span={2} offset={2}>
+          <Button fullWidth size="lg" onClick={() => setUnder(!under)}>
+            {under ? "Under" : "Over"}
+          </Button>
+        </Grid.Col>
+        <Grid.Col span={4}>
           <Center>
             <Button
               disabled={loading || !pickedUserSkin || !pickedUpgradeSkin}
