@@ -122,7 +122,7 @@ export default function Navigation({ children, money }) {
                 component="a"
                 label="Casino"
                 description="gamble with your skins"
-                active={router.pathname === "/casino"}
+                active={router.pathname.includes("/casino")}
                 color="orange"
                 sx={{ padding: 30, borderRadius: 5, marginTop: 10 }}
                 styles={{ label: { fontSize: "20px" } }}

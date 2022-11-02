@@ -1,5 +1,6 @@
 import { RingProgress, Center, Text } from "@mantine/core";
 import { useState, useEffect } from "react";
+import useSound from "use-sound";
 
 export default function UpgradeRing({
   result,
@@ -7,14 +8,15 @@ export default function UpgradeRing({
   finished,
   setFinished,
   under,
+  loose,
 }) {
-  console.log(result);
   const [outerSections, setOuterSections] = useState([
     { value: 100, color: "dark" },
   ]);
   const [innerSections, setInnerSections] = useState([
     { value: 100, color: "dark" },
   ]);
+  const [sound] = useSound("/sounds/click.mp3", { volume: 0.01 });
 
   useEffect(() => {
     if (chance) {
@@ -47,10 +49,12 @@ export default function UpgradeRing({
   useEffect(() => {
     async function loadResult() {
       const timer = (ms) => new Promise((res) => setTimeout(res, ms));
+
       if (result) {
-        console.log(result);
         const spins = Math.floor(Math.random() * (8 - 4 + 1) + 4);
         let frames;
+        let soundSteps = 0;
+        let everyXSound = 25;
         if (under) {
           frames = spins * 100 + result.random;
         } else {
@@ -59,20 +63,25 @@ export default function UpgradeRing({
 
         let steps = 1;
         let j = 0;
+        let previousInt;
         for (let i = frames; i >= 0; i -= steps) {
           setInnerSections([
             { value: 1 + j, color: "dark" },
             { value: 1, color: "yellow" },
             { value: 100 - j, color: "dark" },
           ]);
-          if (i % 100 == 0) {
-            j = 0;
-            setInnerSections([{ value: 100, color: "dark" }]);
+          //generate sound
+          let parsedI = parseInt(i);
+          if (parsedI !== previousInt && parsedI % everyXSound == 0) {
+            previousInt = parsedI;
+            sound();
           }
+          //slow down inner spinner
           if (i <= 400) {
             steps -= 0.001245;
           }
 
+          soundSteps++;
           j += steps;
           await timer(5);
         }
@@ -90,8 +99,7 @@ export default function UpgradeRing({
             label={
               <Center>
                 <Text size={"xl"} weight="500">
-                  {finished && !result.result ? "You lost" : ""}
-                  {chance ? `${chance}%` : ""}
+                  {chance ? `${chance}%` : loose ? "You lost!" : ""}
                 </Text>
               </Center>
             }

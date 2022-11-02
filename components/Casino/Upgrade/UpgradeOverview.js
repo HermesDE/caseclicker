@@ -12,6 +12,7 @@ import {
   Input,
 } from "@mantine/core";
 import { openModal } from "@mantine/modals";
+import { showNotification } from "@mantine/notifications";
 import { useEffect, useRef, useState } from "react";
 import DollarIcon from "../../icons/DollarIcon";
 import UpgradeRing from "./UpgradeRing";
@@ -23,26 +24,29 @@ export default function UpgradeOverview() {
   const [pickedUserSkin, setPickedUserSkin] = useState(null);
   const [pickedUpgradeSkin, setPickedUpgradeSkin] = useState(null);
 
-  const [userSkinPrice, setUserSkinPrice] = useState(null);
-  const [upgradeSkinPrice, setUpgradeSkinPrice] = useState(null);
+  const [userSkinPrice, setUserSkinPrice] = useState("");
+  const [upgradeSkinPrice, setUpgradeSkinPrice] = useState("");
 
   const [under, setUnder] = useState(false);
   const [chance, setChance] = useState(null);
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState(null);
   const [finished, setFinished] = useState(false);
+  const [loose, setLoose] = useState(false);
 
   const [updateInventory, setUpdateInventory] = useState(false);
 
   useEffect(() => {
     async function fetchSkins() {
-      const response = await fetch("/api/inventory?sort=price");
+      const response = await fetch(
+        `/api/inventory?sort=price&price=${userSkinPrice}`
+      );
       if (response.ok) {
         setUserSkins(await response.json());
       }
     }
     fetchSkins();
-  }, [updateInventory]);
+  }, [updateInventory, userSkinPrice]);
 
   useEffect(() => {
     async function fetchSkins() {
@@ -79,9 +83,13 @@ export default function UpgradeOverview() {
     if (finished) {
       //user has won
       if (result?.result) {
+        console.log(pickedUpgradeSkin);
         openModal({
-          children: <UpgradeWonModal />,
+          children: <UpgradeWonModal skin={pickedUpgradeSkin} />,
+          size: "lg",
         });
+      } else {
+        setLoose(true);
       }
       setUpdateInventory(!updateInventory);
       setPickedUserSkin(null);
@@ -119,17 +127,11 @@ export default function UpgradeOverview() {
                 <Text>{pickedUserSkin.name.split("|").pop()}</Text>
               </>
             ) : (
-              <div
-                style={{
-                  height: "100%",
-                  display: "flex",
-                  alignContent: "center",
-                }}
-              >
+              <Center>
                 <Text size={"lg"} weight={500}>
                   Pick one skin from below
                 </Text>
-              </div>
+              </Center>
             )}
           </Card>
         </Grid.Col>
@@ -142,6 +144,7 @@ export default function UpgradeOverview() {
               chance={chance}
               under={under}
               setUnder={setUnder}
+              loose={loose}
             />
           </Center>
         </Grid.Col>
@@ -174,7 +177,13 @@ export default function UpgradeOverview() {
       </Grid>
       <Grid>
         <Grid.Col span={2} offset={2}>
-          <Button fullWidth size="lg" onClick={() => setUnder(!under)}>
+          <Button
+            fullWidth
+            size="lg"
+            color={"orange"}
+            variant="outline"
+            onClick={() => setUnder(!under)}
+          >
             {under ? "Under" : "Over"}
           </Button>
         </Grid.Col>
@@ -183,9 +192,9 @@ export default function UpgradeOverview() {
             <Button
               disabled={loading || !pickedUserSkin || !pickedUpgradeSkin}
               fullWidth
-              variant="outline"
+              variant="light"
               size="lg"
-              color={"gray"}
+              color={"yellow"}
               onClick={async () => {
                 setLoading(true);
                 const body = {
@@ -199,23 +208,33 @@ export default function UpgradeOverview() {
                 });
                 if (response.ok) {
                   setResult(await response.json());
+                } else {
+                  showNotification({
+                    title: "Error",
+                    message: "Oops something went wrong. Try another skin.",
+                    color: "red",
+                  });
                 }
               }}
             >
-              UPGRADE
+              <Text>UPGRADE</Text>
             </Button>
           </Center>
         </Grid.Col>
       </Grid>
-      <Grid>
+      <Grid mt={20}>
         <Grid.Col span={6}>
           <Container fluid>
             <Group position="apart">
               <Text>Your skins ({userSkins.length})</Text>
-              {/* add filter posibilities */}
+              <Input
+                icon={<DollarIcon size={20} />}
+                value={userSkinPrice}
+                onChange={(e) => setUserSkinPrice(e.target.value)}
+              />
             </Group>
             {userSkins.length > 0 && (
-              <ScrollArea style={{ height: 500 }} offsetScrollbars>
+              <ScrollArea mt={20} style={{ height: 500 }} offsetScrollbars>
                 <Grid>
                   {userSkins.map((skin) => {
                     const namePartOne = skin.name.split("|").shift();
@@ -257,6 +276,7 @@ export default function UpgradeOverview() {
                               setPickedUserSkin(null);
                               return;
                             }
+                            setUpgradeSkinPrice(null);
                             setPickedUserSkin(skin);
                           }}
                           withBorder
@@ -312,7 +332,7 @@ export default function UpgradeOverview() {
               />
             </Group>
             {upgradeSkins.length > 0 && (
-              <ScrollArea offsetScrollbars style={{ height: 500 }}>
+              <ScrollArea mt={20} offsetScrollbars style={{ height: 500 }}>
                 <Grid>
                   {upgradeSkins.map((skin) => {
                     const namePartOne = skin.name.split("|").shift();

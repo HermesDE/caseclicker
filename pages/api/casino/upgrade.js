@@ -16,7 +16,7 @@ async function handler(req, res) {
       }
 
       const chance = (userSkin.price / upgradeSkin.price) * 100;
-      if (chance > 90) {
+      if (chance > 91) {
         return res
           .status(400)
           .json({ error: "skin price difference is too small" });
@@ -33,6 +33,7 @@ async function handler(req, res) {
       await OpenedSkin.findOneAndDelete({ _id: userSkin._id });
       if (result) {
         const float = generateFloat(upgradeSkin.exterior);
+        delete upgradeSkin._id;
         upgradeSkin.float = float;
         upgradeSkin.userId = token.id;
         upgradeSkin.openedAt = new Date();

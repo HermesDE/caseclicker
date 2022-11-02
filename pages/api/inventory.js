@@ -11,7 +11,7 @@ async function handler(req, res) {
 
   switch (req.method) {
     case "GET": {
-      const { sort, exterior, rarity, value } = req.query;
+      const { sort, exterior, rarity, value, price } = req.query;
       let skins = await OpenedSkin.find({ userId: userId });
 
       if (value) {
@@ -26,6 +26,12 @@ async function handler(req, res) {
       }
       if (rarity !== "null" && rarity) {
         skins = skins.filter((skin) => skin.rarity === rarity);
+      }
+      if (!isNaN(parseInt(price))) {
+        skins = await OpenedSkin.find({
+          userId: userId,
+          price: { $lte: price },
+        });
       }
 
       if (sort === "true") {
