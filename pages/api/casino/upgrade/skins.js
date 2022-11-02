@@ -5,7 +5,7 @@ import Skin from "../../../../lib/database/schemas/skin";
 
 async function handler(req, res) {
   const token = await getToken({ req });
-  const { id } = req.body;
+  const { id, price } = req.body;
   switch (req.method) {
     case "POST":
       const userSkin = await OpenedSkin.findById(id);
@@ -15,7 +15,10 @@ async function handler(req, res) {
           .json({ error: "No skin found with the given id" });
       }
       const upgradeSkins = await Skin.find({
-        price: { $gte: userSkin.price * 1.1, $lte: userSkin.price * 2 },
+        price: {
+          $gte: userSkin.price * 1.1,
+          $lte: price || userSkin.price * 2,
+        },
       })
         .sort({ price: -1 })
         .limit(100);

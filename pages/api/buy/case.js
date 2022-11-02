@@ -5,65 +5,7 @@ import SkinGroup from "../../../lib/database/schemas/skingroup";
 import Skin from "../../../lib/database/schemas/skin";
 import { getToken } from "next-auth/jwt";
 import OpenedSkin from "../../../lib/database/schemas/openedSkin";
-
-const generateFloat = (exterior) => {
-  let min, max;
-  switch (exterior) {
-    case "Factory New":
-      min = 0;
-      max = 0.07;
-      break;
-    case "Minimal Wear":
-      min = 0.07;
-      max = 0.15;
-      break;
-    case "Field-Tested":
-      min = 0.15;
-      max = 0.38;
-      break;
-    case "Well-Worn":
-      min = 0.38;
-      max = 0.45;
-      break;
-    case "Battle-Scarred":
-      min = 0.45;
-      max = 1;
-  }
-  return Math.random() * (max - min) + min;
-
-  //const float = Math.random();
-  /* if (
-    exteriors.find((e) => e === "Battle-Scarred") === undefined &&
-    float > 0.45
-  ) {
-    return generateFloat(exteriors);
-  } else if (
-    exteriors.find((e) => e === "Well-Worn") === undefined &&
-    float > 0.38 &&
-    float < 0.45
-  ) {
-    return generateFloat(exteriors);
-  } else if (
-    exteriors.find((e) => e === "Field-Tested") === undefined &&
-    float > 0.15 &&
-    float < 0.38
-  ) {
-    return generateFloat(exteriors);
-  } else if (
-    exteriors.find((e) => e === "Minimal Wear") === undefined &&
-    float > 0.07 &&
-    float < 0.15
-  ) {
-    return generateFloat(exteriors);
-  } else if (
-    exteriors.find((e) => e === "Factory New") === undefined &&
-    float < 0.07
-  ) {
-    return generateFloat(exteriors);
-  } else {
-    return float;
-  } */
-};
+import generateFloat from "../../../lib/float";
 
 async function handler(req, res) {
   const token = await getToken({ req });

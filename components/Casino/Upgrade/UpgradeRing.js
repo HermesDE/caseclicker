@@ -1,7 +1,7 @@
 import { RingProgress, Center, Text } from "@mantine/core";
 import { useState, useEffect } from "react";
 
-export default function UpgradeRing({ result, chance }) {
+export default function UpgradeRing({ result, chance, finished, setFinished }) {
   const [outerSections, setOuterSections] = useState([
     { value: 100, color: "dark" },
   ]);
@@ -21,31 +21,42 @@ export default function UpgradeRing({ result, chance }) {
   }, [chance]);
 
   useEffect(() => {
+    if (finished) {
+      setOuterSections([{ value: 100, color: "dark" }]);
+      setInnerSections([{ value: 100, color: "dark" }]);
+      if (!result?.result) {
+        setOuterSections([{ value: 100, color: "red" }]);
+      }
+    }
+  }, [finished, result]);
+
+  useEffect(() => {
     async function loadResult() {
       const timer = (ms) => new Promise((res) => setTimeout(res, ms));
       if (result) {
-        const spins = Math.floor(Math.random() * (4 - 2 + 1) + 2);
-        const frames = spins * 100 + result.random;
-        for (let i = 1; i < frames; i++) {
+        console.log(result);
+        const spins = Math.floor(Math.random() * (8 - 4 + 1) + 4);
+        let frames = spins * 100 + result.random;
+        let steps = 1;
+        let j = 0;
+        for (let i = frames; i >= 0; i -= steps) {
           setInnerSections([
-            { value: i - 1, color: "dark" },
+            { value: 1 + j, color: "dark" },
             { value: 1, color: "yellow" },
-            { value: 100 - i, color: "dark" },
+            { value: 100 - j, color: "dark" },
           ]);
           if (i % 100 == 0) {
+            j = 0;
             setInnerSections([{ value: 100, color: "dark" }]);
           }
+          if (i <= 400) {
+            steps -= 0.001245;
+          }
 
-          await timer(20);
+          j += steps;
+          await timer(5);
         }
-        /* for (let i = 0; i < result.random; i++) {
-          setInnerSections([
-            { value: i - 1, color: "dark" },
-            { value: 1, color: "yellow" },
-            { value: 100 - i, color: "dark" },
-          ]);
-          await timer(20);
-        } */
+        setFinished(true);
       }
     }
     loadResult();
@@ -59,6 +70,7 @@ export default function UpgradeRing({ result, chance }) {
             label={
               <Center>
                 <Text size={"xl"} weight="500">
+                  {finished && !result.result ? "You lost" : ""}
                   {chance ? `${chance}%` : ""}
                 </Text>
               </Center>

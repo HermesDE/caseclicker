@@ -9,9 +9,13 @@ import {
   ScrollArea,
   Text,
   Button,
+  Input,
 } from "@mantine/core";
-import { useEffect, useState } from "react";
+import { openModal } from "@mantine/modals";
+import { useEffect, useRef, useState } from "react";
+import DollarIcon from "../../icons/DollarIcon";
 import UpgradeRing from "./UpgradeRing";
+import UpgradeWonModal from "./UpgradeWonModal";
 
 export default function UpgradeOverview() {
   const [userSkins, setUserSkins] = useState([]);
@@ -19,9 +23,15 @@ export default function UpgradeOverview() {
   const [pickedUserSkin, setPickedUserSkin] = useState(null);
   const [pickedUpgradeSkin, setPickedUpgradeSkin] = useState(null);
 
+  const [userSkinPrice, setUserSkinPrice] = useState(null);
+  const [upgradeSkinPrice, setUpgradeSkinPrice] = useState(null);
+
   const [chance, setChance] = useState(null);
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState(null);
+  const [finished, setFinished] = useState(false);
+
+  const [updateInventory, setUpdateInventory] = useState(false);
 
   useEffect(() => {
     async function fetchSkins() {
@@ -31,12 +41,13 @@ export default function UpgradeOverview() {
       }
     }
     fetchSkins();
-  }, []);
+  }, [updateInventory]);
 
   useEffect(() => {
     async function fetchSkins() {
       const body = {
         id: pickedUserSkin._id,
+        price: upgradeSkinPrice,
       };
       const response = await fetch("/api/casino/upgrade/skins", {
         method: "POST",
@@ -51,7 +62,7 @@ export default function UpgradeOverview() {
       setPickedUpgradeSkin(null);
       fetchSkins();
     }
-  }, [pickedUserSkin]);
+  }, [pickedUserSkin, upgradeSkinPrice]);
 
   useEffect(() => {
     if (pickedUserSkin && pickedUpgradeSkin) {
@@ -63,12 +74,29 @@ export default function UpgradeOverview() {
     }
   }, [pickedUpgradeSkin, pickedUserSkin]);
 
+  useEffect(() => {
+    if (finished) {
+      //user has won
+      if (result?.result) {
+        openModal({
+          children: <UpgradeWonModal />,
+        });
+      }
+      setUpdateInventory(!updateInventory);
+      setPickedUserSkin(null);
+      setPickedUpgradeSkin(null);
+      setUpgradeSkins([]);
+      setLoading(false);
+      setFinished(false);
+    }
+  }, [finished, result]);
+
   return (
     <Container fluid>
       <Grid justify={"center"} align="center">
         <Grid.Col span={4}>
           <Card withBorder sx={{ height: 300 }}>
-            {pickedUserSkin && (
+            {pickedUserSkin ? (
               <>
                 <Group position="right">
                   <Badge variant="filled" color={"dark"} size="lg">
@@ -89,12 +117,29 @@ export default function UpgradeOverview() {
                 <Text>{pickedUserSkin.name.split("|").shift()}</Text>
                 <Text>{pickedUserSkin.name.split("|").pop()}</Text>
               </>
+            ) : (
+              <div
+                style={{
+                  height: "100%",
+                  display: "flex",
+                  alignContent: "center",
+                }}
+              >
+                <Text size={"lg"} weight={500}>
+                  Pick one skin from below
+                </Text>
+              </div>
             )}
           </Card>
         </Grid.Col>
         <Grid.Col span={4}>
           <Center>
-            <UpgradeRing result={result} chance={chance} />
+            <UpgradeRing
+              finished={finished}
+              setFinished={setFinished}
+              result={result}
+              chance={chance}
+            />
           </Center>
         </Grid.Col>
         <Grid.Col span={4}>
@@ -252,7 +297,11 @@ export default function UpgradeOverview() {
           <Container fluid>
             <Group position="apart">
               <Text>Upgrade skins ({upgradeSkins.length})</Text>
-              {/* add filter posibilities */}
+              <Input
+                icon={<DollarIcon size={20} />}
+                value={upgradeSkinPrice || Math.ceil(pickedUserSkin?.price)}
+                onChange={(e) => setUpgradeSkinPrice(e.target.value)}
+              />
             </Group>
             {upgradeSkins.length > 0 && (
               <ScrollArea offsetScrollbars style={{ height: 500 }}>
