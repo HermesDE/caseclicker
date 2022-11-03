@@ -32,6 +32,7 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
   });
   const [sellLock, setSellLock] = useState(true);
   const [inventoryValue, setInventoryValue] = useState(0);
+  const [inventoryCount, setInventoryCount] = useState(0);
 
   useEffect(() => {
     async function fetchData() {
@@ -60,6 +61,7 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
       const response = await fetch("api/inventory?value=true");
       const data = await response.json();
       setInventoryValue(data.inventoryValue);
+      setInventoryCount(data.inventoryCount);
     }
     fetchData();
   }, []);
@@ -70,9 +72,12 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
 
   return (
     <Container fluid>
-      <Grid justify={"center"}>
-        <Grid.Col>
+      <Grid justify={"left"}>
+        <Grid.Col span={6}>
           <Text>Inventory value: {inventoryValue}$</Text>
+        </Grid.Col>
+        <Grid.Col span={6}>
+          <Text>Inventory count: {inventoryCount}</Text>
         </Grid.Col>
       </Grid>
       <Grid align={"flex-end"}>

@@ -19,7 +19,11 @@ async function handler(req, res) {
           { $match: { userId: userId } },
           { $group: { _id: null, value: { $sum: "$price" } } },
         ]);
-        return res.json({ inventoryValue: value[0].value });
+        const count = await OpenedSkin.count({ userId: userId });
+        return res.json({
+          inventoryValue: value[0].value,
+          inventoryCount: count,
+        });
       }
       if (exterior !== "null" && exterior) {
         skins = skins.filter((skin) => skin.exterior === exterior);
