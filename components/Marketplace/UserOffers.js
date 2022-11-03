@@ -53,7 +53,7 @@ export default function UserOffers() {
               <Grid>
                 {userOffers.map((offer) => {
                   return (
-                    <Grid.Col key={offer._id} span={4}>
+                    <Grid.Col key={offer._id} xs={12} sm={6} md={4} xl={3}>
                       <UserOfferSkinCard
                         id={offer._id}
                         offeredAt={offer.offeredAt}

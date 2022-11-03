@@ -26,7 +26,7 @@ export default function CaseShowcase({
         {cases.length > 0 &&
           cases.map((c) => {
             return (
-              <Grid.Col key={c._id} span={4}>
+              <Grid.Col key={c._id} xs={12} sm={6} lg={6} xl={4}>
                 <CaseCard
                   toggleMoneyUpdate={toggleMoneyUpdate}
                   id={c._id}

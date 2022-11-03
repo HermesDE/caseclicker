@@ -4,6 +4,7 @@ import {
   Center,
   Container,
   Grid,
+  Image,
   RingProgress,
   Text,
   Title,
@@ -18,10 +19,10 @@ export default function CasinoOverview({ money, toggleMoneyUpdate, tokens }) {
   return (
     <Container fluid>
       <Grid align={"center"}>
-        <Grid.Col span={3}>
+        <Grid.Col xs={6}>
           <Text>Your current tokens: {tokens}</Text>
         </Grid.Col>
-        <Grid.Col span={3}>
+        <Grid.Col xs={6}>
           <Button
             onClick={() =>
               openModal({
@@ -51,12 +52,33 @@ export default function CasinoOverview({ money, toggleMoneyUpdate, tokens }) {
         </Grid.Col>
       </Grid>
       <Grid mt={20}>
-        {/* <Grid.Col>
-          <a href="/casino/coinflip">Coinflip</a>
+        {/* <Grid.Col xs={12} sm={6} lg={4} xl={3}>
+          <Link href={"/casino/coinflip"}>
+            <Card
+              sx={{ cursor: "pointer", height: 300 }}
+              withBorder
+              shadow={"md"}
+            >
+              <Center>
+                <Title order={3}>Coinflip</Title>
+              </Center>
+              <Center>
+                <Image
+                  fit="contain"
+                  height={200}
+                  src={"/pictures/casino/coinflip/ctlogo.webp"}
+                />
+              </Center>
+            </Card>
+          </Link>
         </Grid.Col> */}
-        <Grid.Col span={4}>
+        <Grid.Col xs={12} sm={6} lg={4} xl={3}>
           <Link href={"/casino/upgrade"}>
-            <Card sx={{ cursor: "pointer" }} withBorder shadow={"md"}>
+            <Card
+              sx={{ cursor: "pointer", height: 300 }}
+              withBorder
+              shadow={"md"}
+            >
               <Center>
                 <UpgradeIcon size={24} />
                 <Title order={3}>Upgrade</Title>

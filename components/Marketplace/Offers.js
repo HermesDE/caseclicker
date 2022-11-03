@@ -59,12 +59,21 @@ export default function Offers({ toggleMoneyUpdate, money }) {
             withIndicators
             breakpoints={[
               {
-                minWidth: "sm",
+                maxWidth: "xs",
                 slideSize: "100%",
-                slideGap: 0,
               },
-              { minWidth: "md", slideSize: "33.333333%" },
-              //{ minWidth: "xl", slideSize: "25%" },
+              {
+                minWidth: "xs",
+                slideSize: "100%",
+              },
+              {
+                minWidth: "sm",
+                slideSize: "50%",
+              },
+              {
+                minWidth: "xl",
+                slideSize: "33.33333%",
+              },
             ]}
           >
             {latestOffers.map((offer) => {

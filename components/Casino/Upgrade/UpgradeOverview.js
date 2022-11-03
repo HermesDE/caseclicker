@@ -102,7 +102,7 @@ export default function UpgradeOverview() {
   return (
     <Container fluid>
       <Grid justify={"center"} align="center">
-        <Grid.Col span={4}>
+        <Grid.Col xs={6} order={1} orderSm={2} xl={4} orderXl={1}>
           <Card withBorder sx={{ height: 300 }}>
             {pickedUserSkin ? (
               <>
@@ -134,7 +134,7 @@ export default function UpgradeOverview() {
             )}
           </Card>
         </Grid.Col>
-        <Grid.Col span={4}>
+        <Grid.Col xs={12} order={3} orderSm={1} xl={4} orderXl={2}>
           <Center>
             <UpgradeRing
               finished={finished}
@@ -147,7 +147,7 @@ export default function UpgradeOverview() {
             />
           </Center>
         </Grid.Col>
-        <Grid.Col span={4}>
+        <Grid.Col xs={6} order={2} orderSm={3} xl={4} orderXl={3}>
           <Card withBorder sx={{ height: 300 }}>
             {pickedUpgradeSkin && (
               <>
@@ -175,8 +175,9 @@ export default function UpgradeOverview() {
         </Grid.Col>
       </Grid>
       <Grid>
-        <Grid.Col span={2} offset={2}>
+        <Grid.Col span={6}>
           <Button
+            disabled={loading}
             fullWidth
             size="lg"
             color={"orange"}
@@ -186,7 +187,7 @@ export default function UpgradeOverview() {
             {under ? "Under" : "Over"}
           </Button>
         </Grid.Col>
-        <Grid.Col span={4}>
+        <Grid.Col span={6}>
           <Center>
             <Button
               disabled={loading || !pickedUserSkin || !pickedUpgradeSkin}
@@ -222,7 +223,7 @@ export default function UpgradeOverview() {
         </Grid.Col>
       </Grid>
       <Grid mt={20}>
-        <Grid.Col span={6}>
+        <Grid.Col xs={12} xl={6}>
           <Container fluid>
             <Group position="apart">
               <Text>Your skins ({userSkins.length})</Text>
@@ -262,7 +263,7 @@ export default function UpgradeOverview() {
                         break;
                     }
                     return (
-                      <Grid.Col key={skin._id} span={3}>
+                      <Grid.Col key={skin._id} span={6} sm={4} md={3}>
                         <Card
                           sx={{
                             borderColor:
@@ -320,13 +321,13 @@ export default function UpgradeOverview() {
             )}
           </Container>
         </Grid.Col>
-        <Grid.Col span={6}>
+        <Grid.Col xs={12} xl={6}>
           <Container fluid>
             <Group position="apart">
               <Text>Upgrade skins ({upgradeSkins.length})</Text>
               <Input
                 icon={<DollarIcon size={20} />}
-                value={upgradeSkinPrice || Math.ceil(pickedUserSkin?.price)}
+                value={upgradeSkinPrice || Math.ceil(pickedUserSkin?.price) * 2}
                 onChange={(e) => setUpgradeSkinPrice(e.target.value)}
               />
             </Group>
@@ -360,7 +361,7 @@ export default function UpgradeOverview() {
                         break;
                     }
                     return (
-                      <Grid.Col key={skin._id} span={3}>
+                      <Grid.Col key={skin._id} span={6} sm={4} md={3}>
                         <Card
                           sx={{
                             borderColor:

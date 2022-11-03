@@ -73,22 +73,22 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
   return (
     <Container fluid>
       <Grid justify={"left"}>
-        <Grid.Col span={6}>
+        <Grid.Col xs={12} sm={6}>
           <Text>Inventory value: {inventoryValue}$</Text>
         </Grid.Col>
-        <Grid.Col span={6}>
+        <Grid.Col xs={12} sm={6}>
           <Text>Inventory count: {inventoryCount}</Text>
         </Grid.Col>
       </Grid>
       <Grid align={"flex-end"}>
-        <Grid.Col span={3}>
+        <Grid.Col xs={6} sm={4} md={3}>
           <Select
             label="Sort"
             value={sortTimestamp}
             onChange={setSortTimestamp}
             data={[
-              { value: true, label: "last opened" },
-              { value: false, label: "first opened" },
+              { value: true, label: "Latest" },
+              { value: false, label: "Oldest" },
               {
                 value: "price",
                 label: "Price",
@@ -96,7 +96,7 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
             ]}
           />
         </Grid.Col>
-        <Grid.Col span={3}>
+        <Grid.Col xs={6} sm={4} md={3}>
           <Select
             label="Filter exterior"
             allowDeselect
@@ -111,7 +111,7 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
             ]}
           />
         </Grid.Col>
-        <Grid.Col span={3}>
+        <Grid.Col xs={6} sm={4} md={3}>
           <Select
             label="Filter rarity"
             allowDeselect
@@ -127,7 +127,7 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
             ]}
           />
         </Grid.Col>
-        <Grid.Col span={3}>
+        <Grid.Col xs={6} sm={4} md={3}>
           <Button
             onClick={() => {
               setExterior(undefined);
@@ -139,7 +139,7 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
         </Grid.Col>
       </Grid>
       <Grid mt={10}>
-        <Grid.Col span={3}>
+        <Grid.Col span={6}>
           <Button
             fullWidth
             color={"red"}
@@ -149,7 +149,7 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
             {sellLock ? "Activate Sellmode" : "Deactive Sellmode"}
           </Button>
         </Grid.Col>
-        <Grid.Col span={3}>
+        <Grid.Col span={6}>
           <Button
             color={"red"}
             variant={"light"}
@@ -179,7 +179,7 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
           {skins.length > 0 &&
             skins.map((skin) => {
               return (
-                <Grid.Col key={skin._id} span={4}>
+                <Grid.Col key={skin._id} xs={6} md={4} xl={3}>
                   <SkinCard
                     id={skin._id}
                     name={skin.name}

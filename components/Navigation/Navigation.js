@@ -63,12 +63,11 @@ export default function Navigation({ children, money }) {
               : theme.colors.gray[0],
         },
       }}
-      navbarOffsetBreakpoint="md"
-      asideOffsetBreakpoint="sm"
+      navbarOffsetBreakpoint="lg"
       navbar={
         <Navbar
           p="md"
-          hiddenBreakpoint="md"
+          hiddenBreakpoint="lg"
           hidden={!opened}
           width={{ sm: 300, lg: 300 }}
         >
@@ -204,7 +203,7 @@ export default function Navigation({ children, money }) {
           <div
             style={{ display: "flex", alignItems: "center", height: "100%" }}
           >
-            <MediaQuery largerThan="md" styles={{ display: "none" }}>
+            <MediaQuery largerThan="lg" styles={{ display: "none" }}>
               <Burger
                 opened={opened}
                 onClick={() => setOpened((o) => !o)}
