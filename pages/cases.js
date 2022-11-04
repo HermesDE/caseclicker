@@ -34,7 +34,7 @@ export default function Cases() {
   return (
     <>
       <Head>
-        <title>Cases | Case Clicker</title>
+        <title>Cases | Case Clicker Online</title>
       </Head>
       <Navigation money={money}>
         <CaseShowcase

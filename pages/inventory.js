@@ -30,7 +30,7 @@ export default function Inventory() {
   return (
     <>
       <Head>
-        <title>Inventory | Case Clicker</title>
+        <title>Inventory | Case Clicker Online</title>
       </Head>
       <Navigation money={money}>
         <InventoryShowcase toggleMoneyUpdate={toggleMoneyUpdate} />

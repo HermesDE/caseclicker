@@ -20,6 +20,7 @@ import {
   Indicator,
   ActionIcon,
   ScrollArea,
+  Grid,
 } from "@mantine/core";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -215,8 +216,29 @@ export default function Navigation({ children, money }) {
 
             <Link href={"/"} passHref>
               <a>
-                <Title>Case Clicker</Title>
+                <Title>Case Clicker Online</Title>
               </a>
+            </Link>
+
+            <Link href={"/impressum"}>
+              <Text
+                sx={{ cursor: "pointer" }}
+                size={"sm"}
+                weight={200}
+                component="a"
+              >
+                Impressum
+              </Text>
+            </Link>
+            <Link style={{ marginLeft: 200 }} href={"/privacy-policy"}>
+              <Text
+                sx={{ cursor: "pointer" }}
+                size={"sm"}
+                weight={200}
+                component="a"
+              >
+                Privacy Policy
+              </Text>
             </Link>
           </div>
         </Header>

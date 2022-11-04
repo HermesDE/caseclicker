@@ -33,7 +33,7 @@ export default function Coinflip() {
   return (
     <>
       <Head>
-        <title>Coinflip | Case Clicker</title>
+        <title>Coinflip | Case Clicker Online</title>
       </Head>
       <Navigation money={money}>
         <CoinflipOverview tokens={tokens} />

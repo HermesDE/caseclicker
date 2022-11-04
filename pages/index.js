@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Home | Case Clicker</title>
+        <title>Home | Case Clicker Online</title>
       </Head>
       <Navigation money={money}>
         <Clicker

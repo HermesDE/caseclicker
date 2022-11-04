@@ -11,7 +11,10 @@ export default async function middleware(req) {
     return NextResponse.next();
   }
   if (!token) {
-    if (req.url === url + "/" || req.url.split("/").pop() === "cases") {
+    if (
+      req.url.split("/").pop() === "legal-notice" ||
+      req.url.split("/").pop() === "privacy-policy"
+    ) {
       return NextResponse.next();
     }
     if (!req.url.split("/").includes("auth")) {

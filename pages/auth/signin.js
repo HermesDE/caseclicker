@@ -6,13 +6,13 @@ export default function SignIn({ providers }) {
   return (
     <>
       <Head>
-        <title>SignIn | Case Clicker</title>
+        <title>SignIn | Case Clicker Online</title>
       </Head>
       <Container>
         <Grid mt={50} mb={20}>
           <Grid.Col>
             <Center>
-              <Title>Welcome to Case Clicker</Title>
+              <Title>Welcome to Case Clicker Online</Title>
             </Center>
           </Grid.Col>
         </Grid>

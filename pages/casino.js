@@ -32,7 +32,7 @@ export default function Casino() {
   return (
     <>
       <Head>
-        <title>Casino | Case Clicker</title>
+        <title>Casino | Case Clicker Online</title>
       </Head>
       <Navigation money={money}>
         <CasinoOverview

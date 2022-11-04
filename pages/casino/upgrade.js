@@ -26,7 +26,7 @@ export default function Upgrade() {
   return (
     <>
       <Head>
-        <title>Casino Upgrade | Case Clicker</title>
+        <title>Casino Upgrade | Case Clicker Online</title>
       </Head>
       <Navigation money={money}>
         <UpgradeOverview />

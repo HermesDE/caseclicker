@@ -31,7 +31,7 @@ export default function Marketplace() {
   return (
     <>
       <Head>
-        <title>Marketplace | Case Clicker</title>
+        <title>Marketplace | Case Clicker Online</title>
       </Head>
       <Navigation money={money}>
         <MarketplaceOverview

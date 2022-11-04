@@ -38,7 +38,7 @@ export default function CoinflipGame() {
   return (
     <>
       <Head>
-        <title>Coinflip | Case Clicker</title>
+        <title>Coinflip | Case Clicker Online</title>
       </Head>
       <Navigation>
         <Container fluid>
