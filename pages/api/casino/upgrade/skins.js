@@ -6,7 +6,24 @@ import Skin from "../../../../lib/database/schemas/skin";
 async function handler(req, res) {
   const token = await getToken({ req });
   const { id, price } = req.body;
+  const sortPrice = req.query.price;
   switch (req.method) {
+    case "GET":
+      let skins;
+      if (!Number.isNaN(parseInt(sortPrice))) {
+        skins = await OpenedSkin.find({
+          userId: token.id,
+          price: { $lte: sortPrice },
+        })
+          .sort({ price: -1 })
+          .limit(50);
+      } else {
+        skins = await OpenedSkin.find({ userId: token.id })
+          .sort({ price: -1 })
+          .limit(50);
+      }
+      res.json(skins);
+      break;
     case "POST":
       const userSkin = await OpenedSkin.findById(id);
       if (!userSkin) {

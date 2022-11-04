@@ -11,7 +11,7 @@ async function handler(req, res) {
 
   switch (req.method) {
     case "GET": {
-      const { sort, exterior, rarity, value, price, page } = req.query;
+      const { sort, exterior, rarity, value, page } = req.query;
 
       if (value) {
         const value = await OpenedSkin.aggregate([
@@ -30,6 +30,7 @@ async function handler(req, res) {
       if (rarity !== null && rarity) {
         query.rarity = rarity;
       }
+
       const skins = await OpenedSkin.find(query)
         .sort(
           sort === "true"

@@ -39,7 +39,7 @@ export default function UpgradeOverview() {
   useEffect(() => {
     async function fetchSkins() {
       const response = await fetch(
-        `/api/inventory?sort=price&price=${userSkinPrice}`
+        `/api/casino/upgrade/skins?price=${userSkinPrice}`
       );
       if (response.ok) {
         setUserSkins(await response.json());
@@ -87,6 +87,7 @@ export default function UpgradeOverview() {
           children: <UpgradeWonModal skin={pickedUpgradeSkin} />,
           size: "lg",
         });
+        setLoose(false);
       } else {
         setLoose(true);
       }
