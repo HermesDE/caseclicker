@@ -11,49 +11,42 @@ async function handler(req, res) {
 
   switch (req.method) {
     case "GET": {
-      const { sort, exterior, rarity, value, price } = req.query;
-      let skins = await OpenedSkin.find({ userId: userId });
+      const { sort, exterior, rarity, value, price, page } = req.query;
 
       if (value) {
         const value = await OpenedSkin.aggregate([
           { $match: { userId: userId } },
           { $group: { _id: null, value: { $sum: "$price" } } },
         ]);
-        const count = await OpenedSkin.count({ userId: userId });
-        return res.json({
-          inventoryValue: value[0].value,
-          inventoryCount: count,
-        });
-      }
-      if (exterior !== "null" && exterior) {
-        skins = skins.filter((skin) => skin.exterior === exterior);
-      }
-      if (rarity !== "null" && rarity) {
-        skins = skins.filter((skin) => skin.rarity === rarity);
-      }
-      if (!isNaN(parseInt(price))) {
-        skins = await OpenedSkin.find({
-          userId: userId,
-          price: { $lte: price },
-        });
+        return res.json({ inventoryValue: value[0].value });
       }
 
-      if (sort === "true") {
-        skins.sort((a, b) => {
-          return new Date(b.openedAt) - new Date(a.openedAt);
-        });
+      const query = {
+        userId: userId,
+      };
+      if (exterior !== null && exterior) {
+        query.exterior = exterior;
       }
-      if (sort === "price") {
-        skins.sort((a, b) => {
-          return b.price - a.price;
-        });
+      if (rarity !== null && rarity) {
+        query.rarity = rarity;
       }
+      const skins = await OpenedSkin.find(query)
+        .sort(
+          sort === "true"
+            ? { openedAt: -1 }
+            : sort === "false"
+            ? { openedAt: 1 }
+            : sort === "price"
+            ? { price: -1 }
+            : {}
+        )
 
-      if (skins.length > 50) {
-        skins.length = 50;
-      }
+        .limit(50)
+        .skip((page - 1) * 50);
+      const filterCount = await OpenedSkin.countDocuments(query);
+      const count = await OpenedSkin.countDocuments({ userId: userId });
 
-      res.json(skins);
+      res.json({ skins, pages: Math.ceil(filterCount / 50), count: count });
       break;
     }
 

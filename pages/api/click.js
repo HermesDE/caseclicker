@@ -9,7 +9,7 @@ async function handler(req, res) {
   const userStat = await UserStat.findOne({ userId: userId });
   const updatedUserStat = await UserStat.findOneAndUpdate(
     { userId: userId },
-    { money: userStat.money + userStat.moneyPerClick }
+    { $inc: { money: userStat.moneyPerClick } }
   );
   res.json(updatedUserStat);
 }

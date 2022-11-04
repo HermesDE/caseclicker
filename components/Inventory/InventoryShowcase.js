@@ -7,6 +7,7 @@ import {
   Title,
   Button,
   Text,
+  Pagination,
 } from "@mantine/core";
 import { useLocalStorage } from "@mantine/hooks";
 import { openModal } from "@mantine/modals";
@@ -34,11 +35,18 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
   const [inventoryValue, setInventoryValue] = useState(0);
   const [inventoryCount, setInventoryCount] = useState(0);
 
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
+
+  const deleteSkin = (id) => {
+    setSkins(skins.filter((skin) => skin._id !== id));
+  };
+
   useEffect(() => {
     async function fetchData() {
       setLoading(true);
       const response = await fetch(
-        `/api/inventory?sort=${sortTimestamp}${
+        `/api/inventory?page=${page}&sort=${sortTimestamp}${
           exterior ? `&exterior=${exterior}` : ""
         }${rarity ? `&rarity=${rarity}` : ""}`
       );
@@ -50,25 +58,24 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
         setLoading(false);
         return;
       }
-      setSkins(await response.json());
+      const data = await response.json();
+      setSkins(data.skins);
+
+      setInventoryCount(data.count);
+      setTotalPages(data.pages);
       setLoading(false);
     }
     fetchData();
-  }, [sortTimestamp, exterior, rarity]);
+  }, [sortTimestamp, exterior, rarity, page]);
 
   useEffect(() => {
     async function fetchData() {
       const response = await fetch("api/inventory?value=true");
       const data = await response.json();
       setInventoryValue(data.inventoryValue);
-      setInventoryCount(data.inventoryCount);
     }
     fetchData();
   }, []);
-
-  const deleteSkin = (id) => {
-    setSkins(skins.filter((skin) => skin._id !== id));
-  };
 
   return (
     <Container fluid>
@@ -143,7 +150,7 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
           <Button
             fullWidth
             color={"red"}
-            variant={sellLock ? "filled" : "outline"}
+            variant={sellLock ? "outline" : "filled"}
             onClick={() => setSellLock(!sellLock)}
           >
             {sellLock ? "Activate Sellmode" : "Deactive Sellmode"}
@@ -175,27 +182,57 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
           <Title order={2}>No skins found</Title>
         </Center>
       ) : (
-        <Grid mt={20} gutter={"xs"}>
-          {skins.length > 0 &&
-            skins.map((skin) => {
-              return (
-                <Grid.Col key={skin._id} xs={6} md={4} xl={3}>
-                  <SkinCard
-                    id={skin._id}
-                    name={skin.name}
-                    iconUrl={skin.iconUrl}
-                    price={skin.price}
-                    rarity={skin.rarity}
-                    rarityColor={skin.rarityColor}
-                    float={skin.float}
-                    deleteSkin={deleteSkin}
-                    toggleMoneyUpdate={toggleMoneyUpdate}
-                    sellLock={sellLock}
-                  />
-                </Grid.Col>
-              );
-            })}
-        </Grid>
+        <>
+          <Grid mt={20}>
+            <Grid.Col span={12}>
+              <Center>
+                <Pagination
+                  onChange={setPage}
+                  color={"orange"}
+                  total={totalPages}
+                  page={page}
+                />
+              </Center>
+            </Grid.Col>
+          </Grid>
+          <Grid mt={20}>
+            {skins.length > 0 &&
+              skins.map((skin) => {
+                return (
+                  <Grid.Col key={skin._id} xs={6} md={4} xl={3}>
+                    <SkinCard
+                      id={skin._id}
+                      name={skin.name}
+                      iconUrl={skin.iconUrl}
+                      price={skin.price}
+                      rarity={skin.rarity}
+                      rarityColor={skin.rarityColor}
+                      float={skin.float}
+                      statTrak={skin.statTrak}
+                      knifeType={skin.knifeType}
+                      type={skin.type}
+                      souvenir={skin.souvenir}
+                      deleteSkin={deleteSkin}
+                      toggleMoneyUpdate={toggleMoneyUpdate}
+                      sellLock={sellLock}
+                    />
+                  </Grid.Col>
+                );
+              })}
+          </Grid>
+          <Grid mt={20}>
+            <Grid.Col span={12}>
+              <Center>
+                <Pagination
+                  onChange={setPage}
+                  color={"orange"}
+                  total={totalPages}
+                  page={page}
+                />
+              </Center>
+            </Grid.Col>
+          </Grid>
+        </>
       )}
     </Container>
   );

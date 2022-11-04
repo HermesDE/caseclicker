@@ -11,12 +11,33 @@ export default function SkinCard({
   rarity,
   rarityColor,
   float,
+  statTrak,
+  knifeType,
+  souvenir,
+  type,
   deleteSkin,
   toggleMoneyUpdate,
   sellLock,
 }) {
   return (
-    <Card shadow={"sm"} p="lg" radius={"md"} withBorder>
+    <Card
+      shadow={"sm"}
+      p="lg"
+      radius={"md"}
+      withBorder
+      sx={{
+        borderColor:
+          knifeType !== null
+            ? "purple"
+            : statTrak
+            ? "orange"
+            : souvenir
+            ? "yellow"
+            : type === "Gloves"
+            ? "purple"
+            : "dark.04",
+      }}
+    >
       <Card.Section>
         <Image
           alt={name}
