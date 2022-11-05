@@ -202,7 +202,12 @@ export default function Navigation({ children, money }) {
       header={
         <Header height={70} p="md">
           <div
-            style={{ display: "flex", alignItems: "center", height: "100%" }}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              height: "100%",
+              justifyContent: "space-between",
+            }}
           >
             <MediaQuery largerThan="lg" styles={{ display: "none" }}>
               <Burger
@@ -216,30 +221,37 @@ export default function Navigation({ children, money }) {
 
             <Link href={"/"} passHref>
               <a>
-                <Title>Case Clicker Online</Title>
+                <Title>CC Online</Title>
               </a>
             </Link>
 
-            <Link href={"/impressum"}>
-              <Text
-                sx={{ cursor: "pointer" }}
-                size={"sm"}
-                weight={200}
-                component="a"
-              >
-                Impressum
-              </Text>
-            </Link>
-            <Link style={{ marginLeft: 200 }} href={"/privacy-policy"}>
-              <Text
-                sx={{ cursor: "pointer" }}
-                size={"sm"}
-                weight={200}
-                component="a"
-              >
-                Privacy Policy
-              </Text>
-            </Link>
+            <div>
+              <div style={{ marginLeft: 10 }}>
+                <Link href={"/legal-notice"}>
+                  <Text
+                    sx={{ cursor: "pointer" }}
+                    size={"sm"}
+                    weight={200}
+                    component="a"
+                  >
+                    Impressum / Legal Notice
+                  </Text>
+                </Link>
+              </div>
+
+              <div style={{ marginLeft: 10 }}>
+                <Link style={{ marginLeft: 200 }} href={"/privacy-policy"}>
+                  <Text
+                    sx={{ cursor: "pointer" }}
+                    size={"sm"}
+                    weight={200}
+                    component="a"
+                  >
+                    Privacy Policy
+                  </Text>
+                </Link>
+              </div>
+            </div>
           </div>
         </Header>
       }
