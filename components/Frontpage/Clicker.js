@@ -33,7 +33,7 @@ export default function Clicker({
     const initConnection = async () => {
       const session = await getSession();
       setUserSession(session);
-      socket = io("http://localhost:3001", { auth: session });
+      socket = io("https://ws.case-clicker.com", { auth: session });
       socket.on("connect_error", (err) => {
         console.log(err.message);
       });
