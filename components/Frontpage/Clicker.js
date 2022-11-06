@@ -16,6 +16,7 @@ import { showNotification } from "@mantine/notifications";
 import DollarIcon from "../icons/DollarIcon";
 import { getSession } from "next-auth/react";
 import { io } from "socket.io-client";
+import url from "../../lib/wsUrl";
 
 let socket;
 
@@ -26,14 +27,17 @@ export default function Clicker({
   setMoneyPerClick,
 }) {
   const [connected, setConnected] = useState(false);
-  const [userSession, setUserSession] = useState(null);
   const [play] = useSound("/sounds/moneyClick.mp3", { volume: 0.05 });
 
   useEffect(() => {
     const initConnection = async () => {
-      const session = await getSession();
-      setUserSession(session);
-      socket = io("https://ws.case-clicker.com", { auth: session });
+      const response = await fetch("/api/auth/jwt");
+      const token = await response.json();
+
+      socket = io(url, {
+        auth: { token: token },
+      });
+      console.log("io");
       socket.on("connect_error", (err) => {
         console.log(err.message);
       });
@@ -81,12 +85,14 @@ export default function Clicker({
             <motion.div whileTap={{ scale: 0.9 }}>
               <UnstyledButton>
                 <DollarIcon
-                  size={200}
+                  size={250}
                   color="#CCCC00"
                   onClick={async () => {
                     play();
 
-                    socket.emit("click");
+                    if (socket) {
+                      socket.emit("click");
+                    }
 
                     /* const response = await fetch("/api/click", {
                       method: "POST",
