@@ -1,9 +1,3 @@
-.container {
-  background-color: rgb(60, 59, 63);
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-}
 #coin-flip-cont {
   width: 128px;
   height: 128px;
@@ -28,13 +22,13 @@
 #coin .front {
   transform: translateZ(1px);
   border-radius: 50%;
-  background: url(/public/ct.webp);
+  background: url("/pictures/casino/ctlogo.webp");
 }
 
 #coin .back {
   transform: translateZ(-1px) rotateY(180deg);
   border-radius: 50%;
-  background: url(/public/t.webp);
+  background: url("/pictures/casino/tlogo.webp");
 }
 
 #coin.animation1620 {

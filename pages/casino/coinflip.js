@@ -36,7 +36,11 @@ export default function Coinflip() {
         <title>Coinflip | Case Clicker Online</title>
       </Head>
       <Navigation money={money}>
-        <CoinflipOverview tokens={tokens} />
+        <CoinflipOverview
+          tokens={tokens}
+          toggleMoneyUpdate={toggleMoneyUpdate}
+          setTokens={setTokens}
+        />
       </Navigation>
     </>
   );
