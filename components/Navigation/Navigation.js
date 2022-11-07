@@ -70,7 +70,7 @@ export default function Navigation({ children, money }) {
           p="md"
           hiddenBreakpoint="lg"
           hidden={!opened}
-          width={{ sm: 300, lg: 300 }}
+          width={{ sm: 275 }}
         >
           <Navbar.Section component={ScrollArea} grow>
             <Link href="/" passHref>
@@ -219,10 +219,8 @@ export default function Navigation({ children, money }) {
               />
             </MediaQuery>
 
-            <Link href={"/"} passHref>
-              <a>
-                <Title>CC Online</Title>
-              </a>
+            <Link href={"/"}>
+              <Title sx={{ cursor: "pointer" }}>CC Online</Title>
             </Link>
 
             <div>

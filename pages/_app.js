@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
       <MantineProvider
         withGlobalStyles
         withNormalizeCSS
-        theme={{ colorScheme: "dark" }}
+        theme={{ colorScheme: "dark", breakpoints: [{ xl: 1500 }] }}
       >
         <NotificationsProvider>
           <ModalsProvider>

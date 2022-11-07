@@ -52,7 +52,7 @@ export default function CasinoOverview({ money, toggleMoneyUpdate, tokens }) {
         </Grid.Col>
       </Grid>
       <Grid mt={20}>
-        {/* <Grid.Col xs={12} sm={6} lg={4} xl={3}>
+        <Grid.Col xs={12} sm={6} lg={4} xl={3}>
           <Link href={"/casino/coinflip"}>
             <Card
               sx={{ cursor: "pointer", height: 300 }}
@@ -62,16 +62,16 @@ export default function CasinoOverview({ money, toggleMoneyUpdate, tokens }) {
               <Center>
                 <Title order={3}>Coinflip</Title>
               </Center>
-              <Center>
+              <Center mt={15}>
                 <Image
                   fit="contain"
-                  height={200}
+                  height={170}
                   src={"/pictures/casino/coinflip/ctlogo.webp"}
                 />
               </Center>
             </Card>
           </Link>
-        </Grid.Col> */}
+        </Grid.Col>
         <Grid.Col xs={12} sm={6} lg={4} xl={3}>
           <Link href={"/casino/upgrade"}>
             <Card

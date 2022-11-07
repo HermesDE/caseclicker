@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 
 export default function CoinflipCoin({
+  gameId,
   host,
   guest,
   winner,
   setAnimationEnded,
-  ready,
-  setReady,
+  toggleUserStats,
 }) {
-  const [classList, setClassList] = useState("");
+  const [classList, setClassList] = useState(gameId);
 
   const spinArray = [
     "animation1620",
@@ -24,19 +24,19 @@ export default function CoinflipCoin({
     if (!winner) return;
 
     if (winner === "host") {
-      setClassList("animation2160");
+      setClassList(classList + " animation2160");
     } else {
-      setClassList("animation1980");
+      setClassList(classList + " animation1980");
     }
 
     //setClassList(getSpin());
   }, []);
 
   useEffect(() => {
-    const coin = document.getElementById("coin");
-    coin.addEventListener("animationend", () => {
+    const coin = document.getElementsByClassName(gameId);
+    coin[0].addEventListener("animationend", () => {
+      toggleUserStats();
       setAnimationEnded(true);
-      setReady(!ready);
     });
   }, []);
 

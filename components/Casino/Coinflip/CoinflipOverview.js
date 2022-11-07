@@ -2,17 +2,19 @@ import {
   Button,
   Center,
   Container,
+  Divider,
   Grid,
   Input,
+  NumberInput,
   Text,
   Title,
 } from "@mantine/core";
 import { useState, useEffect } from "react";
 import CoinflipGameCard from "./CoinflipGameCard";
-import Router from "next/router";
 import { io } from "socket.io-client";
 import { getSession } from "next-auth/react";
 import url from "../../../lib/wsUrl";
+import TokensIcon from "../../icons/TokensIcon";
 
 let socket;
 
@@ -25,12 +27,10 @@ export default function CoinflipOverview({
   const [id, setId] = useState(null);
   const [userSession, setUserSession] = useState(null);
 
-  const [bet, setBet] = useState(0);
+  const [bet, setBet] = useState(1);
   const [disabled, setDisabled] = useState(false);
 
   const [games, setGames] = useState([]);
-
-  const [ready, setReady] = useState(false);
 
   const deleteGame = (id) => {
     socket.emit("deleteGame", id, userSession.userId);
@@ -52,20 +52,20 @@ export default function CoinflipOverview({
 
       socket = io(url + "/coinflip", { auth: { token } });
       socket.on("connect_error", (err) => {
-        console.log(err.message);
+        console.error(err.message);
       });
       socket.on("connect", () => {
         setConnected(true);
         setId(socket.id);
 
         socket.emit("games");
-        socket.on("userstats", (data) => {
-          setTokens(data.tokens);
-        });
       });
       socket.on("games", (data) => {
         //all games
         setGames(data);
+      });
+      socket.on("userstats", (data) => {
+        setTokens(data.tokens);
       });
     };
     initConnection();
@@ -78,16 +78,6 @@ export default function CoinflipOverview({
         socket.off("userstats");
       }
     };
-  }, []);
-
-  useEffect(() => {
-    if (!socket) return;
-
-    socket.on("users", (data) => {
-      console.log(data);
-    });
-
-    return () => socket.off("users");
   }, []);
 
   useEffect(() => {
@@ -161,46 +151,53 @@ export default function CoinflipOverview({
 
   //disable new game button if user has 3 open games already
   useEffect(() => {
-    if (games.length <= 0) {
-      return;
-    }
-
     if (
-      games.filter((game) => game?.host?.id === userSession.userId).length >= 3
+      games.filter((game) => game?.host?.id === userSession?.userId).length >=
+        3 ||
+      tokens < bet
     ) {
       setDisabled(true);
     } else {
       setDisabled(false);
     }
-  }, [games, userSession]);
+  }, [games, userSession, bet]);
 
-  useEffect(() => {
+  const toggleUserStats = () => {
     if (!socket) return;
-
-    console.log("userstats update", userSession);
-    socket.emit("userstats", userSession.userId);
-
-    return () => socket.off("userstats");
-  }, [ready]);
+    socket.emit("userstats", userSession?.userId);
+  };
 
   return connected ? (
     <Container fluid>
       <Grid>
-        <Grid.Col span={12}>
-          <Text weight={500}>{tokens} Tokens available</Text>
+        <Grid.Col span={"content"}>
+          <TokensIcon color={"yellow"} size={24} />
+        </Grid.Col>
+        <Grid.Col span={"auto"}>
+          <Text weight={500}>{tokens}</Text>
         </Grid.Col>
       </Grid>
       <Grid>
-        <Grid.Col span={12}>
-          {connected && <p>Connected with id {id}</p>}
+        <Grid.Col xs={6} sm={3}>
+          <NumberInput
+            icon={<TokensIcon color={"yellow"} />}
+            value={bet}
+            onChange={(value) => {
+              if (isNaN(value)) return;
+              const regex = new RegExp("^[0-9]*$");
+              if (!regex.exec(value)) return;
+              setBet(value);
+            }}
+            min={1}
+            noClampOnBlur
+            stepHoldDelay={500}
+            stepHoldInterval={50}
+          />
         </Grid.Col>
-      </Grid>
-      <Grid>
-        <Grid.Col span={6}>
-          <Input value={bet} onChange={(e) => setBet(e.target.value)} />
-        </Grid.Col>
-        <Grid.Col span={6}>
+        <Grid.Col xs={6} sm={3}>
           <Button
+            color={"yellow"}
+            variant="outline"
             disabled={disabled}
             onClick={() => {
               createGame(bet);
@@ -210,19 +207,25 @@ export default function CoinflipOverview({
           </Button>
         </Grid.Col>
       </Grid>
+
       {games.length > 0 ? (
-        <Grid>
+        <Grid mt={20}>
           {games.map((game) => {
             return (
-              <Grid.Col span={4} key={game?.id || Math.random()}>
+              <Grid.Col
+                xs={12}
+                sm={6}
+                md={4}
+                xl={3}
+                key={game?.id || Math.random()}
+              >
                 <CoinflipGameCard
                   game={game}
                   session={userSession}
                   deleteGame={deleteGame}
                   joinGame={joinGame}
                   tokens={tokens}
-                  ready={ready}
-                  setReady={setReady}
+                  toggleUserStats={toggleUserStats}
                 />
               </Grid.Col>
             );

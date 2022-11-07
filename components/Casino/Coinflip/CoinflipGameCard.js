@@ -20,8 +20,7 @@ export default function CoinflipGameCard({
   deleteGame,
   joinGame,
   tokens,
-  ready,
-  setReady,
+  toggleUserStats,
 }) {
   const [animationEnded, setAnimationEnded] = useState(false);
   return game === undefined ? (
@@ -77,12 +76,12 @@ export default function CoinflipGameCard({
           {game.status === "full" && game.winner && (
             <Center>
               <CoinflipCoin
+                gameId={game.id}
                 host={game.host}
                 guest={game.guest}
                 winner={game.winner}
                 setAnimationEnded={setAnimationEnded}
-                ready={ready}
-                setReady={setReady}
+                toggleUserStats={toggleUserStats}
               />
             </Center>
           )}
