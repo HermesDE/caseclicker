@@ -4,6 +4,9 @@ import { getToken } from "next-auth/jwt";
 
 async function handler(req, res) {
   const token = await getToken({ req });
+  if (!token) {
+    return res.status(401).json({ error: "unauthorized" });
+  }
   switch (req.method) {
     case "GET":
       const notifications = await Notification.find({ userId: token.id }).sort({

@@ -11,15 +11,11 @@ export default async function middleware(req) {
     return NextResponse.next();
   }
   if (!token) {
-    if (
-      req.url.split("/").pop() === "legal-notice" ||
-      req.url.split("/").pop() === "privacy-policy"
-    ) {
-      return NextResponse.next();
+    if (req.url.split("/").includes("admin")) {
+      return NextResponse.redirect(url);
     }
-    if (!req.url.split("/").includes("auth")) {
-      return NextResponse.redirect(url + "/api/auth/signin");
-    }
+
+    return NextResponse.next();
   }
   if (req.url.split("/").includes("admin")) {
     if (token.email === "v.wagner2k@gmail.com") {

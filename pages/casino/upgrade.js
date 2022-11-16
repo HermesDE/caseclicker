@@ -2,6 +2,7 @@ import UpgradeOverview from "../../components/Casino/Upgrade/UpgradeOverview";
 import Navigation from "../../components/Navigation/Navigation";
 import Head from "next/head";
 import { useState, useEffect } from "react";
+import { showNotification } from "@mantine/notifications";
 
 export default function Upgrade() {
   const [money, setMoney] = useState(0);
@@ -12,10 +13,13 @@ export default function Upgrade() {
       const response = await fetch("/api/me");
 
       if (!response.ok) {
-        showNotification({
-          title: "Error",
-          message: `Error while fetching user information\nError Message: ${response.status} ${response.statusText}`,
-        });
+        if (response.status !== 401) {
+          showNotification({
+            title: "Error",
+            message: `Error while fetching user information\nError Message: ${response.status} ${response.statusText}`,
+          });
+        }
+
         return;
       }
       const data = await response.json();

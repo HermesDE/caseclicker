@@ -13,10 +13,14 @@ export default function Marketplace() {
       const response = await fetch("/api/me");
 
       if (!response.ok) {
-        showNotification({
-          title: "Error",
-          message: `Error while fetching user information\nError Message: ${response.status} ${response.statusText}`,
-        });
+        if (response.status !== 401) {
+          showNotification({
+            title: "Error",
+            message: `Error while fetching user information\nError Message: ${response.status} ${response.statusText}`,
+            color: "red",
+          });
+        }
+
         return;
       }
       const data = await response.json();

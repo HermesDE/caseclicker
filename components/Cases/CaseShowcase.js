@@ -1,6 +1,7 @@
 import { Container, Grid } from "@mantine/core";
 import { useEffect, useState } from "react";
 import CaseCard from "./CaseCard";
+import useSound from "use-sound";
 
 export default function CaseShowcase({
   toggleMoneyUpdate,
@@ -8,6 +9,7 @@ export default function CaseShowcase({
   userOpenedCases,
 }) {
   const [cases, setCases] = useState([]);
+  const [caseOpenSound] = useSound("/sounds/caseOpen.mp3", { volume: 0.1 });
 
   useEffect(() => {
     async function fetchData() {
@@ -21,7 +23,7 @@ export default function CaseShowcase({
   }, []);
 
   return (
-    <Container fluid>
+    <Container mt={20} fluid>
       <Grid>
         {cases.length > 0 &&
           cases.map((c) => {
@@ -37,6 +39,7 @@ export default function CaseShowcase({
                   link={c.link}
                   neededOpenedCases={c.neededOpenedCases}
                   userOpenedCases={userOpenedCases}
+                  caseOpenSound={caseOpenSound}
                 />
               </Grid.Col>
             );

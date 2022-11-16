@@ -17,11 +17,13 @@ export default function UserOffers() {
     async function fetchData() {
       const response = await fetch("/api/marketplace?userOffers=true");
       if (!response.ok) {
-        return showNotification({
-          title: "Error",
-          message: "Error while fetching your offers",
-          color: "red",
-        });
+        if (response.status !== 401) {
+          return showNotification({
+            title: "Error",
+            message: "Error while fetching your offers",
+            color: "red",
+          });
+        }
       }
       setUserOffers(await response.json());
     }

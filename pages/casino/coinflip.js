@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import CoinflipOverview from "../../components/Casino/Coinflip/CoinflipOverview";
 import Navigation from "../../components/Navigation/Navigation";
 import Head from "next/head";
+import { showNotification } from "@mantine/notifications";
 
 export default function Coinflip() {
   const [money, setMoney] = useState(0);
@@ -14,10 +15,13 @@ export default function Coinflip() {
       const response = await fetch("/api/me");
 
       if (!response.ok) {
-        showNotification({
-          title: "Error",
-          message: `Error while fetching user information\nError Message: ${response.status} ${response.statusText}`,
-        });
+        if (response.status !== 401) {
+          showNotification({
+            title: "Error",
+            message: `Error while fetching user information\nError Message: ${response.status} ${response.statusText}`,
+          });
+        }
+
         return;
       }
       const data = await response.json();

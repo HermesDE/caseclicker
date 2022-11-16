@@ -14,10 +14,13 @@ export default function Cases() {
       const response = await fetch("/api/me");
 
       if (!response.ok) {
-        showNotification({
-          title: "Error",
-          message: `Error while fetching user information\nError Message: ${response.status} ${response.statusText}`,
-        });
+        if (response.status !== 401) {
+          showNotification({
+            title: "Error",
+            message: `Error while fetching user information\nError Message: ${response.status} ${response.statusText}`,
+          });
+        }
+
         return;
       }
       const data = await response.json();

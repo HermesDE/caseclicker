@@ -5,6 +5,9 @@ import OpenedSkin from "../../lib/database/schemas/openedSkin";
 
 async function handler(req, res) {
   const token = await getToken({ req });
+  if (!token) {
+    return res.status(401).json({ error: "unautorized" });
+  }
   switch (req.method) {
     case "GET":
       const { userOffers, tag } = req.query;

@@ -21,6 +21,7 @@ import {
   ActionIcon,
   ScrollArea,
   Grid,
+  Alert,
 } from "@mantine/core";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -224,7 +225,7 @@ export default function Navigation({ children, money }) {
             </Link>
 
             <div>
-              <div style={{ marginLeft: 10 }}>
+              {/* <div style={{ marginLeft: 10 }}>
                 <Link href={"/legal-notice"}>
                   <Text
                     sx={{ cursor: "pointer" }}
@@ -235,7 +236,7 @@ export default function Navigation({ children, money }) {
                     Impressum / Legal Notice
                   </Text>
                 </Link>
-              </div>
+              </div> */}
 
               <div style={{ marginLeft: 10 }}>
                 <Link style={{ marginLeft: 200 }} href={"/privacy-policy"}>
@@ -254,7 +255,21 @@ export default function Navigation({ children, money }) {
         </Header>
       }
     >
-      {children}
+      <>
+        {status === "unauthenticated" && (
+          <Alert color={"orange"} title="You are currently not logged in">
+            <Text weight={500}>
+              Hey you! It looks like you are not currently logged in. This means
+              that you can browse through all pages, but you cant interact with
+              the site. To play Case Clicker Online you need to log in. This
+              will also save your progress and allow you to play from anywhere
+              on many different devices.
+            </Text>
+          </Alert>
+        )}
+
+        {children}
+      </>
     </AppShell>
   );
 }

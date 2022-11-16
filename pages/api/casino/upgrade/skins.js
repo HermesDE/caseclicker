@@ -5,6 +5,9 @@ import Skin from "../../../../lib/database/schemas/skin";
 
 async function handler(req, res) {
   const token = await getToken({ req });
+  if (!token) {
+    return res.status(401).json({ error: "unauthorized" });
+  }
   const { id, price } = req.body;
   const sortPrice = req.query.price;
   switch (req.method) {

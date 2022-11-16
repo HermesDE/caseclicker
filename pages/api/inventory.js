@@ -7,6 +7,9 @@ import { getToken } from "next-auth/jwt";
 
 async function handler(req, res) {
   const token = await getToken({ req });
+  if (!token) {
+    return res.status(401).json({ error: "unautorized" });
+  }
   const userId = token.id;
 
   switch (req.method) {

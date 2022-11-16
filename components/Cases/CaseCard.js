@@ -1,7 +1,6 @@
 import { Badge, Button, Card, Center, Group, Image, Text } from "@mantine/core";
 import { openModal, closeAllModals } from "@mantine/modals";
 import { motion } from "framer-motion";
-import useSound from "use-sound";
 import UnboxedSkinCard from "./UnboxedSkinCard";
 import { useState } from "react";
 import { showNotification } from "@mantine/notifications";
@@ -18,8 +17,8 @@ export default function CaseCard({
   link,
   neededOpenedCases,
   userOpenedCases,
+  caseOpenSound,
 }) {
-  const [caseOpen] = useSound("/sounds/caseOpen.mp3", { volume: 0.1 });
   const [loading, setLoading] = useState(false);
 
   return (
@@ -58,7 +57,7 @@ export default function CaseCard({
         radius="md"
         onClick={async () => {
           setLoading(true);
-          caseOpen();
+          caseOpenSound();
           const body = {
             id: id,
           };

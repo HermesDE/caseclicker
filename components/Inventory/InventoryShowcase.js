@@ -51,10 +51,14 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
         }${rarity ? `&rarity=${rarity}` : ""}`
       );
       if (!response.ok) {
-        showNotification({
-          title: "Error",
-          message: `Error while fetching inventory\nError Message: ${response.status} ${response.statusText}`,
-        });
+        if (response.status !== 401) {
+          showNotification({
+            title: "Error",
+            message: `Error while fetching inventory\nError Message: ${response.status} ${response.statusText}`,
+            color: "red",
+          });
+        }
+
         setLoading(false);
         return;
       }
