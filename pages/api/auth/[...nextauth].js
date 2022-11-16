@@ -60,8 +60,8 @@ export const authOptions = {
     },
   },
   pages: {
-    signIn: "/auth/signin",
-    error: "/auth/signin",
+    signIn: "/auth/login",
+    error: "/auth/login",
   },
 };
 export default NextAuth(authOptions);
