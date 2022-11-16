@@ -3,7 +3,6 @@ import {
   AppShell,
   Navbar,
   Header,
-  Footer,
   Text,
   MediaQuery,
   Burger,
@@ -12,7 +11,6 @@ import {
   NavLink,
   Group,
   Avatar,
-  UnstyledButton,
   Divider,
   Menu,
   Button,
@@ -20,18 +18,16 @@ import {
   Indicator,
   ActionIcon,
   ScrollArea,
-  Grid,
   Alert,
 } from "@mantine/core";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
 import { signOut, signIn } from "next-auth/react";
-import RightIcon from "../icons/RightIcon";
-import { openConfirmModal } from "@mantine/modals";
 import NotificationDrawer from "../Notifications/NotificationDrawer";
 import ArrowUpIcon from "../icons/ArrowUpIcon";
 import LogoutIcon from "../icons/LogoutIcon";
+import { useMediaQuery } from "@mantine/hooks";
 
 export default function Navigation({ children, money }) {
   const theme = useMantineTheme();
@@ -40,6 +36,7 @@ export default function Navigation({ children, money }) {
   const { data: session, status } = useSession();
   const [notifications, setNotifications] = useState([]);
   const [open, setOpen] = useState(false);
+  const mobile = useMediaQuery("(max-width: 700px)");
 
   useEffect(() => {
     async function fetchData() {
@@ -221,7 +218,9 @@ export default function Navigation({ children, money }) {
             </MediaQuery>
 
             <Link href={"/"}>
-              <Title sx={{ cursor: "pointer" }}>CC Online</Title>
+              <Title sx={{ cursor: "pointer" }}>
+                {mobile ? "CC Online" : "Case Clicker Online"}
+              </Title>
             </Link>
 
             <div>

@@ -14,6 +14,17 @@ export default function Informations() {
             user data will be preserved.
           </Text>
         </Grid>
+        <Grid mt={30}>
+          <Text color={"yellow"} weight={500}>
+            <a
+              href="https://discord.gg/hdPqd2z5NZ"
+              target={"_blank"}
+              rel="noreferrer"
+            >
+              Join our discord!
+            </a>
+          </Text>
+        </Grid>
       </Container>
     </>
   );
