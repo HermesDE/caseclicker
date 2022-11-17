@@ -67,6 +67,17 @@ async function handler(req, res) {
           cost: Math.round(cost * 100) / 100,
           count: raritySkins.length,
         });
+      } else if (type === "price") {
+        const skins = await OpenedSkin.find({
+          userId: userId,
+          price: { $lt: value },
+        });
+        let costs = skins.map((skin) => skin.price);
+        let cost = costs.reduce((a, b) => a + b, 0);
+        return res.json({
+          cost: Math.round(cost * 100) / 100,
+          count: skins.length,
+        });
       }
       break;
     }
@@ -85,6 +96,23 @@ async function handler(req, res) {
         await OpenedSkin.deleteMany({
           userId: userId,
           rarity: value,
+        });
+        await UserStat.findOneAndUpdate(
+          { userId: userId },
+          { $inc: { money: cost } }
+        );
+        return res.json({ message: "ok" });
+      } else if (type === "price") {
+        const skins = await OpenedSkin.find({
+          userId: userId,
+          price: { $lt: value },
+        });
+        let costs = skins.map((skin) => skin.price);
+        let cost = costs.reduce((a, b) => a + b, 0);
+
+        await OpenedSkin.deleteMany({
+          userId: userId,
+          price: { $lt: value },
         });
         await UserStat.findOneAndUpdate(
           { userId: userId },
