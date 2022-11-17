@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import UnboxedSkinCard from "./UnboxedSkinCard";
 import { useState } from "react";
 import { showNotification } from "@mantine/notifications";
+import CustomCaseContent from "./CustomCaseContent";
 
 export default function CaseCard({
   id,
@@ -18,6 +19,7 @@ export default function CaseCard({
   neededOpenedCases,
   userOpenedCases,
   caseOpenSound,
+  customCase,
 }) {
   const [loading, setLoading] = useState(false);
 
@@ -25,9 +27,16 @@ export default function CaseCard({
     <Card shadow={"sm"} p="lg" radius={"md"} withBorder>
       <Card.Section>
         <Center>
-          <motion.image whileHover={{ scaleY: 1.1 }}>
-            <a href={link} rel="noreferrer" target={"_blank"}>
+          <motion.image whileHover={{ scaleY: 1.01 }}>
+            {customCase ? (
               <Image
+                onClick={() =>
+                  openModal({
+                    title: "Content",
+                    children: <CustomCaseContent id={id} />,
+                    size: "xl",
+                  })
+                }
                 alt={name}
                 mt={10}
                 src={`/pictures/cases/${iconUrl}`}
@@ -36,7 +45,19 @@ export default function CaseCard({
                 fit="contain"
                 sx={{ cursor: "pointer" }}
               ></Image>
-            </a>
+            ) : (
+              <a href={link} rel="noreferrer" target={"_blank"}>
+                <Image
+                  alt={name}
+                  mt={10}
+                  src={`/pictures/cases/${iconUrl}`}
+                  height={100}
+                  width={150}
+                  fit="contain"
+                  sx={{ cursor: "pointer" }}
+                ></Image>
+              </a>
+            )}
           </motion.image>
         </Center>
       </Card.Section>
@@ -61,11 +82,14 @@ export default function CaseCard({
           const body = {
             id: id,
           };
-          const response = await fetch("/api/buy/case", {
-            method: "POST",
-            body: JSON.stringify(body),
-            headers: { "Content-Type": "application/json" },
-          });
+          const response = await fetch(
+            `/api/buy/${customCase ? "customCase" : "case"}`,
+            {
+              method: "POST",
+              body: JSON.stringify(body),
+              headers: { "Content-Type": "application/json" },
+            }
+          );
           setLoading(false);
           if (!response.ok) {
             showNotification({

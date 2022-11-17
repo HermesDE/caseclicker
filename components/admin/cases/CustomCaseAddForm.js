@@ -22,10 +22,6 @@ export default function CaseAddForm() {
   const [casePrice, setCasePrice] = useState(0);
   const [neededOpenedCases, setNeededOpenedCases] = useState(0);
 
-  /*  for (let i = 1; i <= 1000; i++) {
-    setNumbers([...numbers, i]);
-  } */
-
   useEffect(() => {
     async function fetchData() {
       let formattedSkingroups = [];
@@ -118,10 +114,14 @@ export default function CaseAddForm() {
                 <TextInput
                   value={percentage[i]}
                   onChange={(value) => {
-                    setPercentage([
-                      ...percentage,
-                      (percentage[i] = value.target.value),
-                    ]);
+                    let newState = [...percentage];
+                    /* if (value.target.value === "") {
+                      newState.splice(i, 1);
+                      setPercentage(newState);
+                      return;
+                    } */
+                    newState[i] = value.target.value;
+                    setPercentage(newState);
                   }}
                 />
               </Grid.Col>
@@ -133,20 +133,14 @@ export default function CaseAddForm() {
           <Button
             disabled={!caseName || !selectedSkingroups.length > 0 || !casePrice}
             onClick={async () => {
-              let skingroups = [];
-              for (const [i, skin] of selectedSkingroups.entries()) {
-                const obj = {
-                  skingroup: skin,
-                  chance: selectedPercentage[i],
-                };
-                skingroups.push(obj);
-              }
+              percentage.length = selectedSkingroups.length;
+
               const body = {
                 name: caseName,
                 iconUrl: iconUrl,
                 price: casePrice,
-                skingroups: skingroups,
-                odds: selectedPercentage,
+                skingroups: selectedSkingroups,
+                percentage: percentage,
                 caseUrl: caseUrl,
                 neededOpenedCases: neededOpenedCases,
               };
