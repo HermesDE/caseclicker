@@ -12,12 +12,12 @@ async function handler(req, res) {
       if (Number.isNaN(tokens)) {
         return res.status(400).json({ error: "Please provide a number" });
       }
-      if (tokens > userStat.money / 10) {
+      if (tokens > userStat.money * 10) {
         return res.status(400).json({ error: "You dont have enough money" });
       }
       await UserStat.findOneAndUpdate(
         { userId: token.id },
-        { $inc: { money: -tokens * 10, tokens: +tokens } }
+        { $inc: { money: -tokens / 10, tokens: +tokens } }
       );
       res.json({ message: "ok" });
       break;

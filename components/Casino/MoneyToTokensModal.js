@@ -7,12 +7,12 @@ export default function MoneyToTokensModal({ money, toggleMoneyUpdate }) {
   const [invalid, setInvalid] = useState(false);
 
   useEffect(() => {
-    setInvalid(Number.isNaN(+tokens) || tokens > money / 10);
+    setInvalid(Number.isNaN(+tokens) || tokens > money * 10);
   }, [tokens, money]);
 
   return (
     <Container fluid>
-      {tokens > money / 10 && <Text>You dont have enough money</Text>}
+      {tokens > money * 10 && <Text>You dont have enough money</Text>}
       <Grid>
         <Grid.Col span={3}>
           <Text size={"sm"}>Tokens to be converted</Text>
@@ -32,7 +32,7 @@ export default function MoneyToTokensModal({ money, toggleMoneyUpdate }) {
           </FocusTrap>
         </Grid.Col>
         <Grid.Col span={3}>
-          <Text>Tokens = {tokens * 10} Dollar</Text>
+          <Text>Tokens = {tokens / 10} Dollar</Text>
         </Grid.Col>
         <Grid.Col span={3}>
           <Button

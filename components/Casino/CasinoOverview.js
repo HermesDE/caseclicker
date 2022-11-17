@@ -14,6 +14,7 @@ import { useEffect } from "react";
 import MoneyToTokensModal from "./MoneyToTokensModal";
 import Link from "next/link";
 import UpgradeIcon from "../icons/UpgradeIcon";
+import TokensToMoneyModal from "./TokensToMoneyModal";
 
 export default function CasinoOverview({ money, toggleMoneyUpdate, tokens }) {
   return (
@@ -22,6 +23,8 @@ export default function CasinoOverview({ money, toggleMoneyUpdate, tokens }) {
         <Grid.Col xs={6}>
           <Text>Your current tokens: {tokens}</Text>
         </Grid.Col>
+      </Grid>
+      <Grid>
         <Grid.Col xs={6}>
           <Button
             onClick={() =>
@@ -41,6 +44,28 @@ export default function CasinoOverview({ money, toggleMoneyUpdate, tokens }) {
             fullWidth
           >
             Convert money to tokens
+          </Button>
+        </Grid.Col>
+        <Grid.Col xs={6}>
+          <Button
+            onClick={() =>
+              openModal({
+                title: "Convert tokens to money",
+                children: (
+                  <TokensToMoneyModal
+                    tokens={tokens}
+                    money={money}
+                    toggleMoneyUpdate={toggleMoneyUpdate}
+                  />
+                ),
+                size: "xl",
+              })
+            }
+            color={"orange"}
+            variant="outline"
+            fullWidth
+          >
+            Convert tokens to money
           </Button>
         </Grid.Col>
       </Grid>
