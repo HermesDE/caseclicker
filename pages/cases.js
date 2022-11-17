@@ -38,6 +38,7 @@ export default function Cases() {
     <>
       <Head>
         <title>Cases | Case Clicker Online</title>
+        <meta name="description" content="open some juicy cases" />
       </Head>
       <Navigation money={money}>
         <CaseShowcase

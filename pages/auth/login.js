@@ -17,6 +17,8 @@ export default function Login({ providers }) {
     <>
       <Head>
         <title>Login | Case Clicker Online</title>
+        <meta name="description" content="Login to your account" />
+        <meta name="keywords" content="login, signin" />
       </Head>
       <Container fluid>
         <Grid align={"center"}>

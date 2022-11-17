@@ -36,6 +36,7 @@ export default function Inventory() {
     <>
       <Head>
         <title>Inventory | Case Clicker Online</title>
+        <meta name="description" content="look at your beautiful skins" />
       </Head>
       <Navigation money={money}>
         <InventoryShowcase toggleMoneyUpdate={toggleMoneyUpdate} />

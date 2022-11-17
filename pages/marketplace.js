@@ -36,6 +36,7 @@ export default function Marketplace() {
     <>
       <Head>
         <title>Marketplace | Case Clicker Online</title>
+        <meta name="description" content="sell your skins to other people" />
       </Head>
       <Navigation money={money}>
         <MarketplaceOverview

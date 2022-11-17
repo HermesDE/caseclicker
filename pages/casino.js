@@ -37,6 +37,7 @@ export default function Casino() {
     <>
       <Head>
         <title>Casino | Case Clicker Online</title>
+        <meta name="description" content="gamble with your skins" />
       </Head>
       <Navigation money={money}>
         <CasinoOverview
