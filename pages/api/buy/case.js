@@ -98,23 +98,15 @@ async function handler(req, res) {
     exteriors[[Math.floor(Math.random() * exteriors.length)]];
   const skin = filteredSkins.find((skin) => skin.exterior === randomExterior);
   let float;
-  if (randomExterior !== "Not painted") {
+  if (
+    randomExterior === "Factory New" ||
+    randomExterior === "Minimal Wear" ||
+    randomExterior === "Field-Tested" ||
+    randomExterior === "Well-Worn" ||
+    randomExterior === "Battle-Scarred"
+  ) {
     float = generateFloat(randomExterior);
   }
-
-  //pick skin by float
-  /* let skin;
-  if (float <= 0.07) {
-    skin = filteredSkins.find((skin) => skin.exterior === "Factory New");
-  } else if (float <= 0.15) {
-    skin = filteredSkins.find((skin) => skin.exterior === "Minimal Wear");
-  } else if (float <= 0.38) {
-    skin = filteredSkins.find((skin) => skin.exterior === "Field-Tested");
-  } else if (float <= 0.45) {
-    skin = filteredSkins.find((skin) => skin.exterior === "Well-Worn");
-  } else if (float <= 1) {
-    skin = filteredSkins.find((skin) => skin.exterior === "Battle-Scarred");
-  } */
 
   const newOpenedSkin = new OpenedSkin({
     name: skin.name,

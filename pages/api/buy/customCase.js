@@ -46,7 +46,13 @@ async function handler(req, res) {
     exteriors[[Math.floor(Math.random() * exteriors.length)]];
   const skin = filteredSkins.find((skin) => skin.exterior === randomExterior);
   let float;
-  if (randomExterior !== "Not painted") {
+  if (
+    randomExterior === "Factory New" ||
+    randomExterior === "Minimal Wear" ||
+    randomExterior === "Field-Tested" ||
+    randomExterior === "Well-Worn" ||
+    randomExterior === "Battle-Scarred"
+  ) {
     float = generateFloat(randomExterior);
   }
 
