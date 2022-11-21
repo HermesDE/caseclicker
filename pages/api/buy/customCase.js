@@ -1,6 +1,5 @@
 import connectDB from "../../../lib/database/connectMongoDb";
 import UserStat from "../../../lib/database/schemas/userStat";
-import Case from "../../../lib/database/schemas/case";
 import CustomCase from "../../../lib/database/schemas/customCase";
 import SkinGroup from "../../../lib/database/schemas/skingroup";
 import Skin from "../../../lib/database/schemas/skin";
@@ -82,6 +81,14 @@ async function handler(req, res) {
   //delete money from database
   userStat.money -= caseToBuy.price;
   await userStat.save();
+
+  await CustomCase.findByIdAndUpdate(caseToBuy._id, {
+    $inc: {
+      moneySpend: +caseToBuy.price,
+      moneyEarned: +skin.price,
+      openedCount: +1,
+    },
+  });
 
   res.json(newOpenedSkin);
 }

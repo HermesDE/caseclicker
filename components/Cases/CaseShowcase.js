@@ -1,5 +1,5 @@
 import { Container, Grid, Tabs } from "@mantine/core";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import CaseCard from "./CaseCard";
 import useSound from "use-sound";
 
@@ -30,6 +30,14 @@ export default function CaseShowcase({
     fetchData();
     fetchCustomCases();
   }, []);
+
+  const toggleStatsUpdate = (id) => {
+    return useMemo(() => {
+      const c = cases.find((c) => c._id === id);
+      console.log(c);
+      return Math.floor((c.moneyEarned / c.openedCount) * 100) / 100;
+    }, [id]);
+  };
 
   return (
     <Container fluid>
@@ -64,6 +72,9 @@ export default function CaseShowcase({
                       userOpenedCases={userOpenedCases}
                       caseOpenSound={caseOpenSound}
                       customCase={false}
+                      moneyEarned={c.moneyEarned}
+                      moneySpend={c.moneySpend}
+                      openedCount={c.openedCount}
                     />
                   </Grid.Col>
                 );
@@ -88,6 +99,9 @@ export default function CaseShowcase({
                       userOpenedCases={userOpenedCases}
                       caseOpenSound={caseOpenSound}
                       customCase={true}
+                      moneySpend={c.moneySpend}
+                      moneyEarned={c.moneyEarned}
+                      openedCount={c.openedCount}
                     />
                   </Grid.Col>
                 );

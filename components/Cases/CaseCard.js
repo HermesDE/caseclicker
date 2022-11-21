@@ -1,10 +1,20 @@
-import { Badge, Button, Card, Center, Group, Image, Text } from "@mantine/core";
+import {
+  Badge,
+  Button,
+  Card,
+  Center,
+  Group,
+  Image,
+  Text,
+  Tooltip,
+} from "@mantine/core";
 import { openModal, closeAllModals } from "@mantine/modals";
 import { motion } from "framer-motion";
 import UnboxedSkinCard from "./UnboxedSkinCard";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { showNotification } from "@mantine/notifications";
 import CustomCaseContent from "./CustomCaseContent";
+import InfoIcon from "../icons/InfoIcon";
 
 export default function CaseCard({
   id,
@@ -20,11 +30,34 @@ export default function CaseCard({
   userOpenedCases,
   caseOpenSound,
   customCase,
+  moneySpend,
+  moneyEarned,
+  openedCount,
 }) {
   const [loading, setLoading] = useState(false);
+  const revenue = useMemo(() => {
+    return Math.floor((moneyEarned / openedCount) * 100) / 100;
+  }, [moneyEarned, openedCount]);
 
   return (
     <Card shadow={"sm"} p="lg" radius={"md"} withBorder>
+      <Tooltip
+        datatype=""
+        multiline
+        position="left"
+        events={{ hover: true, touch: true }}
+        label={
+          <>
+            <Text>{`Revenue: ${revenue}$/case`}</Text>
+            <Text>{`Opened ${openedCount} times`}</Text>
+          </>
+        }
+      >
+        <div style={{ position: "absolute", left: "90%", cursor: "pointer" }}>
+          <InfoIcon size={24} />
+        </div>
+      </Tooltip>
+
       <Card.Section>
         <Center>
           <motion.image whileHover={{ scaleY: 1.01 }}>

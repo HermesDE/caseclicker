@@ -135,6 +135,14 @@ async function handler(req, res) {
   userStat.money -= caseToBuy.price;
   await userStat.save();
 
+  await Case.findByIdAndUpdate(caseToBuy._id, {
+    $inc: {
+      moneySpend: +caseToBuy.price,
+      moneyEarned: +skin.price,
+      openedCount: +1,
+    },
+  });
+
   res.json(newOpenedSkin);
 }
 export default connectDB(handler);
