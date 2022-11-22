@@ -34,7 +34,7 @@ export default function CustomCaseContent({ id }) {
       {skins.length > 0 &&
         skins.map((skin, i) => {
           return (
-            <Grid.Col key={i} span={4}>
+            <Grid.Col key={i} xs={6} md={4}>
               <CustomCaseContentSkinCard skin={skin} />
             </Grid.Col>
           );
