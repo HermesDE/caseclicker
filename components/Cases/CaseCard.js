@@ -72,10 +72,9 @@ export default function CaseCard({
                   })
                 }
                 alt={name}
-                mt={10}
                 src={`/pictures/cases/${iconUrl}`}
-                height={100}
-                width={150}
+                height={150}
+                width={225}
                 fit="contain"
                 sx={{ cursor: "pointer" }}
               ></Image>
