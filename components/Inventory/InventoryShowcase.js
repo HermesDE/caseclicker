@@ -85,7 +85,9 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
     <Container fluid>
       <Grid justify={"left"}>
         <Grid.Col xs={12} sm={6}>
-          <Text>Inventory value: {inventoryValue}$</Text>
+          <Text>
+            Inventory value: {Math.floor(inventoryValue * 100) / 100}$
+          </Text>
         </Grid.Col>
         <Grid.Col xs={12} sm={6}>
           <Text>Inventory count: {inventoryCount}</Text>

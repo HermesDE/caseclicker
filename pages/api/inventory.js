@@ -31,7 +31,11 @@ async function handler(req, res) {
         query.exterior = exterior;
       }
       if (rarity !== null && rarity) {
-        query.rarity = rarity;
+        if (rarity === "Covert") {
+          query.rarity = ["Covert", "Extraordinary"];
+        } else {
+          query.rarity = rarity;
+        }
       }
 
       const skins = await OpenedSkin.find(query)

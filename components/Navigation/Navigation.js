@@ -132,21 +132,29 @@ export default function Navigation({ children, money }) {
             {session ? (
               <>
                 <Group position="center">
-                  <Indicator
-                    color={"orange"}
-                    onClick={() => setOpen(true)}
-                    sx={{ cursor: "pointer" }}
-                    showZero={false}
-                    label={notifications.length}
-                    overflowCount={10}
-                    size={22}
-                  >
+                  {notifications.length > 0 ? (
+                    <Indicator
+                      color={"orange"}
+                      onClick={() => setOpen(true)}
+                      sx={{ cursor: "pointer" }}
+                      showZero={false}
+                      label={notifications.length}
+                      overflowCount={10}
+                      size={22}
+                    >
+                      <Avatar
+                        onClick={() => setOpen(true)}
+                        sx={{ cursor: "pointer" }}
+                        src={session?.user?.image}
+                      />
+                    </Indicator>
+                  ) : (
                     <Avatar
                       onClick={() => setOpen(true)}
                       sx={{ cursor: "pointer" }}
                       src={session?.user?.image}
                     />
-                  </Indicator>
+                  )}
 
                   <div>
                     <Text weight={500}>{Math.round(money * 100) / 100} $</Text>
