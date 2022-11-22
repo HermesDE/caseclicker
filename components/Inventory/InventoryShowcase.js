@@ -206,6 +206,7 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
                   <Grid.Col key={skin._id} xs={6} md={4} xl={3}>
                     <SkinCard
                       id={skin._id}
+                      classId={skin.classId}
                       name={skin.name}
                       iconUrl={skin.iconUrl}
                       price={skin.price}

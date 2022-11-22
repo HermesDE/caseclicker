@@ -2,9 +2,11 @@ import { Badge, Button, Card, Group, Image, Text } from "@mantine/core";
 import { showNotification } from "@mantine/notifications";
 import { openModal } from "@mantine/modals";
 import MarketplaceOfferModal from "./MarketplaceOfferModal";
+import SkingroupContentCard from "./SkingroupContentCard";
 
 export default function SkinCard({
   id,
+  classId,
   name,
   iconUrl,
   price,
@@ -40,6 +42,13 @@ export default function SkinCard({
     >
       <Card.Section>
         <Image
+          sx={{ cursor: "pointer" }}
+          onClick={() =>
+            openModal({
+              children: <SkingroupContentCard classId={classId} />,
+              size: "xl",
+            })
+          }
           alt={name}
           src={`https://steamcommunity-a.akamaihd.net/economy/image/${iconUrl}`}
           height={100}
