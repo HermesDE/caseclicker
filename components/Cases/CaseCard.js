@@ -38,6 +38,7 @@ export default function CaseCard({
   const revenue = useMemo(() => {
     return Math.floor((moneyEarned / openedCount) * 100) / 100;
   }, [moneyEarned, openedCount]);
+  const formatter = Intl.NumberFormat("en", { notation: "compact" });
 
   return (
     <Card shadow={"sm"} p="lg" radius={"md"} withBorder>
@@ -49,7 +50,7 @@ export default function CaseCard({
         label={
           <>
             <Text>{`Revenue: ${revenue}$/case`}</Text>
-            <Text>{`Opened ${openedCount} times`}</Text>
+            <Text>{`Opened ${formatter.format(openedCount)} times`}</Text>
           </>
         }
       >
