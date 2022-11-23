@@ -13,6 +13,7 @@ async function handler(req, res) {
 
   const userStat = await UserStat.findOne({ userId: userId });
   const caseToBuy = await Case.findById(req.body.id);
+  const { quickOpen } = req.body;
 
   //check if user has enough money
   if (userStat.money < caseToBuy.price)
@@ -143,6 +144,20 @@ async function handler(req, res) {
     },
   });
 
-  res.json(newOpenedSkin);
+  if (quickOpen) {
+    return res.json(newOpenedSkin);
+  }
+
+  let allSkins = [];
+  for (const skingroup of skingroups) {
+    if (skingroup.weaponType === "Knife" || skingroup.type === "Gloves")
+      continue;
+    const s = await Skin.find({ classId: skingroup.skinIds });
+    for (const skin of s) {
+      allSkins.push(skin);
+    }
+  }
+
+  res.json({ skins: allSkins, newOpenedSkin });
 }
 export default connectDB(handler);

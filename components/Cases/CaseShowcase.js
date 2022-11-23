@@ -11,6 +11,9 @@ export default function CaseShowcase({
   const [cases, setCases] = useState([]);
   const [customCases, setCustomCases] = useState([]);
   const [caseOpenSound] = useSound("/sounds/caseOpen.mp3", { volume: 0.1 });
+  const [caseOpenAnimationSound] = useSound("/sounds/caseOpenAnimation.mp3", {
+    volume: 0.1,
+  });
 
   useEffect(() => {
     async function fetchData() {
@@ -63,6 +66,7 @@ export default function CaseShowcase({
                       neededOpenedCases={c.neededOpenedCases}
                       userOpenedCases={userOpenedCases}
                       caseOpenSound={caseOpenSound}
+                      caseOpenAnimationSound={caseOpenAnimationSound}
                       customCase={false}
                       moneyEarned={c.moneyEarned}
                       moneySpend={c.moneySpend}
@@ -90,6 +94,7 @@ export default function CaseShowcase({
                       neededOpenedCases={c.neededOpenedCases}
                       userOpenedCases={userOpenedCases}
                       caseOpenSound={caseOpenSound}
+                      caseOpenAnimationSound={caseOpenAnimationSound}
                       customCase={true}
                       moneySpend={c.moneySpend}
                       moneyEarned={c.moneyEarned}

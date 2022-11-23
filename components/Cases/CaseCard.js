@@ -8,13 +8,16 @@ import {
   Text,
   Tooltip,
 } from "@mantine/core";
-import { openModal, closeAllModals } from "@mantine/modals";
+import { openModal } from "@mantine/modals";
 import { motion } from "framer-motion";
 import UnboxedSkinCard from "./UnboxedSkinCard";
 import { useMemo, useState } from "react";
 import { showNotification } from "@mantine/notifications";
 import CustomCaseContent from "./CustomCaseContent";
 import InfoIcon from "../icons/InfoIcon";
+import LightningIcon from "../icons/LightningIcon";
+import CaseOpeningCarousel from "./CaseOpeningCarousel";
+import CustomCaseOpeningCarousel from "./CustomCaseOpeningCarousel";
 
 export default function CaseCard({
   id,
@@ -29,6 +32,7 @@ export default function CaseCard({
   neededOpenedCases,
   userOpenedCases,
   caseOpenSound,
+  caseOpenAnimationSound,
   customCase,
   moneySpend,
   moneyEarned,
@@ -39,6 +43,32 @@ export default function CaseCard({
     return Math.floor((moneyEarned / openedCount) * 100) / 100;
   }, [moneyEarned, openedCount]);
   const formatter = Intl.NumberFormat("en", { notation: "compact" });
+
+  const buyCase = async (quickOpen) => {
+    setLoading(true);
+    const body = {
+      id: id,
+      quickOpen: quickOpen,
+    };
+    const response = await fetch(
+      `/api/buy/${customCase ? "customCase" : "case"}`,
+      {
+        method: "POST",
+        body: JSON.stringify(body),
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+    setLoading(false);
+    if (!response.ok) {
+      showNotification({
+        title: "Error",
+        message: "Error while opening the case",
+        color: "red",
+      });
+      return;
+    }
+    return await response.json();
+  };
 
   return (
     <Card shadow={"sm"} p="lg" radius={"md"} withBorder>
@@ -99,61 +129,85 @@ export default function CaseCard({
         <Text weight={500}>{name}</Text>
         <Badge color={"yellow"}>{price} $</Badge>
       </Group>
-      <Button
-        disabled={
-          loading || money < price || userOpenedCases < neededOpenedCases
-        }
-        loading={loading}
-        variant="light"
-        color={"blue"}
-        fullWidth
-        mt={"md"}
-        radius="md"
-        onClick={async () => {
-          setLoading(true);
-          caseOpenSound();
-          const body = {
-            id: id,
-          };
-          const response = await fetch(
-            `/api/buy/${customCase ? "customCase" : "case"}`,
-            {
-              method: "POST",
-              body: JSON.stringify(body),
-              headers: { "Content-Type": "application/json" },
-            }
-          );
-          setLoading(false);
-          if (!response.ok) {
-            showNotification({
-              title: "Error",
-              message: "Error while opening the case",
-              color: "red",
-            });
-            return;
+      <Group spacing={"xs"} mt={"md"} position="apart">
+        <Button
+          sx={{ width: "65%" }}
+          variant="light"
+          disabled={
+            loading || money < price || userOpenedCases < neededOpenedCases
           }
-          const unboxedSkin = await response.json();
+          loading={loading}
+          radius="md"
+          onClick={async () => {
+            const skins = await buyCase(false);
+            if (!skins) return;
 
-          toggleMoneyUpdate();
-          openModal({
-            title: "Look what you unboxed",
-            children: <UnboxedSkinCard skin={unboxedSkin} />,
-            size: "lg",
-            transition: "slide-up",
-            transitionDuration: 300,
-          });
-        }}
-      >
-        {loading
-          ? "Opening"
-          : money < price
-          ? "Not enough money"
-          : userOpenedCases < neededOpenedCases
-          ? `Open another ${
-              neededOpenedCases - userOpenedCases
-            } cases to unlock`
-          : "Buy and open"}
-      </Button>
+            caseOpenAnimationSound();
+            customCase
+              ? openModal({
+                  title: `Opening ${name}`,
+                  children: (
+                    <CustomCaseOpeningCarousel
+                      toggleMoneyUpdate={toggleMoneyUpdate}
+                      skins={skins.skins}
+                      skingroups={skins.skingroups}
+                      unboxedSkin={skins.newOpenedSkin}
+                    />
+                  ),
+                  size: "xl",
+                })
+              : openModal({
+                  title: `Opening ${name}`,
+                  children: (
+                    <CaseOpeningCarousel
+                      toggleMoneyUpdate={toggleMoneyUpdate}
+                      skins={skins.skins}
+                      unboxedSkin={skins.newOpenedSkin}
+                    />
+                  ),
+                  size: "xl",
+                });
+          }}
+        >
+          Buy and open
+        </Button>
+        <Button
+          sx={{ width: "30%" }}
+          leftIcon={<LightningIcon size={20} />}
+          disabled={
+            loading || money < price || userOpenedCases < neededOpenedCases
+          }
+          loading={loading}
+          variant="outline"
+          color={"yellow"}
+          radius="md"
+          onClick={async () => {
+            caseOpenSound();
+
+            const unboxedSkin = await buyCase(true);
+            if (!unboxedSkin) return;
+
+            toggleMoneyUpdate();
+            openModal({
+              title: "Look what you unboxed",
+              children: <UnboxedSkinCard skin={unboxedSkin} />,
+              size: "lg",
+              transition: "slide-up",
+              transitionDuration: 300,
+            });
+          }}
+        >
+          {loading
+            ? "Opening"
+            : money < price
+            ? "Not enough money"
+            : userOpenedCases < neededOpenedCases
+            ? `Open another ${
+                neededOpenedCases - userOpenedCases
+              } cases to unlock`
+            : "Open"}
+        </Button>
+      </Group>
     </Card>
   );
 }

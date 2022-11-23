@@ -7,6 +7,7 @@ import { getToken } from "next-auth/jwt";
 import OpenedSkin from "../../../lib/database/schemas/openedSkin";
 import generateFloat from "../../../lib/float";
 import weightedRandom from "../../../lib/weightedRandom";
+import Skingroup from "../../../lib/database/schemas/skingroup";
 
 async function handler(req, res) {
   const token = await getToken({ req });
@@ -14,6 +15,7 @@ async function handler(req, res) {
 
   const userStat = await UserStat.findOne({ userId: userId });
   const caseToBuy = await CustomCase.findById(req.body.id);
+  const { quickOpen } = req.body;
 
   //check if user has enough money
   if (userStat.money < caseToBuy.price)
@@ -90,6 +92,28 @@ async function handler(req, res) {
     },
   });
 
-  res.json(newOpenedSkin);
+  if (quickOpen) {
+    return res.json(newOpenedSkin);
+  }
+
+  let allSkins = [];
+  let allSkingroups = [];
+  for (const skingroup of caseToBuy.skingroups) {
+    allSkingroups.push(skingroup.skingroup);
+  }
+  allSkingroups = await Skingroup.find({ _id: allSkingroups });
+  for (const skingroup of allSkingroups) {
+    const skins = await Skin.find({ classId: skingroup.skinIds });
+    for (let s of skins) {
+      s._doc = { ...s._doc, skingroup: skingroup.id };
+      allSkins.push(s);
+    }
+  }
+
+  res.json({
+    skins: allSkins,
+    skingroups: caseToBuy.skingroups,
+    newOpenedSkin,
+  });
 }
 export default connectDB(handler);
