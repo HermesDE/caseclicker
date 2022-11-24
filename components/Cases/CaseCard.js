@@ -72,7 +72,7 @@ export default function CaseCard({
 
   return (
     <Card shadow={"sm"} p="lg" radius={"md"} withBorder>
-      <Tooltip
+      {/* <Tooltip
         datatype=""
         multiline
         position="left"
@@ -87,7 +87,7 @@ export default function CaseCard({
         <div style={{ position: "absolute", left: "90%", cursor: "pointer" }}>
           <InfoIcon size={24} />
         </div>
-      </Tooltip>
+      </Tooltip> */}
 
       <Card.Section>
         <Center>
