@@ -40,12 +40,15 @@ export default function CaseCarousel({
         plugins={[autoplay.current]}
         speed={2}
         onSlideChange={async (i) => {
+          if (i === 1) {
+            toggleMoneyUpdate();
+          }
           if (i % 2 === 0) {
             playRollSound();
           }
           if (i === steps.current - 1) {
             await sleep(5000);
-            toggleMoneyUpdate();
+
             closeAllModals();
             openModal({
               title: "Look what you unboxed",
