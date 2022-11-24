@@ -91,7 +91,7 @@ export default function CaseCard({
 
       <Card.Section>
         <Center>
-          <motion.image whileHover={{ scaleY: 1.01 }}>
+          <motion.div whileHover={{ scale: 1.15 }}>
             {customCase ? (
               <Image
                 onClick={() =>
@@ -121,7 +121,7 @@ export default function CaseCard({
                 ></Image>
               </a>
             )}
-          </motion.image>
+          </motion.div>
         </Center>
       </Card.Section>
 
@@ -169,7 +169,15 @@ export default function CaseCard({
                 });
           }}
         >
-          Buy and open
+          {loading
+            ? "Opening"
+            : money < price
+            ? "Not enough money"
+            : userOpenedCases < neededOpenedCases
+            ? `Open another ${
+                neededOpenedCases - userOpenedCases
+              } cases to unlock`
+            : "Buy and Open"}
         </Button>
         <Button
           sx={{ width: "30%" }}
@@ -197,15 +205,7 @@ export default function CaseCard({
             });
           }}
         >
-          {loading
-            ? "Opening"
-            : money < price
-            ? "Not enough money"
-            : userOpenedCases < neededOpenedCases
-            ? `Open another ${
-                neededOpenedCases - userOpenedCases
-              } cases to unlock`
-            : "Open"}
+          Open
         </Button>
       </Group>
     </Card>
