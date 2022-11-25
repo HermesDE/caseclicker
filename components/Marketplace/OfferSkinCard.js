@@ -8,7 +8,8 @@ import {
   Tooltip,
 } from "@mantine/core";
 import { showNotification } from "@mantine/notifications";
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import dayjs from "dayjs";
 
 export default function OfferSkinCard({
   id,
@@ -18,10 +19,41 @@ export default function OfferSkinCard({
   toggleMoneyUpdate,
   deleteOffer,
   money,
+  updateTime,
 }) {
   const [loading, setLoading] = useState(false);
+  const difference = useMemo(() => {
+    const date1 = dayjs(offeredAt);
+    let diff = date1.diff();
+    let unit = "sec";
+    diff = Math.abs(diff);
+    diff /= 1000;
+    if (diff > 60) {
+      diff /= 60;
+      unit = "min";
+    } else {
+      return [Math.floor(diff), unit];
+    }
+    if (diff * 60 >= 3600) {
+      diff /= 60;
+      unit = "h";
+    } else {
+      return [Math.floor(diff), unit];
+    }
+    if (diff > 24) {
+      diff /= 24;
+      unit =
+        Math.floor(diff * 100) / 100 <= 2 ? (unit = "day") : (unit = "days");
+    }
+
+    return [Math.floor(diff), unit];
+  }, [offeredAt, updateTime]);
+  //console.log(difference);
   return (
     <Card shadow={"sm"} p="lg" radius={"md"} withBorder>
+      <Text color={"dark.2"} size="xs" sx={{ marginTop: -10 }}>
+        {difference} old
+      </Text>
       <Card.Section>
         <Image
           alt={openedSkin.name}

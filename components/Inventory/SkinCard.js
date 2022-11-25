@@ -86,11 +86,11 @@ export default function SkinCard({
             if (response.ok) {
               deleteSkin(id);
               toggleMoneyUpdate();
-              showNotification({
+              /* showNotification({
                 title: "Item sold!",
                 message: `You sold your ${name} for ${price} $.`,
                 color: "green",
-              });
+              }); */
             } else {
               showNotification({
                 title: "Oops",
@@ -102,7 +102,9 @@ export default function SkinCard({
         >
           Sell for {price} $
         </Button>
-        {rarity === "Classified" || rarity === "Covert" ? (
+        {rarity === "Classified" ||
+        rarity === "Covert" ||
+        rarity === "Extraordinary" ? (
           <Button
             variant="default"
             onClick={() =>

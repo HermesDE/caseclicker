@@ -8,12 +8,15 @@ import {
   Button,
   Text,
   Pagination,
+  TextInput,
 } from "@mantine/core";
 import { useLocalStorage } from "@mantine/hooks";
 import { openModal } from "@mantine/modals";
 import { showNotification } from "@mantine/notifications";
 import { useEffect, useState } from "react";
+import SearchIcon from "../icons/SearchIcon";
 import CustomSell from "./CustomSell";
+import SearchInput from "./SearchInput";
 import SkinCard from "./SkinCard";
 
 export default function InventoryShowcase({ toggleMoneyUpdate }) {
@@ -31,6 +34,7 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
     defaultValue: "",
     key: "rarity",
   });
+  const [search, setSearch] = useState("");
   const [sellLock, setSellLock] = useState(true);
   const [inventoryValue, setInventoryValue] = useState(0);
   const [inventoryCount, setInventoryCount] = useState(0);
@@ -43,21 +47,23 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
   };
 
   useEffect(() => {
+    if (page > 1) setPage(1);
+  }, [search]);
+
+  useEffect(() => {
     async function fetchData() {
       setLoading(true);
       const response = await fetch(
-        `/api/inventory?page=${page}&sort=${sortTimestamp}${
+        `/api/inventory?page=${page}&sort=${sortTimestamp}&search=${search}${
           exterior ? `&exterior=${exterior}` : ""
         }${rarity ? `&rarity=${rarity}` : ""}`
       );
-      if (!response.ok) {
-        if (response.status !== 401) {
-          showNotification({
-            title: "Error",
-            message: `Error while fetching inventory\nError Message: ${response.status} ${response.statusText}`,
-            color: "red",
-          });
-        }
+      if (!response.ok && response.status !== 401) {
+        showNotification({
+          title: "Error",
+          message: `Error while fetching inventory\nError Message: ${response.status} ${response.statusText}`,
+          color: "red",
+        });
 
         setLoading(false);
         return;
@@ -70,7 +76,7 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
       setLoading(false);
     }
     fetchData();
-  }, [sortTimestamp, exterior, rarity, page]);
+  }, [sortTimestamp, exterior, rarity, page, search]);
 
   useEffect(() => {
     async function fetchData() {
@@ -179,6 +185,7 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
           </Button>
         </Grid.Col>
       </Grid>
+      <SearchInput mt={10} setSearch={setSearch} />
       {loading ? (
         <Center>
           <Loader mt={20} size={"xl"} color="orange" />
@@ -201,6 +208,7 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
               </Center>
             </Grid.Col>
           </Grid>
+
           <Grid mt={20}>
             {skins.length > 0 &&
               skins.map((skin) => {

@@ -23,7 +23,7 @@ async function handler(req, res) {
       }
       if (tag === "price") {
         const offers = await MarketplaceSkin.find({ userId: { $ne: token.id } })
-          .sort({ price: 1 })
+          .sort({ price: -1 })
           .limit(20);
         return res.json(offers);
       }
@@ -46,7 +46,8 @@ async function handler(req, res) {
       }
       if (
         inventorySkin.rarity !== "Classified" &&
-        inventorySkin.rarity !== "Covert"
+        inventorySkin.rarity !== "Covert" &&
+        inventorySkin.rarity !== "Extraordinary"
       ) {
         return res.status(400).json({
           error: "Only classified or covert skins can be placed on the market",
