@@ -9,7 +9,7 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import CoinflipGameCard from "./CoinflipGameCard";
 import { io } from "socket.io-client";
 import { getSession } from "next-auth/react";
@@ -78,7 +78,7 @@ export default function CoinflipOverview({
         socket.off("userstats");
       }
     };
-  }, []);
+  }, [setTokens]);
 
   useEffect(() => {
     if (!socket) return;
@@ -160,12 +160,12 @@ export default function CoinflipOverview({
     } else {
       setDisabled(false);
     }
-  }, [games, userSession, bet]);
+  }, [games, userSession, bet, tokens]);
 
-  const toggleUserStats = () => {
+  const toggleUserStats = useCallback(() => {
     if (!socket) return;
     socket.emit("userstats", userSession?.userId);
-  };
+  }, [userSession]);
 
   return connected ? (
     <Container fluid>

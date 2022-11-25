@@ -10,7 +10,7 @@ export default function SearchInput({ setSearch, mt }) {
       setSearch(input);
     }, 1000);
     return () => clearTimeout(searchTimeout);
-  }, [input]);
+  }, [input, setSearch]);
 
   return (
     <Grid mt={mt}>

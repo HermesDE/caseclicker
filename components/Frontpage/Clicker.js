@@ -65,7 +65,7 @@ export default function Clicker({
         socket.off("click");
       };
     }
-  }, []);
+  }, [setMoney, setMoneyPerClick]);
 
   return (
     <Container>

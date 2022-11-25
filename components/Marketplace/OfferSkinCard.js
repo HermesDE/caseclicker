@@ -8,7 +8,7 @@ import {
   Tooltip,
 } from "@mantine/core";
 import { showNotification } from "@mantine/notifications";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import dayjs from "dayjs";
 
 export default function OfferSkinCard({
@@ -19,9 +19,9 @@ export default function OfferSkinCard({
   toggleMoneyUpdate,
   deleteOffer,
   money,
-  updateTime,
 }) {
   const [loading, setLoading] = useState(false);
+  const [updateTime, setUpdateTime] = useState(false);
   const difference = useMemo(() => {
     const date1 = dayjs(offeredAt);
     let diff = date1.diff();
@@ -48,7 +48,14 @@ export default function OfferSkinCard({
 
     return [Math.floor(diff), unit];
   }, [offeredAt, updateTime]);
-  //console.log(difference);
+
+  useEffect(() => {
+    const interval = setTimeout(() => {
+      setUpdateTime(!updateTime);
+    }, 3000);
+    return () => clearTimeout(interval);
+  }, [updateTime]);
+
   return (
     <Card shadow={"sm"} p="lg" radius={"md"} withBorder>
       <Text color={"dark.2"} size="xs" sx={{ marginTop: -10 }}>

@@ -89,6 +89,7 @@ export default function CasinoOverview({ money, toggleMoneyUpdate, tokens }) {
               </Center>
               <Center mt={15}>
                 <Image
+                  alt="coinflip logo"
                   fit="contain"
                   height={170}
                   src={"/pictures/casino/coinflip/ctlogo.webp"}

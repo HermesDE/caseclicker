@@ -24,13 +24,13 @@ export default function CoinflipCoin({
     if (!winner) return;
 
     if (winner === "host") {
-      setClassList(classList + " animation2160");
+      setClassList((current) => [...current, " animation2160"]);
     } else {
-      setClassList(classList + " animation1980");
+      setClassList((current) => [...current, " animation1980"]);
     }
 
     //setClassList(getSpin());
-  }, []);
+  }, [winner]);
 
   useEffect(() => {
     const coin = document.getElementsByClassName(gameId);
@@ -38,7 +38,7 @@ export default function CoinflipCoin({
       toggleUserStats();
       setAnimationEnded(true);
     });
-  }, []);
+  }, [gameId, setAnimationEnded, toggleUserStats]);
 
   return (
     <div className="container">

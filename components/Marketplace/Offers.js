@@ -28,8 +28,6 @@ export default function Offers({ toggleMoneyUpdate, money }) {
   const autoplayLatest = useRef(Autoplay({ delay: 3000 }));
   const autoplayExpensive = useRef(Autoplay({ delay: 3000 }));
 
-  const [updateTime, setUpdateTime] = useState(false);
-
   useEffect(() => {
     async function fetchLatestOffers() {
       const response = await fetch("/api/marketplace?tag=latest");
@@ -44,13 +42,6 @@ export default function Offers({ toggleMoneyUpdate, money }) {
     fetchLatestOffers();
     fetchExpensiveOffers();
   }, []);
-
-  useEffect(() => {
-    const interval = setTimeout(() => {
-      setUpdateTime(!updateTime);
-    }, 3000);
-    return () => clearTimeout(interval);
-  }, [updateTime]);
 
   const deleteOffer = (id) => {
     setLatestOffers(latestOffers.filter((offer) => offer._id !== id));
@@ -109,7 +100,6 @@ export default function Offers({ toggleMoneyUpdate, money }) {
                         toggleMoneyUpdate={toggleMoneyUpdate}
                         deleteOffer={deleteOffer}
                         money={money}
-                        updateTime={updateTime}
                       />
                     </Carousel.Slide>
                   );
@@ -163,7 +153,6 @@ export default function Offers({ toggleMoneyUpdate, money }) {
                         toggleMoneyUpdate={toggleMoneyUpdate}
                         deleteOffer={deleteOffer}
                         money={money}
-                        updateTime={updateTime}
                       />
                     </Carousel.Slide>
                   );

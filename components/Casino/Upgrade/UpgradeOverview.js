@@ -98,7 +98,7 @@ export default function UpgradeOverview() {
       setLoading(false);
       setFinished(false);
     }
-  }, [finished, result]);
+  }, [finished, result, pickedUpgradeSkin, updateInventory]);
 
   return (
     <Container fluid>
@@ -115,6 +115,7 @@ export default function UpgradeOverview() {
 
                 <Card.Section>
                   <Image
+                    alt="picked user skin"
                     height={200}
                     fit="contain"
                     src={
@@ -160,6 +161,7 @@ export default function UpgradeOverview() {
 
                 <Card.Section>
                   <Image
+                    alt="picked upgrade skin"
                     height={200}
                     fit="contain"
                     src={
@@ -302,6 +304,7 @@ export default function UpgradeOverview() {
                           </Card.Section>
                           <Card.Section>
                             <Image
+                              alt={skin.name}
                               fit="contain"
                               height={75}
                               src={
@@ -399,6 +402,7 @@ export default function UpgradeOverview() {
                           </Card.Section>
                           <Card.Section>
                             <Image
+                              alt={skin.name}
                               fit="contain"
                               height={75}
                               src={

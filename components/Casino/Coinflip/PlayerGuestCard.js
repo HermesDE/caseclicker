@@ -7,7 +7,7 @@ export default function PlayerGuestCard({ guest, bet, status, winner }) {
     if (status === "closed") {
       setBackgroundColor(winner === "guest" ? "green" : "red");
     }
-  }, []);
+  }, [status, winner]);
   return (
     <>
       {guest ? (
