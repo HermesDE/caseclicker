@@ -8,11 +8,13 @@ import {
   Group,
   Paper,
   Text,
+  Tooltip,
 } from "@mantine/core";
 import { useState } from "react";
 import TokensIcon from "../../icons/TokensIcon";
 import TrashIcon from "../../icons/TrashIcon";
 import CoinflipCoin from "./CoinflipCoin";
+import BotIcon from "../../icons/BotIcon";
 
 export default function CoinflipGameCard({
   game,
@@ -115,15 +117,30 @@ export default function CoinflipGameCard({
               </Paper>
             </>
           ) : game.host.id === session.userId ? (
-            <Center mt={30}>
-              <Text>Waiting for player</Text>
-            </Center>
+            <>
+              <Center mt={30}>
+                <Text>Waiting for player</Text>
+              </Center>
+              <Center>
+                <Tooltip label="Play with bot" position="bottom">
+                  <ActionIcon
+                    variant="filled"
+                    color={"yellow"}
+                    onClick={() => {
+                      joinGame(game.id, true);
+                    }}
+                  >
+                    <BotIcon size={20} />
+                  </ActionIcon>
+                </Tooltip>
+              </Center>
+            </>
           ) : (
             <Center mt={30}>
               <Button
                 disabled={tokens < game.bet}
                 color={"yellow"}
-                onClick={() => joinGame(game.id)}
+                onClick={() => joinGame(game.id, false)}
               >
                 Join for
                 <TokensIcon color={"yellow"} size={16} />

@@ -35,8 +35,8 @@ export default function CoinflipOverview({
   const deleteGame = (id) => {
     socket.emit("deleteGame", id, userSession.userId);
   };
-  const joinGame = (id) => {
-    socket.emit("joinGame", id, userSession);
+  const joinGame = (id, bot) => {
+    socket.emit("joinGame", id, bot, userSession);
   };
   const createGame = (bet) => {
     socket.emit("createGame", { bet: bet });
