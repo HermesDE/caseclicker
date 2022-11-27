@@ -49,12 +49,12 @@ export const authOptions = {
           useNewUrlParser: true,
           useUnifiedTopology: true,
         })
-        .then(() => {
+        .then(async () => {
           const newUserStat = new UserStat({
             userId: message.user.id,
           });
-          newUserStat.save();
-          mongoose.connection.close();
+          await newUserStat.save();
+          //await mongoose.connection.close();
         });
     },
   },
