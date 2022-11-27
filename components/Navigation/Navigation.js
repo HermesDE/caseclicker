@@ -27,6 +27,7 @@ import { signOut, signIn } from "next-auth/react";
 import NotificationDrawer from "../Notifications/NotificationDrawer";
 import ArrowUpIcon from "../icons/ArrowUpIcon";
 import LogoutIcon from "../icons/LogoutIcon";
+import SettingsIcon from "../icons/SettingsIcon";
 import { useMediaQuery } from "@mantine/hooks";
 
 export default function Navigation({ children, money }) {
@@ -168,7 +169,17 @@ export default function Navigation({ children, money }) {
                     </Menu.Target>
                     <Menu.Dropdown>
                       <Menu.Item
-                        onClick={() => signOut()}
+                        onClick={() => router.push("/user/settings")}
+                        icon={<SettingsIcon size={16} />}
+                      >
+                        Settings
+                      </Menu.Item>
+                      <Menu.Item
+                        onClick={() =>
+                          signOut({
+                            callbackUrl: window.location.origin + "/auth/login",
+                          })
+                        }
                         color={"red"}
                         icon={<LogoutIcon size={16} />}
                       >

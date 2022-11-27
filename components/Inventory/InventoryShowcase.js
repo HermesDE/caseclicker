@@ -190,7 +190,7 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
         <Center>
           <Loader mt={20} size={"xl"} color="orange" />
         </Center>
-      ) : skins.length <= 0 ? (
+      ) : skins?.length <= 0 ? (
         <Center mt={20}>
           <Title order={2}>No skins found</Title>
         </Center>
@@ -210,7 +210,7 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
           </Grid>
 
           <Grid mt={20}>
-            {skins.length > 0 &&
+            {skins?.length > 0 &&
               skins.map((skin) => {
                 return (
                   <Grid.Col key={skin._id} xs={6} md={4} xl={3}>

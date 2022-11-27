@@ -1,7 +1,10 @@
 import "../styles/globals.css";
 import { SessionProvider } from "next-auth/react";
 import { MantineProvider } from "@mantine/core";
-import { NotificationsProvider } from "@mantine/notifications";
+import {
+  NotificationsProvider,
+  showNotification,
+} from "@mantine/notifications";
 import { ModalsProvider } from "@mantine/modals";
 import { useState, useEffect } from "react";
 
@@ -16,16 +19,12 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
     async function fetchData() {
       const response = await fetch("/api/me");
 
-      if (!response.ok) {
-        if (response.status !== 401) {
-          showNotification({
-            title: "Error",
-            message: `Error while fetching user information\nError Message: ${response.status} ${response.statusText}`,
-            color: "red",
-          });
-        }
-
-        return;
+      if (!response.ok && response.status !== 401) {
+        return showNotification({
+          title: "Error",
+          message: `Error while fetching user information\nError Message: ${response.status} ${response.statusText}`,
+          color: "red",
+        });
       }
       const data = await response.json();
       setMoney(data.money);
