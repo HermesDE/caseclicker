@@ -2,10 +2,12 @@ import { Card, Image, Group, Text, Badge, Button } from "@mantine/core";
 import { closeAllModals } from "@mantine/modals";
 import { useRef } from "react";
 import useSound from "use-sound";
+import { useMediaQuery } from "@mantine/hooks";
 
 export default function UnboxedSkinCard({ skin }) {
   const sound = useRef();
   let color;
+  const mobile = useMediaQuery("(max-width: 900px)");
 
   switch (skin.rarity) {
     case "Mil-Spec Grade":
@@ -62,7 +64,7 @@ export default function UnboxedSkinCard({ skin }) {
             "https://steamcommunity-a.akamaihd.net/economy/image/" +
             skin.iconUrl
           }
-          height={200}
+          height={mobile ? 100 : 200}
           fit="contain"
         />
       </Card.Section>

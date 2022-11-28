@@ -3,6 +3,7 @@ import { Divider } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
 import sleep from "../../lib/sleep";
 import UnboxedSkinCard from "./UnboxedSkinCard";
+import { useMediaQuery } from "@mantine/hooks";
 
 export default function CaseCarousel({
   unboxedSkin,
@@ -12,6 +13,7 @@ export default function CaseCarousel({
   playRollSound,
   toggleMoneyUpdate,
 }) {
+  const mobile = useMediaQuery("(max-width: 900px)");
   return (
     <>
       <Divider
@@ -53,7 +55,7 @@ export default function CaseCarousel({
             openModal({
               title: "Look what you unboxed",
               children: <UnboxedSkinCard skin={unboxedSkin} />,
-              size: "lg",
+              size: mobile ? "md" : "lg",
               transition: "slide-up",
               transitionDuration: 300,
             });

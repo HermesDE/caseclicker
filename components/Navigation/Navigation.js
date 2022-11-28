@@ -38,7 +38,7 @@ export default function Navigation({ children, money }) {
   const { data: session, status } = useSession();
   const [notifications, setNotifications] = useState([]);
   const [open, setOpen] = useState(false);
-  const mobile = useMediaQuery("(max-width: 700px)");
+  const mobile = useMediaQuery("(max-width: 900px)");
 
   useEffect(() => {
     async function fetchData() {
@@ -70,7 +70,7 @@ export default function Navigation({ children, money }) {
           p="md"
           hiddenBreakpoint="lg"
           hidden={!opened}
-          width={{ sm: 275 }}
+          width={{ sm: mobile ? 400 : 275 }}
         >
           <Navbar.Section component={ScrollArea} grow>
             <Link href="/" passHref>
@@ -218,7 +218,7 @@ export default function Navigation({ children, money }) {
         </Footer>
       } */
       header={
-        <Header height={70} p="md">
+        <Header height={mobile ? 30 : 70} p="md">
           <div
             style={{
               display: "flex",
@@ -242,8 +242,8 @@ export default function Navigation({ children, money }) {
                 alt="case clicker online logo"
                 style={{ cursor: "pointer" }}
                 src={"/pictures/logos/full/logo-no-background.png"}
-                width={500}
-                height={50}
+                width={mobile ? 250 : 500}
+                height={mobile ? 25 : 50}
                 objectFit={"contain"}
               />
             </Link>

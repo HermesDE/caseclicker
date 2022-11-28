@@ -13,6 +13,7 @@ import {
 import { closeAllModals } from "@mantine/modals";
 import { useRef } from "react";
 import useSound from "use-sound";
+import { useMediaQuery } from "@mantine/hooks";
 
 export default function UpgradeWonModal({ skin }) {
   const sound = useRef();
@@ -43,6 +44,7 @@ export default function UpgradeWonModal({ skin }) {
     default:
       break;
   }
+  const mobile = useMediaQuery("(max-width: 900px)");
   const [unboxedSkinSound] = useSound("/sounds/" + sound.current, {
     volume: 0.1,
   });
@@ -58,7 +60,7 @@ export default function UpgradeWonModal({ skin }) {
             <Card.Section>
               <Image
                 fit="contain"
-                height={200}
+                height={mobile ? 100 : 200}
                 alt={skin.name}
                 src={
                   "https://steamcommunity-a.akamaihd.net/economy/image/" +

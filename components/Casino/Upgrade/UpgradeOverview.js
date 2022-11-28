@@ -17,6 +17,7 @@ import { useEffect, useRef, useState } from "react";
 import DollarIcon from "../../icons/DollarIcon";
 import UpgradeRing from "./UpgradeRing";
 import UpgradeWonModal from "./UpgradeWonModal";
+import { useMediaQuery } from "@mantine/hooks";
 
 export default function UpgradeOverview() {
   const [userSkins, setUserSkins] = useState([]);
@@ -35,6 +36,8 @@ export default function UpgradeOverview() {
   const [loose, setLoose] = useState(false);
 
   const [updateInventory, setUpdateInventory] = useState(false);
+
+  const mobile = useMediaQuery("(max-width: 900px)");
 
   useEffect(() => {
     async function fetchSkins() {
@@ -85,7 +88,7 @@ export default function UpgradeOverview() {
       if (result?.result) {
         openModal({
           children: <UpgradeWonModal skin={pickedUpgradeSkin} />,
-          size: "lg",
+          size: mobile ? "md" : "lg",
         });
         setLoose(false);
       } else {

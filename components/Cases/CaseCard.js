@@ -18,6 +18,7 @@ import InfoIcon from "../icons/InfoIcon";
 import LightningIcon from "../icons/LightningIcon";
 import CaseOpeningCarousel from "./CaseOpeningCarousel";
 import CustomCaseOpeningCarousel from "./CustomCaseOpeningCarousel";
+import { useMediaQuery } from "@mantine/hooks";
 
 export default function CaseCard({
   id,
@@ -43,6 +44,7 @@ export default function CaseCard({
     return Math.floor((moneyEarned / openedCount) * 100) / 100;
   }, [moneyEarned, openedCount]);
   const formatter = Intl.NumberFormat("en", { notation: "compact" });
+  const mobile = useMediaQuery("(max-width: 900px)");
 
   const buyCase = async (quickOpen) => {
     setLoading(true);
@@ -199,7 +201,7 @@ export default function CaseCard({
             openModal({
               title: "Look what you unboxed",
               children: <UnboxedSkinCard skin={unboxedSkin} />,
-              size: "lg",
+              size: mobile ? "md" : "lg",
               transition: "slide-up",
               transitionDuration: 300,
             });
