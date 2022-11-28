@@ -6,10 +6,9 @@
 .pnp.js
 
 #pwa
-**/public/workbox-*.js
-**/public/sw.js
-**/public/fallback-*.js
-
+/public/workbox-*.js
+/public/sw.js
+/public/fallback-*.js
 
 # testing
 /coverage
