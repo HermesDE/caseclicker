@@ -7,6 +7,7 @@ import {
 } from "@mantine/notifications";
 import { ModalsProvider } from "@mantine/modals";
 import { useState, useEffect } from "react";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   const [money, setMoney] = useState(0);
@@ -39,34 +40,59 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
     setUpdate(!update);
   };
   return (
-    <SessionProvider
-      session={session}
-      refetchInterval={120}
-      refetchOnWindowFocus
-    >
-      <MantineProvider
-        withGlobalStyles
-        withNormalizeCSS
-        theme={{ colorScheme: "dark", breakpoints: [{ xl: 1500 }] }}
+    <>
+      <Head>
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+      </Head>
+      <SessionProvider
+        session={session}
+        refetchInterval={120}
+        refetchOnWindowFocus
       >
-        <NotificationsProvider>
-          <ModalsProvider>
-            <Component
-              toggleMoneyUpdate={toggleMoneyUpdate}
-              money={money}
-              setMoney={setMoney}
-              moneyPerClick={moneyPerClick}
-              setMoneyPerClick={setMoneyPerClick}
-              tokens={tokens}
-              setTokens={setTokens}
-              userOpenedCases={userOpenedCases}
-              setUserOpenedCases={setUserOpenedCases}
-              {...pageProps}
-            />
-          </ModalsProvider>
-        </NotificationsProvider>
-      </MantineProvider>
-    </SessionProvider>
+        <MantineProvider
+          withGlobalStyles
+          withNormalizeCSS
+          theme={{ colorScheme: "dark", breakpoints: [{ xl: 1500 }] }}
+        >
+          <NotificationsProvider>
+            <ModalsProvider>
+              <Component
+                toggleMoneyUpdate={toggleMoneyUpdate}
+                money={money}
+                setMoney={setMoney}
+                moneyPerClick={moneyPerClick}
+                setMoneyPerClick={setMoneyPerClick}
+                tokens={tokens}
+                setTokens={setTokens}
+                userOpenedCases={userOpenedCases}
+                setUserOpenedCases={setUserOpenedCases}
+                {...pageProps}
+              />
+            </ModalsProvider>
+          </NotificationsProvider>
+        </MantineProvider>
+      </SessionProvider>
+    </>
   );
 }
 

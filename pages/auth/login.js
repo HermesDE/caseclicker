@@ -11,6 +11,7 @@ import {
 } from "@mantine/core";
 import { getProviders, signIn, getSession } from "next-auth/react";
 import Head from "next/head";
+import Image from "next/image";
 
 export default function Login({ providers }) {
   return (
@@ -24,10 +25,14 @@ export default function Login({ providers }) {
         <Grid align={"center"}>
           <Grid.Col sm={5}>
             <Container fluid>
-              <Grid>
+              <Grid mb={15}>
                 <Grid.Col>
                   <Center>
-                    <Title>Case Clicker Online</Title>
+                    <Image
+                      src={"/pictures/logos/big/logo-no-background.png"}
+                      width={500}
+                      height={250}
+                    />
                   </Center>
                 </Grid.Col>
               </Grid>

@@ -29,6 +29,7 @@ import ArrowUpIcon from "../icons/ArrowUpIcon";
 import LogoutIcon from "../icons/LogoutIcon";
 import SettingsIcon from "../icons/SettingsIcon";
 import { useMediaQuery } from "@mantine/hooks";
+import Image from "next/image";
 
 export default function Navigation({ children, money }) {
   const theme = useMantineTheme();
@@ -237,9 +238,13 @@ export default function Navigation({ children, money }) {
             </MediaQuery>
 
             <Link href={"/"}>
-              <Title sx={{ cursor: "pointer" }}>
-                {mobile ? "CC Online" : "Case Clicker Online"}
-              </Title>
+              <Image
+                style={{ cursor: "pointer" }}
+                src={"/pictures/logos/full/logo-no-background.png"}
+                width={500}
+                height={50}
+                objectFit={"contain"}
+              />
             </Link>
 
             <div>
