@@ -239,6 +239,7 @@ export default function Navigation({ children, money }) {
 
             <Link href={"/"}>
               <Image
+                alt="case clicker online logo"
                 style={{ cursor: "pointer" }}
                 src={"/pictures/logos/full/logo-no-background.png"}
                 width={500}

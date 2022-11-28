@@ -29,6 +29,7 @@ export default function Login({ providers }) {
                 <Grid.Col>
                   <Center>
                     <Image
+                      alt="case clicker online logo"
                       src={"/pictures/logos/big/logo-no-background.png"}
                       width={500}
                       height={250}
