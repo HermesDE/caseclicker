@@ -63,6 +63,20 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
+
+        {/* pwa tags */}
+        <meta name="application-name" content="Case Clicker Online" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Case Clicker Online" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="theme-color" content="#ffd8a8" />
+
+        <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <SessionProvider
         session={session}

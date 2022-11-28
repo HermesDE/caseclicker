@@ -1,0 +1,26 @@
+{
+  "name": "Case Clicker Online",
+  "short_name": "CC Online",
+  "icons": [
+    {
+      "src": "/pictures/logos/icon192px.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/pictures/logos/icon384px.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/pictures/logos/icon512px.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ffd8a8",
+  "background_color": "#141517",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "landscape"
+}
