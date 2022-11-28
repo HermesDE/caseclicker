@@ -30,6 +30,7 @@ import LogoutIcon from "../icons/LogoutIcon";
 import SettingsIcon from "../icons/SettingsIcon";
 import { useMediaQuery } from "@mantine/hooks";
 import Image from "next/image";
+import CookieBanner from "../dsgvo/CookieBanner";
 
 export default function Navigation({ children, money }) {
   const theme = useMantineTheme();
@@ -291,7 +292,7 @@ export default function Navigation({ children, money }) {
             </Text>
           </Alert>
         )}
-
+        <CookieBanner />
         {children}
       </>
     </AppShell>
