@@ -3,6 +3,7 @@ import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import DiscordProvider from "next-auth/providers/discord";
 import FaceItProvider from "next-auth/providers/faceit";
+import RedditProvider from "next-auth/providers/reddit";
 import clientPromise from "../../../lib/database/mongodb";
 import mongoose from "mongoose";
 import UserStat from "../../../lib/database/schemas/userStat";
@@ -16,6 +17,15 @@ export const authOptions = {
     DiscordProvider({
       clientId: process.env.DISCORD_CLIENT_ID,
       clientSecret: process.env.DISCORD_CLIENT_SECRET,
+    }),
+    RedditProvider({
+      clientId: process.env.REDDIT_CLIENT_ID,
+      clientSecret: process.env.REDDIT_CLIENT_SECRET,
+      authorization: {
+        params: {
+          duration: "permanent",
+        },
+      },
     }),
     /* FaceItProvider({
       clientId: process.env.FACEIT_CLIENT_ID,
