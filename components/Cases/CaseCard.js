@@ -1,4 +1,5 @@
 import {
+  ActionIcon,
   Badge,
   Button,
   Card,
@@ -38,6 +39,8 @@ export default function CaseCard({
   moneySpend,
   moneyEarned,
   openedCount,
+  size,
+  showcase,
 }) {
   const [loading, setLoading] = useState(false);
   const revenue = useMemo(() => {
@@ -72,6 +75,141 @@ export default function CaseCard({
     return await response.json();
   };
 
+  const onClickImage = () => {
+    if (showcase) return;
+    openModal({
+      title: "Content",
+      children: <CustomCaseContent id={id} />,
+      size: "xl",
+    });
+  };
+  const onClickBuyButton = async () => {
+    if (showcase) return;
+    const skins = await buyCase(false);
+    if (!skins) return;
+
+    caseOpenAnimationSound();
+    customCase
+      ? openModal({
+          title: `Opening ${name}`,
+          children: (
+            <CustomCaseOpeningCarousel
+              toggleMoneyUpdate={toggleMoneyUpdate}
+              skins={skins.skins}
+              skingroups={skins.skingroups}
+              unboxedSkin={skins.newOpenedSkin}
+            />
+          ),
+          size: "xl",
+        })
+      : openModal({
+          title: `Opening ${name}`,
+          children: (
+            <CaseOpeningCarousel
+              toggleMoneyUpdate={toggleMoneyUpdate}
+              skins={skins.skins}
+              unboxedSkin={skins.newOpenedSkin}
+            />
+          ),
+          size: "xl",
+        });
+  };
+  const onClickQuickBuyButton = async () => {
+    if (showcase) return;
+    caseOpenSound();
+
+    const unboxedSkin = await buyCase(true);
+    if (!unboxedSkin) return;
+
+    toggleMoneyUpdate();
+    openModal({
+      title: "Look what you unboxed",
+      children: <UnboxedSkinCard skin={unboxedSkin} />,
+      size: mobile ? "md" : "lg",
+      transition: "slide-up",
+      transitionDuration: 300,
+    });
+  };
+
+  if (size === "small") {
+    return (
+      <Card
+        sx={{ minWidth: 275 }}
+        shadow={"sm"}
+        p="md"
+        radius={"md"}
+        withBorder
+      >
+        <Group position="apart">
+          <Text weight={500} size={"xs"}>
+            {name}
+          </Text>
+          <Badge size="sm" color={"yellow"}>
+            {price} $
+          </Badge>
+        </Group>
+
+        <Group position="apart" spacing={"xs"}>
+          <motion.div whileHover={{ scale: 1.15 }}>
+            {customCase ? (
+              <Image
+                onClick={() => onClickImage()}
+                alt={name}
+                src={`/pictures/cases/${iconUrl}`}
+                height={75}
+                width={112}
+                fit="contain"
+                sx={{ cursor: "pointer" }}
+              ></Image>
+            ) : (
+              <a href={link} rel="noreferrer" target={"_blank"}>
+                <Image
+                  alt={name}
+                  mt={10}
+                  src={`/pictures/cases/${iconUrl}`}
+                  height={50}
+                  width={75}
+                  fit="contain"
+                  sx={{ cursor: "pointer" }}
+                ></Image>
+              </a>
+            )}
+          </motion.div>
+          <Button
+            variant="light"
+            disabled={
+              loading || money < price || userOpenedCases < neededOpenedCases
+            }
+            loading={loading}
+            radius="md"
+            onClick={async () => onClickBuyButton()}
+          >
+            {loading
+              ? "Opening"
+              : money < price
+              ? "Not enough money"
+              : userOpenedCases < neededOpenedCases
+              ? `Not unlocked`
+              : "Buy & Open"}
+          </Button>
+          <ActionIcon
+            disabled={
+              loading || money < price || userOpenedCases < neededOpenedCases
+            }
+            loading={loading}
+            variant="outline"
+            color={"yellow"}
+            radius="md"
+            onClick={async () => onClickQuickBuyButton()}
+            size={36}
+          >
+            <LightningIcon size={22} />
+          </ActionIcon>
+        </Group>
+      </Card>
+    );
+  }
+
   return (
     <Card shadow={"sm"} p="lg" radius={"md"} withBorder>
       {/* <Tooltip
@@ -96,13 +234,7 @@ export default function CaseCard({
           <motion.div whileHover={{ scale: 1.15 }}>
             {customCase ? (
               <Image
-                onClick={() =>
-                  openModal({
-                    title: "Content",
-                    children: <CustomCaseContent id={id} />,
-                    size: "xl",
-                  })
-                }
+                onClick={() => onClickImage()}
                 alt={name}
                 src={`/pictures/cases/${iconUrl}`}
                 height={150}
@@ -140,36 +272,7 @@ export default function CaseCard({
           }
           loading={loading}
           radius="md"
-          onClick={async () => {
-            const skins = await buyCase(false);
-            if (!skins) return;
-
-            caseOpenAnimationSound();
-            customCase
-              ? openModal({
-                  title: `Opening ${name}`,
-                  children: (
-                    <CustomCaseOpeningCarousel
-                      toggleMoneyUpdate={toggleMoneyUpdate}
-                      skins={skins.skins}
-                      skingroups={skins.skingroups}
-                      unboxedSkin={skins.newOpenedSkin}
-                    />
-                  ),
-                  size: "xl",
-                })
-              : openModal({
-                  title: `Opening ${name}`,
-                  children: (
-                    <CaseOpeningCarousel
-                      toggleMoneyUpdate={toggleMoneyUpdate}
-                      skins={skins.skins}
-                      unboxedSkin={skins.newOpenedSkin}
-                    />
-                  ),
-                  size: "xl",
-                });
-          }}
+          onClick={async () => onClickBuyButton()}
         >
           {loading
             ? "Opening"
@@ -191,21 +294,7 @@ export default function CaseCard({
           variant="outline"
           color={"yellow"}
           radius="md"
-          onClick={async () => {
-            caseOpenSound();
-
-            const unboxedSkin = await buyCase(true);
-            if (!unboxedSkin) return;
-
-            toggleMoneyUpdate();
-            openModal({
-              title: "Look what you unboxed",
-              children: <UnboxedSkinCard skin={unboxedSkin} />,
-              size: mobile ? "md" : "lg",
-              transition: "slide-up",
-              transitionDuration: 300,
-            });
-          }}
+          onClick={async () => onClickQuickBuyButton()}
         >
           Open
         </Button>

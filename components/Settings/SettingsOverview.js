@@ -1,7 +1,8 @@
-import { Button, Text, Container, Grid, Title } from "@mantine/core";
+import { Button, Text, Container, Grid, Title, Divider } from "@mantine/core";
 import { closeAllModals, openConfirmModal } from "@mantine/modals";
 import { showNotification } from "@mantine/notifications";
 import { signOut } from "next-auth/react";
+import CardSizeSettings from "./CardSizeSettings";
 import UsernameSettings from "./UsernameSettings";
 
 export default function SettingsOverview({ session }) {
@@ -9,12 +10,14 @@ export default function SettingsOverview({ session }) {
     <Container fluid>
       <Grid>
         <Grid.Col>
-          <Title order={3}>Your account</Title>
+          <Title order={2}>Settings</Title>
         </Grid.Col>
       </Grid>
       <UsernameSettings session={session} />
-
-      <Grid mt={20}>
+      <Divider mt={20} mb={20} size={"md"} />
+      <CardSizeSettings />
+      <Divider mt={20} mb={20} size={"md"} />
+      <Grid>
         <Grid.Col>
           <Button
             color={"red"}

@@ -34,6 +34,10 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
     defaultValue: "",
     key: "rarity",
   });
+  const [cardSize] = useLocalStorage({
+    key: "cardSize",
+    defaultValue: "normal",
+  });
   const [search, setSearch] = useState("");
   const [sellLock, setSellLock] = useState(true);
   const [inventoryValue, setInventoryValue] = useState(0);
@@ -186,7 +190,7 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
         </Grid.Col>
       </Grid>
       <SearchInput mt={10} setSearch={setSearch} />
-      {loading ? (
+      {loading || !cardSize ? (
         <Center>
           <Loader mt={20} size={"xl"} color="orange" />
         </Center>
@@ -209,17 +213,24 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
             </Grid.Col>
           </Grid>
 
-          <Grid mt={20}>
+          <Grid mt={20} grow gutter={cardSize === "small" ? "xs" : "md"}>
             {skins?.length > 0 &&
               skins.map((skin) => {
                 return (
-                  <Grid.Col key={skin._id} xs={6} md={4} xl={3}>
+                  <Grid.Col
+                    key={skin._id}
+                    span={cardSize === "small" ? "content" : 12}
+                    xs={cardSize === "small" ? "content" : 6}
+                    md={cardSize === "small" ? "content" : 4}
+                    xl={cardSize === "small" ? "content" : 3}
+                  >
                     <SkinCard
                       id={skin._id}
                       classId={skin.classId}
                       name={skin.name}
                       iconUrl={skin.iconUrl}
                       price={skin.price}
+                      exterior={skin.exterior}
                       rarity={skin.rarity}
                       rarityColor={skin.rarityColor}
                       float={skin.float}
@@ -230,6 +241,7 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
                       deleteSkin={deleteSkin}
                       toggleMoneyUpdate={toggleMoneyUpdate}
                       sellLock={sellLock}
+                      size={cardSize}
                     />
                   </Grid.Col>
                 );
