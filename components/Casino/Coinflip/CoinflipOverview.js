@@ -15,6 +15,7 @@ import { io } from "socket.io-client";
 import { getSession } from "next-auth/react";
 import url from "../../../lib/wsUrl";
 import TokensIcon from "../../icons/TokensIcon";
+import CoinflipUserCount from "./CoinflipUserCount";
 
 let socket;
 
@@ -68,8 +69,9 @@ export default function CoinflipOverview({
       socket.on("userstats", (data) => {
         setTokens(data.tokens);
       });
-      socket.on("userCount", (count) => {
+      socket.on("usercount", (count) => {
         setUserCount(count);
+        console.log("user count updated");
       });
     };
     initConnection();
@@ -80,10 +82,10 @@ export default function CoinflipOverview({
         socket.off("connect_error");
         socket.off("games");
         socket.off("userstats");
-        socket.off("userCount");
+        socket.off("usercount");
       }
     };
-  }, [setTokens]);
+  }, []);
 
   useEffect(() => {
     if (!socket) return;
@@ -174,15 +176,7 @@ export default function CoinflipOverview({
 
   return connected ? (
     <Container fluid>
-      {userCount && (
-        <Grid>
-          <Grid.Col span={12}>
-            <Text size={"lg"} weight={500}>
-              {userCount} {userCount > 1 ? "users" : "user"} online
-            </Text>
-          </Grid.Col>
-        </Grid>
-      )}
+      <CoinflipUserCount userCount={userCount} />
       <Grid mt={10}>
         <Grid.Col span={"content"}>
           <TokensIcon color={"yellow"} size={24} />
