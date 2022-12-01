@@ -100,8 +100,8 @@ export default function PrivacyPolicy() {
             Profiling means any form of automated processing of personal data
             consisting of the use of personal data to evaluate certain personal
             aspects relating to a natural person, in particular to analyse or
-            predict aspects concerning that natural person's performance at
-            work, economic situation, health, personal preferences, interests,
+            predict aspects concerning that natural persons performance at work,
+            economic situation, health, personal preferences, interests,
             reliability, behaviour, location or movements.{" "}
           </p>
         </li>
@@ -163,7 +163,7 @@ export default function PrivacyPolicy() {
           <h4>k) Consent</h4>
           <p>
             Consent of the data subject is any freely given, specific, informed
-            and unambiguous indication of the data subject's wishes by which he
+            and unambiguous indication of the data subjects wishes by which he
             or she, by a statement or by a clear affirmative action, signifies
             agreement to the processing of personal data relating to him or her.{" "}
           </p>
@@ -214,7 +214,7 @@ export default function PrivacyPolicy() {
         recognition is to make it easier for users to utilize our website. The
         website user that uses cookies, e.g. does not have to enter access data
         each time the website is accessed, because this is taken over by the
-        website, and the cookie is thus stored on the user's computer system.
+        website, and the cookie is thus stored on the users computer system.
         Another example is the cookie of a shopping cart in an online shop. The
         online store remembers the articles that a customer has placed in the
         virtual shopping cart via a cookie.
@@ -598,17 +598,17 @@ export default function PrivacyPolicy() {
             into, or the performance of, a contract between the data subject and
             a data controller, or (2) is not authorised by Union or Member State
             law to which the controller is subject and which also lays down
-            suitable measures to safeguard the data subject's rights and
-            freedoms and legitimate interests, or (3) is not based on the data
-            subject's explicit consent.
+            suitable measures to safeguard the data subjects rights and freedoms
+            and legitimate interests, or (3) is not based on the data subjects
+            explicit consent.
           </p>
 
           <p>
             If the decision (1) is necessary for entering into, or the
             performance of, a contract between the data subject and a data
-            controller, or (2) it is based on the data subject's explicit
+            controller, or (2) it is based on the data subjects explicit
             consent, the Case Clicker Online shall implement suitable measures
-            to safeguard the data subject's rights and freedoms and legitimate
+            to safeguard the data subjects rights and freedoms and legitimate
             interests, at least the right to obtain human intervention on the
             part of the controller, to express his or her point of view and
             contest the decision.
