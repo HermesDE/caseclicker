@@ -31,6 +31,7 @@ export default function CoinflipOverview({
   const [disabled, setDisabled] = useState(false);
 
   const [games, setGames] = useState([]);
+  const [userCount, setUserCount] = useState();
 
   const deleteGame = (id) => {
     socket.emit("deleteGame", id, userSession.userId);
@@ -67,6 +68,9 @@ export default function CoinflipOverview({
       socket.on("userstats", (data) => {
         setTokens(data.tokens);
       });
+      socket.on("userCount", (count) => {
+        setUserCount(count);
+      });
     };
     initConnection();
 
@@ -76,6 +80,7 @@ export default function CoinflipOverview({
         socket.off("connect_error");
         socket.off("games");
         socket.off("userstats");
+        socket.off("userCount");
       }
     };
   }, [setTokens]);
@@ -169,7 +174,16 @@ export default function CoinflipOverview({
 
   return connected ? (
     <Container fluid>
-      <Grid>
+      {userCount && (
+        <Grid>
+          <Grid.Col span={12}>
+            <Text size={"lg"} weight={500}>
+              {userCount} {userCount > 1 ? "users" : "user"} online
+            </Text>
+          </Grid.Col>
+        </Grid>
+      )}
+      <Grid mt={10}>
         <Grid.Col span={"content"}>
           <TokensIcon color={"yellow"} size={24} />
         </Grid.Col>
