@@ -1,19 +1,27 @@
 import {
   Button,
   Center,
+  Checkbox,
   Container,
   Divider,
   Grid,
   List,
   MediaQuery,
   Stack,
+  Text,
   Title,
 } from "@mantine/core";
+import { showNotification } from "@mantine/notifications";
 import { getProviders, signIn, getSession } from "next-auth/react";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function Login({ providers }) {
+  const [agreed, setAgreed] = useState(false);
+  const [color, setColor] = useState("white");
+
   return (
     <>
       <Head>
@@ -47,7 +55,18 @@ export default function Login({ providers }) {
                           variant="outline"
                           color={"orange"}
                           size="md"
-                          onClick={() => signIn(provider.id)}
+                          onClick={() => {
+                            if (!agreed) {
+                              showNotification({
+                                title:
+                                  "You need to agree to the privacy policy first",
+                                color: "red",
+                              });
+                              setColor("red");
+                              return;
+                            }
+                            signIn(provider.id);
+                          }}
                         >
                           Login with {provider.name}
                         </Button>
@@ -56,6 +75,28 @@ export default function Login({ providers }) {
                   </Grid>
                 );
               })}
+              <Grid justify={"center"}>
+                <Grid.Col xs={12} xl={6}>
+                  <Checkbox
+                    label={
+                      <Link href="/privacy-policy">
+                        <Text color={color} sx={{ cursor: "pointer" }}>
+                          I agree to the{" "}
+                          <span
+                            style={{
+                              color: color === "red" ? color : "steelblue",
+                            }}
+                          >
+                            Privacy Policy
+                          </span>
+                        </Text>
+                      </Link>
+                    }
+                    value={agreed}
+                    onChange={(e) => setAgreed(e.currentTarget.checked)}
+                  />
+                </Grid.Col>
+              </Grid>
             </Container>
           </Grid.Col>
           <MediaQuery smallerThan={"sm"} styles={{ display: "none" }}>
