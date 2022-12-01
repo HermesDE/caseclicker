@@ -44,7 +44,7 @@ export default function CaseSelectorModal({
     <Grid gutter={"sm"} grow>
       {cases.map((c) => {
         return (
-          <Grid.Col span={3}>
+          <Grid.Col key={c._id} span={3}>
             <Card withBorder>
               <Center>
                 <Indicator

@@ -70,7 +70,7 @@ export default function CreateCaseBattleModal({ money, userOpenedCases }) {
       <Grid grow>
         {selectedCases.map((c) => {
           return (
-            <Grid.Col span={3}>
+            <Grid.Col key={c._id} span={3}>
               <SelectedCase c={c} />
             </Grid.Col>
           );
