@@ -33,7 +33,10 @@ export default function CoinflipGameCard({
         <Grid.Col span={4} mt={5}>
           <Paper withBorder p={20}>
             <Center>
-              <Avatar src={game.host.image} alt="game host image" />
+              <Avatar
+                src={game.host.image || "/pictures/casino/coinflip/ctlogo.webp"}
+                alt="game host image"
+              />
             </Center>
             <Center>
               <Text>{game.host.name}</Text>
@@ -93,7 +96,12 @@ export default function CoinflipGameCard({
             <>
               <Paper withBorder p={20}>
                 <Center>
-                  <Avatar src={game.guest.image} alt="game guest image" />
+                  <Avatar
+                    src={
+                      game.guest.image || "/pictures/casino/coinflip/tlogo.webp"
+                    }
+                    alt="game guest image"
+                  />
                 </Center>
                 <Center>
                   <Text>{game.guest.name}</Text>

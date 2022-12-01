@@ -47,14 +47,18 @@ export default function CoinflipCoin({
           <div
             className="front"
             style={{
-              background: `url(${host.image})`,
+              background: `url(${
+                host.image || "/pictures/casino/coinflip/ctlogo.webp"
+              })`,
               backgroundSize: "contain",
             }}
           ></div>
           <div
             className="back"
             style={{
-              background: `url(${guest.image})`,
+              background: `url(${
+                guest.image || "/pictures/casino/coinflip/tlogo.webp"
+              })`,
               backgroundSize: "contain",
             }}
           ></div>
