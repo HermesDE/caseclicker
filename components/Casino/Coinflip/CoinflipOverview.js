@@ -15,7 +15,7 @@ import { io } from "socket.io-client";
 import { getSession } from "next-auth/react";
 import url from "../../../lib/wsUrl";
 import TokensIcon from "../../icons/TokensIcon";
-import CoinflipUserCount from "./CoinflipUserCount";
+import CasinoUserCount from "../CasinoUserCount";
 
 let socket;
 
@@ -176,7 +176,7 @@ export default function CoinflipOverview({
 
   return connected ? (
     <Container fluid>
-      <CoinflipUserCount userCount={userCount} />
+      <CasinoUserCount userCount={userCount} />
       <Grid mt={10}>
         <Grid.Col span={"content"}>
           <TokensIcon color={"yellow"} size={24} />

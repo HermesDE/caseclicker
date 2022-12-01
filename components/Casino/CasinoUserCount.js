@@ -1,6 +1,6 @@
 import { Grid, Text } from "@mantine/core";
 
-export default function CoinflipUserCount({ userCount }) {
+export default function CasinoUserCount({ userCount }) {
   return (
     <Grid>
       <Grid.Col span={12}>
