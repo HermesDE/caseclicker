@@ -25,7 +25,7 @@ export default function CardSizeSettings() {
       <Grid.Col span={"content"}>
         <SkinCard
           showcase={true}
-          name="AK-47 | Fire Serpent (Factory New)"
+          name="StatTrak™ AK-47 | Fire Serpent (Factory New)"
           classId="2258156525"
           iconUrl="-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszOeC9H_9mkhIWFg8j1OO-GqWlD6dN-teXI8oThxg3n8kM5ZD-nJI-UJ1c2MFjU-VXolezugZXpvMyan3I3v3Qjty2OlhKpwUYbndZ_4hw"
           price={10000}
