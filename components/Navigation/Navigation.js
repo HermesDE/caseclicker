@@ -160,7 +160,12 @@ export default function Navigation({ children, money }) {
                   )}
 
                   <div>
-                    <Text weight={500}>{Math.round(money * 100) / 100} $</Text>
+                    <Text weight={500}>
+                      {new Intl.NumberFormat("en", {
+                        style: "currency",
+                        currency: "USD",
+                      }).format(money)}
+                    </Text>
                     <Text>{session?.user?.name}</Text>
                   </div>
                   <Menu position="top">

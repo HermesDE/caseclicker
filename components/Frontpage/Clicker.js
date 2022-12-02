@@ -73,7 +73,12 @@ export default function Clicker({
         <Grid.Col span={12}>
           <Center>
             <Stack spacing={"xs"}>
-              <Title order={1}>{Math.round(money * 100) / 100} $</Title>
+              <Title order={1}>
+                {new Intl.NumberFormat("en", {
+                  style: "currency",
+                  currency: "USD",
+                }).format(money)}
+              </Title>
               <Text weight={500}>{moneyPerClick} $/click</Text>
             </Stack>
           </Center>
