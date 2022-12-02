@@ -4,8 +4,10 @@ import url from "../../../lib/wsUrl";
 import CasinoUserCount from "../CasinoUserCount";
 import { io } from "socket.io-client";
 import { Button, Container, Grid } from "@mantine/core";
-import { openModal } from "@mantine/modals";
+import { closeAllModals, openModal } from "@mantine/modals";
 import CreateCaseBattleModal from "./CreateCaseBattleModal";
+import CaseBattleGameCard from "./CaseBattleGameCard";
+import { useRouter } from "next/router";
 
 let socket;
 
@@ -19,6 +21,8 @@ export default function CaseBattleOverview({
   const [games, setGames] = useState([]);
 
   const [userCount, setUserCount] = useState();
+
+  const router = useRouter();
 
   useEffect(() => {
     const initConnection = async () => {
@@ -41,6 +45,13 @@ export default function CaseBattleOverview({
         //all games
         setGames(data);
       });
+      socket.on("newGame", (data) => {
+        setGames((current) => [...current, data]);
+      });
+      socket.on("gameCreated", (gameId) => {
+        router.push("/casino/casebattle/" + gameId);
+        closeAllModals();
+      });
       socket.on("usercount", (count) => {
         setUserCount(count);
         console.log("user count updated");
@@ -53,10 +64,27 @@ export default function CaseBattleOverview({
         socket.off("connect");
         socket.off("connect_error");
         socket.off("games");
+        socket.off("gameCreated");
         socket.off("usercount");
       }
     };
   }, []);
+
+  const createCaseBattle = (
+    teams,
+    playerCount,
+    isPrivate,
+    battlePrice,
+    cases
+  ) => {
+    socket.emit("createGame", {
+      teams,
+      playerCount,
+      isPrivate,
+      battlePrice,
+      cases,
+    });
+  };
 
   return (
     <Container fluid>
@@ -76,6 +104,7 @@ export default function CaseBattleOverview({
                   <CreateCaseBattleModal
                     money={money}
                     userOpenedCases={userOpenedCases}
+                    createCaseBattle={createCaseBattle}
                   />
                 ),
                 size: "xl",
@@ -85,6 +114,15 @@ export default function CaseBattleOverview({
             Create Case Battle
           </Button>
         </Grid.Col>
+      </Grid>
+      <Grid>
+        {games.map((game) => {
+          return (
+            <Grid.Col key={game.id} span={12}>
+              <CaseBattleGameCard game={game} />
+            </Grid.Col>
+          );
+        })}
       </Grid>
     </Container>
   );
