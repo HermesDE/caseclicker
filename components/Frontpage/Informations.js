@@ -1,4 +1,6 @@
 import { Title, Text, Grid, Container } from "@mantine/core";
+import { openModal } from "@mantine/modals";
+import RedeemCodeModal from "../Navigation/RedeemCodeModal";
 
 export default function Informations() {
   return (
@@ -12,6 +14,21 @@ export default function Informations() {
             Attention! This application is currently under rapid development and
             is still in an early testing phase. It is not guaranteed that all
             user data will be preserved.
+          </Text>
+        </Grid>
+        <Grid mt={10}>
+          <Text
+            onClick={() =>
+              openModal({
+                title: "Redeem Code",
+                children: <RedeemCodeModal codeName={"xmas"} />,
+              })
+            }
+            sx={{ cursor: "pointer" }}
+            color={"red"}
+            weight={500}
+          >
+            Use code "xmas" for 1000 dollars!
           </Text>
         </Grid>
         <Grid mt={30}>

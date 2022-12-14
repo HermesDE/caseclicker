@@ -31,6 +31,9 @@ import SettingsIcon from "../icons/SettingsIcon";
 import { useMediaQuery } from "@mantine/hooks";
 import Image from "next/image";
 import CookieBanner from "../dsgvo/CookieBanner";
+import PromoCodeIcon from "../icons/PromoCodeIcon";
+import { openModal } from "@mantine/modals";
+import RedeemCodeModal from "./RedeemCodeModal";
 
 export default function Navigation({ children, money }) {
   const theme = useMantineTheme();
@@ -183,6 +186,17 @@ export default function Navigation({ children, money }) {
                       </Menu.Item>
                       <Menu.Item
                         onClick={() =>
+                          openModal({
+                            title: "Redeem Code",
+                            children: <RedeemCodeModal />,
+                          })
+                        }
+                        icon={<PromoCodeIcon size={16} />}
+                      >
+                        Redeem Code
+                      </Menu.Item>
+                      <Menu.Item
+                        onClick={() =>
                           signOut({
                             callbackUrl: window.location.origin + "/auth/login",
                           })
@@ -286,8 +300,14 @@ export default function Navigation({ children, money }) {
       }
     >
       <>
+        <CookieBanner />
+        {children}
         {status === "unauthenticated" && (
-          <Alert color={"orange"} title="You are currently not logged in">
+          <Alert
+            mt={20}
+            color={"orange"}
+            title="You are currently not logged in"
+          >
             <Text weight={500}>
               Hey you! It looks like you are not currently logged in. This means
               that you can browse through all pages, but you cant interact with
@@ -297,8 +317,6 @@ export default function Navigation({ children, money }) {
             </Text>
           </Alert>
         )}
-        <CookieBanner />
-        {children}
       </>
     </AppShell>
   );
