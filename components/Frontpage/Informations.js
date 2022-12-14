@@ -28,7 +28,7 @@ export default function Informations() {
             color={"red"}
             weight={500}
           >
-            Use code "xmas" for 1000 dollars!
+            Use code xmas for 1000 dollars!
           </Text>
         </Grid>
         <Grid mt={30}>
