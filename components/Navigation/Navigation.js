@@ -35,8 +35,6 @@ import CookieBanner from "../dsgvo/CookieBanner";
 import PromoCodeIcon from "../icons/PromoCodeIcon";
 import { openModal } from "@mantine/modals";
 import RedeemCodeModal from "./RedeemCodeModal";
-import CoinflipChat from "../Casino/Coinflip/CoinflipChat";
-import CoinflipChatInput from "../Casino/Coinflip/CoinflipChatInput";
 
 export default function Navigation({ children, money }) {
   const theme = useMantineTheme();
