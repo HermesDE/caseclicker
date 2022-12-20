@@ -78,7 +78,6 @@ export default function CoinflipOverview({
       });
       socket.on("usercount", (count) => {
         setUserCount(count);
-        console.log("user count updated");
       });
     };
     initConnection();
@@ -191,7 +190,7 @@ export default function CoinflipOverview({
               <TokensIcon color={"yellow"} size={24} />
             </Grid.Col>
             <Grid.Col span={"auto"}>
-              <Text weight={500}>{tokens}</Text>
+              <Text weight={500}>{Math.floor(tokens)}</Text>
             </Grid.Col>
           </Grid>
           <Grid>
