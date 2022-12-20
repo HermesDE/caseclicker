@@ -11,62 +11,30 @@ import {
 } from "@mantine/core";
 import { openModal } from "@mantine/modals";
 import { useEffect } from "react";
-import MoneyToTokensModal from "./MoneyToTokensModal";
 import Link from "next/link";
 import UpgradeIcon from "../icons/UpgradeIcon";
-import TokensToMoneyModal from "./TokensToMoneyModal";
+import TokensToSkins from "./TokensToSkins";
 
-export default function CasinoOverview({ money, toggleMoneyUpdate, tokens }) {
+export default function CasinoOverview({
+  money,
+  toggleMoneyUpdate,
+  tokens,
+  setTokens,
+}) {
   return (
     <Container fluid>
       <Grid align={"center"}>
         <Grid.Col xs={6}>
-          <Text>Your current tokens: {tokens}</Text>
+          <Text>Your current tokens: {Math.floor(tokens)}</Text>
         </Grid.Col>
       </Grid>
       <Grid>
-        <Grid.Col xs={6}>
-          <Button
-            onClick={() =>
-              openModal({
-                title: "Convert money to tokens",
-                children: (
-                  <MoneyToTokensModal
-                    money={money}
-                    toggleMoneyUpdate={toggleMoneyUpdate}
-                  />
-                ),
-                size: "xl",
-              })
-            }
-            color={"orange"}
-            variant="outline"
-            fullWidth
-          >
-            Convert money to tokens
-          </Button>
-        </Grid.Col>
-        <Grid.Col xs={6}>
-          <Button
-            onClick={() =>
-              openModal({
-                title: "Convert tokens to money",
-                children: (
-                  <TokensToMoneyModal
-                    tokens={tokens}
-                    money={money}
-                    toggleMoneyUpdate={toggleMoneyUpdate}
-                  />
-                ),
-                size: "xl",
-              })
-            }
-            color={"orange"}
-            variant="outline"
-            fullWidth
-          >
-            Convert tokens to money
-          </Button>
+        <Grid.Col xs={12}>
+          <TokensToSkins
+            tokens={tokens}
+            setTokens={setTokens}
+            toggleMoneyUpdate={toggleMoneyUpdate}
+          />
         </Grid.Col>
       </Grid>
       <Grid mt={50}>

@@ -16,6 +16,7 @@ import SkingroupContentCard from "./SkingroupContentCard";
 import formatExterior from "../../lib/formatExterior";
 import DollarIcon from "../icons/DollarIcon";
 import BagIcon from "../icons/BagIcon";
+import TokensIcon from "../icons/TokensIcon";
 
 export default function SkinCard({
   id,
@@ -44,10 +45,31 @@ export default function SkinCard({
       size: "xl",
     });
   };
+  const convertToTokens = async () => {
+    if (showcase) return;
+    const body = {
+      id,
+    };
+    const response = await fetch("/api/casino/skinToTokens", {
+      method: "POST",
+      body: JSON.stringify(body),
+      headers: { "Content-Type": "application/json" },
+    });
+    if (response.ok) {
+      deleteSkin(id);
+      toggleMoneyUpdate();
+    } else {
+      showNotification({
+        title: "Oops",
+        message: "Something went wrong while converting your skin to tokens",
+        color: "red",
+      });
+    }
+  };
   const sellOnClick = async () => {
     if (showcase) return;
     const body = {
-      id: id,
+      id,
     };
     const response = await fetch("/api/inventory", {
       method: "DELETE",
@@ -90,20 +112,21 @@ export default function SkinCard({
     });
   };
 
+  const formattedPrice = Intl.NumberFormat("en", {
+    style: "currency",
+    currency: "USD",
+  }).format(price);
+
   if (size === "small") {
     const { namePartOne, namePartTwo, shortExterior } = formatExterior(
       name,
       exterior
     );
-    /* price = Intl.NumberFormat("en", {
-      notation: "compact",
-      style: "currency",
-      currency: "USD",
-    }).format(price); */
+
     return (
       <Card
         shadow={"sm"}
-        p="xs"
+        //p="xs"
         radius={"md"}
         withBorder
         sx={{
@@ -156,7 +179,7 @@ export default function SkinCard({
 
         <Group mt={5} spacing="xs" position="apart">
           <Badge size={"sm"} color="yellow">
-            {price + " $"}
+            {formattedPrice}
           </Badge>
           {float && (
             <Badge size={"sm"} color="dark">
@@ -165,7 +188,7 @@ export default function SkinCard({
           )}
         </Group>
         <Group grow mt="xs" spacing="xs">
-          <Tooltip label="Sell" withArrow color={"dark"}>
+          <Tooltip label="Sell" withArrow color={"dark"} openDelay={500}>
             <ActionIcon
               color={"red"}
               variant="light"
@@ -175,10 +198,25 @@ export default function SkinCard({
               <DollarIcon size={22} />
             </ActionIcon>
           </Tooltip>
+          <Tooltip
+            label="Convert to tokens"
+            withArrow
+            multiline
+            color={"dark"}
+            openDelay={500}
+          >
+            <ActionIcon
+              color={"yellow"}
+              variant="outline"
+              onClick={() => convertToTokens()}
+            >
+              <TokensIcon />
+            </ActionIcon>
+          </Tooltip>
           {rarity === "Classified" ||
           rarity === "Covert" ||
           rarity === "Extraordinary" ? (
-            <Tooltip label="Offer" withArrow color={"dark"}>
+            <Tooltip label="Offer" withArrow color={"dark"} openDelay={500}>
               <ActionIcon variant="default" onClick={() => offerOnClick()}>
                 <BagIcon size={20} />
               </ActionIcon>
@@ -192,7 +230,7 @@ export default function SkinCard({
   return (
     <Card
       shadow={"sm"}
-      p="lg"
+      //p="lg"
       radius={"md"}
       withBorder
       sx={{
@@ -228,25 +266,59 @@ export default function SkinCard({
         <Text color={"dark.2"} size="xs">
           {float}
         </Text>
-        <Badge color={"yellow"}>{price} $</Badge>
+        <Badge color={"yellow"}>{formattedPrice}</Badge>
       </Group>
 
       <Group grow mt="md" spacing="xs">
-        <Button
-          variant="light"
-          color={"red"}
-          radius="md"
-          disabled={sellLock}
-          onClick={() => sellOnClick()}
+        <Tooltip
+          color={"dark"}
+          withArrow
+          multiline
+          label={`Sell for ${formattedPrice}`}
+          openDelay={500}
         >
-          Sell for {price} $
-        </Button>
+          <Button
+            variant="light"
+            color={"red"}
+            radius="md"
+            disabled={sellLock}
+            onClick={() => sellOnClick()}
+          >
+            Sell for {formattedPrice}
+          </Button>
+        </Tooltip>
+
+        <Tooltip
+          color={"dark"}
+          withArrow
+          multiline
+          label="Convert to tokens"
+          openDelay={500}
+        >
+          <Button
+            leftIcon={<TokensIcon />}
+            color="yellow"
+            variant="outline"
+            onClick={() => convertToTokens()}
+          >
+            Convert to tokens
+          </Button>
+        </Tooltip>
+
         {rarity === "Classified" ||
         rarity === "Covert" ||
         rarity === "Extraordinary" ? (
-          <Button variant="default" onClick={() => offerOnClick()}>
-            Offer on marketplace
-          </Button>
+          <Tooltip
+            color={"dark"}
+            withArrow
+            multiline
+            label="Offer on marketplace"
+            openDelay={500}
+          >
+            <Button variant="default" onClick={() => offerOnClick()}>
+              Offer on marketplace
+            </Button>
+          </Tooltip>
         ) : (
           ""
         )}

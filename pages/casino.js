@@ -24,6 +24,7 @@ export default function Casino({
           toggleMoneyUpdate={toggleMoneyUpdate}
           money={money}
           tokens={tokens}
+          setTokens={setTokens}
         />
       </Navigation>
       ;

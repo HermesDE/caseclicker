@@ -18,6 +18,7 @@ import SearchIcon from "../icons/SearchIcon";
 import CustomSell from "./CustomSell";
 import SearchInput from "./SearchInput";
 import SkinCard from "./SkinCard";
+import InventoryFilter from "./InventoryFilter";
 
 export default function InventoryShowcase({ toggleMoneyUpdate }) {
   const [loading, setLoading] = useState(false);
@@ -91,6 +92,15 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
     fetchData();
   }, []);
 
+  const filterProps = {
+    sortTimestamp,
+    setSortTimestamp,
+    exterior,
+    setExterior,
+    rarity,
+    setRarity,
+  };
+
   return (
     <Container fluid>
       <Grid justify={"left"}>
@@ -103,64 +113,7 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
           <Text>Inventory count: {inventoryCount}</Text>
         </Grid.Col>
       </Grid>
-      <Grid align={"flex-end"}>
-        <Grid.Col xs={6} sm={4} md={3}>
-          <Select
-            label="Sort"
-            value={sortTimestamp}
-            onChange={setSortTimestamp}
-            data={[
-              { value: true, label: "Latest" },
-              { value: false, label: "Oldest" },
-              {
-                value: "price",
-                label: "Price",
-              },
-            ]}
-          />
-        </Grid.Col>
-        <Grid.Col xs={6} sm={4} md={3}>
-          <Select
-            label="Filter exterior"
-            allowDeselect
-            value={exterior}
-            onChange={setExterior}
-            data={[
-              "Factory New",
-              "Minimal Wear",
-              "Field-Tested",
-              "Well-Worn",
-              "Battle-Scarred",
-            ]}
-          />
-        </Grid.Col>
-        <Grid.Col xs={6} sm={4} md={3}>
-          <Select
-            label="Filter rarity"
-            allowDeselect
-            value={rarity}
-            onChange={setRarity}
-            data={[
-              "Common",
-              "Uncommon",
-              "Mil-Spec Grade",
-              "Restricted",
-              "Classified",
-              "Covert",
-            ]}
-          />
-        </Grid.Col>
-        <Grid.Col xs={6} sm={4} md={3}>
-          <Button
-            onClick={() => {
-              setExterior(undefined);
-              setRarity(undefined);
-            }}
-          >
-            Reset filters
-          </Button>
-        </Grid.Col>
-      </Grid>
+      <InventoryFilter {...filterProps} />
       <Grid mt={10}>
         <Grid.Col span={6}>
           <Button

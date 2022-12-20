@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import {
   AppShell,
+  Aside,
   Navbar,
   Header,
   Text,
@@ -34,6 +35,8 @@ import CookieBanner from "../dsgvo/CookieBanner";
 import PromoCodeIcon from "../icons/PromoCodeIcon";
 import { openModal } from "@mantine/modals";
 import RedeemCodeModal from "./RedeemCodeModal";
+import CoinflipChat from "../Casino/Coinflip/CoinflipChat";
+import CoinflipChatInput from "../Casino/Coinflip/CoinflipChatInput";
 
 export default function Navigation({ children, money }) {
   const theme = useMantineTheme();
@@ -43,6 +46,12 @@ export default function Navigation({ children, money }) {
   const [notifications, setNotifications] = useState([]);
   const [open, setOpen] = useState(false);
   const mobile = useMediaQuery("(max-width: 900px)");
+  const [asideOpened, setAsideOpened] = useState(!mobile);
+
+  //chat states and functions
+  const coinflipHandleSubmit = (socket, message) => {
+    socket.emit("newMessage", message);
+  };
 
   useEffect(() => {
     async function fetchData() {
@@ -68,6 +77,24 @@ export default function Navigation({ children, money }) {
               : theme.colors.gray[0],
         },
       }}
+      //asideOffsetBreakpoint={"xl"}
+      /* aside={
+        router.pathname.includes("/coinflip") ? (
+          <Aside
+            p="md"
+            hiddenBreakpoint={"xl"}
+            hidden={!asideOpened}
+            width={{ sm: 350 }}
+          >
+            <Aside.Section component={ScrollArea} grow>
+              <CoinflipChat handleSubmit={coinflipHandleSubmit} />
+            </Aside.Section>
+            <Aside.Section>
+              <CoinflipChatInput handleSubmit={coinflipHandleSubmit} />
+            </Aside.Section>
+          </Aside>
+        ) : null
+      } */
       navbarOffsetBreakpoint="lg"
       navbar={
         <Navbar
@@ -295,6 +322,16 @@ export default function Navigation({ children, money }) {
                 </Link>
               </div>
             </div>
+            {router.pathname.includes("/coinflip") ? (
+              <MediaQuery largerThan="xl" styles={{ display: "none" }}>
+                <Burger
+                  opened={asideOpened}
+                  onClick={() => setAsideOpened((o) => !o)}
+                  size="sm"
+                  color={theme.colors.gray[6]}
+                />
+              </MediaQuery>
+            ) : null}
           </div>
         </Header>
       }

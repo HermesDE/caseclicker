@@ -4,7 +4,7 @@ import { useRef } from "react";
 import useSound from "use-sound";
 import { useMediaQuery } from "@mantine/hooks";
 
-export default function UnboxedSkinCard({ skin }) {
+export default function UnboxedSkinCard({ skin, playSound }) {
   const sound = useRef();
   let color;
   const mobile = useMediaQuery("(max-width: 900px)");
@@ -38,7 +38,10 @@ export default function UnboxedSkinCard({ skin }) {
     volume: 0.1,
   });
 
-  unboxedSkinSound();
+  if (playSound === true) {
+    unboxedSkinSound();
+  }
+
   return (
     <Card
       shadow={"sm"}

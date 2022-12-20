@@ -6,6 +6,7 @@ import {
   Grid,
   Input,
   NumberInput,
+  ScrollArea,
   Text,
   Title,
 } from "@mantine/core";
@@ -34,6 +35,8 @@ export default function CoinflipOverview({
   const [games, setGames] = useState([]);
   const [userCount, setUserCount] = useState();
 
+  const [showChat, setShowChat] = useState(true);
+
   const deleteGame = (id) => {
     socket.emit("deleteGame", id, userSession.userId);
   };
@@ -61,6 +64,10 @@ export default function CoinflipOverview({
         setId(socket.id);
 
         socket.emit("games");
+      });
+      socket.on("disconnect", () => {
+        setConnected(false);
+        setId(null);
       });
       socket.on("games", (data) => {
         //all games
@@ -176,74 +183,97 @@ export default function CoinflipOverview({
 
   return connected ? (
     <Container fluid>
-      <CasinoUserCount userCount={userCount} />
-      <Grid mt={10}>
-        <Grid.Col span={"content"}>
-          <TokensIcon color={"yellow"} size={24} />
-        </Grid.Col>
-        <Grid.Col span={"auto"}>
-          <Text weight={500}>{tokens}</Text>
-        </Grid.Col>
-      </Grid>
       <Grid>
-        <Grid.Col xs={6} sm={3}>
-          <NumberInput
-            icon={<TokensIcon color={"yellow"} />}
-            value={bet}
-            onChange={(value) => {
-              if (isNaN(value)) return;
-              const regex = new RegExp("^[0-9]*$");
-              if (!regex.exec(value)) return;
-              setBet(value);
-            }}
-            min={1}
-            noClampOnBlur
-            stepHoldDelay={500}
-            stepHoldInterval={50}
-          />
-        </Grid.Col>
-        <Grid.Col xs={6} sm={3}>
-          <Button
-            color={"yellow"}
-            variant="outline"
-            disabled={disabled}
-            onClick={() => {
-              createGame(bet);
-            }}
-          >
-            Create Game
-          </Button>
-        </Grid.Col>
-      </Grid>
-
-      {games.length > 0 ? (
-        <Grid mt={20}>
-          {games.map((game) => {
-            return (
-              <Grid.Col
-                xs={12}
-                sm={6}
-                md={4}
-                xl={3}
-                key={game?.id || Math.random()}
+        <Grid.Col span={showChat ? 8 : 12}>
+          <CasinoUserCount userCount={userCount} />
+          <Grid mt={10}>
+            <Grid.Col span={"content"}>
+              <TokensIcon color={"yellow"} size={24} />
+            </Grid.Col>
+            <Grid.Col span={"auto"}>
+              <Text weight={500}>{tokens}</Text>
+            </Grid.Col>
+          </Grid>
+          <Grid>
+            <Grid.Col xs={6} sm={3}>
+              <NumberInput
+                icon={<TokensIcon color={"yellow"} />}
+                value={bet}
+                onChange={(value) => {
+                  if (isNaN(value)) return;
+                  const regex = new RegExp("^[0-9]*$");
+                  if (!regex.exec(value)) return;
+                  setBet(value);
+                }}
+                min={1}
+                max={tokens}
+                stepHoldDelay={500}
+                stepHoldInterval={50}
+              />
+            </Grid.Col>
+            <Grid.Col xs={6} sm={3}>
+              <Button
+                color={"yellow"}
+                variant="outline"
+                disabled={disabled}
+                onClick={() => {
+                  createGame(bet);
+                }}
               >
-                <CoinflipGameCard
-                  game={game}
-                  session={userSession}
-                  deleteGame={deleteGame}
-                  joinGame={joinGame}
-                  tokens={tokens}
-                  toggleUserStats={toggleUserStats}
-                />
+                Create Game
+              </Button>
+            </Grid.Col>
+          </Grid>
+
+          {games.length > 0 ? (
+            <Grid mt={20}>
+              {games.map((game) => {
+                return (
+                  <Grid.Col
+                    xs={12}
+                    sm={6}
+                    md={4}
+                    xl={3}
+                    key={game?.id || Math.random()}
+                  >
+                    <CoinflipGameCard
+                      game={game}
+                      session={userSession}
+                      deleteGame={deleteGame}
+                      joinGame={joinGame}
+                      tokens={tokens}
+                      toggleUserStats={toggleUserStats}
+                    />
+                  </Grid.Col>
+                );
+              })}
+            </Grid>
+          ) : (
+            <Center mt={50}>
+              <Title order={2}>No open coinflip games</Title>
+            </Center>
+          )}
+        </Grid.Col>
+        {/* {showChat && (
+          <Grid.Col span={4}>
+            <Grid>
+              <Grid.Col span={6}>
+                <Title order={3}>Chat</Title>
               </Grid.Col>
-            );
-          })}
-        </Grid>
-      ) : (
-        <Center mt={50}>
-          <Title order={2}>No open coinflip games</Title>
-        </Center>
-      )}
+              <Grid.Col span={6}>
+                <Button>Toggle Chat</Button>
+              </Grid.Col>
+            </Grid>
+            <Grid>
+              <Grid.Col span={12}>
+                <ScrollArea style={{ height: "85vh" }}>
+                  <h1>test</h1>
+                </ScrollArea>
+              </Grid.Col>
+            </Grid>
+          </Grid.Col>
+        )} */}
+      </Grid>
     </Container>
   ) : (
     ""
