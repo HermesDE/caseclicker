@@ -1,6 +1,4 @@
 import { useEffect, useState, useRef } from "react";
-import Autoplay from "embla-carousel-autoplay";
-import useSound from "use-sound";
 import CaseCarousel from "./CaseCarousel";
 import { Carousel } from "@mantine/carousel";
 import { Card, Divider, Image } from "@mantine/core";
@@ -33,9 +31,6 @@ export default function CustomCaseOpeningCarousel({
   const [slides, setSlides] = useState([]);
   const slidesRef = useRef([]);
   const steps = useRef(50);
-
-  const autoplay = useRef(Autoplay({ delay: 100, stopOnLastSnap: true }));
-  const [playRollSound] = useSound("/sounds/roll.mp3", { volume: 0.2 });
 
   useEffect(() => {
     let skingroupArray = [];
@@ -87,8 +82,6 @@ export default function CustomCaseOpeningCarousel({
       unboxedSkin={unboxedSkin}
       slides={slides}
       steps={steps}
-      autoplay={autoplay}
-      playRollSound={playRollSound}
       toggleMoneyUpdate={toggleMoneyUpdate}
     />
   );

@@ -1,8 +1,7 @@
 import { Carousel } from "@mantine/carousel";
 import { Card, Divider, Image } from "@mantine/core";
 import { useEffect, useRef, useState } from "react";
-import Autoplay from "embla-carousel-autoplay";
-import useSound from "use-sound";
+
 import CaseCarousel from "./CaseCarousel";
 
 const pickRandomSkin = (skins) => {
@@ -34,9 +33,6 @@ export default function CaseOpeningCarousel({
   const [slides, setSlides] = useState([]);
   const slidesRef = useRef([]);
   const steps = useRef(50);
-
-  const autoplay = useRef(Autoplay({ delay: 100, stopOnLastSnap: true }));
-  const [playRollSound] = useSound("/sounds/roll.mp3", { volume: 0.2 });
 
   useEffect(() => {
     const blueSkins = skins.filter((skin) => skin.rarity === "Mil-Spec Grade");
@@ -91,8 +87,6 @@ export default function CaseOpeningCarousel({
       unboxedSkin={unboxedSkin}
       slides={slides}
       steps={steps}
-      autoplay={autoplay}
-      playRollSound={playRollSound}
       toggleMoneyUpdate={toggleMoneyUpdate}
     />
   );

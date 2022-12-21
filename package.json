@@ -19,6 +19,7 @@
     "@mantine/next": "^5.8.3",
     "@mantine/notifications": "^5.8.3",
     "@next-auth/mongodb-adapter": "^1.1.1",
+    "chance": "^1.1.9",
     "dayjs": "^1.11.5",
     "embla-carousel-autoplay": "^7.0.5",
     "embla-carousel-react": "^7.0.3",

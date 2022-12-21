@@ -4,16 +4,23 @@ import { Carousel } from "@mantine/carousel";
 import sleep from "../../lib/sleep";
 import UnboxedSkinCard from "./UnboxedSkinCard";
 import { useMediaQuery } from "@mantine/hooks";
+import Chance from "chance";
+import Autoplay from "embla-carousel-autoplay";
+import useSound from "use-sound";
+import { useRef } from "react";
 
 export default function CaseCarousel({
   unboxedSkin,
   slides,
   steps,
-  autoplay,
-  playRollSound,
   toggleMoneyUpdate,
 }) {
+  const chance = new Chance();
+  const autoplay = useRef(Autoplay({ delay: 100, stopOnLastSnap: true }));
+  const [playRollSound] = useSound("/sounds/roll.mp3", { volume: 0.2 });
   const mobile = useMediaQuery("(max-width: 900px)");
+  const alignNumber = chance.floating({ min: 0.31, max: 0.57, fixed: 2 }); //Math.random() * (0.57 - 0.31) + (0.31).toFixed(2);
+
   return (
     <>
       <Divider
@@ -22,7 +29,7 @@ export default function CaseCarousel({
           height: "75%",
           zIndex: 1,
           display: "flex",
-          left: Math.floor(Math.random() * (55 - 40 + 1) + 40) + "%",
+          left: "50%", //Math.floor(Math.random() * (0.57 - 0.31 + 1) + 0.31),
           marginTop: -20,
         }}
         orientation="vertical"
@@ -34,7 +41,7 @@ export default function CaseCarousel({
         draggable={false}
         slideSize={"25%"}
         slideGap="sm"
-        align={"center"}
+        align={alignNumber}
         withControls={false}
         height={150}
         mx={"auto"}
