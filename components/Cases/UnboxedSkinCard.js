@@ -38,7 +38,7 @@ export default function UnboxedSkinCard({ skin, playSound }) {
     volume: 0.1,
   });
 
-  if (playSound === true) {
+  if (playSound !== false) {
     unboxedSkinSound();
   }
 
