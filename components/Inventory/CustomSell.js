@@ -30,8 +30,8 @@ export default function CustomSell({ toggleMoneyUpdate }) {
             value={rarity}
             onChange={setRarity}
             data={[
-              "Common",
-              "Uncommon",
+              "Consumer Grade",
+              "Industrial Grade",
               "Mil-Spec Grade",
               "Restricted",
               "Classified",
