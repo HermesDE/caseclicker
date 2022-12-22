@@ -132,13 +132,13 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
             fullWidth
             onClick={() =>
               openModal({
-                title: "Custom sell",
+                title: "Custom sell / convert",
                 children: <CustomSell toggleMoneyUpdate={toggleMoneyUpdate} />,
                 size: "xl",
               })
             }
           >
-            Open custom sell
+            Open custom sell / convert
           </Button>
         </Grid.Col>
       </Grid>

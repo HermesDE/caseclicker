@@ -62,7 +62,7 @@ async function handler(req, res) {
     }
 
     case "PATCH": {
-      const { type, value } = req.body;
+      const { type, value, currency } = req.body;
       if (type === "rarity") {
         const raritySkins = await OpenedSkin.find({
           userId: userId,
@@ -71,7 +71,10 @@ async function handler(req, res) {
         let costs = raritySkins.map((skin) => skin.price);
         let cost = costs.reduce((a, b) => a + b, 0);
         return res.json({
-          cost: Math.round(cost * 100) / 100,
+          cost:
+            currency === "money"
+              ? Math.round(cost * 100) / 100
+              : Math.round(cost * 10 * 100) / 100,
           count: raritySkins.length,
         });
       } else if (type === "price") {
@@ -82,7 +85,10 @@ async function handler(req, res) {
         let costs = skins.map((skin) => skin.price);
         let cost = costs.reduce((a, b) => a + b, 0);
         return res.json({
-          cost: Math.round(cost * 100) / 100,
+          cost:
+            currency === "money"
+              ? Math.round(cost * 100) / 100
+              : Math.round(cost * 10 * 100) / 100,
           count: skins.length,
         });
       }
@@ -90,7 +96,7 @@ async function handler(req, res) {
     }
 
     case "DELETE": {
-      const { type, value, id } = req.body;
+      const { type, value, id, currency } = req.body;
 
       if (type === "rarity") {
         const raritySkins = await OpenedSkin.find({
@@ -104,10 +110,17 @@ async function handler(req, res) {
           userId: userId,
           rarity: value,
         });
-        await UserStat.findOneAndUpdate(
-          { userId: userId },
-          { $inc: { money: cost } }
-        );
+        if (currency === "money") {
+          await UserStat.findOneAndUpdate(
+            { userId: userId },
+            { $inc: { money: cost } }
+          );
+        } else if (currency === "tokens") {
+          await UserStat.findOneAndUpdate(
+            { userId: userId },
+            { $inc: { tokens: cost * 10 } }
+          );
+        }
         return res.json({ message: "ok" });
       } else if (type === "price") {
         const skins = await OpenedSkin.find({
@@ -121,10 +134,17 @@ async function handler(req, res) {
           userId: userId,
           price: { $lt: value },
         });
-        await UserStat.findOneAndUpdate(
-          { userId: userId },
-          { $inc: { money: cost } }
-        );
+        if (currency === "money") {
+          await UserStat.findOneAndUpdate(
+            { userId: userId },
+            { $inc: { money: cost } }
+          );
+        } else if (currency === "tokens") {
+          await UserStat.findOneAndUpdate(
+            { userId: userId },
+            { $inc: { tokens: cost * 10 } }
+          );
+        }
         return res.json({ message: "ok" });
       }
 
