@@ -34,16 +34,16 @@ async function handler(req, res) {
     weaponType,
     type,
     statTrak = false;
-  if (randomRarity <= 800) {
+  if (randomRarity <= 750) {
     rarity = "Mil-Spec Grade";
     knifeType = null;
-  } else if (randomRarity <= 960) {
+  } else if (randomRarity <= 900) {
     rarity = "Restricted";
     knifeType = null;
-  } else if (randomRarity <= 990) {
+  } else if (randomRarity <= 950) {
     rarity = "Classified";
     knifeType = null;
-  } else if (randomRarity <= 997) {
+  } else if (randomRarity <= 980) {
     rarity = "Covert";
     knifeType = null;
   } else if (randomRarity <= 1000) {
