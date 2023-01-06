@@ -21,14 +21,14 @@ export default function Informations() {
             onClick={() =>
               openModal({
                 title: "Redeem Code",
-                children: <RedeemCodeModal codeName={"xmas"} />,
+                children: <RedeemCodeModal codeName={"2023"} />,
               })
             }
             sx={{ cursor: "pointer" }}
             color={"red"}
             weight={500}
           >
-            Use code xmas for 1000 dollars!
+            Use code 2023 for two random knifes!
           </Text>
         </Grid>
         <Grid mt={30}>
