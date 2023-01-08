@@ -13,11 +13,14 @@ import {
 } from "@mantine/core";
 import { openModal } from "@mantine/modals";
 import { showNotification } from "@mantine/notifications";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import DollarIcon from "../../icons/DollarIcon";
 import UpgradeRing from "./UpgradeRing";
 import UpgradeWonModal from "./UpgradeWonModal";
 import { useMediaQuery } from "@mantine/hooks";
+import UpgradePickedSkin from "./UpgradePickedSkin";
+import LowerThanIcon from "../../icons/LowerThanIcon";
+import formatExterior from "../../../lib/formatExterior";
 
 export default function UpgradeOverview() {
   const [userSkins, setUserSkins] = useState([]);
@@ -27,9 +30,10 @@ export default function UpgradeOverview() {
 
   const [userSkinPrice, setUserSkinPrice] = useState("");
   const [upgradeSkinPrice, setUpgradeSkinPrice] = useState("");
+  const [userSkinName, setUserSkinName] = useState("");
+  const [upgradeSkinName, setUpgradeSkinName] = useState("");
 
-  const [under, setUnder] = useState(false);
-  const [chance, setChance] = useState(null);
+  const [under, setUnder] = useState(true);
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState(null);
   const [finished, setFinished] = useState(false);
@@ -42,20 +46,21 @@ export default function UpgradeOverview() {
   useEffect(() => {
     async function fetchSkins() {
       const response = await fetch(
-        `/api/casino/upgrade/skins?price=${userSkinPrice}`
+        `/api/casino/upgrade/skins?price=${userSkinPrice}&name=${userSkinName}`
       );
       if (response.ok) {
         setUserSkins(await response.json());
       }
     }
     fetchSkins();
-  }, [updateInventory, userSkinPrice]);
+  }, [updateInventory, userSkinPrice, userSkinName]);
 
   useEffect(() => {
     async function fetchSkins() {
       const body = {
         id: pickedUserSkin._id,
         price: upgradeSkinPrice,
+        skinName: upgradeSkinName,
       };
       const response = await fetch("/api/casino/upgrade/skins", {
         method: "POST",
@@ -70,15 +75,15 @@ export default function UpgradeOverview() {
       setPickedUpgradeSkin(null);
       fetchSkins();
     }
-  }, [pickedUserSkin, upgradeSkinPrice]);
+  }, [pickedUserSkin, upgradeSkinPrice, upgradeSkinName]);
 
-  useEffect(() => {
+  const chance = useMemo(() => {
     if (pickedUserSkin && pickedUpgradeSkin) {
       const calculatedChance =
         (pickedUserSkin.price / pickedUpgradeSkin.price) * 100;
-      setChance(Math.round(calculatedChance * 100) / 100);
+      return Math.round(calculatedChance * 100) / 100;
     } else {
-      setChance(null);
+      return null;
     }
   }, [pickedUpgradeSkin, pickedUserSkin]);
 
@@ -107,37 +112,7 @@ export default function UpgradeOverview() {
     <Container fluid>
       <Grid justify={"center"} align="center">
         <Grid.Col xs={6} order={1} orderSm={2} xl={4} orderXl={1}>
-          <Card withBorder sx={{ height: 300 }}>
-            {pickedUserSkin ? (
-              <>
-                <Group position="right">
-                  <Badge variant="filled" color={"dark"} size="lg">
-                    {pickedUserSkin.price} $
-                  </Badge>
-                </Group>
-
-                <Card.Section>
-                  <Image
-                    alt="picked user skin"
-                    height={200}
-                    fit="contain"
-                    src={
-                      "https://steamcommunity-a.akamaihd.net/economy/image/" +
-                      pickedUserSkin.iconUrl
-                    }
-                  />
-                </Card.Section>
-                <Text>{pickedUserSkin.name.split("|").shift()}</Text>
-                <Text>{pickedUserSkin.name.split("|").pop()}</Text>
-              </>
-            ) : (
-              <Center>
-                <Text size={"lg"} weight={500}>
-                  Pick one skin from below
-                </Text>
-              </Center>
-            )}
-          </Card>
+          <UpgradePickedSkin skin={pickedUserSkin} />
         </Grid.Col>
         <Grid.Col xs={12} order={3} orderSm={1} xl={4} orderXl={2}>
           <Center>
@@ -153,31 +128,7 @@ export default function UpgradeOverview() {
           </Center>
         </Grid.Col>
         <Grid.Col xs={6} order={2} orderSm={3} xl={4} orderXl={3}>
-          <Card withBorder sx={{ height: 300 }}>
-            {pickedUpgradeSkin && (
-              <>
-                <Group position="right">
-                  <Badge variant="filled" color={"dark"} size="lg">
-                    {pickedUpgradeSkin.price} $
-                  </Badge>
-                </Group>
-
-                <Card.Section>
-                  <Image
-                    alt="picked upgrade skin"
-                    height={200}
-                    fit="contain"
-                    src={
-                      "https://steamcommunity-a.akamaihd.net/economy/image/" +
-                      pickedUpgradeSkin.iconUrl
-                    }
-                  />
-                </Card.Section>
-                <Text>{pickedUpgradeSkin.name.split("|").shift()}</Text>
-                <Text>{pickedUpgradeSkin.name.split("|").pop()}</Text>
-              </>
-            )}
-          </Card>
+          <UpgradePickedSkin skin={pickedUpgradeSkin} />
         </Grid.Col>
       </Grid>
       <Grid>
@@ -231,10 +182,17 @@ export default function UpgradeOverview() {
       <Grid mt={20}>
         <Grid.Col xs={12} xl={6}>
           <Container fluid>
-            <Group position="apart">
+            <Group>
               <Text>Your skins ({userSkins.length})</Text>
               <Input
-                icon={<DollarIcon size={20} />}
+                placeholder="filter by name"
+                value={userSkinName}
+                onChange={(e) => setUserSkinName(e.target.value)}
+              />
+              <Input
+                rightSection={<DollarIcon size={20} />}
+                icon={<LowerThanIcon size={20} />}
+                placeholder="filter by price"
                 value={userSkinPrice}
                 onChange={(e) => setUserSkinPrice(e.target.value)}
               />
@@ -243,37 +201,20 @@ export default function UpgradeOverview() {
               <ScrollArea mt={20} style={{ height: 500 }} offsetScrollbars>
                 <Grid>
                   {userSkins.map((skin) => {
-                    const namePartOne = skin.name.split("|").shift();
-                    let namePartTwo = skin.name.split("(").shift();
-                    namePartTwo = namePartTwo.split("|").pop();
-                    let exterior = skin.name.split("(").pop();
-                    exterior = exterior.split(")").shift();
-                    switch (exterior) {
-                      case "Factory New":
-                        exterior = "FN";
-                        break;
-                      case "Minimal Wear":
-                        exterior = "MW";
-                        break;
-                      case "Field-Tested":
-                        exterior = "FT";
-                        break;
-                      case "Well-Worn":
-                        exterior = "WW";
-                        break;
-                      case "Battle-Scarred":
-                        exterior = "BS";
-                        break;
-                      default:
-                        exterior = "\u2605";
-                        break;
-                    }
+                    const { namePartOne, namePartTwo, shortExterior } =
+                      formatExterior(skin.name, skin.exterior);
                     return (
                       <Grid.Col key={skin._id} span={6} sm={4} md={3}>
                         <Card
                           sx={{
                             borderColor:
-                              pickedUserSkin === skin ? "green" : "dark",
+                              pickedUpgradeSkin === skin
+                                ? "green"
+                                : skin.statTrak
+                                ? "orange"
+                                : skin.souvenir
+                                ? "yellow"
+                                : "dark",
                             cursor: "pointer",
                           }}
                           onClick={() => {
@@ -294,7 +235,7 @@ export default function UpgradeOverview() {
                                 variant="filled"
                                 sx={{ marginTop: 5, marginLeft: 5 }}
                               >
-                                {exterior}
+                                {shortExterior}
                               </Badge>
                               <Badge
                                 color={"dark"}
@@ -330,11 +271,18 @@ export default function UpgradeOverview() {
         </Grid.Col>
         <Grid.Col xs={12} xl={6}>
           <Container fluid>
-            <Group position="apart">
+            <Group>
               <Text>Upgrade skins ({upgradeSkins.length})</Text>
               <Input
-                icon={<DollarIcon size={20} />}
-                value={upgradeSkinPrice || Math.ceil(pickedUserSkin?.price) * 2}
+                placeholder={"filter by name"}
+                value={upgradeSkinName}
+                onChange={(e) => setUpgradeSkinName(e.target.value)}
+              />
+              <Input
+                icon={<LowerThanIcon size={20} />}
+                rightSection={<DollarIcon size={20} />}
+                placeholder={pickedUserSkin?.price * 2 || "filter by price"}
+                value={upgradeSkinPrice}
                 onChange={(e) => setUpgradeSkinPrice(e.target.value)}
               />
             </Group>
@@ -342,37 +290,20 @@ export default function UpgradeOverview() {
               <ScrollArea mt={20} offsetScrollbars style={{ height: 500 }}>
                 <Grid>
                   {upgradeSkins.map((skin) => {
-                    const namePartOne = skin.name.split("|").shift();
-                    let namePartTwo = skin.name.split("(").shift();
-                    namePartTwo = namePartTwo.split("|").pop();
-                    let exterior = skin.name.split("(").pop();
-                    exterior = exterior.split(")").shift();
-                    switch (exterior) {
-                      case "Factory New":
-                        exterior = "FN";
-                        break;
-                      case "Minimal Wear":
-                        exterior = "MW";
-                        break;
-                      case "Field-Tested":
-                        exterior = "FT";
-                        break;
-                      case "Well-Worn":
-                        exterior = "WW";
-                        break;
-                      case "Battle-Scarred":
-                        exterior = "BS";
-                        break;
-                      default:
-                        exterior = "\u2605";
-                        break;
-                    }
+                    const { namePartOne, namePartTwo, shortExterior } =
+                      formatExterior(skin.name, skin.exterior);
                     return (
                       <Grid.Col key={skin._id} span={6} sm={4} md={3}>
                         <Card
                           sx={{
                             borderColor:
-                              pickedUpgradeSkin === skin ? "green" : "dark",
+                              pickedUpgradeSkin === skin
+                                ? "green"
+                                : skin.statTrak
+                                ? "orange"
+                                : skin.souvenir
+                                ? "yellow"
+                                : "dark",
                             cursor: "pointer",
                           }}
                           onClick={() => {
@@ -392,7 +323,7 @@ export default function UpgradeOverview() {
                                 variant="filled"
                                 sx={{ marginTop: 5, marginLeft: 5 }}
                               >
-                                {exterior}
+                                {shortExterior}
                               </Badge>
                               <Badge
                                 color={"dark"}
