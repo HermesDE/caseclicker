@@ -1,6 +1,7 @@
 import connectDB from "../../../lib/database/connectMongoDb";
 import { getToken } from "next-auth/jwt";
 import OpenedSkin from "../../../lib/database/schemas/openedSkin";
+import UserStat from "../../../lib/database/schemas/userStat";
 import generateFloat from "../../../lib/float";
 
 async function handler(req, res) {
@@ -42,6 +43,10 @@ async function handler(req, res) {
       }
 
       res.json({ result: result, random: random });
+      await UserStat.findOneAndUpdate(
+        { userId: token.id },
+        { $inc: { upgrades: +1 } }
+      );
       break;
 
     default:
