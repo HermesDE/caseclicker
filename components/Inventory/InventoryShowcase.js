@@ -40,7 +40,7 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
     defaultValue: "normal",
   });
   const [search, setSearch] = useState("");
-  const [sellLock, setSellLock] = useState(true);
+  const [sellLock, setSellLock] = useState(false);
   const [inventoryValue, setInventoryValue] = useState(0);
   const [inventoryCount, setInventoryCount] = useState(0);
 
@@ -115,7 +115,7 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
       </Grid>
       <InventoryFilter {...filterProps} />
       <Grid mt={10}>
-        <Grid.Col span={6}>
+        {/* <Grid.Col span={6}>
           <Button
             fullWidth
             color={"red"}
@@ -124,7 +124,7 @@ export default function InventoryShowcase({ toggleMoneyUpdate }) {
           >
             {sellLock ? "Activate Sellmode" : "Deactive Sellmode"}
           </Button>
-        </Grid.Col>
+        </Grid.Col> */}
         <Grid.Col span={6}>
           <Button
             color={"red"}
