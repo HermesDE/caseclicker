@@ -232,7 +232,6 @@ export default function CoinflipOverview({
                     xs={12}
                     sm={6}
                     md={4}
-                    xl={3}
                     key={game?.id || Math.random()}
                   >
                     <CoinflipGameCard
