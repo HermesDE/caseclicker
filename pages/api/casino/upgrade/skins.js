@@ -8,30 +8,30 @@ async function handler(req, res) {
   if (!token) {
     return res.status(401).json({ error: "unauthorized" });
   }
-  const { id, price, skinName } = req.body;
-  const sortPrice = req.query.price;
-  const name = req.query.name;
 
-  const query = {
-    userId: token.id,
-    price: { $lte: sortPrice },
-  };
-  if (name !== null && name) {
-    query.name = { $regex: name, $options: "i" };
-  }
   switch (req.method) {
-    case "GET":
+    case "GET": {
       let skins;
-      if (!Number.isNaN(parseInt(sortPrice))) {
-        skins = await OpenedSkin.find(query).sort({ price: -1 }).limit(50);
-      } else {
-        skins = await OpenedSkin.find({ userId: token.id })
-          .sort({ price: -1 })
-          .limit(50);
+      const { price, name } = req.query;
+
+      const query = {
+        userId: token.id,
+      };
+      if (price !== null && price !== "" && !Number.isNaN(price)) {
+        query.price = { $lte: price };
       }
+      if (name !== null && name) {
+        query.name = { $regex: name, $options: "i" };
+      }
+
+      skins = await OpenedSkin.find(query).sort({ price: -1 }).limit(50);
+
       res.json(skins);
       break;
+    }
+
     case "POST":
+      const { id, price, name } = req.body;
       const userSkin = await OpenedSkin.findById(id);
       if (!userSkin) {
         return res
@@ -44,8 +44,8 @@ async function handler(req, res) {
           $lte: price || userSkin.price * 2,
         },
       };
-      if (skinName !== null && skinName) {
-        query.name = { $regex: skinName, $options: "i" };
+      if (name !== null && name) {
+        query.name = { $regex: name, $options: "i" };
       }
       const upgradeSkins = await Skin.find(query)
         .sort({ price: -1 })

@@ -21,6 +21,7 @@ import { useMediaQuery } from "@mantine/hooks";
 import UpgradePickedSkin from "./UpgradePickedSkin";
 import LowerThanIcon from "../../icons/LowerThanIcon";
 import formatExterior from "../../../lib/formatExterior";
+import SearchIcon from "../../icons/SearchIcon";
 
 export default function UpgradeOverview() {
   const [userSkins, setUserSkins] = useState([]);
@@ -60,7 +61,7 @@ export default function UpgradeOverview() {
       const body = {
         id: pickedUserSkin._id,
         price: upgradeSkinPrice,
-        skinName: upgradeSkinName,
+        name: upgradeSkinName,
       };
       const response = await fetch("/api/casino/upgrade/skins", {
         method: "POST",
@@ -185,6 +186,7 @@ export default function UpgradeOverview() {
             <Group>
               <Text>Your skins ({userSkins.length})</Text>
               <Input
+                icon={<SearchIcon size={20} />}
                 placeholder="filter by name"
                 value={userSkinName}
                 onChange={(e) => setUserSkinName(e.target.value)}
@@ -208,7 +210,7 @@ export default function UpgradeOverview() {
                         <Card
                           sx={{
                             borderColor:
-                              pickedUpgradeSkin === skin
+                              pickedUserSkin === skin
                                 ? "green"
                                 : skin.statTrak
                                 ? "orange"
@@ -274,6 +276,7 @@ export default function UpgradeOverview() {
             <Group>
               <Text>Upgrade skins ({upgradeSkins.length})</Text>
               <Input
+                icon={<SearchIcon size={20} />}
                 placeholder={"filter by name"}
                 value={upgradeSkinName}
                 onChange={(e) => setUpgradeSkinName(e.target.value)}
