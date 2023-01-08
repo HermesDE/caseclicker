@@ -31,8 +31,6 @@ const handler = async (req, res) => {
           ? skin.price["7_days"].average
           : skin.price["30_days"]
           ? skin.price["30_days"].average
-          : skin.price["all_time"]
-          ? skin.price["all_time"].average
           : null
         : null;
 
@@ -55,8 +53,8 @@ const handler = async (req, res) => {
         rarity: skin.rarity,
         rarityColor: skin.rarity_color,
         price: price,
-        statTrak: skin.stattrak,
-        souvenir: skin.souvenir,
+        statTrak: skin.stattrak || null,
+        souvenir: skin.souvenir || null,
       });
       await newSkin.save();
 
@@ -101,9 +99,10 @@ const handler = async (req, res) => {
     //console.log(skinFile.items_list[key].type);
   }
   //push skingroups to database
-  for (const skingroup of skingroups) {
+  /* for (const skingroup of skingroups) {
     const newSkinGroup = new Skingroup(skingroup);
     await newSkinGroup.save();
-  }
+  } */
+  res.json({ message: "ok" });
 };
 export default connectDB(handler);
