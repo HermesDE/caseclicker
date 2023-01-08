@@ -9,13 +9,13 @@ async function handler(req, res) {
     return res.status(406).json({ error: "invalid method" });
 
   let updatedSkins = 0;
-  /* const response = await fetch("http://csgobackpack.net/api/GetItemsList/v2/");
+  const response = await fetch("http://csgobackpack.net/api/GetItemsList/v2/");
   if (!response.ok) {
     return res.status(500).json({ error: await response.json() });
   }
-  const data = await response.json(); */
-  let data = await fs.readFile("./newSkins.json", { encoding: "utf-8" });
-  data = JSON.parse(data);
+  const data = await response.json();
+  /* let data = await fs.readFile("./newSkins.json", { encoding: "utf-8" });
+  data = JSON.parse(data); */
   const newSkinList = data.items_list;
 
   //get all skins from database that needs to be changed
