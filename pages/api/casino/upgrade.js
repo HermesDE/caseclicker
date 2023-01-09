@@ -45,7 +45,7 @@ async function handler(req, res) {
       res.json({ result: result, random: random });
       await UserStat.findOneAndUpdate(
         { userId: token.id },
-        { $inc: { upgrades: +1 } }
+        { $inc: { upgrades: +1, upgradesWon: result ? 1 : 0 } }
       );
       break;
 

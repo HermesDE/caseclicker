@@ -49,10 +49,16 @@ async function handler(req, res) {
 
   //subtract money from buyer and add it to seller
   buyerUserStat.money -= marketplaceSkin.price;
+  buyerUserStat.moneySpent += marketplaceSkin.price;
   await buyerUserStat.save();
   await UserStat.findOneAndUpdate(
     { userId: marketplaceSkin.userId },
-    { $inc: { money: marketplaceSkin.price } }
+    {
+      $inc: {
+        money: marketplaceSkin.price,
+        moneyEarned: marketplaceSkin.price,
+      },
+    }
   );
 
   //create notification to inform the seller about the sold item

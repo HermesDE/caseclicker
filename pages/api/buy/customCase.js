@@ -78,11 +78,14 @@ async function handler(req, res) {
   await newOpenedSkin.save();
   await UserStat.findOneAndUpdate(
     { userId: userId },
-    { $inc: { openedCases: 1 } }
+    {
+      $inc: {
+        openedCases: 1,
+        money: -caseToBuy.price,
+        moneySpent: caseToBuy.price,
+      },
+    }
   );
-  //delete money from database
-  userStat.money -= caseToBuy.price;
-  await userStat.save();
 
   await CustomCase.findByIdAndUpdate(caseToBuy._id, {
     $inc: {
