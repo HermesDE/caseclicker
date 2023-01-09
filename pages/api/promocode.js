@@ -22,7 +22,7 @@ async function handler(req, res) {
   if (!promoCode.active) {
     return res.status(400).json({ error: "promo code is not active" });
   }
-  if (promoCode.redeemedBy.includes(token.id)) {
+  if (promoCode.redeemedBy.includes(token.email)) {
     return res
       .status(400)
       .json({ error: "You already redeemed this promo code" });
@@ -73,7 +73,7 @@ async function handler(req, res) {
     default:
       break;
   }
-  promoCode.redeemedBy.push(token.id);
+  promoCode.redeemedBy.push(token.email);
   await promoCode.save();
 
   res.json({ message: "ok" });
