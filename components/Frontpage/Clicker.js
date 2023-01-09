@@ -69,16 +69,25 @@ export default function Clicker({
 
   return (
     <Container>
-      <Grid justify={"center"}>
+      <Grid>
+        <Grid.Col span={12}>
+          <Center>
+            <Title sx={{ fontSize: 20 }}>
+              Case Clicker Online is a free csgo case opening simulation
+            </Title>
+          </Center>
+        </Grid.Col>
+      </Grid>
+      <Grid mt={20} justify={"center"}>
         <Grid.Col span={12}>
           <Center>
             <Stack spacing={"xs"}>
-              <Title order={1}>
+              <Text weight={500} size={50}>
                 {new Intl.NumberFormat("en", {
                   style: "currency",
                   currency: "USD",
                 }).format(money)}
-              </Title>
+              </Text>
               <Text weight={500}>{moneyPerClick} $/click</Text>
             </Stack>
           </Center>

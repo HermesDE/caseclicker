@@ -7,7 +7,7 @@ export default function Informations() {
     <>
       <Container fluid mt={50}>
         <Grid>
-          <Title order={1}>News and Informations</Title>
+          <Title order={2}>News and Informations</Title>
         </Grid>
         <Grid mt={10}>
           <Text weight={400}>

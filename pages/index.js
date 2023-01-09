@@ -17,14 +17,14 @@ export default function Home({
   return (
     <>
       <Head>
-        <title>Home | Case Clicker Online</title>
+        <title>Case Clicker Online</title>
         <meta
           name="description"
-          content="a CS:GO like case opening simulator"
+          content="case clicker online is a CSGO like case opening simulation"
         />
         <meta
           name="keywords"
-          content="csgo, cs:go, case clicker, case clicker online, case simulator"
+          content="csgo, cs:go, case clicker, case clicker online, case simulator, csgo clicker"
         />
       </Head>
       <Navigation money={money}>

@@ -8,6 +8,7 @@ import {
 import { ModalsProvider } from "@mantine/modals";
 import { useState, useEffect } from "react";
 import Head from "next/head";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   const [money, setMoney] = useState(0);
@@ -90,6 +91,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         >
           <NotificationsProvider>
             <ModalsProvider>
+              <GoogleAnalytics trackPageViews />
               <Component
                 toggleMoneyUpdate={toggleMoneyUpdate}
                 money={money}
