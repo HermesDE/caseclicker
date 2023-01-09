@@ -2,7 +2,6 @@ import Head from "next/head";
 import Navigation from "../../components/Navigation/Navigation";
 import SettingsOverview from "../../components/Settings/SettingsOverview";
 import { useSession } from "next-auth/react";
-import { useRouter } from "next/router";
 
 export default function Settings({
   toggleMoneyUpdate,
@@ -16,7 +15,6 @@ export default function Settings({
   setUserOpenedCases,
 }) {
   const { data: session, status } = useSession();
-  const router = useRouter();
 
   if (status === "authenticated") {
     return (

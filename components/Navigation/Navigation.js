@@ -33,6 +33,7 @@ import { useMediaQuery } from "@mantine/hooks";
 import Image from "next/image";
 import CookieBanner from "../dsgvo/CookieBanner";
 import PromoCodeIcon from "../icons/PromoCodeIcon";
+import UserIcon from "../icons/UserIcon";
 import { openModal } from "@mantine/modals";
 import RedeemCodeModal from "./RedeemCodeModal";
 
@@ -194,7 +195,9 @@ export default function Navigation({ children, money }) {
                         currency: "USD",
                       }).format(money)}
                     </Text>
-                    <Text>{session?.user?.name}</Text>
+                    <Link href={`/profile/${session?.userId}`} passHref>
+                      <Text component="a">{session?.user?.name}</Text>
+                    </Link>
                   </div>
                   <Menu position="top">
                     <Menu.Target>
@@ -203,6 +206,14 @@ export default function Navigation({ children, money }) {
                       </ActionIcon>
                     </Menu.Target>
                     <Menu.Dropdown>
+                      <Menu.Item
+                        onClick={() =>
+                          router.push(`/profile/${session.userId}`)
+                        }
+                        icon={<UserIcon size={16} />}
+                      >
+                        Profile
+                      </Menu.Item>
                       <Menu.Item
                         onClick={() => router.push("/user/settings")}
                         icon={<SettingsIcon size={16} />}
