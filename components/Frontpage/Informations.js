@@ -12,7 +12,7 @@ export default function Informations() {
         <Grid mt={10}>
           <Text weight={400}>
             Promocodes cannot be used multiple times with multiple accounts
-            using the same e-mail!
+            using the same email!
           </Text>
         </Grid>
         <Grid mt={10}>
