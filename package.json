@@ -24,7 +24,7 @@
     "embla-carousel-autoplay": "^7.0.5",
     "embla-carousel-react": "^7.0.3",
     "framer-motion": "^7.6.1",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "mongodb": "^4.11.0",
     "mongoose": "^6.6.5",
     "next": "12.3.1",
