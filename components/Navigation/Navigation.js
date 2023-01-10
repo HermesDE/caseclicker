@@ -20,6 +20,7 @@ import {
   ActionIcon,
   ScrollArea,
   Alert,
+  Stack,
 } from "@mantine/core";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -44,7 +45,8 @@ export default function Navigation({ children, money }) {
   const { data: session, status } = useSession();
   const [notifications, setNotifications] = useState([]);
   const [open, setOpen] = useState(false);
-  const mobile = useMediaQuery("(max-width: 900px)");
+  const mobile = useMediaQuery("(max-width: 950px)");
+  const mobileHeight = useMediaQuery("(max-height: 500px)");
   const [asideOpened, setAsideOpened] = useState(!mobile);
 
   //chat states and functions
@@ -110,8 +112,13 @@ export default function Navigation({ children, money }) {
                 description="click you rich"
                 active={router.pathname === "/"}
                 color="orange"
-                sx={{ padding: 30, borderRadius: 5, marginTop: 10 }}
-                styles={{ label: { fontSize: "20px" } }}
+                sx={{
+                  padding: !mobileHeight && 30,
+                  paddingLeft: mobileHeight && 30,
+                  borderRadius: 5,
+                  marginTop: 10,
+                }}
+                styles={{ label: { fontSize: mobileHeight ? "16px" : "20px" } }}
               />
             </Link>
             <Link href="/cases" passHref>
@@ -121,8 +128,13 @@ export default function Navigation({ children, money }) {
                 description="open some juicy cases"
                 active={router.pathname === "/cases"}
                 color="orange"
-                sx={{ padding: 30, borderRadius: 5, marginTop: 10 }}
-                styles={{ label: { fontSize: "20px" } }}
+                sx={{
+                  padding: !mobileHeight && 30,
+                  paddingLeft: mobileHeight && 30,
+                  borderRadius: 5,
+                  marginTop: 10,
+                }}
+                styles={{ label: { fontSize: mobileHeight ? "16px" : "20px" } }}
               />
             </Link>
             <Link href="/inventory" passHref>
@@ -132,8 +144,13 @@ export default function Navigation({ children, money }) {
                 description="look at your beautiful skins"
                 active={router.pathname === "/inventory"}
                 color="orange"
-                sx={{ padding: 30, borderRadius: 5, marginTop: 10 }}
-                styles={{ label: { fontSize: "20px" } }}
+                sx={{
+                  padding: !mobileHeight && 30,
+                  paddingLeft: mobileHeight && 30,
+                  borderRadius: 5,
+                  marginTop: 10,
+                }}
+                styles={{ label: { fontSize: mobileHeight ? "16px" : "20px" } }}
               />
             </Link>
             <Link href="/marketplace" passHref>
@@ -143,19 +160,50 @@ export default function Navigation({ children, money }) {
                 description="sell your skins to other people"
                 active={router.pathname === "/marketplace"}
                 color="orange"
-                sx={{ padding: 30, borderRadius: 5, marginTop: 10 }}
-                styles={{ label: { fontSize: "20px" } }}
+                sx={{
+                  padding: !mobileHeight && 30,
+                  paddingLeft: mobileHeight && 30,
+                  borderRadius: 5,
+                  marginTop: 10,
+                }}
+                styles={{ label: { fontSize: mobileHeight ? "16px" : "20px" } }}
               />
             </Link>
             <Link href="/casino" passHref>
               <NavLink
                 component="a"
                 label="Casino"
-                description="gamble with your skins"
+                description={"gamble with your skins"}
                 active={router.pathname.includes("/casino")}
                 color="orange"
-                sx={{ padding: 30, borderRadius: 5, marginTop: 10 }}
-                styles={{ label: { fontSize: "20px" } }}
+                sx={{
+                  padding: !mobileHeight && 30,
+                  paddingLeft: mobileHeight && 30,
+                  borderRadius: 5,
+                  marginTop: 10,
+                }}
+                styles={{ label: { fontSize: mobileHeight ? "16px" : "20px" } }}
+              />
+            </Link>
+
+            <Link href="/privacy-policy" passHref>
+              <NavLink
+                component="a"
+                label="Privacy Policy"
+                active={router.pathname.includes("/privacy-policy")}
+                color="orange"
+                sx={{ paddingLeft: 30, borderRadius: 5, marginTop: 10 }}
+                styles={{ label: { fontSize: "14px" } }}
+              />
+            </Link>
+            <Link href="/terms-and-conditions" passHref>
+              <NavLink
+                component="a"
+                label="Terms and Conditions"
+                active={router.pathname.includes("/terms-and-conditions")}
+                color="orange"
+                sx={{ paddingLeft: 30, borderRadius: 5, marginTop: 10 }}
+                styles={{ label: { fontSize: "14px" } }}
               />
             </Link>
           </Navbar.Section>
@@ -268,11 +316,6 @@ export default function Navigation({ children, money }) {
           </Navbar.Section>
         </Navbar>
       }
-      /* footer={
-        <Footer height={60} p="md">
-          Application footer
-        </Footer>
-      } */
       header={
         <Header height={mobile ? 30 : 70} p="md">
           <div
@@ -280,7 +323,7 @@ export default function Navigation({ children, money }) {
               display: "flex",
               alignItems: "center",
               height: "100%",
-              justifyContent: "space-between",
+              justifyContent: "left",
             }}
           >
             <MediaQuery largerThan="lg" styles={{ display: "none" }}>
@@ -303,44 +346,6 @@ export default function Navigation({ children, money }) {
                 objectFit={"contain"}
               />
             </Link>
-
-            <div>
-              {/* <div style={{ marginLeft: 10 }}>
-                <Link href={"/legal-notice"}>
-                  <Text
-                    sx={{ cursor: "pointer" }}
-                    size={"sm"}
-                    weight={200}
-                    component="a"
-                  >
-                    Impressum / Legal Notice
-                  </Text>
-                </Link>
-              </div> */}
-
-              <div style={{ marginLeft: 10 }}>
-                <Link style={{ marginLeft: 200 }} href={"/privacy-policy"}>
-                  <Text
-                    sx={{ cursor: "pointer" }}
-                    size={"sm"}
-                    weight={200}
-                    component="a"
-                  >
-                    Privacy Policy
-                  </Text>
-                </Link>
-              </div>
-            </div>
-            {router.pathname.includes("/coinflip") ? (
-              <MediaQuery largerThan="xl" styles={{ display: "none" }}>
-                <Burger
-                  opened={asideOpened}
-                  onClick={() => setAsideOpened((o) => !o)}
-                  size="sm"
-                  color={theme.colors.gray[6]}
-                />
-              </MediaQuery>
-            ) : null}
           </div>
         </Header>
       }

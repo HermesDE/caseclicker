@@ -10,6 +10,7 @@ import {
   Stack,
   Text,
   Title,
+  Group,
 } from "@mantine/core";
 import { showNotification } from "@mantine/notifications";
 import { getProviders, signIn, getSession } from "next-auth/react";
@@ -59,7 +60,7 @@ export default function Login({ providers }) {
                             if (!agreed) {
                               showNotification({
                                 title:
-                                  "You need to agree to the privacy policy first",
+                                  "You need to agree to the terms and conditions and privacy policy first",
                                 color: "red",
                               });
                               setColor("red");
@@ -77,24 +78,40 @@ export default function Login({ providers }) {
               })}
               <Grid justify={"center"}>
                 <Grid.Col xs={12} xl={6}>
-                  <Checkbox
-                    label={
-                      <Link href="/privacy-policy">
-                        <Text color={color} sx={{ cursor: "pointer" }}>
-                          I agree to the{" "}
-                          <span
-                            style={{
-                              color: color === "red" ? color : "steelblue",
-                            }}
-                          >
-                            Privacy Policy
-                          </span>
-                        </Text>
-                      </Link>
-                    }
-                    value={agreed}
-                    onChange={(e) => setAgreed(e.currentTarget.checked)}
-                  />
+                  <Center>
+                    <Checkbox
+                      label={
+                        <Group>
+                          <Text>I agree to the</Text>
+                          <Link href="/privacy-policy" passHref>
+                            <Text component="a" color={color}>
+                              <span
+                                style={{
+                                  color: color === "red" ? color : "steelblue",
+                                }}
+                              >
+                                Privacy Policy
+                              </span>
+                            </Text>
+                          </Link>
+                          <Text>and</Text>
+                          <Link href="/terms-and-conditions" passHref>
+                            <Text component="a" color={color}>
+                              <span
+                                style={{
+                                  color: color === "red" ? color : "steelblue",
+                                }}
+                              >
+                                Terms and Conditions
+                              </span>
+                            </Text>
+                          </Link>
+                        </Group>
+                      }
+                      value={agreed}
+                      onChange={(e) => setAgreed(e.currentTarget.checked)}
+                    />
+                  </Center>
                 </Grid.Col>
               </Grid>
             </Container>
