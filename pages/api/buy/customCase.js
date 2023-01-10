@@ -83,6 +83,7 @@ async function handler(req, res) {
         openedCases: 1,
         money: -caseToBuy.price,
         moneySpent: caseToBuy.price,
+        xp: caseToBuy.price * 0.5,
       },
     }
   );

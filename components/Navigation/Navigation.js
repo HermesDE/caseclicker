@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import {
   AppShell,
   Aside,
@@ -21,6 +21,7 @@ import {
   ScrollArea,
   Alert,
   Stack,
+  Progress,
 } from "@mantine/core";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -37,8 +38,10 @@ import PromoCodeIcon from "../icons/PromoCodeIcon";
 import UserIcon from "../icons/UserIcon";
 import { openModal } from "@mantine/modals";
 import RedeemCodeModal from "./RedeemCodeModal";
+import UserContext from "../Context/UserContext";
 
-export default function Navigation({ children, money }) {
+export default function Navigation({ children }) {
+  const { xp, rank, money } = useContext(UserContext);
   const theme = useMantineTheme();
   const [opened, setOpened] = useState(false);
   const router = useRouter();
@@ -47,12 +50,6 @@ export default function Navigation({ children, money }) {
   const [open, setOpen] = useState(false);
   const mobile = useMediaQuery("(max-width: 950px)");
   const mobileHeight = useMediaQuery("(max-height: 500px)");
-  const [asideOpened, setAsideOpened] = useState(!mobile);
-
-  //chat states and functions
-  const coinflipHandleSubmit = (socket, message) => {
-    socket.emit("newMessage", message);
-  };
 
   useEffect(() => {
     async function fetchData() {
@@ -78,24 +75,6 @@ export default function Navigation({ children, money }) {
               : theme.colors.gray[0],
         },
       }}
-      //asideOffsetBreakpoint={"xl"}
-      /* aside={
-        router.pathname.includes("/coinflip") ? (
-          <Aside
-            p="md"
-            hiddenBreakpoint={"xl"}
-            hidden={!asideOpened}
-            width={{ sm: 350 }}
-          >
-            <Aside.Section component={ScrollArea} grow>
-              <CoinflipChat handleSubmit={coinflipHandleSubmit} />
-            </Aside.Section>
-            <Aside.Section>
-              <CoinflipChatInput handleSubmit={coinflipHandleSubmit} />
-            </Aside.Section>
-          </Aside>
-        ) : null
-      } */
       navbarOffsetBreakpoint="lg"
       navbar={
         <Navbar
@@ -206,6 +185,21 @@ export default function Navigation({ children, money }) {
                 styles={{ label: { fontSize: "14px" } }}
               />
             </Link>
+          </Navbar.Section>
+          <Navbar.Section>
+            <Divider my={"sm"} labelPosition="center" />
+
+            <Group>
+              <Image src={rank.image} width={60} height={25} />
+              <Text>{rank.name}</Text>
+            </Group>
+            <Progress
+              mt={5}
+              color={"orange"}
+              value={
+                ((xp - 0) * 100) / (rank.xpNeededForRankup - rank.xpNeeded) - 0
+              }
+            />
           </Navbar.Section>
           <Navbar.Section>
             <Divider my={"sm"} labelPosition="center" />

@@ -3,17 +3,7 @@ import Clicker from "../components/Frontpage/Clicker";
 import Informations from "../components/Frontpage/Informations";
 import Head from "next/head";
 
-export default function Home({
-  toggleMoneyUpdate,
-  money,
-  setMoney,
-  moneyPerClick,
-  setMoneyPerClick,
-  tokens,
-  setTokens,
-  userOpenedCases,
-  setUserOpenedCases,
-}) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -27,14 +17,8 @@ export default function Home({
           content="csgo, cs:go, case clicker, case clicker online, case simulator, csgo clicker"
         />
       </Head>
-      <Navigation money={money}>
-        <Clicker
-          money={money}
-          setMoney={setMoney}
-          moneyPerClick={moneyPerClick}
-          setMoneyPerClick={setMoneyPerClick}
-        />
-
+      <Navigation>
+        <Clicker />
         <Informations />
       </Navigation>
     </>

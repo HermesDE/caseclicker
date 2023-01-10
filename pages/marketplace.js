@@ -1,18 +1,11 @@
 import Navigation from "../components/Navigation/Navigation";
 import MarketplaceOverview from "../components/Marketplace/MarketplaceOverview";
 import Head from "next/head";
+import UserContext from "../components/Context/UserContext";
+import { useContext } from "react";
 
-export default function Marketplace({
-  toggleMoneyUpdate,
-  money,
-  setMoney,
-  moneyPerClick,
-  setMoneyPerClick,
-  tokens,
-  setTokens,
-  userOpenedCases,
-  setUserOpenedCases,
-}) {
+export default function Marketplace() {
+  const { toggleMoneyUpdate, money } = useContext(UserContext);
   return (
     <>
       <Head>

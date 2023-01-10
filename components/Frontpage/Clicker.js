@@ -9,23 +9,20 @@ import {
   Stack,
   UnstyledButton,
 } from "@mantine/core";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import useSound from "use-sound";
 import { motion } from "framer-motion";
 import { showNotification } from "@mantine/notifications";
 import DollarIcon from "../icons/DollarIcon";
-import { getSession } from "next-auth/react";
 import { io } from "socket.io-client";
 import url from "../../lib/wsUrl";
+import UserContext from "../Context/UserContext";
 
 let socket;
 
-export default function Clicker({
-  money,
-  setMoney,
-  moneyPerClick,
-  setMoneyPerClick,
-}) {
+export default function Clicker() {
+  const { money, setMoney, moneyPerClick, setMoneyPerClick, setXp } =
+    useContext(UserContext);
   const [connected, setConnected] = useState(false);
   const [play] = useSound("/sounds/moneyClick.mp3", { volume: 0.05 });
 
@@ -46,6 +43,7 @@ export default function Clicker({
         socket.on("click", (data) => {
           setMoney(data.money);
           setMoneyPerClick(data.moneyPerClick);
+          setXp(data.xp);
         });
       });
       socket.on("blocked", (data) => {
@@ -65,7 +63,7 @@ export default function Clicker({
         socket.off("click");
       };
     }
-  }, [setMoney, setMoneyPerClick]);
+  }, [setMoney, setMoneyPerClick, setXp]);
 
   return (
     <Container>

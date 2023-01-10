@@ -1,18 +1,11 @@
 import InventoryShowcase from "../components/Inventory/InventoryShowcase";
 import Navigation from "../components/Navigation/Navigation";
 import Head from "next/head";
+import UserContext from "../components/Context/UserContext";
+import { useContext } from "react";
 
-export default function Inventory({
-  toggleMoneyUpdate,
-  money,
-  setMoney,
-  moneyPerClick,
-  setMoneyPerClick,
-  tokens,
-  setTokens,
-  userOpenedCases,
-  setUserOpenedCases,
-}) {
+export default function Inventory() {
+  const { toggleMoneyUpdate, money } = useContext(UserContext);
   return (
     <>
       <Head>
