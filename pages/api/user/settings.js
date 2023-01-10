@@ -6,6 +6,7 @@ import OpenedSkin from "../../../lib/database/schemas/openedSkin";
 import UserStat from "../../../lib/database/schemas/userStat";
 import Account from "../../../lib/database/schemas/account";
 import Notification from "../../../lib/database/schemas/notification";
+import Profile from "../../../lib/database/schemas/profile";
 
 async function handler(req, res) {
   const token = await getToken({ req });
@@ -27,6 +28,7 @@ async function handler(req, res) {
       await Notification.deleteMany({ userId: id });
       await OpenedSkin.deleteMany({ userId: id });
       await UserStat.deleteOne({ userId: id });
+      await Profile.deleteOne({ userId: id });
       await Account.findOneAndDelete({ userId: id });
       await User.findByIdAndDelete(id);
 

@@ -7,6 +7,7 @@ import RedditProvider from "next-auth/providers/reddit";
 import clientPromise from "../../../lib/database/mongodb";
 import mongoose from "mongoose";
 import UserStat from "../../../lib/database/schemas/userStat";
+import Profile from "../../../lib/database/schemas/profile";
 export const authOptions = {
   // Configure one or more authentication providers
   providers: [
@@ -64,6 +65,10 @@ export const authOptions = {
             userId: message.user.id,
           });
           await newUserStat.save();
+          const newProfile = new Profile({
+            userId: message.user.id,
+          });
+          await newProfile.save();
           //await mongoose.connection.close();
         });
     },
