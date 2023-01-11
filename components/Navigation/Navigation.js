@@ -41,7 +41,7 @@ import RedeemCodeModal from "./RedeemCodeModal";
 import UserContext from "../Context/UserContext";
 
 export default function Navigation({ children }) {
-  const { xp, rank, money } = useContext(UserContext);
+  const { xp, rank, money, toggleMoneyUpdate } = useContext(UserContext);
   const theme = useMantineTheme();
   const [opened, setOpened] = useState(false);
   const router = useRouter();
@@ -64,6 +64,10 @@ export default function Navigation({ children }) {
       notifications.filter((notification) => notification._id !== id)
     );
   };
+
+  useEffect(() => {
+    toggleMoneyUpdate();
+  }, []);
 
   return (
     <AppShell
@@ -186,21 +190,32 @@ export default function Navigation({ children }) {
               />
             </Link>
           </Navbar.Section>
-          <Navbar.Section>
-            <Divider my={"sm"} labelPosition="center" />
+          {session?.user && (
+            <Navbar.Section>
+              <Divider my={"sm"} labelPosition="center" />
 
-            <Group>
-              <Image src={rank.image} width={60} height={25} />
-              <Text>{rank.name}</Text>
-            </Group>
-            <Progress
-              mt={5}
-              color={"orange"}
-              value={
-                ((xp - 0) * 100) / (rank.xpNeededForRankup - rank.xpNeeded) - 0
-              }
-            />
-          </Navbar.Section>
+              <Group>
+                <Image src={rank.image} width={60} height={25} />
+                <Text>{rank.name}</Text>
+              </Group>
+              <Progress
+                mt={5}
+                color={"yellow"}
+                value={
+                  ((xp - rank.xpNeeded) * 100) /
+                  (rank.xpNeededForRankup - rank.xpNeeded)
+                }
+              />
+              <Center>
+                <Text size={"xs"}>
+                  {parseInt(xp) -
+                    rank.xpNeeded +
+                    " / " +
+                    rank.xpNeededForRankup}
+                </Text>
+              </Center>
+            </Navbar.Section>
+          )}
           <Navbar.Section>
             <Divider my={"sm"} labelPosition="center" />
             {session ? (

@@ -49,6 +49,8 @@ export default function UnboxedSkinCard({ skin, playSound }) {
       radius="md"
       withBorder
       sx={{
+        minWidth: 500,
+        maxWidth: 500,
         borderColor: skin.statTrak
           ? "orange"
           : skin.knifeType !== null
@@ -72,7 +74,12 @@ export default function UnboxedSkinCard({ skin, playSound }) {
         />
       </Card.Section>
       <Group position="apart" mt="md">
-        <Text color={"#" + skin.rarityColor} weight={500}>
+        <Text
+          sx={{ maxWidth: "79%" }}
+          truncate
+          color={"#" + skin.rarityColor}
+          weight={500}
+        >
           {skin.name}
         </Text>
         <Badge size="lg" color="orange" variant="light">
