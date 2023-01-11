@@ -195,7 +195,7 @@ export default function Navigation({ children }) {
               <Divider my={"sm"} labelPosition="center" />
 
               <Group>
-                <Image src={rank.image} width={60} height={25} />
+                <Image alt="rank" src={rank.image} width={60} height={25} />
                 <Text>{rank.name}</Text>
               </Group>
               <Progress

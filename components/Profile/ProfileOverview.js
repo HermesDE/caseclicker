@@ -55,6 +55,7 @@ export default function ProfileOverview({
             <Grid.Col span={12}>
               <Center>
                 <Image
+                  alt="profile picture"
                   width={100}
                   height={100}
                   fit="contain"
@@ -76,7 +77,7 @@ export default function ProfileOverview({
                 )}
               </Center>
               <Center>
-                <Image src={rank.image} width={100} fit="contain" />
+                <Image alt="rank" src={rank.image} width={100} fit="contain" />
               </Center>
             </Grid.Col>
           </Grid>
@@ -84,7 +85,9 @@ export default function ProfileOverview({
         <Grid.Col span={8}>
           <Card withBorder>
             {profile.description.length > 0 ? (
-              profile.description.map((line) => <Text>{line}</Text>)
+              profile.description.map((line) => (
+                <Text key={Math.random()}>{line}</Text>
+              ))
             ) : (
               <Text>no description</Text>
             )}
