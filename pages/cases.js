@@ -5,7 +5,8 @@ import UserContext from "../components/Context/UserContext";
 import { useContext } from "react";
 
 export default function Cases() {
-  const { toggleMoneyUpdate, money, userOpenedCases } = useContext(UserContext);
+  const { toggleMoneyUpdate, money, userOpenedCases, rank } =
+    useContext(UserContext);
   return (
     <>
       <Head>
@@ -17,6 +18,7 @@ export default function Cases() {
           money={money}
           toggleMoneyUpdate={toggleMoneyUpdate}
           userOpenedCases={userOpenedCases}
+          rank={rank}
         />
       </Navigation>
     </>

@@ -28,7 +28,10 @@ export default function CardSizeSettings() {
             onChange={setCardSize}
           />
         </Grid.Col>
-        <Grid.Col span={"content"}>
+        <Grid.Col
+          sm={cardSize === "normal" ? 6 : "content"}
+          xl={cardSize === "normal" ? 4 : "content"}
+        >
           <SkinCard
             showcase={true}
             name="StatTrak™ AK-47 | Fire Serpent (Factory New)"
@@ -56,6 +59,7 @@ export default function CardSizeSettings() {
             neededOpenedCases={0}
             size={cardSize}
             showcase={true}
+            rank={1}
           />
         </Grid.Col>
       </Grid>

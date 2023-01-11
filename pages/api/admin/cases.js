@@ -11,7 +11,7 @@ const handler = async (req, res) => {
         skingroups: req.body.skingroups,
         specialItem: req.body.specialItem,
         link: req.body.caseUrl,
-        neededOpenedCases: req.body.neededOpenedCases,
+        rankNeeded: req.body.rankNeeded,
       });
       const savedCase = await newCase.save();
       res.json(savedCase);

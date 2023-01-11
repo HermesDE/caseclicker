@@ -20,7 +20,7 @@ export default function CaseAddForm() {
   const [iconUrl, setIconUrl] = useState("");
   const [caseUrl, setCaseUrl] = useState("");
   const [casePrice, setCasePrice] = useState(0);
-  const [neededOpenedCases, setNeededOpenedCases] = useState(0);
+  const [rankNeeded, setRankNeeded] = useState(1);
 
   useEffect(() => {
     async function fetchData() {
@@ -60,8 +60,8 @@ export default function CaseAddForm() {
         <Grid.Col span={3}>
           <TextInput
             label="Needed opened cases"
-            value={neededOpenedCases}
-            onChange={(e) => setNeededOpenedCases(e.target.value)}
+            value={rankNeeded}
+            onChange={(e) => setRankNeeded(e.target.value)}
           />
         </Grid.Col>
       </Grid>
@@ -142,7 +142,7 @@ export default function CaseAddForm() {
                 skingroups: selectedSkingroups,
                 percentage: percentage,
                 caseUrl: caseUrl,
-                neededOpenedCases: neededOpenedCases,
+                rankNeeded,
               };
               await fetch("/api/admin/customCases", {
                 method: "POST",

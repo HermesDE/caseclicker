@@ -75,7 +75,7 @@ export default function UnboxedSkinCard({ skin, playSound }) {
       </Card.Section>
       <Group position="apart" mt="md">
         <Text
-          sx={{ maxWidth: "79%" }}
+          sx={{ maxWidth: "77%" }}
           truncate
           color={"#" + skin.rarityColor}
           weight={500}

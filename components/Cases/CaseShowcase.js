@@ -8,6 +8,7 @@ export default function CaseShowcase({
   toggleMoneyUpdate,
   money,
   userOpenedCases,
+  rank,
 }) {
   const [cases, setCases] = useState([]);
   const [customCases, setCustomCases] = useState([]);
@@ -27,14 +28,14 @@ export default function CaseShowcase({
       const response = await fetch("/api/cases");
       if (!response.ok) return;
       let cases = await response.json();
-      cases = cases.sort((a, b) => a.neededOpenedCases - b.neededOpenedCases);
+      cases = cases.sort((a, b) => a.rankNeeded - b.rankNeeded);
       setCases(cases);
     }
     async function fetchCustomCases() {
       const response = await fetch("/api/customCases");
       if (!response.ok) return;
       let cases = await response.json();
-      cases = cases.sort((a, b) => a.neededOpenedCases - b.neededOpenedCases);
+      cases = cases.sort((a, b) => a.rankNeeded - b.rankNeeded);
       setCustomCases(cases);
     }
     setLoading(true);
@@ -82,8 +83,10 @@ export default function CaseShowcase({
                         iconUrl={c.iconUrl}
                         price={c.price}
                         money={money}
+                        rank={rank}
                         link={c.link}
                         neededOpenedCases={c.neededOpenedCases}
+                        rankNeeded={c.rankNeeded}
                         userOpenedCases={userOpenedCases}
                         caseOpenSound={caseOpenSound}
                         caseOpenAnimationSound={caseOpenAnimationSound}
@@ -113,6 +116,7 @@ export default function CaseShowcase({
                         money={money}
                         link={c.link}
                         neededOpenedCases={c.neededOpenedCases}
+                        rankNeeded={c.rankNeeded}
                         userOpenedCases={userOpenedCases}
                         caseOpenSound={caseOpenSound}
                         caseOpenAnimationSound={caseOpenAnimationSound}
@@ -121,6 +125,7 @@ export default function CaseShowcase({
                         moneyEarned={c.moneyEarned}
                         openedCount={c.openedCount}
                         size={cardSize}
+                        rank={rank}
                       />
                     </Grid.Col>
                   );

@@ -41,7 +41,7 @@ export default function Page({
 export async function getServerSideProps(context) {
   const { id } = context.params;
 
-  const user = await User.findById(id);
+  const user = await User.findById(id).select("name image");
   const userstat = await UserStat.findOne({ userId: id });
   const profile = await Profile.findOne({ userId: id });
   const skins = await OpenedSkin.find({ userId: id })
@@ -52,7 +52,7 @@ export async function getServerSideProps(context) {
     { $group: { _id: null, value: { $sum: "$price" } } },
   ]);
   const count = await OpenedSkin.countDocuments({ userId: id });
-  const inventory = { value: value[0].value, count };
+  const inventory = { value: value[0]?.value | 0, count };
   const rank = xpToRank(userstat.xp);
 
   return {

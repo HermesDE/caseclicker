@@ -7,9 +7,9 @@ import {
   Text,
   Image,
   Card,
-  TextInput,
 } from "@mantine/core";
 import UnboxedSkinCard from "../Cases/UnboxedSkinCard";
+import { useSession } from "next-auth/react";
 
 export default function ProfileOverview({
   user,
@@ -19,7 +19,9 @@ export default function ProfileOverview({
   profile,
   rank,
 }) {
-  if (profile.private) {
+  const session = useSession();
+
+  if (profile.private && user._id !== session?.data?.userId) {
     return (
       <Container fluid>
         <Grid>

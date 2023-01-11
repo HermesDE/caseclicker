@@ -1,5 +1,5 @@
 import { openModal, closeAllModals } from "@mantine/modals";
-import { Divider } from "@mantine/core";
+import { Center, Divider } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
 import sleep from "../../lib/sleep";
 import UnboxedSkinCard from "./UnboxedSkinCard";
@@ -61,7 +61,11 @@ export default function CaseCarousel({
             closeAllModals();
             openModal({
               title: "Look what you unboxed",
-              children: <UnboxedSkinCard skin={unboxedSkin} />,
+              children: (
+                <Center>
+                  <UnboxedSkinCard skin={unboxedSkin} />
+                </Center>
+              ),
               size: mobile ? "md" : "lg",
               transition: "slide-up",
               transitionDuration: 300,
