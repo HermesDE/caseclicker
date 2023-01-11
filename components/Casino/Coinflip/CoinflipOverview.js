@@ -35,8 +35,6 @@ export default function CoinflipOverview({
   const [games, setGames] = useState([]);
   const [userCount, setUserCount] = useState();
 
-  const [showChat, setShowChat] = useState(true);
-
   const deleteGame = (id) => {
     socket.emit("deleteGame", id, userSession.userId);
   };
@@ -183,7 +181,7 @@ export default function CoinflipOverview({
   return connected ? (
     <Container fluid>
       <Grid>
-        <Grid.Col span={showChat ? 8 : 12}>
+        <Grid.Col span={12}>
           <CasinoUserCount userCount={userCount} />
           <Grid mt={10}>
             <Grid.Col span={"content"}>
@@ -232,6 +230,8 @@ export default function CoinflipOverview({
                     xs={12}
                     sm={6}
                     md={4}
+                    lg={4}
+                    xl={4}
                     key={game?.id || Math.random()}
                   >
                     <CoinflipGameCard
@@ -252,25 +252,6 @@ export default function CoinflipOverview({
             </Center>
           )}
         </Grid.Col>
-        {/* {showChat && (
-          <Grid.Col span={4}>
-            <Grid>
-              <Grid.Col span={6}>
-                <Title order={3}>Chat</Title>
-              </Grid.Col>
-              <Grid.Col span={6}>
-                <Button>Toggle Chat</Button>
-              </Grid.Col>
-            </Grid>
-            <Grid>
-              <Grid.Col span={12}>
-                <ScrollArea style={{ height: "85vh" }}>
-                  <h1>test</h1>
-                </ScrollArea>
-              </Grid.Col>
-            </Grid>
-          </Grid.Col>
-        )} */}
       </Grid>
     </Container>
   ) : (
