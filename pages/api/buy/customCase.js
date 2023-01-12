@@ -16,7 +16,7 @@ async function handler(req, res) {
 
   const userStat = await UserStat.findOne({ userId: userId });
   const caseToBuy = await CustomCase.findById(req.body.id);
-  const { quickOpen } = req.body;
+  const { quickOpen, count } = req.body;
   const rank = xpToRank(userStat.xp);
 
   //check if user has enough money
@@ -27,79 +27,91 @@ async function handler(req, res) {
   if (rank.id < caseToBuy.rankNeeded) {
     return res.status(403).json({ error: "you didn't unlock the case" });
   }
-
-  const randomSkinGroup = weightedRandom(caseToBuy.skingroups);
-  const skingroup = await SkinGroup.findById(randomSkinGroup);
-  const skins = await Skin.find({ classId: skingroup.skinIds });
-
-  let statTrak;
-  const randomStatTrak = Math.floor(Math.random() * 10) + 1;
-  if (randomStatTrak === 7) statTrak = true;
-  if (skins[0].type === "Gloves") statTrak = false;
-
-  let filteredSkins;
-  if (statTrak) {
-    filteredSkins = skins.filter((skin) => skin.statTrak === true);
-  } else {
-    filteredSkins = skins.filter((skin) => skin.statTrak !== true);
+  if (Number.isNaN(count) || count < 1 || count > 10) {
+    return res.status(400).json({ error: "invalid count" });
   }
 
-  const exteriors = filteredSkins.map((skin) => skin.exterior);
-  const randomExterior =
-    exteriors[[Math.floor(Math.random() * exteriors.length)]];
-  const skin = filteredSkins.find((skin) => skin.exterior === randomExterior);
-  let float;
-  if (
-    randomExterior === "Factory New" ||
-    randomExterior === "Minimal Wear" ||
-    randomExterior === "Field-Tested" ||
-    randomExterior === "Well-Worn" ||
-    randomExterior === "Battle-Scarred"
-  ) {
-    float = generateFloat(randomExterior);
+  let openedSkins = [];
+  for (let i = 0; i < count; i++) {
+    const randomSkinGroup = weightedRandom(caseToBuy.skingroups);
+    const skingroup = await SkinGroup.findById(randomSkinGroup);
+    const skins = await Skin.find({ classId: skingroup.skinIds });
+
+    let statTrak;
+    const randomStatTrak = Math.floor(Math.random() * 10) + 1;
+    if (randomStatTrak === 7) statTrak = true;
+    if (skins[0].type === "Gloves") statTrak = false;
+
+    let filteredSkins;
+    if (statTrak) {
+      filteredSkins = skins.filter((skin) => skin.statTrak === true);
+    } else {
+      filteredSkins = skins.filter((skin) => skin.statTrak !== true);
+    }
+
+    const exteriors = filteredSkins.map((skin) => skin.exterior);
+    const randomExterior =
+      exteriors[[Math.floor(Math.random() * exteriors.length)]];
+    const skin = filteredSkins.find((skin) => skin.exterior === randomExterior);
+    let float;
+    if (
+      randomExterior === "Factory New" ||
+      randomExterior === "Minimal Wear" ||
+      randomExterior === "Field-Tested" ||
+      randomExterior === "Well-Worn" ||
+      randomExterior === "Battle-Scarred"
+    ) {
+      float = generateFloat(randomExterior);
+    }
+
+    const newOpenedSkin = new OpenedSkin({
+      name: skin.name,
+      classId: skin.classId,
+      iconUrl: skin.iconUrl,
+      type: skin.type,
+      weaponType: skin.weaponType,
+      gunType: skin.gunType,
+      knifeType: skin.knifeType,
+      exterior: skin.exterior,
+      rarity: skin.rarity,
+      rarityColor: skin.rarityColor,
+      price: skin.price,
+      float: float,
+      statTrak: statTrak,
+      souvenir: skin.souvenir ? true : false,
+      userId: userId,
+      openedAt: new Date(),
+    });
+    await newOpenedSkin.save();
+    openedSkins.push(newOpenedSkin);
   }
 
-  const newOpenedSkin = new OpenedSkin({
-    name: skin.name,
-    classId: skin.classId,
-    iconUrl: skin.iconUrl,
-    type: skin.type,
-    weaponType: skin.weaponType,
-    gunType: skin.gunType,
-    knifeType: skin.knifeType,
-    exterior: skin.exterior,
-    rarity: skin.rarity,
-    rarityColor: skin.rarityColor,
-    price: skin.price,
-    float: float,
-    statTrak: statTrak,
-    souvenir: skin.souvenir ? true : false,
-    userId: userId,
-    openedAt: new Date(),
-  });
-  await newOpenedSkin.save();
   await UserStat.findOneAndUpdate(
     { userId: userId },
     {
       $inc: {
-        openedCases: 1,
-        money: -caseToBuy.price,
-        moneySpent: caseToBuy.price,
-        xp: caseToBuy.price * 0.5,
+        openedCases: count,
+        money: -caseToBuy.price * count,
+        moneySpent: caseToBuy.price * count,
+        xp: caseToBuy.price * count * 0.5,
       },
     }
   );
 
+  const moneyEarned = openedSkins.reduce(
+    (partialSum, a) => partialSum + a.price,
+    0
+  );
   await CustomCase.findByIdAndUpdate(caseToBuy._id, {
     $inc: {
       moneySpend: +caseToBuy.price,
-      moneyEarned: +skin.price,
+      moneyEarned: +moneyEarned,
       openedCount: +1,
     },
   });
 
   if (quickOpen) {
-    return res.json(newOpenedSkin);
+    return res.json(openedSkins);
   }
 
   let allSkins = [];
@@ -119,7 +131,7 @@ async function handler(req, res) {
   res.json({
     skins: allSkins,
     skingroups: caseToBuy.skingroups,
-    newOpenedSkin,
+    openedSkins,
   });
 }
 export default connectDB(handler);

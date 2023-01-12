@@ -25,12 +25,13 @@ const pickRandomSkin = (skins) => {
 
 export default function CaseOpeningCarousel({
   skins,
-  unboxedSkin,
+  unboxedSkins,
   toggleMoneyUpdate,
 }) {
-  const [sortedSkins, setSortedSkins] = useState({});
+  const sortedSkins = useRef({});
   const [pickedSkins, setPickedSkins] = useState([]);
   const [slides, setSlides] = useState([]);
+  const pickedSkinsRef = useRef([]);
   const slidesRef = useRef([]);
   const steps = useRef(50);
 
@@ -40,51 +41,60 @@ export default function CaseOpeningCarousel({
     const pinkSkins = skins.filter((skin) => skin.rarity === "Classified");
     const redSkins = skins.filter((skin) => skin.rarity === "Covert");
 
-    setSortedSkins({ blueSkins, violetSkins, pinkSkins, redSkins });
+    sortedSkins.current = { blueSkins, violetSkins, pinkSkins, redSkins };
   }, [skins]);
 
   useEffect(() => {
-    let skinArray = [];
-    for (let i = 0; i < steps.current; i++) {
-      if (i === steps.current - 6) {
-        skinArray.push(unboxedSkin);
-        continue;
+    if (unboxedSkins.length <= 0) return;
+
+    for (let j = 0; j < unboxedSkins.length; j++) {
+      let skinArray = [];
+      for (let i = 0; i < steps.current; i++) {
+        if (i === steps.current - 6) {
+          skinArray.push(unboxedSkins[j]);
+          continue;
+        }
+        skinArray.push(pickRandomSkin(sortedSkins.current));
       }
-      skinArray.push(pickRandomSkin(sortedSkins));
+      pickedSkinsRef.current.push(skinArray);
     }
-    setPickedSkins(skinArray);
-  }, [sortedSkins, unboxedSkin]);
+    setPickedSkins(pickedSkinsRef.current);
+  }, [sortedSkins.current, unboxedSkins]);
 
   useEffect(() => {
-    if (pickedSkins[0] === undefined) return;
-    slidesRef.current = pickedSkins.map((skin, i) => {
-      let image, color;
-      if (skin.weaponType === "Knife" || skin.type === "Gloves") {
-        image = "/pictures/skins/rareItem.webp";
-        color = "#ffd700";
-      } else {
-        image = `https://steamcommunity-a.akamaihd.net/economy/image/${skin.iconUrl}`;
-        color = "#" + skin.rarityColor;
-      }
-      return (
-        <Carousel.Slide key={i}>
-          <Card>
-            <Card.Section>
-              <Image alt={skin.name} fit="contain" src={image} />
-            </Card.Section>
-            <Card.Section>
-              <Divider color={color} size="lg" />
-            </Card.Section>
-          </Card>
-        </Carousel.Slide>
-      );
-    });
+    //if (pickedSkins.length <= 0) return;
+    for (let i = 0; i < pickedSkins.length / 2; i++) {
+      if (pickedSkins[i][0] === undefined) return;
+      const s = pickedSkins[i].map((skin, i) => {
+        let image, color;
+        if (skin.weaponType === "Knife" || skin.type === "Gloves") {
+          image = "/pictures/skins/rareItem.webp";
+          color = "#ffd700";
+        } else {
+          image = `https://steamcommunity-a.akamaihd.net/economy/image/${skin.iconUrl}`;
+          color = "#" + skin.rarityColor;
+        }
+        return (
+          <Carousel.Slide key={i}>
+            <Card>
+              <Card.Section>
+                <Image alt={skin.name} fit="contain" src={image} />
+              </Card.Section>
+              <Card.Section>
+                <Divider color={color} size="lg" />
+              </Card.Section>
+            </Card>
+          </Carousel.Slide>
+        );
+      });
+      slidesRef.current.push(s);
+    }
     setSlides(slidesRef.current);
   }, [pickedSkins]);
 
   return (
     <CaseCarousel
-      unboxedSkin={unboxedSkin}
+      unboxedSkins={unboxedSkins}
       slides={slides}
       steps={steps}
       toggleMoneyUpdate={toggleMoneyUpdate}

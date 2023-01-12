@@ -60,6 +60,7 @@ export default function CardSizeSettings() {
             size={cardSize}
             showcase={true}
             rank={1}
+            count={1}
           />
         </Grid.Col>
       </Grid>

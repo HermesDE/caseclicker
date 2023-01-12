@@ -3,7 +3,7 @@ import TokensIcon from "../icons/TokensIcon";
 import { useState } from "react";
 import { showNotification } from "@mantine/notifications";
 import { openModal } from "@mantine/modals";
-import TokensToSkinsRewardModal from "./TokensToSkinsRewardModal";
+import UnboxedSkinsCarousel from "../Cases/UnboxedSkinsCarousel";
 
 export default function TokensToSkins({
   tokens,
@@ -38,7 +38,7 @@ export default function TokensToSkins({
     setTokens((tokens -= tokensToConvert));
     openModal({
       title: "Your converted skins",
-      children: <TokensToSkinsRewardModal skins={skins} />,
+      children: <UnboxedSkinsCarousel skins={skins} />,
       size: skins.length === 1 ? "xl" : "100%",
     });
     setLoading(false);

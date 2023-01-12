@@ -1,7 +1,7 @@
 import { Carousel } from "@mantine/carousel";
-import UnboxedSkinCard from "../Cases/UnboxedSkinCard";
+import UnboxedSkinCard from "./UnboxedSkinCard";
 
-export default function TokensToSkinsRewardModal({ skins }) {
+export default function UnboxedSkinsCarousel({ skins }) {
   return (
     <Carousel
       mx={"auto"}
@@ -31,10 +31,10 @@ export default function TokensToSkinsRewardModal({ skins }) {
         },
       ]}
     >
-      {skins.map((skin) => {
+      {skins.map((skin, i) => {
         return (
           <Carousel.Slide key={skin._id}>
-            <UnboxedSkinCard skin={skin} playSound={false} />
+            <UnboxedSkinCard skin={skin} playSound={i === 0} />
           </Carousel.Slide>
         );
       })}

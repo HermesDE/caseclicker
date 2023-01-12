@@ -6,6 +6,7 @@ import {
   Center,
   Group,
   Image,
+  Select,
   Text,
 } from "@mantine/core";
 import { openModal } from "@mantine/modals";
@@ -19,6 +20,8 @@ import CaseOpeningCarousel from "./CaseOpeningCarousel";
 import CustomCaseOpeningCarousel from "./CustomCaseOpeningCarousel";
 import { useMediaQuery } from "@mantine/hooks";
 import findRankById from "../../lib/findRankById";
+import UnboxedSkinsCarousel from "./UnboxedSkinsCarousel";
+import sortSkinsByRarity from "../../lib/sortSkinsByRarity";
 
 export default function CaseCard({
   id,
@@ -42,16 +45,24 @@ export default function CaseCard({
   size,
   showcase,
   rank,
+  count,
 }) {
   const [loading, setLoading] = useState(false);
   const mobile = useMediaQuery("(max-width: 900px)");
   const { short } = findRankById(rankNeeded);
+  const formattedPrice = useMemo(() => {
+    return new Intl.NumberFormat("en", {
+      style: "currency",
+      currency: "USD",
+    }).format(price * count);
+  }, [count, price]);
 
   const buyCase = async (quickOpen) => {
     setLoading(true);
     const body = {
       id,
       quickOpen,
+      count,
     };
     const response = await fetch(
       `/api/buy/${customCase ? "customCase" : "case"}`,
@@ -106,7 +117,7 @@ export default function CaseCard({
             <CaseOpeningCarousel
               toggleMoneyUpdate={toggleMoneyUpdate}
               skins={skins.skins}
-              unboxedSkin={skins.newOpenedSkin}
+              unboxedSkins={skins.openedSkins}
             />
           ),
           size: "xl",
@@ -116,18 +127,15 @@ export default function CaseCard({
     if (showcase) return;
     caseOpenSound();
 
-    const unboxedSkin = await buyCase(true);
-    if (!unboxedSkin) return;
+    const skins = await buyCase(true);
+    const sortedSkins = await sortSkinsByRarity(skins);
+    if (!skins) return;
 
     toggleMoneyUpdate();
     openModal({
       title: "Look what you unboxed",
-      children: (
-        <Center>
-          <UnboxedSkinCard skin={unboxedSkin} />
-        </Center>
-      ),
-      size: mobile ? "md" : "lg",
+      children: <UnboxedSkinsCarousel skins={sortedSkins} />,
+      size: skins.length === 1 ? "xl" : "100%",
       transition: "slide-up",
       transitionDuration: 300,
     });
@@ -150,7 +158,7 @@ export default function CaseCard({
           </div>
 
           <Badge size="sm" color={"yellow"}>
-            {price} $
+            {formattedPrice}
           </Badge>
         </Group>
 
@@ -182,21 +190,21 @@ export default function CaseCard({
           </motion.div>
           <Button
             variant="light"
-            disabled={loading || money < price || rank.id < rankNeeded}
+            disabled={loading || money < price * count || rank.id < rankNeeded}
             loading={loading}
             radius="md"
             onClick={async () => onClickBuyButton()}
           >
             {loading
               ? "Opening"
-              : money < price
+              : money < price * count
               ? "Not enough money"
               : rank.id < rankNeeded
               ? `Reach ${short}`
               : "Buy & Open"}
           </Button>
           <ActionIcon
-            disabled={loading || money < price || rank.id < rankNeeded}
+            disabled={loading || money < price * count || rank.id < rankNeeded}
             loading={loading}
             variant="outline"
             color={"yellow"}
@@ -261,25 +269,25 @@ export default function CaseCard({
       </Card.Section>
 
       <Group position="apart" mt={"md"} mb="xs">
-        <div style={{ width: "76%" }}>
+        <div style={{ width: "75%" }}>
           <Text truncate weight={500}>
             {name}
           </Text>
         </div>
-        <Badge color={"yellow"}>{price} $</Badge>
+        <Badge color={"yellow"}>{formattedPrice}</Badge>
       </Group>
       <Group spacing={"xs"} mt={"md"} position="apart">
         <Button
           sx={{ width: "65%" }}
           variant="light"
-          disabled={loading || money < price || rank.id < rankNeeded}
+          disabled={loading || money < price * count || rank.id < rankNeeded}
           loading={loading}
           radius="md"
           onClick={async () => onClickBuyButton()}
         >
           {loading
             ? "Opening"
-            : money < price
+            : money < price * count
             ? "Not enough money"
             : rank.id < rankNeeded
             ? `Reach rank ${short} to unlock`
@@ -288,7 +296,7 @@ export default function CaseCard({
         <Button
           sx={{ width: "30%" }}
           leftIcon={<LightningIcon size={20} />}
-          disabled={loading || money < price || rank.id < rankNeeded}
+          disabled={loading || money < price * count || rank.id < rankNeeded}
           loading={loading}
           variant="outline"
           color={"yellow"}
