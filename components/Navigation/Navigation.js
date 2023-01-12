@@ -211,7 +211,7 @@ export default function Navigation({ children }) {
                   {parseInt(xp) -
                     rank.xpNeeded +
                     " / " +
-                    rank.xpNeededForRankup}
+                    parseInt(rank.xpNeededForRankup - rank.xpNeeded)}
                 </Text>
               </Center>
             </Navbar.Section>
