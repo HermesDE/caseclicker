@@ -8,6 +8,7 @@ import OpenedSkin from "../../../lib/database/schemas/openedSkin";
 import generateFloat from "../../../lib/float";
 import weightedRandom from "../../../lib/weightedRandom";
 import Skingroup from "../../../lib/database/schemas/skingroup";
+import xpToRank from "../../../lib/xpToRank";
 
 async function handler(req, res) {
   const token = await getToken({ req });
@@ -16,13 +17,14 @@ async function handler(req, res) {
   const userStat = await UserStat.findOne({ userId: userId });
   const caseToBuy = await CustomCase.findById(req.body.id);
   const { quickOpen } = req.body;
+  const rank = xpToRank(userStat.xp);
 
   //check if user has enough money
   if (userStat.money < caseToBuy.price)
     return res.status(403).json({ error: "you dont have enough money" });
 
-  //check if user has enough openedCases
-  if (userStat.openedCases < caseToBuy.neededOpenedCases) {
+  //check if user has required rank
+  if (rank.id < caseToBuy.rankNeeded) {
     return res.status(403).json({ error: "you didn't unlock the case" });
   }
 
