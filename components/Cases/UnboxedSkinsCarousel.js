@@ -1,8 +1,13 @@
 import { Carousel } from "@mantine/carousel";
+import { Center } from "@mantine/core";
 import UnboxedSkinCard from "./UnboxedSkinCard";
 
 export default function UnboxedSkinsCarousel({ skins }) {
-  return (
+  return skins.length === 1 ? (
+    <Center>
+      <UnboxedSkinCard skin={skins[0]} playSound={true} />
+    </Center>
+  ) : (
     <Carousel
       mx={"auto"}
       withIndicators={skins.length > 3}
