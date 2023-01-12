@@ -106,7 +106,7 @@ export default function CaseCard({
               toggleMoneyUpdate={toggleMoneyUpdate}
               skins={skins.skins}
               skingroups={skins.skingroups}
-              unboxedSkin={skins.newOpenedSkin}
+              unboxedSkins={skins.openedSkins}
             />
           ),
           size: "xl",

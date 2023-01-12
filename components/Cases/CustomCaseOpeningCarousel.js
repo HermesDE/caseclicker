@@ -23,63 +23,78 @@ const weightedRandom = (values) => {
 export default function CustomCaseOpeningCarousel({
   skins,
   skingroups,
-  unboxedSkin,
+  unboxedSkins,
   toggleMoneyUpdate,
 }) {
   const [pickedSkingroups, setPickedSkingroups] = useState([]);
+  const pickedSkingroupsRef = useRef([]);
   const [pickedSkins, setPickedSkins] = useState([]);
+  const pickedSkinsRef = useRef([]);
   const [slides, setSlides] = useState([]);
   const slidesRef = useRef([]);
   const steps = useRef(50);
 
   useEffect(() => {
-    let skingroupArray = [];
-    for (let i = 0; i < steps.current; i++) {
-      skingroupArray.push(weightedRandom(skingroups));
-    }
-    setPickedSkingroups(skingroupArray);
-  }, [skingroups, unboxedSkin]);
+    if (unboxedSkins.length <= 0) return;
 
-  useEffect(() => {
-    let skinArray = [];
-    for (const [i, skingroup] of pickedSkingroups.entries()) {
-      if (i === steps.current - 6) {
-        skinArray.push(unboxedSkin);
-        continue;
+    for (let j = 0; j < unboxedSkins.length; j++) {
+      let skingroupArray = [];
+      for (let i = 0; i < steps.current; i++) {
+        skingroupArray.push(weightedRandom(skingroups));
       }
-      let s = skins.filter((skin) => skin.skingroup === skingroup);
-      var skin = s[Math.floor(Math.random() * s.length)];
-      skinArray.push(skin);
+      pickedSkingroupsRef.current.push(skingroupArray);
     }
-    setPickedSkins(skinArray);
-  }, [pickedSkingroups, unboxedSkin, skins]);
+    setPickedSkingroups(pickedSkingroupsRef.current);
+  }, [skingroups, unboxedSkins]);
 
   useEffect(() => {
-    if (pickedSkins[0] === undefined) return;
-    slidesRef.current = pickedSkins.map((skin, i) => {
-      return (
-        <Carousel.Slide key={i}>
-          <Card>
-            <Card.Section>
-              <Image
-                alt={skin.name}
-                fit="contain"
-                src={`https://steamcommunity-a.akamaihd.net/economy/image/${skin.iconUrl}`}
-              />
-            </Card.Section>
-            <Card.Section>
-              <Divider color={`#${skin.rarityColor}`} size="lg" />
-            </Card.Section>
-          </Card>
-        </Carousel.Slide>
-      );
-    });
+    for (let j = 0; j < pickedSkingroups.length; j++) {
+      let skinArray = [];
+      for (const [i, skingroup] of pickedSkingroups[j].entries()) {
+        if (i === steps.current - 6) {
+          skinArray.push(unboxedSkins[j]);
+          continue;
+        }
+        let s = skins.filter((skin) => skin.skingroup === skingroup);
+        let skin = s[Math.floor(Math.random() * s.length)];
+        skinArray.push(skin);
+      }
+      pickedSkinsRef.current.push(skinArray);
+    }
+    setPickedSkins(pickedSkinsRef.current);
+  }, [pickedSkingroups, unboxedSkins, skins]);
+
+  useEffect(() => {
+    for (let j = 0; j < pickedSkins.length; j++) {
+      if (pickedSkins[j][0] === undefined) return;
+
+      const s = pickedSkins[j].map((skin, i) => {
+        return (
+          <Carousel.Slide key={i}>
+            <Card>
+              <Card.Section>
+                <Image
+                  alt={skin.name}
+                  fit="contain"
+                  src={`https://steamcommunity-a.akamaihd.net/economy/image/${skin.iconUrl}`}
+                />
+              </Card.Section>
+              <Card.Section>
+                <Divider color={`#${skin.rarityColor}`} size="lg" />
+              </Card.Section>
+            </Card>
+          </Carousel.Slide>
+        );
+      });
+      slidesRef.current.push(s);
+    }
+
     setSlides(slidesRef.current);
   }, [pickedSkins]);
 
   return (
     <CaseCarousel
-      unboxedSkin={unboxedSkin}
+      unboxedSkins={unboxedSkins}
       slides={slides}
       steps={steps}
       toggleMoneyUpdate={toggleMoneyUpdate}
