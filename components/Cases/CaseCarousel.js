@@ -37,11 +37,11 @@ export default function CaseCarousel({
               <Divider
                 sx={{
                   position: "absolute",
-                  height: "75%",
+                  height: 160,
                   zIndex: 1,
                   display: "flex",
                   left: "50%", //Math.floor(Math.random() * (0.57 - 0.31 + 1) + 0.31),
-                  marginTop: -20,
+                  marginTop: -10,
                 }}
                 orientation="vertical"
                 size={"sm"}
